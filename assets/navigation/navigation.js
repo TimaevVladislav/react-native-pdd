@@ -1,0 +1,95 @@
+import {createNativeStackNavigator} from "@react-navigation/native-stack"
+
+import Home from "../screens/Home"
+import Profile from "../screens/Profile"
+import Signs from "../screens/Signs"
+import Markup from "../screens/Markup"
+import {Exam} from "../screens/Exam"
+import Results, {CloseOutline} from "../screens/Results"
+import {Policies, FeedBack} from "../screens/Settings"
+
+
+import Tickets from "../components/VirtualList"
+import CardComponent from "../components/CardComponent"
+import SignsList from "../components/SignsList"
+import MainButtons from "../components/MainButtons"
+import {Search} from "../components/SearchComponent"
+import FavoriteScreen from "../screens/Favourites"
+import MistakeScreen from "../screens/Mistakes"
+import Timer, {ArrowBack} from "../components/Timer"
+import ExtraInformation, {Region} from "../components/ExtraInformation"
+
+import Router from "./router"
+
+
+
+
+
+const TicketsScreens = (Stack) => (
+    <Stack.Group>
+        <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
+        <Stack.Screen name="Избранное" component={FavoriteScreen} />
+        <Stack.Screen name="Ошибки" component={MistakeScreen} />
+        {/*<Stack.Screen name="" component={} />*/}
+    </Stack.Group>
+)
+
+
+const HomeScreens = (Stack) => (
+    <Stack.Group>
+        <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
+        <Stack.Screen name="Главная" component={Home} />
+        <Stack.Screen name="Правила дорожного движения" component={Profile} options={{title: "ПДД"}} />
+        <Stack.Screen name="Дорожные знаки" component={Signs} />
+        <Stack.Screen name="Дорожная разметка" component={Markup} />
+        <Stack.Screen name="Билеты" component={MainButtons} />
+        <Stack.Screen name="Дополнительная информация" component={ExtraInformation} />
+        <Stack.Screen name="Коды регионов" component={Region} />
+    </Stack.Group>
+)
+
+
+export default function Navigation () {
+    const Stack = createNativeStackNavigator()
+    return (
+        <Stack.Group>
+            {HomeScreens(Stack)}
+            {TicketsScreens(Stack)}
+            <Stack.Screen name="Карточка" component={CardComponent} options={({route}) => ({title: route.params.heading})} />
+            <Stack.Screen
+                name="Обратная связь"
+                component={FeedBack}
+            />
+            <Stack.Screen
+                name="Пользовательское соглашение"
+                component={Policies}
+            />
+            <Stack.Screen
+                name="Экзамен"
+                component={Exam}
+                options={({ route}) => {
+                    return ({
+                        headerLeft: () => {
+                            if(route.params.scrollIndex || route.params.scrollIndex === 0){
+                                return <ArrowBack />
+                            }
+                        },
+                        headerRight: () => <Timer />,
+                        title: route.params.name + ` вопрос ${route.params.scrollIndex + 1}`,
+                    })}}
+            />
+            <Stack.Screen
+                name="Результат"
+                component={Results}
+                options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
+            />
+            <Stack.Screen
+                name="Signs"
+                options={({ route, navigation }) => ({
+                    headerTitleAlign: "center",
+                    headerTitle: () => <Search /> })}>
+                {(props) => <SignsList {...props} />}
+            </Stack.Screen>
+        </Stack.Group>
+    )
+};
