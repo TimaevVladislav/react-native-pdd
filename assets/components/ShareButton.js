@@ -8,7 +8,6 @@ import {DrawerItem} from '@react-navigation/drawer'
 
 
 const ShareButton = () => {
-
     const onShare = async () => {
         try {
             const result = await Share.share({

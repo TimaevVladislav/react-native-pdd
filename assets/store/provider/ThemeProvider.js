@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Appearance} from "react-native"
 import {DARK_COLORS, LIGHT_COLORS} from "../colors"
 
-   // контекст с параметрами по умолчанию
+// контекст с параметрами по умолчанию
 export const ThemeContext = React.createContext({
     isDark: false,
     colors: LIGHT_COLORS,

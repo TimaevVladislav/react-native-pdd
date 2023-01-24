@@ -1,15 +1,7 @@
-import {
-    Text, View,
-    ScrollView,
-    StyleSheet,
-    TouchableOpacity,
-    SafeAreaView,
-    TextInput
-} from "react-native"
+import React, {useState} from "react"
+import {Text, View, ScrollView, StyleSheet, TouchableOpacity, SafeAreaView, TextInput} from "react-native"
 
 import CheckBox from 'expo-checkbox'
-import React, {useState} from "react"
-
 import {ThemeContext} from "../store/provider/ThemeProvider"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
 import {SvgUri} from "react-native-svg"
@@ -191,7 +183,7 @@ const stylesForm = StyleSheet.create({
         padding: 10,
         width: 350
     },
-});
+})
 
 
 const style = StyleSheet.create({
@@ -229,4 +221,4 @@ const style = StyleSheet.create({
     checkbox: {
         justifyContent: "center"
     }
-});
+})

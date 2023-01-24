@@ -83,7 +83,7 @@ function FloatList () {
     }, [navigation])
 
 
-    const Item = ({heading, title, text, img, id}) => (
+    const Item = ({heading, title, text, img}) => (
         <ScrollView>
             <View style={styleSigns.p}>
                 <SvgUri uri={img} />

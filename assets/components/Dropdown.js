@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
 import {useNavigation} from "@react-navigation/native"
 
-import {
-    FlatList,
-    Text,
-    TouchableOpacity,
-    View,
-    StyleSheet
-} from "react-native"
-
+import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
 import {SearchContext} from "../store/provider/SearchProvider"
 import {svgSigns, svgMarkup} from "./SvgXml"
 import {SvgXml} from "react-native-svg"
@@ -17,23 +10,19 @@ export default function Dropdown({iconId}) {
 
     const initialIcons = [
         { id: 0, icon: svgSigns[0] },
-        // { id: 1, icon: svgSigns[0] },
-        // { id: 2, icon: svgSigns[0] },
-        // { id: 3, icon: svgSigns[0] },
-        // { id: 4, icon: svgSigns[0] },
-        // { id: 5, icon: svgSigns[0] },
-        // { id: 6, icon: svgSigns[0] }
+        { id: 1, icon: svgSigns[1] },
+        { id: 2, icon: svgSigns[2] },
+        { id: 3, icon: svgSigns[3] },
+        { id: 4, icon: svgSigns[4] },
+        { id: 5, icon: svgSigns[5] },
+        { id: 6, icon: svgSigns[6] }
     ]
     const navigation = useNavigation()
     const [icon, setIcon] = useState(initialIcons)
 
-    const LogoIcon = () => (
+    const Icons = () => (
         <View>
-            <SvgXml
-                xml={icon[iconId].icon}
-                width={100}
-                height={87}
-            />
+            <SvgXml xml={icon[iconId].icon} width={100} height={87} />
         </View>
     )
 
@@ -73,7 +62,7 @@ export default function Dropdown({iconId}) {
                     dropdownHandler(setSearch, setDropdown, setClicked) }}
                 >
                     <View style={style.row}>
-                        <LogoIcon />
+                        <Icons />
                         <Heading heading={heading} />
                     </View>
                 </TouchableOpacity>

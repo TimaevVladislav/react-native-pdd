@@ -1,84 +1,19 @@
 import React, {useEffect, useState} from 'react'
 import {useLayout} from "../store/hooks/useLayout"
 import {useScroll} from "../store/hooks/useScroll"
-import * as FileSystem from "expo-file-system"
 
-
-import {
-    SafeAreaView,
-    View,
-    FlatList,
-    Text, Image,
-    TouchableOpacity,
-    StyleSheet
-} from 'react-native'
-
-import {items} from "../store/temp/store.json"
-
+import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
+import items from "../store/questions/A_B/tickets/Билет 15.json"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
 
-const Content = ({ img, item, buttonData, handlerResults }) => {
-    //
-    // const [isLoading, setLoading] = useState(true)
-    // const [ticketsData, setTicketsData] = useState([])
-    //
-    // useEffect(() => {
-    //     fetch('../store/temp/store.json')
-    //         .then((response) => response.json())
-    //         .then((json) => setTicketsData(json))
-    //         .catch((error) => console.error(error))
-    //         .finally(() => setLoading(false));
-    // }, []);
+import {ButtonsExam} from "../components/Buttons"
 
-
-
-    // fetch(`../store/questions/A_B/tickets/Билет 1.json`)
-    //     .then(response => response.json())
-    //     .then(data => console.log(data))
-    //     .catch((e) => {
-    //         console.log(e.message)
-    //     })
-
-    // const getTickets = () => {
-    //     FileSystem.createDownloadResumable(
-    //         "",
-    //         "../store/questions/A_B/tickets/Билет 1.json",
-    //         {},
-    //         (data) => console.log(data.totalBytesExpectedToWrite)
-    //     )
-    // }
-    //
-    // try {
-    //     FileSystem.readDirectoryAsync(
-    //         "../store/questions/A_B/tickets/Билет 1.json"
-    //     )
-    //         .then(( data ) => {
-    //             console.log('Finished downloading to ', data);
-    //         })
-    // } catch (error) {
-    //     console.log(error);
-    // }
-
-
-        // .then((res) => {
-            //     console.log(res);
-            //     const d = JSON.parse(res);
-            //     // this.setState({ content: res, fruitType: d.type });
-            // })
-            // .catch((err) => {
-            //     console.log(err.message, err.code)
-            // })
-
-    const initialColors = [
-        { id: 0, color: "#DDDDDD" },
-        { id: 1, color: "#DDDDDD" },
-        { id: 2, color: "#DDDDDD" },
-        { id: 3, color: "#DDDDDD" }
-    ]
+const Content = ({item, handlerResults}) => {
 
     const [addFavorites, setIsFavorites] = useState(true)
-    const [buttonColor, setButtonColor] = useState(initialColors)
+
+
     const [buttonDisabled, setButtonDisabled] = useState(false)
 
     const handlerDisabled = () => setButtonDisabled(true)
@@ -86,11 +21,11 @@ const Content = ({ img, item, buttonData, handlerResults }) => {
     const handlerUpdateColor = (index) => {
         let newColor = buttonColor.map((button) => {
             if (index === button.id) {
-                return { ...buttonColor, [button.color]: "red" }
+                return { ...buttonColor, [button.color]: "black" }
             } else {
                 return button
             }
-        });
+        })
         setButtonColor(newColor)
     }
     const handlerChangeColor = (button, index) => {
@@ -103,32 +38,17 @@ const Content = ({ img, item, buttonData, handlerResults }) => {
     const handlerOnPress = (item, index) => {
         handlerDisabled(), handlerChangeColor(item, index), handlerResults(item)
     }
-    const Button = () => (
-        buttonData.map((item, i) =>  (
-            <View style={styleTicket.container}>
-                <TouchableOpacity
-                    key={i}
-                    disabled={buttonDisabled}
-                    onPress={() => handlerOnPress(item, i)}
-                    style={[{backgroundColor: buttonColor[i].color }, styleTicket.item]}>
-                    <Text style={styleTicket.itemText}>
-                        {`${i + 1}.  ${item[i]}`}
-                    </Text>
-                </TouchableOpacity>
-            </View>
-        ))
-    )
 
     return (
         <View>
             <View style={styleTicket.container}>
-                <Image source={{uri: img}} style={styleTicket.img} />
+                <Image source={{uri: item.image}} style={styleTicket.img} />
             </View>
             <View>
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <Button />
+                <ButtonsExam answers={item.answers} />
                 <FavoritesButton
                     addFavorites={addFavorites}
                     setIsFavorites={setIsFavorites}
@@ -200,7 +120,7 @@ export const Exam = () => {
                     ref={ref}
                     initialScrollIndex={index}
                     getItemLayout={getItemLayout}
-                    data={items[`${route.params.key}`]}
+                    data={items}
                     renderItem={({item}) => <Index indexRender={item.key} /> }
                     initialNumToRender={5}
                     showsHorizontalScrollIndicator={false}
@@ -211,6 +131,7 @@ export const Exam = () => {
     }
 
 
+    // [`${route.params.key}`]
     return (
            <SafeAreaView>
                <IndexRender index={index} ref={ref} route={route} setIndex={setIndex} />
@@ -222,8 +143,8 @@ export const Exam = () => {
                    initialScrollIndex={index}
                    scrollEnabled={false}
                    showsHorizontalScrollIndicator={false}
-                   data={items[`${route.params.key}`]}
-                   renderItem={({item}) => <Content img={item.img} question={item.question} key={item.key} item={item} buttonData={item.render} handlerResults={handlerCountResults} /> }
+                   data={items}
+                   renderItem={({item}) => <Content item={item} buttonData={item.answers} handlerResults={handlerCountResults} /> }
                    keyExtractor={item => item.id}
                />
            </SafeAreaView>
@@ -231,7 +152,7 @@ export const Exam = () => {
 }
 
 
-const stylesVirtual = StyleSheet.create({
+export const stylesVirtual = StyleSheet.create({
     container: {
         flexDirection: "row",
         padding: 1,
@@ -248,7 +169,7 @@ const stylesVirtual = StyleSheet.create({
     },
 })
 
-const styleTicket = StyleSheet.create({
+export const styleTicket = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
