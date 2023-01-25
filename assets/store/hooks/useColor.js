@@ -1,5 +1,7 @@
-import {useEffect, useState} from 'react'
+import {useState} from 'react'
+
 const useColor = () => {
+
     const initialColors = [
         { id: 0, color: "#DDDDDD" },
         { id: 1, color: "#DDDDDD" },
@@ -11,10 +13,8 @@ const useColor = () => {
     const [colors, setColor] = useState(initialColors)
 
     const [buttonColor, setButtonColor] = useState(initialColors)
-    const [buttonDisabled, setButtonDisabled] = useState(false)
 
-
-    const handlerUpdateColor = (index) => {
+    const handleChangeColor = (index) => {
         let newColor = buttonColor.map((button) => {
             if (index === button.id) {
                 return { ...buttonColor, [button.color]: "black" }
@@ -26,12 +26,15 @@ const useColor = () => {
     }
     const handlerChangeColor = (button, index) => {
         if(button[index] && button.correct) {
-            handlerUpdateColor(index)
+            handleChangeColor(index)
         } else {
-            handlerUpdateColor(index)
+            handleChangeColor(index)
         }
     }
-    const handlerPressButton = (item, index) => { setIsDisabled(true), handlerChangeColor(item, index), handlerResults(item) }
+    const handlerPressButton = (item, index) => {
+        setIsDisabled(true),
+        handlerChangeColor(item, index)
+    }
 
     return { handlerPressButton, isDisabled, colors }
 }
