@@ -3,38 +3,12 @@ import {useLayout} from "../store/hooks/useLayout"
 import {useScroll} from "../store/hooks/useScroll"
 
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
-import items from "../store/questions/A_B/tickets/Билет 25.json"
+import items from "../store/questions/A_B/tickets/Билет 29.json"
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 
-const Content = ({item, result}) => {
-
-    // const [buttonDisabled, setButtonDisabled] = useState(false)
-    //
-    // const handlerDisabled = () => setButtonDisabled(true)
-    //
-    // const handlerUpdateColor = (index) => {
-    //     let newColor = buttonColor.map((button) => {
-    //         if (index === button.id) {
-    //             return { ...buttonColor, [button.color]: "black" }
-    //         } else {
-    //             return button
-    //         }
-    //     })
-    //     setButtonColor(newColor)
-    // }
-    // const handlerChangeColor = (button, index) => {
-    //     if(button[index] && button.correct) {
-    //        handlerUpdateColor(index)
-    //     } else {
-    //        handlerUpdateColor(index)
-    //     }
-    // }
-    // const handlerOnPress = (item, index) => {
-    //     handlerDisabled(), handlerChangeColor(item, index), handlerResults(item)
-    // }
-
+const Tickets = ({item, result}) => {
     return (
         <View>
             <View style={styleTicket.container}>
@@ -50,34 +24,6 @@ const Content = ({item, result}) => {
         </View>
     )
 }
-
-// const FavoritesButton = ({ addFavorites, setIsFavorites }) => (
-//     <View style={styleTicket.container}>
-//         {addFavorites ?
-//             <TouchableOpacity onPress={() => setIsFavorites(false) }>
-//                 <View style={[styleTicket.buttonSave]}>
-//                     <View>
-//                         <Ionicons name="star-outline" size={23} color="#3AB4F2" />
-//                     </View>
-//                     <Text style={styleTicket.heading}>
-//                         Добавить в избранное
-//                     </Text>
-//                 </View>
-//             </TouchableOpacity>
-//             :
-//             <TouchableOpacity onPress={() => setIsFavorites(true) }>
-//                 <View style={[styleTicket.buttonSave]}>
-//                     <View>
-//                         <Ionicons name="ios-star" size={23} color="#3AB4F2" />
-//                     </View>
-//                     <Text style={styleTicket.heading}>
-//                         Удалить из избранного
-//                     </Text>
-//                 </View>
-//             </TouchableOpacity>
-//         }
-//     </View>
-// )
 
 export const Exam = () => {
     const { scrollItemLayout } = useLayout()
@@ -137,7 +83,7 @@ export const Exam = () => {
                    scrollEnabled={false}
                    showsHorizontalScrollIndicator={false}
                    data={items}
-                   renderItem={({item}) => <Content item={item} buttonData={item.answers} result={handlerCountResults} /> }
+                   renderItem={({item}) => <Tickets item={item} result={handlerCountResults} /> }
                    keyExtractor={item => item.id}
                />
            </SafeAreaView>
