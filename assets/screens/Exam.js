@@ -7,8 +7,11 @@ import items from "../store/questions/A_B/tickets/Билет 29.json"
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
+import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
 const Tickets = ({item, result}) => {
+    console.log(item.image)
+
     return (
         <View>
             <View style={styleTicket.container}>
@@ -19,6 +22,7 @@ const Tickets = ({item, result}) => {
                     {item.question}
                 </Text>
                 <ButtonsExam answers={item.answers} result={result} />
+                {/*<CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />*/}
                 <Favorites />
             </View>
         </View>
