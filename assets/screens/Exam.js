@@ -10,7 +10,6 @@ import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
-
 import {uriTicket} from "../store/questions/index"
 
 const Tickets = ({item, result}) => {
