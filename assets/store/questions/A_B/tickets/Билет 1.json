@@ -1,9 +1,9 @@
 [
   {
     "title": "Вопрос 1",
-    "ticket_number": "Билет 1",
+    "number": 1,
     "ticket_category": "A,B",
-    "image": "./images/no_image.jpg",
+    "image": "../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg",
     "question": "В каком случае водитель совершит вынужденную остановку?",
     "answers": [
       {
@@ -57,7 +57,7 @@
     "title": "Вопрос 3",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/5fa33b65fe52f38ad87c4b5226c5d3ba.jpg",
+    "image": "5fa33b65fe52f38ad87c4b5226c5d3ba.jpg",
     "question": "Можно ли Вам остановиться в указанном месте для посадки пассажира?",
     "answers": [
       {

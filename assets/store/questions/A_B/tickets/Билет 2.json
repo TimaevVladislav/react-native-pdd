@@ -1,7 +1,7 @@
 [
   {
     "title": "Вопрос 1",
-    "ticket_number": "Билет 2",
+    "number": 2,
     "ticket_category": "A,B",
     "image": "./images/A_B/1871b903ddd6b18d2bc45133234dd7fa.jpg",
     "question": "Сколько полос для движения имеет данная дорога?",

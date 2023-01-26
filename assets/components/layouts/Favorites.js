@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
-import {styleTicket} from "../../screens/Exam"
+import {styleTicket} from "../../screens/ExamScreen"
 export const Favorites = () => {
     const [favorite, setFavorite] = useState(true)
 

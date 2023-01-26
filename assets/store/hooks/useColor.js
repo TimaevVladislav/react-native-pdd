@@ -9,7 +9,6 @@ const useColor = () => {
         { id: 3, color: "#DDDDDD" }
     ]
 
-    const [isDisabled, setIsDisabled] = useState(false)
     const [colors, setColor] = useState(initialColors)
 
     const [buttonColor, setButtonColor] = useState(initialColors)
@@ -31,12 +30,36 @@ const useColor = () => {
             handleChangeColor(index)
         }
     }
+
+    // const [buttonDisabled, setButtonDisabled] = useState(false)
+    //
+    // const handlerDisabled = () => setButtonDisabled(true)
+    //
+    // const handlerUpdateColor = (index) => {
+    //     let newColor = buttonColor.map((button) => {
+    //         if (index === button.id) {
+    //             return { ...buttonColor, [button.color]: "black" }
+    //         } else {
+    //             return button
+    //         }
+    //     })
+    //     setButtonColor(newColor)
+    // }
+    // const handlerChangeColor = (button, index) => {
+    //     if(button[index] && button.correct) {
+    //        handlerUpdateColor(index)
+    //     } else {
+    //        handlerUpdateColor(index)
+    //     }
+    // }
+    // const handlerOnPress = (item, index) => {
+    //     handlerDisabled(), handlerChangeColor(item, index), handlerResults(item)
+    // }
     const handlerPressButton = (item, index) => {
-        setIsDisabled(true),
         handlerChangeColor(item, index)
     }
 
-    return { handlerPressButton, isDisabled, colors }
+    return { handlerPressButton, colors }
 }
 
 export { useColor }

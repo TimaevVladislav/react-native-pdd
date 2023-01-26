@@ -5,7 +5,6 @@ import Navigation from "./assets/navigation/navigation"
 import {ThemeContext, ThemeProvider} from "./assets/store/provider/ThemeProvider"
 import {DARK_COLORS, LIGHT_COLORS} from "./assets/store/colors"
 import {SearchProvider} from "./assets/store/provider/SearchProvider"
-import {StateButtonProvider} from "./assets/store/provider/StateButtonProvider"
 
 
 export default function App() {
@@ -13,7 +12,6 @@ export default function App() {
   return (
           <ThemeProvider>
               <SearchProvider>
-                  <StateButtonProvider>
                       <ThemeContext.Consumer>
                           {(({isDark, name}) => (
                               <NavigationContainer>
@@ -27,7 +25,6 @@ export default function App() {
                               </NavigationContainer>
                           ))}
                       </ThemeContext.Consumer>
-                  </StateButtonProvider>
               </SearchProvider>
           </ThemeProvider>
   );

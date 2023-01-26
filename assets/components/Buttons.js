@@ -2,7 +2,7 @@ import React from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
-import {styleTicket} from "../screens/Exam"
+import {styleTicket} from "../screens/ExamScreen"
 
 import {DrawerItem} from "@react-navigation/drawer"
 import {useColor} from "../store/hooks/useColor"

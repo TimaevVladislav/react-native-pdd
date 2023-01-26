@@ -4,7 +4,7 @@ import Home from "../screens/Home"
 import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
-import {Exam} from "../screens/Exam"
+import {ExamScreen} from "../screens/ExamScreen"
 import Results, {CloseOutline} from "../screens/Results"
 import {Policies, FeedBack} from "../screens/Settings"
 
@@ -14,7 +14,7 @@ import CardComponent from "../components/CardComponent"
 import SignsList from "../components/SignsList"
 import MainButtons from "../components/MainButtons"
 import {Search} from "../components/SearchComponent"
-import FavoriteScreen from "../screens/Favourites"
+import FavoriteScreen from "../screens/FavouriteScreen"
 import MistakeScreen from "../screens/Mistakes"
 import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
@@ -66,7 +66,7 @@ export default function Navigation () {
             />
             <Stack.Screen
                 name="Экзамен"
-                component={Exam}
+                component={ExamScreen}
                 options={({ route}) => {
                     return ({
                         headerLeft: () => {

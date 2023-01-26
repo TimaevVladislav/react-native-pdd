@@ -25,7 +25,7 @@ export default function Router({navigation}) {
                     initialRouteName="Главная"
                     drawerContent={(props) => (
                         <DrawerContentScrollView {...props}>
-                            <LogoDrawer />
+                            {/*<LogoDrawer />*/}
                             <DrawerItemList {...props} />
                         </DrawerContentScrollView>
                     )}

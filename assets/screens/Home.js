@@ -14,10 +14,9 @@ export default function Home({navigation}) {
             <ThemeContext.Consumer>
                 {(({isDark, colors}) => (
                     <View style={[styles.container, {backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}]} >
-                        <Text onPress={() => {
-                            navigation.navigate(item.navigator, { iconId: item.key })}}
-                              style={[styles.titleStyle, {color: colors.textColor}]}>
-                            {item.title}</Text>
+                        <Text onPress={() => {navigation.navigate(item.navigator, { iconId: item.key })}} style={[styles.titleStyle, {color: colors.textColor}]}>
+                            {item.title}
+                        </Text>
                         <TouchableOpacity onPress={() => {navigation.navigate(item.navigator, { iconId: item.key })}}>
                             <View style={styles.containerBorder}>
                                 <Image
@@ -71,4 +70,4 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         paddingVertical: 30,
     },
-});
+})
