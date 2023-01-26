@@ -15,13 +15,14 @@ import numberQuestion from "../store/temp/store.json"
 import {DisableContext, DisableProvider} from "../context/disabled"
 
 const Tickets = ({item, result}) => {
+
     return (
        <DisableProvider>
            <DisableContext.Consumer>
                {(({isDisabled}) => (
                    <View>
                        <View style={styleTicket.container}>
-                           <Image source={{uri: item.image}} style={styleTicket.img} />
+                           {/*<Image source={img} style={styleTicket.img} />*/}
                        </View>
                        <View>
                            <Text style={styleTicket.title}>
@@ -38,11 +39,9 @@ const Tickets = ({item, result}) => {
     )
 }
 
-
-
-export const Exam = () => {
-    const { scrollItemLayout } = useLayout()
-    const { handlerCountResults, index, ref, route, setIndex, navigation } = useScroll()
+export const ExamScreen = () => {
+    const { scrollItemLayout, getItemLayout } = useLayout()
+    const {handlerCountResults, index, ref, route, setIndex, navigation} = useScroll()
 
     const { uriTicket } = useSwitcher()
 
@@ -56,13 +55,12 @@ export const Exam = () => {
     }, [index])
 
     const IndexRender = ({index, ref, setIndex}) => {
-        const { getItemLayout } = useLayout()
-        const Index = ({indexRender}) => (
+        const IdQuestion = ({idQuestion}) => (
             <View style={stylesVirtual.container}>
                 <TouchableOpacity style={stylesVirtual.container}>
-                    <View style={[{backgroundColor: index === indexRender ? "#FAF7F0" : "#DDDDDD" }]}>
-                        <Text style={stylesVirtual.title} onPress={() => setIndex(indexRender) }>
-                            {indexRender + 1}
+                    <View style={[{backgroundColor: index === idQuestion ? "#FAF7F0" : "#DDDDDD" }]}>
+                        <Text style={stylesVirtual.title} onPress={() => setIndex(idQuestion) }>
+                            {idQuestion + 1}
                         </Text>
                     </View>
                 </TouchableOpacity>
@@ -77,7 +75,7 @@ export const Exam = () => {
                     initialScrollIndex={index}
                     getItemLayout={getItemLayout}
                     data={numberQuestion.id[route.params.key]}
-                    renderItem={({item}) => <Index indexRender={item.key} /> }
+                    renderItem={({item}) => <IdQuestion idQuestion={item.key} /> }
                     initialNumToRender={5}
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={item => item.id}
