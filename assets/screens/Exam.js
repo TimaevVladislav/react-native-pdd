@@ -1,39 +1,50 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
+
 import {useLayout} from "../store/hooks/useLayout"
 import {useScroll} from "../store/hooks/useScroll"
+import {useSwitcher} from "../store/questions"
 
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
-
-import img from "../store/images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
-import {uriTicket} from "../store/questions/index"
+import numberQuestion from "../store/temp/store.json"
+
+import {DisableContext, DisableProvider} from "../context/disabled"
 
 const Tickets = ({item, result}) => {
     return (
-        <View>
-            <View style={styleTicket.container}>
-                <Image source={{uri: item.image}} style={styleTicket.img} />
-            </View>
-            <View>
-                <Text style={styleTicket.title}>
-                    {item.question}
-                </Text>
-                <ButtonsExam answers={item.answers} result={result} />
-                <Favorites />
-            </View>
-        </View>
+       <DisableProvider>
+           <DisableContext.Consumer>
+               {(({isDisabled}) => (
+                   <View>
+                       <View style={styleTicket.container}>
+                           <Image source={{uri: item.image}} style={styleTicket.img} />
+                       </View>
+                       <View>
+                           <Text style={styleTicket.title}>
+                               {item.question}
+                           </Text>
+                           <ButtonsExam item={item} answers={item.answers} result={result} />
+                           <Favorites />
+                       </View>
+                       { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : null }
+                   </View>
+               ))}
+           </DisableContext.Consumer>
+       </DisableProvider>
     )
 }
 
-// <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />
+
 
 export const Exam = () => {
     const { scrollItemLayout } = useLayout()
     const { handlerCountResults, index, ref, route, setIndex, navigation } = useScroll()
+
+    const { uriTicket } = useSwitcher()
 
     useEffect(() => {
         ref.current.scrollToOffset({
@@ -44,7 +55,7 @@ export const Exam = () => {
         navigation.setParams({scrollIndex: index, initialIndex: setIndex})
     }, [index])
 
-    const IndexRender = ({index, ref, route, setIndex}) => {
+    const IndexRender = ({index, ref, setIndex}) => {
         const { getItemLayout } = useLayout()
         const Index = ({indexRender}) => (
             <View style={stylesVirtual.container}>
@@ -65,7 +76,7 @@ export const Exam = () => {
                     ref={ref}
                     initialScrollIndex={index}
                     getItemLayout={getItemLayout}
-                    data={uriTicket}
+                    data={numberQuestion.id[route.params.key]}
                     renderItem={({item}) => <Index indexRender={item.key} /> }
                     initialNumToRender={5}
                     showsHorizontalScrollIndicator={false}
@@ -75,7 +86,6 @@ export const Exam = () => {
         )
     }
 
-    // [`${route.params.key}`]
     return (
         <SafeAreaView>
                <IndexRender index={index} ref={ref} route={route} setIndex={setIndex} />
