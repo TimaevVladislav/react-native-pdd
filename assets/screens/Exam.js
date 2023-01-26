@@ -3,15 +3,17 @@ import {useLayout} from "../store/hooks/useLayout"
 import {useScroll} from "../store/hooks/useScroll"
 
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
-import items from "../store/questions/A_B/tickets/Билет 29.json"
+
+import img from "../store/images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
-const Tickets = ({item, result}) => {
-    console.log(item.image)
 
+import {uriTicket} from "../store/questions/index"
+
+const Tickets = ({item, result}) => {
     return (
         <View>
             <View style={styleTicket.container}>
@@ -22,12 +24,13 @@ const Tickets = ({item, result}) => {
                     {item.question}
                 </Text>
                 <ButtonsExam answers={item.answers} result={result} />
-                {/*<CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />*/}
                 <Favorites />
             </View>
         </View>
     )
 }
+
+// <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />
 
 export const Exam = () => {
     const { scrollItemLayout } = useLayout()
@@ -63,7 +66,7 @@ export const Exam = () => {
                     ref={ref}
                     initialScrollIndex={index}
                     getItemLayout={getItemLayout}
-                    data={items}
+                    data={uriTicket}
                     renderItem={({item}) => <Index indexRender={item.key} /> }
                     initialNumToRender={5}
                     showsHorizontalScrollIndicator={false}
@@ -73,10 +76,9 @@ export const Exam = () => {
         )
     }
 
-
     // [`${route.params.key}`]
     return (
-           <SafeAreaView>
+        <SafeAreaView>
                <IndexRender index={index} ref={ref} route={route} setIndex={setIndex} />
                <FlatList
                    ref={ref}
@@ -86,7 +88,7 @@ export const Exam = () => {
                    initialScrollIndex={index}
                    scrollEnabled={false}
                    showsHorizontalScrollIndicator={false}
-                   data={items}
+                   data={uriTicket}
                    renderItem={({item}) => <Tickets item={item} result={handlerCountResults} /> }
                    keyExtractor={item => item.id}
                />
