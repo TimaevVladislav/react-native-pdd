@@ -3,7 +3,7 @@
     "title": "Вопрос 1",
     "ticket_number": null,
     "ticket_category": "A,B",
-    "image": "./images/A_B/573bb9e760618405e89c02b09f248404.jpg",
+    "image": require("../../../images/A_B/("../.././573bb9e760618405e89c02b09f248404.jpg"),
     "question": "Можно ли водителю легкового автомобиля выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
     "answers": [
       {
@@ -30,7 +30,7 @@
     "title": "Вопрос 2",
     "ticket_number": null,
     "ticket_category": "A,B",
-    "image": "./images/A_B/ddd733bef00665b6608b3e08d9008821.jpg",
+    "image": "./require("../../../images/A_B/("../.././ddd733bef00665b6608b3e08d9008821.jpg",
     "question": "Разрешено ли Вам обогнать мотоцикл?",
     "answers": [
       {
@@ -84,7 +84,7 @@
     "title": "Вопрос 4",
     "ticket_number": null,
     "ticket_category": "A,B",
-    "image": "./images/A_B/a7e01ef08e47195501289152879b1782.jpg",
+    "image": "./require("../../../images/A_B/("../.././a7e01ef08e47195501289152879b1782.jpg",
     "question": "Разрешено ли Вам обогнать мотоцикл?",
     "answers": [
       {
