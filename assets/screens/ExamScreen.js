@@ -22,7 +22,7 @@ const Tickets = ({item, result}) => {
                {(({isDisabled}) => (
                    <View>
                        <View style={styleTicket.container}>
-                           {/*<Image source={img} style={styleTicket.img} />*/}
+                           <Image source={item.image} style={styleTicket.img} />
                        </View>
                        <View>
                            <Text style={styleTicket.title}>
@@ -95,7 +95,7 @@ export const ExamScreen = () => {
                    initialScrollIndex={index}
                    scrollEnabled={false}
                    showsHorizontalScrollIndicator={false}
-                   data={uriTicket}
+                   data={uriTicket.ticket}
                    renderItem={({item}) => <Tickets item={item} result={handlerCountResults} /> }
                    keyExtractor={item => item.id}
                />

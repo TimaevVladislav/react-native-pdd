@@ -1,9 +1,9 @@
-[
+export const ticket = [
   {
     "title": "Вопрос 1",
     "number": 1,
     "ticket_category": "A,B",
-    "image": "../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg",
+    "image": require("../../../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"),
     "question": "В каком случае водитель совершит вынужденную остановку?",
     "answers": [
       {
@@ -30,7 +30,7 @@
     "title": "Вопрос 2",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/eca08a0e2b5ffcd12bdd8ffee34afcc3.jpg",
+    "image": require("../../../images/A_B/eca08a0e2b5ffcd12bdd8ffee34afcc3.jpg"),
     "question": "Разрешен ли Вам съезд на дорогу с грунтовым покрытием?",
     "answers": [
       {
@@ -84,7 +84,7 @@
     "title": "Вопрос 4",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/620fde366bcda9940db20a0019eeeeb4.jpg",
+    "image": require("../../../images/A_B/620fde366bcda9940db20a0019eeeeb4.jpg"),
     "question": "Какие из указанных знаков запрещают движение водителям мопедов?",
     "answers": [
       {
@@ -115,7 +115,7 @@
     "title": "Вопрос 5",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/92730be6f1618ab24232b6c3092607b5.jpg",
+    "image": require("../../../images/A_B/92730be6f1618ab24232b6c3092607b5.jpg"),
     "question": "Вы намерены повернуть налево. Где следует остановиться, чтобы уступить дорогу легковому автомобилю?",
     "answers": [
       {
@@ -204,7 +204,7 @@
     "title": "Вопрос 8",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/b61a6e1c048076e6b8ba01ef6e3ae2d1.jpg",
+    "image": require("../../../images/A_B/b61a6e1c048076e6b8ba01ef6e3ae2d1.jpg"),
     "question": "Как Вам следует поступить при повороте направо?",
     "answers": [
       {
@@ -231,7 +231,7 @@
     "title": "Вопрос 9",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/0de3a44f154b8a1dc98c83ccb64a0c6c.jpg",
+    "image": require("../../../images/A_B/0de3a44f154b8a1dc98c83ccb64a0c6c.jpg"),
     "question": "По какой траектории Вам разрешено выполнить разворот?",
     "answers": [
       {
@@ -258,7 +258,7 @@
     "title": "Вопрос 10",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/e25d143aa53eb44b06b020415b6bee54.jpg",
+    "image": require("../../../images/A_B/e25d143aa53eb44b06b020415b6bee54.jpg"),
     "question": "С какой скоростью Вы можете продолжить движение вне населённого пункта по левой полосе на легковом автомобиле?",
     "answers": [
       {
@@ -285,7 +285,7 @@
     "title": "Вопрос 11",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/573bb9e760618405e89c02b09f248404.jpg",
+    "image": require("../../../images/A_B/573bb9e760618405e89c02b09f248404.jpg"),
     "question": "Можно ли водителю легкового автомобиля выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
     "answers": [
       {
@@ -312,7 +312,7 @@
     "title": "Вопрос 12",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/544ea7fd090765e47fa3b71f060b5f22.jpg",
+    "image": require("../../../images/A_B/544ea7fd090765e47fa3b71f060b5f22.jpg"),
     "question": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
     "answers": [
       {
@@ -339,7 +339,7 @@
     "title": "Вопрос 13",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/3bca6590a23e621ade16916c7de64e44.jpg",
+    "image": require("../../../images/A_B/3bca6590a23e621ade16916c7de64e44.jpg"),
     "question": "При повороте направо Вы должны уступить дорогу:",
     "answers": [
       {
@@ -370,7 +370,7 @@
     "title": "Вопрос 14",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/6a8f690af1b507fc0b56db742709f1e8.jpg",
+    "image": require("../../../images/A_B/6a8f690af1b507fc0b56db742709f1e8.jpg"),
     "question": "Вы намерены проехать перекресток в прямом направлении. Кому Вы должны уступить дорогу?",
     "answers": [
       {
@@ -401,7 +401,7 @@
     "title": "Вопрос 15",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/dd7e958840da9ddd1c102a65d8d5c03f.jpg",
+    "image": require("../../../images/A_B/dd7e958840da9ddd1c102a65d8d5c03f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
     "answers": [
       {
@@ -428,7 +428,7 @@
     "title": "Вопрос 16",
     "ticket_number": "Билет 1",
     "ticket_category": "A,B",
-    "image": "./images/A_B/0211b865b53f26534158a13f8886262f.jpg",
+    "image": require("../../../images/A_B/0211b865b53f26534158a13f8886262f.jpg"),
     "question": "С какой максимальной скоростью можно продолжить движение за знаком?",
     "answers": [
       {

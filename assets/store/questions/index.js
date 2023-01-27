@@ -2,14 +2,14 @@ import {useRoute} from "@react-navigation/native"
 
 export const useSwitcher = () => {
     const route = useRoute()
-    let uriTicket = require('./A_B/tickets/Билет 1.json')
+    let uriTicket = require('./A_B/tickets/Билет 1.js')
 
     switch (route.params.key) {
         case 1:
-            uriTicket = require('./A_B/tickets/Билет 1.json');
+            uriTicket = require('./A_B/tickets/Билет 1.js');
             break
         case 2:
-            uriTicket = require('./A_B/tickets/Билет 2.json');
+            uriTicket = require('./A_B/tickets/Билет 2.js');
             break
         case 3:
             uriTicket = require('./A_B/tickets/Билет 3.json');
