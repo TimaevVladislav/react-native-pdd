@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Пдд",
-    "slug": "Пдд",
+    "slug": "Awesome",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -30,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b012667b-432b-4f76-9a0e-707056183d99"
+      }
     }
   }
 }

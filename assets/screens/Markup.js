@@ -1,5 +1,5 @@
 import React from "react"
-import List from "../components/FloatList"
+import List from "../components/layouts/Sections"
 import {items} from "../store/temp/markup.json"
 import {markup} from "../store/temp/markup.json"
 

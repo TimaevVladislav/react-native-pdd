@@ -1,21 +1,16 @@
 import React from 'react'
 import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from 'react-native'
-import {useNavigation, useRoute} from "@react-navigation/native"
+import {useNavigation} from "@react-navigation/native"
 
+const DATA = []
+export default function Tickets() {
 
-const DATA = [];
-
-
-export default function VirtualList(route) {
-
-    const navigation = useNavigation();
+    const navigation = useNavigation()
     const getItem = (data, index) => ({
         id: Math.random().toString(12).substring(0),
         title: index + 1
-    });
-
-    const getItemCount = (data) => 40;
-
+    })
+    const getItemCount = (data) => 40
     const Item = (item) => (
         <TouchableOpacity onPress={() => navigation.navigate("Экзамен", {name: `Билет ${item.title}`, key: item.title})}>
             <View style={style.item}>
@@ -24,7 +19,7 @@ export default function VirtualList(route) {
                 </View>
             </View>
         </TouchableOpacity>
-    );
+    )
 
     return (
         <SafeAreaView>
@@ -37,9 +32,8 @@ export default function VirtualList(route) {
                 getItem={getItem}
             />
         </SafeAreaView>
-    );
+    )
 }
-
 
 export const style = StyleSheet.create({
     item: {
@@ -62,5 +56,5 @@ export const style = StyleSheet.create({
         alignItems: "center",
         marginLeft: -20
     }
-});
+})
 

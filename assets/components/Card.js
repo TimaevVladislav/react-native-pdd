@@ -11,7 +11,7 @@ import {ThemeContext} from "../store/provider/ThemeProvider"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
-export default function CardComponent({route, navigation}) {
+export default function Card({route, navigation}) {
 
     const { setDropdown, setSearch, setClicked } = useContext(SearchContext)
 

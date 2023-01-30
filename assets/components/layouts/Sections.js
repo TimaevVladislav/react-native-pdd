@@ -1,41 +1,35 @@
 import React, {useState} from "react"
-import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-    VirtualizedList
-} from "react-native"
+import {ScrollView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
 
 import {useNavigation, useRoute} from "@react-navigation/native"
-import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
+import {ThemeContext} from "../../store/provider/ThemeProvider"
+import {DARK_COLORS, LIGHT_COLORS} from "../../store/colors"
 
 const List = props => (
     <ThemeContext.Consumer>
         {(({isDark}) => (
             <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
-                <FloatList data={props.data} />
+                <Sections data={props.data} />
             </ScrollView>
         ))}
     </ThemeContext.Consumer>
 )
-
-export default List;
-function FloatList(props) {
+export default List
+function Sections(props) {
     const route = useRoute()
     const [data, setData] = useState(props.data);
     const navigation = useNavigation();
     const getItem = (data, index) => data[index]
 
     const Item = (item) => (
-        <TouchableOpacity onPress={() => navigation.navigate("Signs", {name: item.title, id: item.id, iconId: route.params.iconId - 1})}>
+        <TouchableOpacity onPress={() => navigation.navigate("Signs", {
+            name: item.title, id: item.id
+        })}>
             <View style={[styles.item]}>
                 <Text style={[styles.title]}>{item.title}</Text>
             </View>
         </TouchableOpacity>
-    );
+    )
 
     return (
             <VirtualizedList
@@ -46,9 +40,8 @@ function FloatList(props) {
                 getItemCount={data => data.length}
                 getItem={getItem}
             />
-    );
+    )
 }
-
 export const styles = StyleSheet.create({
     itemImage: {
         height: 20,
@@ -80,4 +73,4 @@ export const styles = StyleSheet.create({
         height: 100,
         borderRadius: 5
     },
-});
+})

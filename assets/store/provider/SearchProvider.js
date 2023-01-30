@@ -18,11 +18,11 @@ export const SearchProvider = ({children}) => {
     const searchFilterFunction = (text) => {
         if (text) {
             const newData = results.filter(item => {
-                const itemData = item.heading ? item.heading.toUpperCase() : ''.toUpperCase();
-                const textData = text.toUpperCase();
+                const itemData = item.heading ? item.heading.toUpperCase() : ''.toUpperCase()
+                const textData = text.toUpperCase()
 
-                return itemData.indexOf(textData) > -1;
-            });
+                return itemData.indexOf(textData) > -1
+            })
             setFiltered(newData)
             setSearch(text)
         } else {

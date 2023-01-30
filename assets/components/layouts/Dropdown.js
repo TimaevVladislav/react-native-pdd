@@ -1,31 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {useNavigation} from "@react-navigation/native"
 
 import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
-import {SearchContext} from "../store/provider/SearchProvider"
-import {svgSigns, svgMarkup} from "./SvgXml"
-import {SvgXml} from "react-native-svg"
+import {SearchContext} from "../../store/provider/SearchProvider"
+import {LocalSvg} from "../LocalSvg"
+import {useSwitcher} from "../../store/icons"
 
-export default function Dropdown({iconId}) {
+export default function Dropdown() {
 
-    const initialIcons = [
-        { id: 0, icon: svgSigns[0] },
-        { id: 1, icon: svgSigns[1] },
-        { id: 2, icon: svgSigns[2] },
-        { id: 3, icon: svgSigns[3] },
-        { id: 4, icon: svgSigns[4] },
-        { id: 5, icon: svgSigns[5] },
-        { id: 6, icon: svgSigns[6] }
-    ]
+    const {} = useSwitcher()
     const navigation = useNavigation()
-    const [icon, setIcon] = useState(initialIcons)
-
-    const Icons = () => (
-        <View>
-            <SvgXml xml={icon[iconId].icon} width={100} height={87} />
-        </View>
-    )
-
     const RenderDropdown = () => (
         <SearchContext.Consumer>
             {(({filtered}) => (
@@ -52,8 +36,6 @@ export default function Dropdown({iconId}) {
         </View>
     )
 
-
-
     const DropdownMenu = ({heading, title, text, icon}) => (
         <SearchContext.Consumer>
             {(({setSearch, setClicked, setDropdown}) => (
@@ -62,7 +44,7 @@ export default function Dropdown({iconId}) {
                     dropdownHandler(setSearch, setDropdown, setClicked) }}
                 >
                     <View style={style.row}>
-                        <Icons />
+                        <LocalSvg asset={icon} />
                         <Heading heading={heading} />
                     </View>
                 </TouchableOpacity>
@@ -71,7 +53,7 @@ export default function Dropdown({iconId}) {
     )
 
     return <RenderDropdown />
-};
+}
 
 const style = StyleSheet.create({
     container: {

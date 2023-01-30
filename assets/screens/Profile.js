@@ -1,5 +1,5 @@
 import React, {createContext} from "react"
-import List from "../components/FloatList"
+import List from "../components/layouts/Sections"
 import {items, item} from "../store/temp/rules.json"
 
 

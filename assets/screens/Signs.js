@@ -1,11 +1,11 @@
 import React, {createContext} from "react"
 
-import List from "../components/FloatList"
+import List from "../components/layouts/Sections"
 import {items} from "../store/temp/signs.json"
 import {item} from "../store/temp/signs.json"
 
 export const ContextSigns = createContext({
-    indexSigns: items ,
+    indexSigns: items,
     signs: [
         item.warning,
         item.priority,

@@ -4,7 +4,6 @@ import {ThemeContext} from "../store/provider/ThemeProvider"
 
 const STATUS_BAR_HEIGHT = 50;
 
-
 export const StatusBarkComponent = () => {
     const { isDark, colors } = useContext(ThemeContext)
 

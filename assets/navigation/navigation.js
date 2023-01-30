@@ -9,8 +9,8 @@ import Results, {CloseOutline} from "../screens/Results"
 import {Policies, FeedBack} from "../screens/Settings"
 
 
-import Tickets from "../components/VirtualList"
-import CardComponent from "../components/CardComponent"
+import Tickets from "../components/layouts/Tickets"
+import Card from "../components/Card"
 import SignsList from "../components/SignsList"
 import MainButtons from "../components/MainButtons"
 import {Search} from "../components/SearchComponent"
@@ -55,7 +55,7 @@ export default function Navigation () {
         <Stack.Group>
             {HomeScreens(Stack)}
             {TicketsScreens(Stack)}
-            <Stack.Screen name="Карточка" component={CardComponent} options={({route}) => ({title: route.params.heading})} />
+            <Stack.Screen name="Карточка" component={Card} options={({route}) => ({title: route.params.heading})} />
             <Stack.Screen
                 name="Обратная связь"
                 component={FeedBack}

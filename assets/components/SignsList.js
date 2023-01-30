@@ -5,6 +5,7 @@ import {Text, View, VirtualizedList, ScrollView, StyleSheet} from "react-native"
 
 import {styleSigns} from "../store/globalStyle"
 import {SvgUri} from "react-native-svg"
+import images from "../store/icons/extra/svgexport-220.svg"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
@@ -12,7 +13,8 @@ import {ThemeContext} from "../store/provider/ThemeProvider"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
-import Dropdown from "./Dropdown"
+import Dropdown from "./layouts/Dropdown"
+import {LocalSvg} from "./LocalSvg";
 
 
 const SignsList = () => (
@@ -26,7 +28,7 @@ const SignsList = () => (
 )
 
 
-export default SignsList;
+export default SignsList
 
 function FloatList () {
     const route = useRoute()
@@ -86,7 +88,7 @@ function FloatList () {
     const Item = ({heading, title, text, img}) => (
         <ScrollView>
             <View style={styleSigns.p}>
-                <SvgUri uri={img} />
+                <LocalSvg asset={img} />
             </View>
             <View>
                 <Text style={[styleSigns.heading]}>
@@ -102,17 +104,17 @@ function FloatList () {
         </ScrollView>
     )
 
-
     return (
                <SearchContext.Consumer>
                    {(({dropdown, filtered}) => (
                        <>
                            <Text style={style.container}>{filtered === null ? "Ничего не найдено" : route.params.name }</Text>
-                           {dropdown ? <Dropdown iconId={route.params.iconId} /> :
+                           {dropdown ? <Dropdown /> :
                                <VirtualizedList
                                    data={state}
                                    initialNumToRender={4}
                                    renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
+                                   extraData={({item}) => { console.log(item )}}
                                    keyExtractor={item => item.key}
                                    getItemCount={data => data.length}
                                    getItem={getItem}
