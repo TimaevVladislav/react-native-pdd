@@ -3,14 +3,14 @@ import {useNavigation, useRoute} from "@react-navigation/native"
 import {Text, View, VirtualizedList, ScrollView, StyleSheet} from "react-native"
 
 
-import {styleSigns} from "../store/globalStyle"
+import {styleSigns} from "../store/temp/data/styles"
 import {SvgUri} from "react-native-svg"
 import images from "../store/icons/extra/svgexport-220.svg"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
 import Dropdown from "./layouts/Dropdown"

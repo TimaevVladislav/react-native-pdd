@@ -1,26 +1,26 @@
 import React, {createContext} from "react"
 
-import List from "../components/layouts/Sections"
-import {items} from "../store/temp/signs.json"
-import {item} from "../store/temp/signs.json"
+import Section from "../components/layouts/Sections"
+
+import {data} from "../store/temp/data/data.js"
 
 export const ContextSigns = createContext({
-    indexSigns: items,
+    indexSigns: data.items,
     signs: [
-        item.warning,
-        item.priority,
-        item.prohibition,
-        item.prescriptive,
-        item.special,
-        item.info,
-        item.services,
-        item.extra
+        data.item.warning,
+        data.item.priority,
+        data.item.prohibition,
+        data.item.prescriptive,
+        data.item.special,
+        data.item.info,
+        data.item.services,
+        data.item.extra
     ]
 })
 
 
 const Signs = () => {
-    return <List data={items} />
+    return <Section data={data.items} />
 
 }
 

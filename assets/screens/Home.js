@@ -1,7 +1,7 @@
 import React from 'react'
-import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {items} from "../store/item"
+import {items} from "../store/temp/data/item"
 
 import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'

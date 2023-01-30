@@ -3,7 +3,7 @@ import {Text, View, ScrollView, StyleSheet, TouchableOpacity, SafeAreaView, Text
 
 import CheckBox from 'expo-checkbox'
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SvgUri} from "react-native-svg"
 
 export default function Settings({navigation}) {

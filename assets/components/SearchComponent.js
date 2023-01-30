@@ -9,9 +9,9 @@ import {
 } from 'react-native'
 
 
-import {items} from "../store/temp/signs.json"
+import {data} from "../store/temp/data/data.js"
 
-import {styleSearch} from "../store/globalStyle"
+import {styleSearch} from "../store/temp/data/styles"
 import {Entypo, Feather} from "@expo/vector-icons"
 
 import {ContextSigns} from "../screens/Signs"
@@ -32,8 +32,6 @@ export const Search = () => (
 const SearchComponent = () => {
 
     const route = useRoute()
-    const navigation = useNavigation()
-
     const {setFiltered, setResults} = useContext(SearchContext)
 
     const {signs, indexSigns} = useContext(ContextSigns)
@@ -41,9 +39,8 @@ const SearchComponent = () => {
     const {vertical, horizontal} = useContext(ContextMarkup)
 
 
-    const getTitle = items.map(item => item.title)
+    const getTitle = data.items.map(item => item.title)
     const getNameRules = indexRules.map(item => item.title)
-
 
     function Markup() {
         if(route.params.name == "Горизонтальная разметка"){
@@ -117,21 +114,4 @@ const SearchComponent = () => {
                 </ThemeContext.Consumer>
     )
 }
-
-
-const styles = StyleSheet.create({
-    container:{
-        marginVertical: 10,
-        marginHorizontal: 10
-    },
-    heading: {
-        marginVertical: 5,
-        fontSize: 18,
-        fontWeight: "bold"
-    },
-    item: {
-        marginVertical: 5,
-        marginHorizontal: 5
-    }
-});
 

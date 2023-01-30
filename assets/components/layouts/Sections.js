@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} f
 
 import {useNavigation, useRoute} from "@react-navigation/native"
 import {ThemeContext} from "../../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../../store/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../../store/temp/data/colors"
 
 const List = props => (
     <ThemeContext.Consumer>

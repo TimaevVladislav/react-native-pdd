@@ -4,11 +4,8 @@ import {useNavigation} from "@react-navigation/native"
 import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
 import {SearchContext} from "../../store/provider/SearchProvider"
 import {LocalSvg} from "../LocalSvg"
-import {useSwitcher} from "../../store/icons"
 
 export default function Dropdown() {
-
-    const {} = useSwitcher()
     const navigation = useNavigation()
     const RenderDropdown = () => (
         <SearchContext.Consumer>
@@ -17,7 +14,7 @@ export default function Dropdown() {
                     data={filtered}
                     ItemSeparatorComponent={ItemSeparator}
                     keyExtractor={(item, index) => index.toString()}
-                    renderItem={({item}) => <DropdownMenu heading={item.heading} title={item.title} icon={item.img} text={item.text} />}
+                    renderItem={({item}) => <DropdownMenu item={item} icon={item.img} heading={item.heading} />}
                 />
             ))}
         </SearchContext.Consumer>
@@ -36,16 +33,18 @@ export default function Dropdown() {
         </View>
     )
 
-    const DropdownMenu = ({heading, title, text, icon}) => (
+    const DropdownMenu = ({item, icon, heading}) => (
         <SearchContext.Consumer>
             {(({setSearch, setClicked, setDropdown}) => (
-                <TouchableOpacity style={style.container} onPress={() => {
-                    navigation.navigate("Карточка", { heading: heading, icons: icon, titles: title, texts: text }),
-                    dropdownHandler(setSearch, setDropdown, setClicked) }}
-                >
+                <TouchableOpacity style={style.container} onPress={() => {navigation.navigate("Карточка", {
+                    heading: heading,
+                    item: item,
+                    icon: icon
+                }), dropdownHandler(setSearch, setDropdown, setClicked)
+                }}>
                     <View style={style.row}>
                         <LocalSvg asset={icon} />
-                        <Heading heading={heading} />
+                        <Heading heading={item.heading} />
                     </View>
                 </TouchableOpacity>
             ))}

@@ -5,16 +5,16 @@ import {
     View
 } from "react-native"
 import {SvgUri} from "react-native-svg"
-import {styleSigns} from "../store/globalStyle"
+import {styleSigns} from "../store/temp/data/styles"
 
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
+import {LocalSvg} from "./LocalSvg";
 
 export default function Card({route, navigation}) {
 
     const { setDropdown, setSearch, setClicked } = useContext(SearchContext)
-
     const closeDropdownHandler = () => {
         setSearch(""),
         setDropdown(true),
@@ -36,17 +36,17 @@ export default function Card({route, navigation}) {
             {(({isDark, setColorScheme, colors}) => (
                 <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
                     <Text style={[styleSigns.heading, {color: colors.textColor}]}>
-                        {route.params.heading}
+                        {route.params.item.heading}
                     </Text>
                     <View style={styleSigns.p}>
-                        <SvgUri uri={route.params.icons}/>
+                        <LocalSvg asset={route.params.icon} />
                     </View>
                     <View>
                         <Text style={[styleSigns.title, {color: colors.textColor}]}>
-                            {route.params.titles}
+                            {route.params.item.title}
                         </Text>
                         <Text style={[styleSigns.text, {color: colors.textColor}]}>
-                            {route.params.texts}
+                            {route.params.item.text}
                         </Text>
                     </View>
                 </ScrollView>
