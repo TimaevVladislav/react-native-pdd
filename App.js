@@ -27,5 +27,5 @@ export default function App() {
                       </ThemeContext.Consumer>
               </SearchProvider>
           </ThemeProvider>
-  );
+  )
 }

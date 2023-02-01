@@ -1,11 +1,9 @@
 import React, {useState, useEffect, useContext} from "react"
 import {useNavigation, useRoute} from "@react-navigation/native"
-import {Text, View, VirtualizedList, ScrollView, StyleSheet} from "react-native"
+import {Text, View, VirtualizedList, ScrollView} from "react-native"
 
 
 import {styleSigns} from "../store/temp/data/styles"
-import {SvgUri} from "react-native-svg"
-import images from "../store/icons/extra/svgexport-220.svg"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
@@ -14,7 +12,8 @@ import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
 import Dropdown from "./layouts/Dropdown"
-import {LocalSvg} from "./LocalSvg";
+import {LocalSvg} from "./LocalSvg"
+import {Loader} from "./Loader"
 
 
 const SignsList = () => (
@@ -105,32 +104,22 @@ function FloatList () {
     )
 
     return (
-               <SearchContext.Consumer>
-                   {(({dropdown, filtered}) => (
-                       <>
-                           <Text style={style.container}>{filtered === null ? "Ничего не найдено" : route.params.name }</Text>
-                           {dropdown ? <Dropdown /> :
-                               <VirtualizedList
-                                   data={state}
-                                   initialNumToRender={4}
-                                   renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
-                                   extraData={({item}) => { console.log(item )}}
-                                   keyExtractor={item => item.key}
-                                   getItemCount={data => data.length}
-                                   getItem={getItem}
-                               />
-                           }
-                       </>
-                   ))}
-               </SearchContext.Consumer>
-    );
+        <SearchContext.Consumer>
+                       {(({dropdown, filtered, results}) => (
+                           <>
+                              <Loader heading={route.params.name} />
+                               {dropdown ? <Dropdown /> :
+                                   <VirtualizedList
+                                       data={state}
+                                       initialNumToRender={4}
+                                       renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
+                                       keyExtractor={item => item.key}
+                                       getItemCount={data => data.length}
+                                       getItem={getItem}
+                                   />
+                               }
+                           </>
+                       ))}
+        </SearchContext.Consumer>
+    )
 }
-
-const style = StyleSheet.create({
-    container:{
-        textAlign: "center",
-        fontWeight: "bold",
-        fontSize: 18,
-        padding: 20
-    }
-})

@@ -1,11 +1,7 @@
 import React, {useEffect, useContext} from 'react'
-import {useNavigation, useRoute} from "@react-navigation/native"
+import {useRoute} from "@react-navigation/native"
 import {
-    SafeAreaView,
-    StyleSheet,
-    View,
-    TextInput,
-    Keyboard,
+    SafeAreaView, View, TextInput, Keyboard,
 } from 'react-native'
 
 

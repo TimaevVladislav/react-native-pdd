@@ -4,13 +4,13 @@ import {
     Text,
     View
 } from "react-native"
-import {SvgUri} from "react-native-svg"
+
 import {styleSigns} from "../store/temp/data/styles"
 
 import {ThemeContext} from "../store/provider/ThemeProvider"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
-import {LocalSvg} from "./LocalSvg";
+import {LocalSvg} from "./LocalSvg"
 
 export default function Card({route, navigation}) {
 

@@ -13,34 +13,33 @@ import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 import numberQuestion from "../store/temp/store.json"
 
 import {DisableContext, DisableProvider} from "../context/disabled"
+import {useColor} from "../store/hooks/useColor";
 
-const Tickets = ({item, result}) => {
-
-    return (
-       <DisableProvider>
-           <DisableContext.Consumer>
-               {(({isDisabled}) => (
-                   <View>
-                       <View style={styleTicket.container}>
-                           <Image source={item.image} style={styleTicket.img} />
-                       </View>
-                       <View>
-                           <Text style={styleTicket.title}>
-                               {item.question}
-                           </Text>
-                           <ButtonsExam item={item} answers={item.answers} result={result} />
-                           <Favorites />
-                       </View>
-                       { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : null }
-                   </View>
-               ))}
-           </DisableContext.Consumer>
-       </DisableProvider>
-    )
-}
+const Tickets = ({item, result}) => (
+    <DisableProvider>
+        <DisableContext.Consumer>
+            {(({isDisabled}) => (
+                <View>
+                    <View style={styleTicket.container}>
+                        <Image source={item.image} style={styleTicket.img} />
+                    </View>
+                    <View>
+                        <Text style={styleTicket.title}>
+                            {item.question}
+                        </Text>
+                        <ButtonsExam item={item} answers={item.answers} result={result} />
+                        <Favorites />
+                    </View>
+                    { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : null }
+                </View>
+            ))}
+        </DisableContext.Consumer>
+    </DisableProvider>
+)
 
 export const ExamScreen = () => {
     const { scrollItemLayout, getItemLayout } = useLayout()
+    const {colors} = useColor()
     const {handlerCountResults, index, ref, route, setIndex, navigation} = useScroll()
 
     const { uriTicket } = useSwitcher()

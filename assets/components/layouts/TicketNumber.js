@@ -1,26 +1,20 @@
 import React from 'react'
 import {SafeAreaView, StyleSheet, Button, TouchableHighlight, VirtualizedList} from 'react-native'
 
-
-
-
-const DATA = [];
+const DATA = []
 
 const getItem = (data, index) => ({
     id: index,
     title: index + 1
-});
-
-const getItemCount = (data) => 20;
-
+})
+const getItemCount = (data) => 20
 
 const Item = ({ title, id }) => (
    <TouchableHighlight style={styles.container}>
-           <Button style={styles.title} title={id} color="grey" />
+       <Button style={styles.title} title={id} color="grey" />
    </TouchableHighlight>
-);
-
-export default function VirtualList() {
+)
+export default function TicketNumber() {
     return (
         <SafeAreaView>
             <VirtualizedList

@@ -6,20 +6,21 @@ import {styleTicket} from "../screens/ExamScreen"
 
 import {DrawerItem} from "@react-navigation/drawer"
 import {Share} from "react-native"
+import {useColor} from "../store/hooks/useColor";
 
 export const ButtonsExam = ({answers, item}) => {
 
-    const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
+    const {handlerColorChange, colors} = useColor()
     const [isDisabled, setIsDisabled] = useState(false)
+    // const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
 
-    const handlerColorChange = (answer, buttonId) => {
-        if (!answer.is_correct) {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
-        } else {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
-        }
-        setIsDisabled(true)
-    }
+    // const handlerColorChange = (answer, buttonId) => {
+    //     if (!answer.is_correct) {
+    //         setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
+    //     } else {
+    //         setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
+    //     }
+    // }
 
 
     return (
@@ -27,7 +28,7 @@ export const ButtonsExam = ({answers, item}) => {
             <View style={styleTicket.container} >
                 <TouchableOpacity
                     disabled={isDisabled}
-                    onPress={() => {handlerColorChange(answer, i)}}
+                    onPress={() => {setIsDisabled(true), handlerColorChange(answer, i)}}
                     style={[{backgroundColor: colors[i] }, styleTicket.item]}>
                     <Text style={styleTicket.itemText}>
                         {`${i + 1}.  ${answer.answer_text}`}
