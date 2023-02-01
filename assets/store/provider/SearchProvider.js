@@ -1,13 +1,11 @@
 import React, {useState} from "react"
-
+import {Text} from "react-native"
 // контекст с параметрами по умолчанию
 export const SearchContext = React.createContext({
     setResults: () => {},
     setClicked: () => {},
-});
-
+})
 export const SearchProvider = ({children}) => {
-
     const [dropdown, setDropdown] = useState(false)
     const [clicked, setClicked] = useState(false)
 
@@ -21,6 +19,10 @@ export const SearchProvider = ({children}) => {
                 const itemData = item.heading ? item.heading.toUpperCase() : ''.toUpperCase()
                 const textData = text.toUpperCase()
 
+                if(!itemData) {
+                    return <Text style={style.container}>Ничего не найдено</Text>
+                }
+
                 return itemData.indexOf(textData) > -1
             })
             setFiltered(newData)
@@ -29,7 +31,7 @@ export const SearchProvider = ({children}) => {
             setFiltered(results)
             setSearch(text)
         }
-    };
+    }
 
 
 
@@ -37,17 +39,18 @@ export const SearchProvider = ({children}) => {
         filtered,
         dropdown, setDropdown,
         search,
+        results,
         clicked,
         setClicked,
         setSearch,
         setFiltered,
         setResults,
         searchFilterFunction
-    };
+    }
 
     return (
         <SearchContext.Provider value={defaultStates}>
             {children}
         </SearchContext.Provider>
-    );
-};
+    )
+}
