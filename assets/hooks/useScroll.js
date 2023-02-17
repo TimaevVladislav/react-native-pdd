@@ -1,6 +1,6 @@
-import React from "react"
+import React, {useState, useEffect, useRef} from "react"
+export const useScroll = () => {
 
-export const useLayout = () => {
 
     const getItemLayout = (data, index) => {
         const FIXED_ITEM_HEIGHT = 100
@@ -12,7 +12,6 @@ export const useLayout = () => {
             animated: true,
         }
     }
-
     const scrollItemLayout = (data, index) => ({
         length: index,
         index,
@@ -21,5 +20,4 @@ export const useLayout = () => {
     })
 
     return { getItemLayout, scrollItemLayout }
-
 }

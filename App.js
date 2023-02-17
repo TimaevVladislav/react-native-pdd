@@ -12,19 +12,15 @@ export default function App() {
   return (
           <ThemeProvider>
               <SearchProvider>
-                      <ThemeContext.Consumer>
-                          {(({isDark, name}) => (
-                              <NavigationContainer>
-                                  <Stack.Navigator screenOptions={{
-                                      headerStyle: {
-                                          backgroundColor: isDark ? DARK_COLORS.layout : "#0d6efd"},
-                                      headerTintColor: '#fff'
-                                  }}>
-                                      {Navigation()}
-                                  </Stack.Navigator>
-                              </NavigationContainer>
-                          ))}
-                      </ThemeContext.Consumer>
+                          <ThemeContext.Consumer>
+                              {(({isDark, name}) => (
+                                  <NavigationContainer>
+                                      <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: isDark ? DARK_COLORS.layout : "#0d6efd"}, headerTintColor: '#fff'}}>
+                                          {Navigation()}
+                                      </Stack.Navigator>
+                                  </NavigationContainer>
+                              ))}
+                          </ThemeContext.Consumer>
               </SearchProvider>
           </ThemeProvider>
   )

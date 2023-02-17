@@ -1,6 +1,6 @@
 import React from 'react'
 import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from 'react-native'
-import {useNavigation} from "@react-navigation/native"
+import {useNavigation, useRoute} from "@react-navigation/native"
 
 const DATA = []
 export default function Tickets() {
@@ -10,7 +10,9 @@ export default function Tickets() {
         id: Math.random().toString(12).substring(0),
         title: index + 1
     })
+
     const getItemCount = (data) => 40
+
     const Item = (item) => (
         <TouchableOpacity onPress={() => navigation.navigate("Экзамен", {name: `Билет ${item.title}`, key: item.title})}>
             <View style={style.item}>

@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 5",
+    "ticket_question": 1,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ce8143ad50a020d95e71ef301c5b4db8.jpg"),
     "question": "Сколько проезжих частей имеет данная дорога?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "949ad9d90453b3e0ae538134a76ec3b1"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 5",
+    "ticket_question": 2,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/54a3b241d955aedbde9a46400f9265dd.jpg"),
     "question": "При наличии какого знака водитель должен уступить дорогу, если встречный разъезд затруднен?",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "e632f22e2729108273f99b70fbcb51a0"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 5",
+    "ticket_question": 3,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3a5beeaca034a8b445f7031a56cb3fb2.jpg"),
     "question": "Разрешена ли Вам стоянка в указанном месте?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "0409a86f19100ec27cfc4ebdf7c3e715"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 5",
+    "ticket_question": 4,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/504b46e9c726ae266f448703767c59fd.jpg"),
     "question": "Нарушил ли водитель грузового автомобиля правила стоянки?",
@@ -113,8 +113,8 @@ export const ticket = [
     "id": "19e0c1237409e47951528ade0d1e2667"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 5",
+    "ticket_question": 5,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6f817d0ef695944185768921913eb549.jpg"),
     "question": "О чем предупреждает Вас вертикальная разметка, нанесенная на ограждение дороги?",
@@ -140,8 +140,8 @@ export const ticket = [
     "id": "e5acbb3fe1e735ec7d5c4a1822a9786a"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 5",
+    "ticket_question": 6,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли водителю продолжить движение после переключения зеленого сигнала светофора на желтый, если возможно остановиться перед перекрестком, только применив экстренное торможение?",
@@ -167,8 +167,8 @@ export const ticket = [
     "id": "73fcecf93aa3f28ee07ecc0cecc9c36a"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 5",
+    "ticket_question": 7,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f5b851c076daed6a37e5d257a1a6ac40.jpg"),
     "question": "Поднятая вверх рука водителя мотоцикла является сигналом, информирующим Вас о его намерении:",
@@ -194,8 +194,8 @@ export const ticket = [
     "id": "9fadeb78415386ced1c7988c64754fa4"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 5",
+    "ticket_question": 8,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/568531e4128e515b517fd19ea3d777e0.jpg"),
     "question": "В каких направлениях Вам можно продолжить движение по левой полосе на грузовом автомобиле с разрешенной максимальной массой не более 3,5 т?",
@@ -221,8 +221,8 @@ export const ticket = [
     "id": "06a70d602087cfea97f58f5d3eebc8a2"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 5",
+    "ticket_question": 9,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/09e32bf1387c6f8f4485d63390c6aa13.jpg"),
     "question": "Вам необходимо повернуть на примыкающую справа дорогу. Ваши действия?",
@@ -248,8 +248,8 @@ export const ticket = [
     "id": "8990770b5c14676a3c0265ef49ad17fc"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 5",
+    "ticket_question": 10,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5fa0335dd123f090cef5df5d9c69ac34.jpg"),
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на легковом автомобиле с прицепом вне населенного пункта?",
@@ -283,8 +283,8 @@ export const ticket = [
     "id": "bd5b66aaf952ac25586fcf5bcf0c0232"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 5",
+    "ticket_question": 11,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5b0fd17cc1af4de1d099c6868930117d.jpg"),
     "question": "Разрешен ли Вам обгон?",
@@ -310,8 +310,8 @@ export const ticket = [
     "id": "120e58fc8c6b182e4faf9d0cc2930645"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 5",
+    "ticket_question": 12,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/456767f8b2e0d39f83d8f9f1b2a378da.jpg"),
     "question": "Кто из водителей нарушил правила стоянки?",
@@ -341,8 +341,8 @@ export const ticket = [
     "id": "592c5535461a8d7a15d496c3d5862a0e"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 5",
+    "ticket_question": 13,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/80092d887fe7b764db1e0a7d64742489.jpg"),
     "question": "Вы намерены развернуться. Ваши действия?",
@@ -368,8 +368,8 @@ export const ticket = [
     "id": "c4547df34b93be087eee947c49c039de"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 5",
+    "ticket_question": 14,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e320da78c9d6109eca702486f83cf428.jpg"),
     "question": "Кому Вы должны уступить дорогу при движении в прямом направлении?",
@@ -395,8 +395,8 @@ export const ticket = [
     "id": "eab47901eebad4a8a34538c55ddf4093"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 5",
+    "ticket_question": 15,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7df7c50058db5aa70e39af72c22dd9ba.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -422,8 +422,8 @@ export const ticket = [
     "id": "19d2d8580ea765d6b86cfad8bf2df9a5"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 5",
+    "ticket_question": 16,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6b8687a08d54c2061c2283d41aef4685.jpg"),
     "question": "Разрешено ли Вам проехать железнодорожный переезд?",
@@ -449,8 +449,8 @@ export const ticket = [
     "id": "0e6a2b2619a50ecac179910231ee10af"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 5",
+    "ticket_question": 17,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях разрешено применять звуковые сигналы в населённых пунктах?",
@@ -476,8 +476,8 @@ export const ticket = [
     "id": "fbe167844b4b14e76a09a785d6c4cedb"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 5",
+    "ticket_question": 18,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При каком максимальном значении суммарного люфта в рулевом управлении допускается эксплуатация легкового автомобиля?",
@@ -503,8 +503,8 @@ export const ticket = [
     "id": "730e7875bc85b16fc38eb7ff933f621b"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 5",
+    "ticket_question": 19,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как следует поступить водителю при высадке из автомобиля, стоящего у тротуара или на обочине?",
@@ -530,8 +530,8 @@ export const ticket = [
     "id": "3363151e1f25d7698a72ee5ab190f1d8"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 5",
+    "ticket_question": 20,
+    "ticket_number": 5,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d4a7cf1f7c02eb99ec3ecd045dffecd5.jpg"),
     "question": "При движении в условиях тумана расстояние до предметов представляется:",

@@ -1,8 +1,10 @@
 import {useRoute} from "@react-navigation/native"
-
 export const useSwitcher = () => {
     const route = useRoute()
     let uriTicket = require('./A_B/tickets/Билет 1.js')
+    let ticket_question = uriTicket.ticket.map(item => item.ticket_question)
+    let ticket_number = uriTicket.ticket.map(item => item.ticket_number)
+
 
     switch (route.params.key) {
         case 1:
@@ -127,5 +129,5 @@ export const useSwitcher = () => {
             break
 
     }
-    return {uriTicket}
+    return { uriTicket, ticket_number, ticket_question }
 }

@@ -54,8 +54,8 @@
     "id": "6d8cc184e714bdeae83c26e52d732f05"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 4",
+    "ticket_question": 3,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/a938e7f7035c4e2406a54463b5029227.jpg",
     "question": "Какой из указанных знаков распространяет своё действие только на ту полосу, над которой он установлен?",
@@ -81,8 +81,8 @@
     "id": "fe3ad290593244a39fb054dcc47b0599"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 4",
+    "ticket_question": 4,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/7d4680cd6374836b7df9f11a15c93bf7.jpg",
     "question": "Вы буксируете неисправный автомобиль. По какой полосе Вам можно продолжить движение в населенном пункте?",
@@ -109,8 +109,8 @@
     "id": "b7ffa71c5a1ef03792b1461e851f626b"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 4",
+    "ticket_question": 5,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что означает разметка в виде надписи «СТОП» на проезжей части?",
@@ -136,8 +136,8 @@
     "id": "479306c3daf4dbc34e7595e66f9671d5"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 4",
+    "ticket_question": 6,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/047f624b1748abed2de5cda9af0c2081.jpg",
     "question": "Каким транспортным средствам разрешено движение прямо?",
@@ -167,8 +167,8 @@
     "id": "0cc812096bd97923077666071b2b2f2a"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 4",
+    "ticket_question": 7,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/899254bfa2059147a6e2515c436b17ed.jpg",
     "question": "Вы намерены продолжить движение по главной дороге. Обязаны ли Вы при этом включить указатели правого поворота?",
@@ -194,8 +194,8 @@
     "id": "92f98e6b50533241becffcca0d638c8e"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 4",
+    "ticket_question": 8,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/23b2feeb6a411f51a8189f46fa4c6cd3.jpg",
     "question": "Кто должен уступить дорогу?",
@@ -217,8 +217,8 @@
     "id": "9e389e1c16e9167531c08bcf8422cd2c"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 4",
+    "ticket_question": 9,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/69b062b40d4304b1244110310a6aaea8.jpg",
     "question": "Вам можно выполнить разворот:",
@@ -245,8 +245,8 @@
     "id": "5ccc967d70f19d41f276ce69b2ad1334"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 4",
+    "ticket_question": 10,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "По какой полосе проезжей части разрешено движение в населенном пункте, если по техническим причинам транспортное средство не может развивать скорость более 40 км/ч?",
@@ -272,8 +272,8 @@
     "id": "062e9c5aab42ef05ec4187442af9fb41"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 4",
+    "ticket_question": 11,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/f4403685c2846332786438c6a5ec6bb6.jpg",
     "question": "Разрешено ли Вам обогнать мотоцикл?",
@@ -299,8 +299,8 @@
     "id": "c788b7fdf64a9a5616a89cd354b5ea1e"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 4",
+    "ticket_question": 12,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/f8f25d016ea45192e3edda3fe9f3f1d0.jpg",
     "question": "Разрешается ли Вам остановка для посадки пассажира в этом месте?",
@@ -326,8 +326,8 @@
     "id": "30d3e76371c210ab6afca75baeb5938c"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 4",
+    "ticket_question": 13,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/9dda910b09ad1968df6fc4c17f70fc23.jpg",
     "question": "Вы намерены проехать перекресток в прямом направлении. Ваши действия?",
@@ -357,8 +357,8 @@
     "id": "e28a9223b25d146bbd5b90a21410f74d"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 4",
+    "ticket_question": 14,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/7033a4fa3f09acef8cb9a9b765d220e5.jpg",
     "question": "Кому Вы должны уступить дорогу при повороте направо?",
@@ -385,8 +385,8 @@
     "id": "f06fda7f7c28b7dcc624f1ece5ec0ee6"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 4",
+    "ticket_question": 15,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/C_D/24311b4eeb9f95cbb498304622d72fcf.jpg",
     "question": "Как Вам следует поступить при выполнении разворота?",
@@ -412,8 +412,8 @@
     "id": "d1512a1262810283918e40cb3495b9ad"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 4",
+    "ticket_question": 16,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Какие из перечисленных действий запрещены водителям транспортных средств в жилой зоне?",
@@ -444,8 +444,8 @@
     "id": "624dc4ae70755f13b23f630a4cfb0a8f"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 4",
+    "ticket_question": 17,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Какое расстояние должно быть обеспечено между буксирующим и буксируемым транспортными средствами при буксировке на жесткой сцепке?",
@@ -471,8 +471,8 @@
     "id": "bc2525b8b718996e8246e661f82ff775"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 4",
+    "ticket_question": 18,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В каком случае разрешается эксплуатация транспортного средства?",
@@ -502,8 +502,8 @@
     "id": "1ac7a8a60373f04a9e68fcd5cd7b2db4"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 4",
+    "ticket_question": 19,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что следует предпринять водителю для предотвращения опасных последствий заноса автомобиля при резком повороте рулевого колеса на скользкой дороге?",
@@ -529,8 +529,8 @@
     "id": "eccbae78adadb9a45e19292abefc501f"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 4",
+    "ticket_question": 20,
+    "ticket_number": 4,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Как следует расположить руки на грудной клетке пострадавшего при проведении сердечно-легочной реанимации?",

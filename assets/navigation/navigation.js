@@ -14,27 +14,20 @@ import Card from "../components/Card"
 import SignsList from "../components/SignsList"
 import MainButtons from "../components/MainButtons"
 import {Search} from "../components/SearchComponent"
-import FavoriteScreen from "../screens/FavouriteScreen"
-import MistakeScreen from "../screens/Mistakes"
+import {FavouriteScreen} from "../screens/FavouriteScreen"
+import MistakeScreen from "../screens/MistakeScreen"
 import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
 
 import Router from "./router"
 
-
-
-
-
 const TicketsScreens = (Stack) => (
     <Stack.Group>
         <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
-        <Stack.Screen name="Избранное" component={FavoriteScreen} />
+        <Stack.Screen name="Избранное" component={FavouriteScreen} />
         <Stack.Screen name="Ошибки" component={MistakeScreen} />
-        {/*<Stack.Screen name="" component={} />*/}
     </Stack.Group>
 )
-
-
 const HomeScreens = (Stack) => (
     <Stack.Group>
         <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
@@ -47,8 +40,6 @@ const HomeScreens = (Stack) => (
         <Stack.Screen name="Коды регионов" component={Region} />
     </Stack.Group>
 )
-
-
 export default function Navigation () {
     const Stack = createNativeStackNavigator()
     return (
@@ -75,7 +66,7 @@ export default function Navigation () {
                             }
                         },
                         headerRight: () => <Timer />,
-                        title: route.params.name + ` вопрос ${route.params.scrollIndex + 1}`,
+                        title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
                     })}}
             />
             <Stack.Screen
@@ -92,4 +83,4 @@ export default function Navigation () {
             </Stack.Screen>
         </Stack.Group>
     )
-};
+}

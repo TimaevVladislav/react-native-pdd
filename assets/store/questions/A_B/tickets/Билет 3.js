@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 3",
+    "ticket_question": 1,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e72bbb0a6d603fa37ff31ffd3bd2d515.jpg"),
     "question": "Выезжая с грунтовой дороги на перекресток, Вы попадаете:",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "0dddc0be36a1ea143d6fffd862ac405f"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 3",
+    "ticket_question": 2,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e5ea59fb8c5d8f172d32af5c36053913.jpg"),
     "question": "Где Вы должны остановиться?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "f1c6fd3f16557349c986a37c59b0efa7"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 3",
+    "ticket_question": 3,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/881aacfa9f384179233cec04baf14420.jpg"),
     "question": "Вам необходимо двигаться со скоростью не более 40 км/ч:",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "11e978b3bbc0be7d8307723af627a99e"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 3",
+    "ticket_question": 4,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/26c59aae3c71753e36f2a139e38da9c2.jpg"),
     "question": "Какой из указанных знаков устанавливается в начале дороги с односторонним движением?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "9c79e336dfa8a9473efe0f718afffbfe"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 3",
+    "ticket_question": 5,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2609dd0293a8f2c0fce44244a3c6b40a.jpg"),
     "question": "Можно ли Вам остановиться в этом месте для посадки или высадки пассажиров?",
@@ -140,8 +140,8 @@ export const ticket = [
     "id": "43a06f0740a5b23bdc29c0b010158048"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 3",
+    "ticket_question": 6,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0935c1587cf1ad38e08e888fceff382f.jpg"),
     "question": "При повороте направо Вы:",
@@ -167,8 +167,8 @@ export const ticket = [
     "id": "c201b4194e31379be85bd767a27d9259"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 3",
+    "ticket_question": 7,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях водитель не должен подавать сигнал указателями поворота?",
@@ -194,8 +194,8 @@ export const ticket = [
     "id": "b5c1dff6251b9488e008ee276d49b97d"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 3",
+    "ticket_question": 8,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/09a7e56d2c58551322f966dfa011da5f.jpg"),
     "question": "Вам разрешено выполнить поворот направо:",
@@ -221,8 +221,8 @@ export const ticket = [
     "id": "ee9dc482c054bd9c183464bac24b25a6"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 3",
+    "ticket_question": 9,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0ed1092b9a399736ca37393c2963c296.jpg"),
     "question": "Разрешается ли Вам выполнить разворот на перекрестке по указанной траектории?",
@@ -248,8 +248,8 @@ export const ticket = [
     "id": "5838425067692c393ec6f42cf4c8f410"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 3",
+    "ticket_question": 10,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5688949120d0f6dad41a3699c5d53d96.jpg"),
     "question": "По какой полосе Вы имеете право двигаться с максимальной разрешенной скоростью вне населенного пункта?",
@@ -275,8 +275,8 @@ export const ticket = [
     "id": "6f19931bf52f941fee4d06909b83e68e"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 3",
+    "ticket_question": 11,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае водитель может начать обгон, если такой маневр на данном участке дороги не запрещен?",
@@ -302,8 +302,8 @@ export const ticket = [
     "id": "eff2a352df08d22d6002edfd84764455"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 3",
+    "ticket_question": 12,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8fcf82e8373415484138ad71355732bb.jpg"),
     "question": "Кто из водителей нарушил правила стоянки?",
@@ -333,8 +333,8 @@ export const ticket = [
     "id": "16190e96c166e8d2dbf1659709d87fb0"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 3",
+    "ticket_question": 13,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/715412530dd5d75884feb036874bd759.jpg"),
     "question": "При движении прямо Вы:",
@@ -360,8 +360,8 @@ export const ticket = [
     "id": "d8e06d3ffac8f8d2adc551fc90f047ec"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 3",
+    "ticket_question": 14,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/789a543e4b2c04f75abe487329d3fbda.jpg"),
     "question": "Вы намерены повернуть направо. Ваши действия?",
@@ -387,8 +387,8 @@ export const ticket = [
     "id": "4d90ef76a000d062a331f81849de9e72"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 3",
+    "ticket_question": 15,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/65f8dd2d800014138813ef003692857f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -418,8 +418,8 @@ export const ticket = [
     "id": "ce32e1f30e2693ddb2c13418c65d3c94"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 3",
+    "ticket_question": 16,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3e744df2b7bb6b14d21ff1ee56e9e3e5.jpg"),
     "question": "Кто из водителей нарушил правила остановки?",
@@ -445,8 +445,8 @@ export const ticket = [
     "id": "03018a402611d50309be83db59abc924"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 3",
+    "ticket_question": 17,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какое оборудование должно иметь механическое транспортное средство, используемое для обучения вождению?",
@@ -476,8 +476,8 @@ export const ticket = [
     "id": "2d859def7cc746611ddb08fb16434c11"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 3",
+    "ticket_question": 18,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие из перечисленных транспортных средств разрешается эксплуатировать без огнетушителя?",
@@ -503,8 +503,8 @@ export const ticket = [
     "id": "b3a96d046a6c130860a7a4a692d15a29"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 3",
+    "ticket_question": 19,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "На повороте возник занос задней оси переднеприводного автомобиля. Ваши действия?",
@@ -534,8 +534,8 @@ export const ticket = [
     "id": "7dfc1d82db1362b0f6fcb67c9c1caf55"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 3",
+    "ticket_question": 20,
+    "ticket_number": 3,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие сведения необходимо сообщить диспетчеру для вызова «Скорой медицинской помощи» при ДТП?",

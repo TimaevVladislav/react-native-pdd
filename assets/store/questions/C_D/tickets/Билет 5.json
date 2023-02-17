@@ -27,8 +27,8 @@
     "id": "949ad9d90453b3e0ae538134a76ec3b1"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 5",
+    "ticket_question": 2,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/23c214f483f83f8769c446d98571c90f.jpg",
     "question": "При наличии какого знака водитель должен уступить дорогу, если встречный разъезд затруднен?",
@@ -59,8 +59,8 @@
     "id": "e632f22e2729108273f99b70fbcb51a0"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 5",
+    "ticket_question": 3,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/2de45d33de8bf8df70155c90fe830833.jpg",
     "question": "Разрешена ли Вам стоянка в указанном месте?",
@@ -87,8 +87,8 @@
     "id": "0409a86f19100ec27cfc4ebdf7c3e715"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 5",
+    "ticket_question": 4,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/1ba54e6b275237d24dc211b9312d0254.jpg",
     "question": "Нарушил ли водитель грузового автомобиля правила стоянки?",
@@ -115,8 +115,8 @@
     "id": "abd6c8b93de41bf9f1471c054f5e64a5"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 5",
+    "ticket_question": 5,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/7598bc637cbfc1c60e82ec13b197c2ff.jpg",
     "question": "О чем предупреждает Вас вертикальная разметка, нанесенная на ограждение дороги?",
@@ -142,8 +142,8 @@
     "id": "e5acbb3fe1e735ec7d5c4a1822a9786a"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 5",
+    "ticket_question": 6,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли водителю продолжить движение после переключения зеленого сигнала светофора на желтый, если возможно остановиться перед перекрестком, только применив экстренное торможение?",
@@ -169,8 +169,8 @@
     "id": "73fcecf93aa3f28ee07ecc0cecc9c36a"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 5",
+    "ticket_question": 7,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/16dfaa3fad2aa5d7689d9ad825c168b0.jpg",
     "question": "Поднятая вверх рука водителя мотоцикла является сигналом, информирующим Вас о его намерении:",
@@ -196,8 +196,8 @@
     "id": "9fadeb78415386ced1c7988c64754fa4"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 5",
+    "ticket_question": 8,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/9538ab9c6a6092c9974d6b6098747881.jpg",
     "question": "В каких направлениях Вам можно продолжить движение по левой полосе на грузовом автомобиле с разрешенной максимальной массой более 3,5 т?",
@@ -223,8 +223,8 @@
     "id": "466ebb80da93fd767f8db5ceb9178c24"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 5",
+    "ticket_question": 9,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/e1c9750ef8250f9aa487744c9b358f5b.jpg",
     "question": "Вам необходимо повернуть на примыкающую справа дорогу. Ваши действия?",
@@ -250,8 +250,8 @@
     "id": "8990770b5c14676a3c0265ef49ad17fc"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 5",
+    "ticket_question": 10,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/f510cdcf0f4afd1960780f563fb51c99.jpg",
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение вне населенных пунктов на автобусе, не относящемся к междугородним или маломестным?",
@@ -281,8 +281,8 @@
     "id": "45f82c522fe68556702e8c8c4058d675"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 5",
+    "ticket_question": 11,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/d44a9c74fe568f829543370f60126ea4.jpg",
     "question": "Разрешен ли Вам обгон?",
@@ -308,8 +308,8 @@
     "id": "120e58fc8c6b182e4faf9d0cc2930645"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 5",
+    "ticket_question": 12,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/bbcca8da1fd74ac47ad9b6516c269d25.jpg",
     "question": "Кто из водителей нарушил правила стоянки?",
@@ -339,8 +339,8 @@
     "id": "592c5535461a8d7a15d496c3d5862a0e"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 5",
+    "ticket_question": 13,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/79deae00be519f899b4e7afc2625e1db.jpg",
     "question": "Вы намерены развернуться. Ваши действия?",
@@ -367,8 +367,8 @@
     "id": "c4547df34b93be087eee947c49c039de"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 5",
+    "ticket_question": 14,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/30606318053dc645eb9672a5beff8126.jpg",
     "question": "Кому Вы должны уступить дорогу при движении в прямом направлении?",
@@ -394,8 +394,8 @@
     "id": "eab47901eebad4a8a34538c55ddf4093"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 5",
+    "ticket_question": 15,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/e97aea5d8829126c30474b6e1dd3d94a.jpg",
     "question": "Как Вам следует поступить при повороте налево?",
@@ -422,8 +422,8 @@
     "id": "79d037f8639905e8e898dacfb97d9cac"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 5",
+    "ticket_question": 16,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/f8e24fa9a4ba0c01bb0fb638a2026180.jpg",
     "question": "Разрешено ли Вам проехать железнодорожный переезд?",
@@ -449,8 +449,8 @@
     "id": "0e6a2b2619a50ecac179910231ee10af"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 5",
+    "ticket_question": 17,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях разрешено применять звуковые сигналы в населенных пунктах?",
@@ -476,8 +476,8 @@
     "id": "ddaf85dad7b351c5464808cbf057e58d"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 5",
+    "ticket_question": 18,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "При какой наименьшей величине падения давления воздуха в пневматическом или пневмогидравлическом тормозных приводах за 15 минут после полного приведения их в действие при неработающем двигателе запрещается эксплуатация транспортного средства?",
@@ -503,8 +503,8 @@
     "id": "fc2ba597e60f82491bef3035d0d0d4e2"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 5",
+    "ticket_question": 19,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Как следует поступить водителю при высадке из автомобиля, стоящего у тротуара или на обочине?",
@@ -530,8 +530,8 @@
     "id": "3363151e1f25d7698a72ee5ab190f1d8"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 5",
+    "ticket_question": 20,
+    "ticket_number": 5,
     "ticket_category": "C,D",
     "image": "./images/C_D/4b0ed6fb6d1354aea844c2205fe133e8.jpg",
     "question": "При движении в условиях тумана расстояние до предметов представляется:",

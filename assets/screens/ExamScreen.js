@@ -1,104 +1,129 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
+import { SafeAreaView, View, FlatList, Text, Image, StyleSheet,  TouchableOpacity } from 'react-native'
 
-import {useLayout} from "../store/hooks/useLayout"
-import {useScroll} from "../store/hooks/useScroll"
-import {useSwitcher} from "../store/questions"
-
-import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity, StyleSheet} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
-import numberQuestion from "../store/temp/store.json"
-
 import {DisableContext, DisableProvider} from "../context/disabled"
-import {useColor} from "../store/hooks/useColor";
+import {colors as color} from "../store/temp/data/colors"
+import {favorites} from "../store/questions/A_B/tickets/favorites.js"
 
-const Tickets = ({item, result}) => (
-    <DisableProvider>
-        <DisableContext.Consumer>
-            {(({isDisabled}) => (
-                <View>
-                    <View style={styleTicket.container}>
-                        <Image source={item.image} style={styleTicket.img} />
-                    </View>
+
+import { useSwitcher } from "../store/questions"
+import { useColor } from "../hooks/useColor"
+import { useLayout } from "../hooks/useLayout"
+
+const Tickets = ({item, colors, handlerColor, tickets, setTickets}) => {
+
+    return (
+        <DisableProvider>
+            <DisableContext.Consumer>
+                {(({isDisabled}) => (
                     <View>
-                        <Text style={styleTicket.title}>
-                            {item.question}
-                        </Text>
-                        <ButtonsExam item={item} answers={item.answers} result={result} />
-                        <Favorites />
+                        <View style={styleTicket.container}>
+                            <Image source={item.image} style={styleTicket.img} />
+                        </View>
+                        <View>
+                            <Text style={styleTicket.title}>
+                                {item.question}
+                            </Text>
+                            <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
+                            <Favorites item={item} tickets={tickets} setTickets={setTickets}/>
+                        </View>
+                        { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : <></> }
                     </View>
-                    { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : null }
-                </View>
-            ))}
-        </DisableContext.Consumer>
-    </DisableProvider>
-)
+                ))}
+            </DisableContext.Consumer>
+        </DisableProvider>
+    )
+}
 
-export const ExamScreen = () => {
-    const { scrollItemLayout, getItemLayout } = useLayout()
-    const {colors} = useColor()
-    const {handlerCountResults, index, ref, route, setIndex, navigation} = useScroll()
+export const ExamScreen = ({navigation}) => {
+
+    const ref = useRef(null)
+    const [tickets, setTickets] = useState(favorites)
+    const [colors, setColor] = useState(color)
 
     const { uriTicket } = useSwitcher()
 
+    const { isScrollId, setIsScrollId, scrollItemLayout } = useLayout()
+
     useEffect(() => {
         ref.current.scrollToOffset({
-            index,
-            offset: 390 * index,
+            isScrollId,
+            offset: 390 * isScrollId,
             animated: true,
         })
-        navigation.setParams({scrollIndex: index, initialIndex: setIndex})
-    }, [index])
+    }, [isScrollId])
 
-    const IndexRender = ({index, ref, setIndex}) => {
-        const IdQuestion = ({idQuestion}) => (
-            <View style={stylesVirtual.container}>
-                <TouchableOpacity style={stylesVirtual.container}>
-                    <View style={[{backgroundColor: index === idQuestion ? "#FAF7F0" : "#DDDDDD" }]}>
-                        <Text style={stylesVirtual.title} onPress={() => setIndex(idQuestion) }>
-                            {idQuestion + 1}
-                        </Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-        )
+    const TicketScrollButton = ({ref}) => {
+
+        const {colors, colorId, handlerColorChange} = useColor()
+        const { getItemLayout } = useLayout()
+
+        const IdQuestion = ({answers, idQuestion, ticket_number}) => {
+            return (
+                <View style={stylesVirtual.container}>
+                    <TouchableOpacity style={stylesVirtual.container}>
+                        <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                            <Text style={stylesVirtual.title} onPress={() => {
+                                setIsScrollId(idQuestion)
+                                navigation.setParams({id: idQuestion })
+                            }}>
+                                {idQuestion}
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+            )
+        }
 
         return (
-            <SafeAreaView>
-                <FlatList
-                    horizontal
-                    ref={ref}
-                    initialScrollIndex={index}
-                    getItemLayout={getItemLayout}
-                    data={numberQuestion.id[route.params.key]}
-                    renderItem={({item}) => <IdQuestion idQuestion={item.key} /> }
-                    initialNumToRender={5}
-                    showsHorizontalScrollIndicator={false}
-                    keyExtractor={item => item.id}
-                />
-            </SafeAreaView>
+            <>
+                <SafeAreaView>
+                    <FlatList
+                        ref={ref}
+                        horizontal
+                        initialScrollIndex={isScrollId}
+                        getItemLayout={getItemLayout}
+                        data={uriTicket.ticket}
+                        renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question - 1} ticket_number={item.ticket_number} /> }
+                        initialNumToRender={7}
+                        showsHorizontalScrollIndicator={false}
+                        keyExtractor={item => item.id}
+                    />
+                </SafeAreaView>
+            </>
         )
+    }
+
+
+    const handlerColor = (answer, buttonId) => {
+        if (!answer.is_correct) {
+            setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
+        } else {
+            setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
+        }
     }
 
     return (
         <SafeAreaView>
-               <IndexRender index={index} ref={ref} route={route} setIndex={setIndex} />
-               <FlatList
-                   ref={ref}
-                   horizontal
-                   getItemLayout={scrollItemLayout}
-                   initialNumToRender={5}
-                   initialScrollIndex={index}
-                   scrollEnabled={false}
-                   showsHorizontalScrollIndicator={false}
-                   data={uriTicket.ticket}
-                   renderItem={({item}) => <Tickets item={item} result={handlerCountResults} /> }
-                   keyExtractor={item => item.id}
-               />
-           </SafeAreaView>
+            <TicketScrollButton ref={ref} />
+            <FlatList
+                ref={ref}
+                horizontal
+                getItemLayout={scrollItemLayout}
+                initialNumToRender={7}
+                initialScrollIndex={isScrollId}
+                scrollEnabled={false}
+                showsHorizontalScrollIndicator={false}
+                data={uriTicket.ticket}
+                renderItem={({item}) => <Tickets tickets={tickets} setTickets={setTickets} item={item} colors={colors} handlerColor={handlerColor} /> }
+                keyExtractor={item => item.id}
+            />
+        </SafeAreaView>
     )
 }
 

@@ -7,7 +7,7 @@ import {
     TouchableOpacity
 } from "react-native"
 
-import {useTimer} from "../store/hooks/useTimer"
+import {useTimer} from "../hooks/useTimer"
 
 
 

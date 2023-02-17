@@ -357,8 +357,8 @@
     "id": "a18d3dd1bdde77448b259039b3c9e140"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 2",
+    "ticket_question": 15,
+    "ticket_number": 2,
     "ticket_category": "C,D",
     "image": "./images/C_D/e2f05655c75d2b762af113bf2f30a8b0.jpg",
     "question": "В каком случае Вы имеете преимущество?",
@@ -407,8 +407,8 @@
     "id": "b3a079f4b929c0d74201d89e99593ebf"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 2",
+    "ticket_question": 16,
+    "ticket_number": 2,
     "ticket_category": "C,D",
     "image": "./images/C_D/3bd95e984603651573ad6148c2bf510d.jpg",
     "question": "Разрешается ли водителю выполнить объезд грузового автомобиля?",
@@ -519,8 +519,8 @@
     "id": "bf71aa93589aba17af3a541f758980b2"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 2",
+    "ticket_question": 20,
+    "ticket_number": 2,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях следует начинать сердечно-легочную реанимацию пострадавшего?",

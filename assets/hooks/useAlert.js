@@ -1,8 +1,5 @@
 import {Alert} from "react-native"
 import {useNavigation, useRoute} from "@react-navigation/native"
-import {useTimer} from "./useTimer";
-import {useEffect} from "react";
-
 
 export const useAlert = () => {
 
@@ -32,9 +29,5 @@ export const useAlert = () => {
         )
     )
 
-
-
-
     return { handlerExpired }
-
 }

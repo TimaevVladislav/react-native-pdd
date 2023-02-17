@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "number": 1,
+    "ticket_question": 1,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"),
     "question": "В каком случае водитель совершит вынужденную остановку?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "ffd0c95b28a89bd4faff45a8874c4fb3"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 1",
+    "ticket_question": 2,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/eca08a0e2b5ffcd12bdd8ffee34afcc3.jpg"),
     "question": "Разрешен ли Вам съезд на дорогу с грунтовым покрытием?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "1531ace809b1025c70912695ad7a7b90"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 1",
+    "ticket_question": 3,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "5fa33b65fe52f38ad87c4b5226c5d3ba.jpg",
     "question": "Можно ли Вам остановиться в указанном месте для посадки пассажира?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "7d6121c8ec64a113baa6047a457e9c10"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 1",
+    "ticket_question": 4,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/620fde366bcda9940db20a0019eeeeb4.jpg"),
     "question": "Какие из указанных знаков запрещают движение водителям мопедов?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "d2e3295129c877898159a3c4e9050771"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 1",
+    "ticket_question": 5,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/92730be6f1618ab24232b6c3092607b5.jpg"),
     "question": "Вы намерены повернуть налево. Где следует остановиться, чтобы уступить дорогу легковому автомобилю?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "7c97d4c309cb475c0f1309aba4c40e71"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 1",
+    "ticket_question": 6,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает мигание зелёного сигнала светофора?",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "627f7626e7460498d50c0570c86d82f4"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 1",
+    "ticket_question": 7,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водитель обязан подавать сигналы световыми указателями поворота (рукой):",
@@ -201,8 +201,8 @@ export const ticket = [
     "id": "ca976eeda460719cc594c0a40bb82616"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 1",
+    "ticket_question": 8,
+    "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b61a6e1c048076e6b8ba01ef6e3ae2d1.jpg"),
     "question": "Как Вам следует поступить при повороте направо?",
@@ -228,9 +228,8 @@ export const ticket = [
     "id": "14452bb58352a0cd0f19b3f3c48f2459"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 9,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0de3a44f154b8a1dc98c83ccb64a0c6c.jpg"),
     "question": "По какой траектории Вам разрешено выполнить разворот?",
     "answers": [
@@ -255,9 +254,8 @@ export const ticket = [
     "id": "461cfbf602ac658c04d0db29322e9b2e"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 10,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/e25d143aa53eb44b06b020415b6bee54.jpg"),
     "question": "С какой скоростью Вы можете продолжить движение вне населённого пункта по левой полосе на легковом автомобиле?",
     "answers": [
@@ -282,9 +280,8 @@ export const ticket = [
     "id": "13240b68ca2e4475deb368dc5781c48f"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 11,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/573bb9e760618405e89c02b09f248404.jpg"),
     "question": "Можно ли водителю легкового автомобиля выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
     "answers": [
@@ -309,9 +306,8 @@ export const ticket = [
     "id": "b66d8c08aba6ec232a4c6669efbbe61a"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 12,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/544ea7fd090765e47fa3b71f060b5f22.jpg"),
     "question": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
     "answers": [
@@ -336,9 +332,8 @@ export const ticket = [
     "id": "297e2e1b88020c6dc2849cd6b990d08a"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 13,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/3bca6590a23e621ade16916c7de64e44.jpg"),
     "question": "При повороте направо Вы должны уступить дорогу:",
     "answers": [
@@ -367,9 +362,8 @@ export const ticket = [
     "id": "d0063ffc0bad8476f04187c35b74b917"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 14,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/6a8f690af1b507fc0b56db742709f1e8.jpg"),
     "question": "Вы намерены проехать перекресток в прямом направлении. Кому Вы должны уступить дорогу?",
     "answers": [
@@ -398,9 +392,8 @@ export const ticket = [
     "id": "09c728e5fcea9efdbd7c74d6f656b64d"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 15,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/dd7e958840da9ddd1c102a65d8d5c03f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
     "answers": [
@@ -425,9 +418,8 @@ export const ticket = [
     "id": "c64eefab25596af3056aa4b69e92516e"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 16,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0211b865b53f26534158a13f8886262f.jpg"),
     "question": "С какой максимальной скоростью можно продолжить движение за знаком?",
     "answers": [
@@ -456,9 +448,8 @@ export const ticket = [
     "id": "764a2188d8c6e13d0b510eca4f241cbf"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 17,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Для перевозки людей на мотоцикле водитель должен иметь водительское удостоверение на право управления транспортными средствами:",
     "answers": [
@@ -483,9 +474,8 @@ export const ticket = [
     "id": "ededa6779bdb9da60ca372a5eacb5335"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 18,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При какой неисправности разрешается эксплуатация транспортного средства?",
     "answers": [
@@ -514,9 +504,8 @@ export const ticket = [
     "id": "3782633d3e8941d82131d75858b75a8c"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 19,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В случае, когда правые колёса автомобиля наезжают на неукреплённую влажную обочину, рекомендуется:",
     "answers": [
@@ -541,9 +530,8 @@ export const ticket = [
     "id": "e9f447c2c017515177c3654a447cc12f"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 1",
-    "ticket_category": "A,B",
+    "ticket_question": 20,
+    "ticket_number": 1,    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что понимается под временем реакции водителя?",
     "answers": [

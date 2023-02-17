@@ -54,8 +54,8 @@
     "id": "1531ace809b1025c70912695ad7a7b90"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 1",
+    "ticket_question": 3,
+    "ticket_number": 3,
     "ticket_category": "C,D",
     "image": "./images/C_D/9cfaa742271081fc28a5d3977e2aaac6.jpg",
     "question": "Можно ли остановиться для посадки пассажира за знаком?",
@@ -82,8 +82,8 @@
     "id": "0822a26166ade1d6f9eca38980c28975"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 1",
+    "ticket_question": 3,
+    "ticket_number": 3,
     "ticket_category": "C,D",
     "image": "./images/C_D/08d6fd9182fcf2a82c59c9bd8369cf89.jpg",
     "question": "Каким транспортным средствам разрешается продолжить движение только направо?",
@@ -109,8 +109,8 @@
     "id": "5c52b83629b2732cf71ffb9ac00bb41b"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 1",
+    "ticket_question": 3,
+    "ticket_number": 3,
     "ticket_category": "C,D",
     "image": "./images/C_D/e42f65f954004b3a2c1b1fc9ac045ea1.jpg",
     "question": "Вы намерены повернуть налево. Где следует остановиться, чтобы уступить дорогу легковому автомобилю?",
@@ -140,8 +140,8 @@
     "id": "7c97d4c309cb475c0f1309aba4c40e71"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 1",
+    "ticket_question": 6,
+    "ticket_number": 1,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что означает мигание зеленого сигнала светофора?",
@@ -167,8 +167,8 @@
     "id": "f86dc5534e28c73d61463eeb3311fed5"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 1",
+    "ticket_question": 7,
+    "ticket_number": 1,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Водитель обязан подавать сигналы световыми указателями поворота (рукой):",
@@ -198,9 +198,8 @@
     "id": "ca976eeda460719cc594c0a40bb82616"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 8,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/76b57bd40a5b9197d20c9e1e41d41b1d.jpg",
     "question": "Как Вам следует поступить при повороте направо?",
     "answers": [
@@ -225,9 +224,8 @@
     "id": "09230c08ea236499a5c0910ae3b43f4e"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 9,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/efd1efd34d242651508f28ca5d6ed914.jpg",
     "question": "По какой траектории Вам разрешено выполнить разворот на маломестном автобусе?",
     "answers": [
@@ -252,9 +250,8 @@
     "id": "1372947586d18d0277667d73b8cb79db"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 10,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/dabc07a4527992fd0cc4e767258a35ef.jpg",
     "question": "С какой скоростью Вы можете продолжить движение вне населенного пункта по левой полосе на грузовом автомобиле с разрешенной максимальной массой более 3,5 т?",
     "answers": [
@@ -280,9 +277,8 @@
     "id": "c09a7e5e6146d492094bf20fe29318e6"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 11,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/0995c27ae2fa23e0a6c0cd4481c77d1d.jpg",
     "question": "Можно ли водителю автобуса выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
     "answers": [
@@ -307,9 +303,8 @@
     "id": "94b44ec8bdbc417cee523eaac071edf8"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 12,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/f9d906bcf57cb6f2c2262915a9b6ac75.jpg",
     "question": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
     "answers": [
@@ -334,9 +329,8 @@
     "id": "953632eea538d3b7639b27f3fce6427c"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 13,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/9ff7bb81769dda852ac8d392f7e8f253.jpg",
     "question": "При повороте направо Вы должны уступить дорогу:",
     "answers": [
@@ -365,9 +359,8 @@
     "id": "d0063ffc0bad8476f04187c35b74b917"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 14,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/5acd42c269b1bfcf82e39eebbc05c73a.jpg",
     "question": "Вы намерены проехать перекресток в прямом направлении. Кому Вы должны уступить дорогу?",
     "answers": [
@@ -396,9 +389,8 @@
     "id": "09c728e5fcea9efdbd7c74d6f656b64d"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 15,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/9f82b084b60ba5ea0e5f0580e7b006e9.jpg",
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
     "answers": [
@@ -424,9 +416,8 @@
     "id": "c64eefab25596af3056aa4b69e92516e"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 16,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/C_D/7b532d8091ac8b34c08ad6be0ca46b70.jpg",
     "question": "С какой максимальной скоростью можно продолжить движение за знаком?",
     "answers": [
@@ -456,9 +447,8 @@
     "id": "764a2188d8c6e13d0b510eca4f241cbf"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 17,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "При движении в темное время суток вне населенных пунктов необходимо использовать:",
     "answers": [
@@ -484,9 +474,8 @@
     "id": "3ddd5b02b71428f540900d18ca9f7033"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 18,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "При какой неисправности разрешается эксплуатация транспортного средства?",
     "answers": [
@@ -515,9 +504,8 @@
     "id": "3782633d3e8941d82131d75858b75a8c"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 19,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В случае, когда правые колеса автомобиля наезжают на неукрепленную влажную обочину, рекомендуется:",
     "answers": [
@@ -542,9 +530,8 @@
     "id": "7d5da7479ed27ff4a2ec5522e0aa5901"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 1",
-    "ticket_category": "C,D",
+    "ticket_question": 20,
+    "ticket_number": 1,    "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что понимается под временем реакции водителя?",
     "answers": [
