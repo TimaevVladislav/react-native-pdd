@@ -14,6 +14,7 @@ import {SearchContext} from "../store/provider/SearchProvider"
 import Dropdown from "./layouts/Dropdown"
 import {LocalSvg} from "./LocalSvg"
 import {Loader} from "./Loader"
+import {Message} from "./Message"
 
 
 const SignsList = () => (
@@ -33,13 +34,13 @@ function FloatList () {
     const route = useRoute()
     const navigation = useNavigation()
 
-
     const {horizontal, vertical} = useContext(ContextMarkup)
     const {rules, indexRules} = useContext(ContextRules)
     const {signs, indexSigns} = useContext(ContextSigns)
     const {setDropdown, setSearch, setClicked} = useContext(SearchContext)
 
     const [state, setState] = useState([])
+
     const getItem = (data, index) => data[index]
 
     useEffect(() => {
@@ -54,7 +55,7 @@ function FloatList () {
         } else if (route.params.name == "Вертикальная разметка") {
             setState(vertical)
         }
-    };
+    }
 
     const SignsState = () => {
         indexSigns.map(item => {
@@ -62,7 +63,7 @@ function FloatList () {
                 setState(signs[item.key])
             }
         })
-    };
+    }
 
 
     const RulesState = () => {
@@ -105,9 +106,10 @@ function FloatList () {
 
     return (
         <SearchContext.Consumer>
-                       {(({dropdown, filtered, results}) => (
+                       {(({dropdown, filtered, results, loading}) => (
                            <>
-                              <Loader heading={route.params.name} />
+                               { loading && <Loader /> }
+
                                {dropdown ? <Dropdown /> :
                                    <VirtualizedList
                                        data={state}

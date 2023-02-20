@@ -28,6 +28,7 @@ export const styleSearch = StyleSheet.create({
     },
     input: {
         fontWeight: "normal",
+        color: "#fff",
         fontSize: 18
     },
     dropDown: {

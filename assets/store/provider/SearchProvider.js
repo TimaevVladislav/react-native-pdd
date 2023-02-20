@@ -15,6 +15,9 @@ export const SearchProvider = ({children}) => {
     const [filtered, setFiltered] = useState([])
     const [results, setResults] = useState([])
 
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState(false)
+
     const searchFilterFunction = (text) => {
         if (text) {
             const newData = results.filter(item => {
@@ -23,15 +26,23 @@ export const SearchProvider = ({children}) => {
 
                 return itemData.indexOf(textData) > -1
             })
+
+
+            if (newData.length > 0) {
+                setLoading(false)
+            } else {
+                setLoading(true)
+            }
+
+
             setFiltered(newData)
             setSearch(text)
         } else {
+
             setFiltered(results)
             setSearch(text)
         }
-    };
-
-
+    }
 
     const defaultStates = {
         filtered,
@@ -42,8 +53,10 @@ export const SearchProvider = ({children}) => {
         setSearch,
         setFiltered,
         setResults,
-        searchFilterFunction
-    };
+        searchFilterFunction,
+        loading,
+        setLoading
+    }
 
     return (
         <SearchContext.Provider value={defaultStates}>

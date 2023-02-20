@@ -1,15 +1,10 @@
 import React, {useEffect, useContext} from 'react'
 import {useRoute} from "@react-navigation/native"
-import {
-    SafeAreaView, View, TextInput, Keyboard,
-} from 'react-native'
-
+import {SafeAreaView, View, TextInput, Keyboard,} from 'react-native'
 
 import {data} from "../store/temp/data/data.js"
-
 import {styleSearch} from "../store/temp/data/styles"
 import {Entypo, Feather} from "@expo/vector-icons"
-
 import {ContextSigns} from "../screens/Signs"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
@@ -76,7 +71,7 @@ const SearchComponent = () => {
                 <ThemeContext.Consumer>
                     {(({isDark}) => (
                         <SearchContext.Consumer>
-                            {(({search, clicked, setClicked, setDropdown, setSearch, searchFilterFunction}) => (
+                            {(({search, clicked, setClicked, setDropdown, setSearch, setLoading, searchFilterFunction}) => (
                                 <SafeAreaView>
                                     <View style={styleSearch.container}>
                                         <TextInput
@@ -94,13 +89,17 @@ const SearchComponent = () => {
                                             <View>
                                                 <Entypo name="cross" size={19}
                                                         onPress={() => {
-                                                            Keyboard.dismiss();
+                                                            Keyboard.dismiss()
                                                             setSearch("")
+                                                            setLoading(false)
                                                             setClicked(false)
                                                             setDropdown(false)
                                                         }}
                                                 />
-                                            </View> : <Feather name="search" size={20} />
+                                            </View>
+                                            :
+
+                                            <Feather name="search" size={20} />
                                         }
                                     </View>
                                 </SafeAreaView>
