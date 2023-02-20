@@ -12,9 +12,9 @@ import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
 import Dropdown from "./layouts/Dropdown"
-import {LocalSvg} from "./LocalSvg"
-import {Loader} from "./Loader"
-import {Message} from "./Message"
+import {LocalSvg} from "./default/LocalSvg"
+import {Loader} from "./default/Loader"
+import {Message} from "./default/Message"
 
 
 const SignsList = () => (

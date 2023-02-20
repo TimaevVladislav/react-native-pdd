@@ -3,7 +3,7 @@ import {useNavigation} from "@react-navigation/native"
 
 import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
 import {SearchContext} from "../../store/provider/SearchProvider"
-import {LocalSvg} from "../LocalSvg"
+import {LocalSvg} from "../default/LocalSvg"
 
 export default function Dropdown() {
     const navigation = useNavigation()

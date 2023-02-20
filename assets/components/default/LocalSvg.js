@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
 
 import loadLocalResource from "react-native-local-resource"
-import {SvgCss, SvgUri, SvgXml} from "react-native-svg"
+import {SvgXml} from "react-native-svg"
 export const LocalSvg = ({asset, ...rest}) => {
     const [xml, setXml] = useState(null)
 

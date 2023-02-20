@@ -10,7 +10,7 @@ import {Policies, FeedBack} from "../screens/Settings"
 
 
 import Tickets from "../components/layouts/Tickets"
-import Card from "../components/Card"
+import Card from "../components/default/Card"
 import SignsList from "../components/SignsList"
 import MainButtons from "../components/MainButtons"
 import {Search} from "../components/SearchComponent"

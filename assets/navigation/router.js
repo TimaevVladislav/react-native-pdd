@@ -13,7 +13,7 @@ import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 import Home from "../screens/Home"
 import Settings from "../screens/Settings"
 import WebViewComponent from "../components/WebViewComponent"
-import {LogoDrawer} from "../components/ShareButton"
+import {LogoDrawer} from "../components/default/ShareButton"
 
 
 export default function Router({navigation}) {
