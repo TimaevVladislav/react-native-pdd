@@ -12,7 +12,7 @@ import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
 
 import Home from "../screens/Home"
 import Settings from "../screens/Settings"
-import WebViewComponent from "../components/WebViewComponent"
+import WebView from "../components/default/WebView"
 import {LogoDrawer} from "../components/default/ShareButton"
 
 
@@ -55,7 +55,7 @@ const DrawerRouter = (Drawer) => (
         />
         <Drawer.Screen
             name="Проверка штрафов"
-            component={WebViewComponent}
+            component={WebView}
             options= {{drawerIcon: ({focused, size}) => (<Ionicons name="checkmark-done-circle-outline" size={size} color={focused ? '#7cc' : '#ccc'} />), }}
         />
         <Drawer.Screen

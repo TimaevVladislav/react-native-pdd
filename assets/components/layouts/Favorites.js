@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react"
-import { Text, TouchableOpacity, View } from "react-native"
+import React, {useState} from "react"
+import {Text, TouchableOpacity, View} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
-import { styleTicket } from "../../screens/ExamScreen"
-import { favorites } from "../../store/questions/A_B/tickets/favorites"
+import {styleTicket} from "../../screens/ExamScreen"
+import {favorites} from "../../store/questions/A_B/tickets/favorites"
 
 export const Favorites = ({item}) => {
 
@@ -12,7 +12,7 @@ export const Favorites = ({item}) => {
 
     const addTicketHandler = (ticket) => {
         setIsFavorite(true)
-       favorite.push(ticket)
+        favorite.push(ticket)
     }
 
     const deleteTicketHandler = (ticket) => {

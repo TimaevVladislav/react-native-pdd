@@ -4,7 +4,7 @@ import React, {useState} from "react"
 export const SearchContext = React.createContext({
     setResults: () => {},
     setClicked: () => {},
-});
+})
 
 export const SearchProvider = ({children}) => {
 
@@ -16,7 +16,6 @@ export const SearchProvider = ({children}) => {
     const [results, setResults] = useState([])
 
     const [loading, setLoading] = useState(false)
-    const [message, setMessage] = useState(false)
 
     const searchFilterFunction = (text) => {
         if (text) {

@@ -19,7 +19,6 @@ import {useLayout} from "../hooks/useLayout"
 
 const Tickets = ({item}) => {
 
-    const [isFavorite, setIsFavorite] = useState(true)
 
     return (
         <DisableProvider>
@@ -47,7 +46,6 @@ const Tickets = ({item}) => {
 export const FavouriteScreen = () => {
 
     const ref = useRef(null)
-
     const [colors, setColor] = useState(color)
     const { isScrollId, setIsScrollId, scrollItemLayout } = useScroll()
 

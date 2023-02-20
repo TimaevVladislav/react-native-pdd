@@ -6,7 +6,9 @@ import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
 import {ExamScreen} from "../screens/ExamScreen"
 import Results, {CloseOutline} from "../screens/Results"
-import {Policies, FeedBack} from "../screens/Settings"
+import {Policies} from "../screens/Settings"
+
+import {FeedBack} from "../components/default/Feedback"
 
 
 import Tickets from "../components/layouts/Tickets"

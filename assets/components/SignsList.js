@@ -14,7 +14,6 @@ import {SearchContext} from "../store/provider/SearchProvider"
 import Dropdown from "./layouts/Dropdown"
 import {LocalSvg} from "./default/LocalSvg"
 import {Loader} from "./default/Loader"
-import {Message} from "./default/Message"
 
 
 const SignsList = () => (

@@ -1,6 +1,6 @@
 import React, {useContext} from "react"
 import {StatusBar, View, StyleSheet} from "react-native"
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../../store/provider/ThemeProvider"
 
 const STATUS_BAR_HEIGHT = 50
 

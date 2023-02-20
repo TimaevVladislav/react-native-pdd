@@ -17,7 +17,7 @@ export default function Settings({navigation}) {
                     <ScrollView style={{backgroundColor: isDark ? "#181818" : LIGHT_COLORS.layout}}>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}, style.containerLogo]}>
                             <View>
-                                <SvgUri uri={"https://s.auto.drom.ru/i24227/pubs/26197/63036/2929346.svg"}/>
+                                <SvgUri uri={"https://s.auto.drom.ru/i24227/pubs/26197/63036/2929346.svg"} />
                             </View>
                         </View>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
@@ -124,66 +124,6 @@ export const Policies = () => (
     </View>
 )
 
-export const FeedBack = () => {
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
-    return (
-        <SafeAreaView style={stylesForm.container}>
-            <View>
-                <View style={stylesForm.inputRow}>
-                    <Text style={{ fontSize: 16}}>E-mail:</Text>
-                    <TextInput
-                        value={email}
-                        onChangeText={(email) => setEmail(email)}
-                        placeholder={"Для обратной связи"}
-                        style={stylesForm.input}
-                    />
-                </View>
-                <View style={stylesForm.textAreaRow}>
-                    <TextInput
-                        value={message}
-                        onChangeText={(message) => setMessage(message)}
-                        placeholder={"Опишите свою проблему"}
-                    />
-                </View>
-            </View>
-        </SafeAreaView>
-    )
-}
-
-
-const stylesForm = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        backgroundColor: '#ffffff',
-    },
-    formsContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        alignContent: "center",
-    },
-    inputRow: {
-        flexDirection: "row",
-        alignItems: "center",
-        alignContent: "center",
-        paddingLeft: 20,
-        backgroundColor: '#e8e8e8'
-    },
-    textAreaRow: {
-        flexDirection: "row",
-        padding: 10,
-        paddingLeft: 20,
-        paddingBottom: 75,
-        height: 100,
-        alignItems: "center",
-        alignContent: "center",
-        backgroundColor: '#e8e8e8'
-    },
-    input: {
-        padding: 10,
-        width: 350
-    },
-})
 
 
 const style = StyleSheet.create({
