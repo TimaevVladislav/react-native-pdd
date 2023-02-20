@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {colors as colorIndex} from "../store/temp/data/colors"
+import {colors as colorIndex} from "../store/data/colors"
 const useColor = () => {
     const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
     const [colorId, setColorId] = useState(colorIndex)

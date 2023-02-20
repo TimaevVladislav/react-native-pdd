@@ -8,10 +8,10 @@ import {
 
 import Ionicons from '@expo/vector-icons/Ionicons'
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 
-import Home from "../screens/Home"
-import Settings from "../screens/Settings"
+import Home from "../screens/HomeScreen"
+import SettingScreen from "../screens/SettingScreen"
 import WebView from "../components/default/WebView"
 import {LogoDrawer} from "../components/default/ShareButton"
 
@@ -60,7 +60,7 @@ const DrawerRouter = (Drawer) => (
         />
         <Drawer.Screen
             name="Настройки"
-            component={Settings}
+            component={SettingScreen}
             options= {{drawerIcon: ({focused, size}) => (<Ionicons name="settings-outline" size={size} color={focused ? '#7cc' : '#ccc'} />),}}
         />
     </Drawer.Group>

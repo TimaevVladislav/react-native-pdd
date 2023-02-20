@@ -1,13 +1,13 @@
 import React from 'react'
-import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
-import {ThemeContext} from "../store/provider/ThemeProvider"
-import {items} from "../store/temp/data/item"
-
 import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
 
+import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {ThemeContext} from "../store/provider/ThemeProvider"
+import {items} from "../store/data/item"
 
-export default function Home({navigation}) {
+
+export default function HomeScreen({navigation}) {
 
     const RenderItem = ({item}) => {
         return (
@@ -28,8 +28,8 @@ export default function Home({navigation}) {
                     </View>
                 ))}
             </ThemeContext.Consumer>
-        );
-    };
+        )
+    }
 
     return (
         <AppIntroSlider
@@ -39,8 +39,8 @@ export default function Home({navigation}) {
             showNextButton={false}
             showDoneButton={false}
         />
-    );
-};
+    )
+}
 
 const styles = StyleSheet.create({
     container: {

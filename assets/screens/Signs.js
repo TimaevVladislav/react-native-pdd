@@ -2,7 +2,7 @@ import React, {createContext} from "react"
 
 import Section from "../components/layouts/Sections"
 
-import {data} from "../store/temp/data/data.js"
+import {data} from "../store/data/data.js"
 
 export const ContextSigns = createContext({
     indexSigns: data.items,

@@ -1,12 +1,12 @@
 import {createNativeStackNavigator} from "@react-navigation/native-stack"
 
-import Home from "../screens/Home"
+import Home from "../screens/HomeScreen"
 import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
 import {ExamScreen} from "../screens/ExamScreen"
 import Results, {CloseOutline} from "../screens/Results"
-import {Policies} from "../screens/Settings"
+import {Policies} from "../screens/SettingScreen"
 
 import {FeedBack} from "../components/default/Feedback"
 

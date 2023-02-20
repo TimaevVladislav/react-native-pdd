@@ -1,9 +1,9 @@
 import React, {useEffect, useContext} from "react"
 import {ScrollView, Text, View} from "react-native"
 
-import {styleSigns} from "../../store/temp/data/styles"
+import {styleSigns} from "../../store/data/styles"
 import {ThemeContext} from "../../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../../store/temp/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
 import {SearchContext} from "../../store/provider/SearchProvider"
 import {LocalSvg} from "./LocalSvg"
 

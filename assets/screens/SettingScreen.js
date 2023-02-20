@@ -1,13 +1,11 @@
 import React, {useState} from "react"
-import {Text, View, ScrollView, StyleSheet, TouchableOpacity, SafeAreaView, TextInput} from "react-native"
+import {Text, View, ScrollView, StyleSheet, TouchableOpacity} from "react-native"
 
 import CheckBox from 'expo-checkbox'
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
-import {SvgUri} from "react-native-svg"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 
-export default function Settings({navigation}) {
-
+export default function SettingScreen({navigation}) {
     const [isLanguage, setLanguage] = useState(false)
     const [isLanguageRus, setLanguageRus] = useState(false)
 
@@ -16,9 +14,7 @@ export default function Settings({navigation}) {
                 {(({isDark,  isLight, isSelected, setIsSelected, setIsDark, setIsLight, colors}) => (
                     <ScrollView style={{backgroundColor: isDark ? "#181818" : LIGHT_COLORS.layout}}>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}, style.containerLogo]}>
-                            <View>
-                                <SvgUri uri={"https://s.auto.drom.ru/i24227/pubs/26197/63036/2929346.svg"} />
-                            </View>
+
                         </View>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                                 <Text style={style.heading}>Тема приложения</Text>
@@ -123,7 +119,6 @@ export const Policies = () => (
         <Text>hello</Text>
     </View>
 )
-
 
 
 const style = StyleSheet.create({

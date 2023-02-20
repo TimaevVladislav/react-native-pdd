@@ -7,7 +7,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
 import {DisableContext, DisableProvider} from "../context/disabled"
-import {colors as color} from "../store/temp/data/colors"
+import {colors as color} from "../store/data/colors"
 import {favorites} from "../store/questions/A_B/tickets/favorites.js"
 
 

@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import Navigation from "./assets/navigation/navigation"
 import {ThemeContext, ThemeProvider} from "./assets/store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "./assets/store/temp/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "./assets/store/data/colors"
 import {SearchProvider} from "./assets/store/provider/SearchProvider"
 
 

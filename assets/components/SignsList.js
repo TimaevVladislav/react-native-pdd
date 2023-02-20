@@ -3,12 +3,12 @@ import {useNavigation, useRoute} from "@react-navigation/native"
 import {Text, View, VirtualizedList, ScrollView} from "react-native"
 
 
-import {styleSigns} from "../store/temp/data/styles"
+import {styleSigns} from "../store/data/styles"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
 import {ThemeContext} from "../store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/temp/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 import {SearchContext} from "../store/provider/SearchProvider"
 
 import Dropdown from "./layouts/Dropdown"
