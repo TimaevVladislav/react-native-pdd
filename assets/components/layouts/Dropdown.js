@@ -14,7 +14,7 @@ export default function Dropdown() {
                     data={filtered}
                     ItemSeparatorComponent={ItemSeparator}
                     keyExtractor={(item, index) => index.toString()}
-                    renderItem={({item}) => <DropdownMenu item={item} icon={item.img} heading={item.heading} />}
+                    renderItem={({item}) => <DropdownMenu item={item} icon={item.img} heading={item.heading} text={item.text} />}
                 />
             ))}
         </SearchContext.Consumer>
@@ -33,13 +33,14 @@ export default function Dropdown() {
         </View>
     )
 
-    const DropdownMenu = ({item, icon, heading}) => (
+    const DropdownMenu = ({item, icon, heading, text}) => (
         <SearchContext.Consumer>
             {(({setSearch, setClicked, setDropdown}) => (
                 <TouchableOpacity style={style.container} onPress={() => {navigation.navigate("Карточка", {
                     heading: heading,
                     item: item,
-                    icon: icon
+                    icon: icon,
+                    text: text
                 }), dropdownHandler(setSearch, setDropdown, setClicked)
                 }}>
                     <View style={style.row}>

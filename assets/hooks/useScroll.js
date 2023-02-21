@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useRef} from "react"
+import React from "react"
 export const useScroll = () => {
-
 
     const getItemLayout = (data, index) => {
         const FIXED_ITEM_HEIGHT = 100
         const NUM_COLUMNS = 3
+
         return {
-            length: index,
+            length: data.length + index,
             index,
             offset: FIXED_ITEM_HEIGHT * Math.floor(index / NUM_COLUMNS),
             animated: true,

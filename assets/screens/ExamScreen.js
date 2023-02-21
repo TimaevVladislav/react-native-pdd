@@ -48,7 +48,8 @@ export const ExamScreen = ({navigation}) => {
 
     const { uriTicket } = useSwitcher()
 
-    const { isScrollId, setIsScrollId, scrollItemLayout } = useLayout()
+    const [isScrollId, setIsScrollId] = useState(0)
+    const { scrollItemLayout } = useLayout()
 
     useEffect(() => {
         ref.current.scrollToOffset({

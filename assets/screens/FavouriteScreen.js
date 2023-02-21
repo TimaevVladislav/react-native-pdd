@@ -46,16 +46,18 @@ const Tickets = ({item}) => {
 export const FavouriteScreen = () => {
 
     const ref = useRef(null)
+    const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)
-    const { isScrollId, setIsScrollId, scrollItemLayout } = useScroll()
+    const { scrollItemLayout } = useScroll()
 
     useEffect(() => {
         ref.current.scrollToOffset({
-            isScrollId,
+            index: isScrollId,
             offset: 390 * isScrollId,
             animated: true,
         })
     }, [isScrollId])
+
 
     const handlerColor = (answer, buttonId) => {
         if (!answer.is_correct) {
@@ -68,7 +70,7 @@ export const FavouriteScreen = () => {
     const TicketScrollFavorites = ({data, setData}) => {
 
         const {colors, colorId} = useColor()
-        const { getItemLayout } = useLayout()
+        const { getItemLayout } = useScroll()
 
         const IdQuestion = ({answers, idQuestion, ticket_number}) => {
             return (
