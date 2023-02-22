@@ -1,12 +1,11 @@
-import React, {useContext, useEffect, useRef, useState} from 'react'
-import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity, ScrollView} from 'react-native'
+import React, {useContext, useEffect, useState} from 'react'
+import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
 
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
-import {DisableContext, DisableProvider} from "../context/disabled"
 import {CountContext} from "../store/provider/CountProvider"
 import {colors as color} from "../store/data/colors"
 import {favorites} from "../store/questions/A_B/tickets/favorites.js"
@@ -16,30 +15,32 @@ import { useSwitcher } from "../store/questions"
 import { useColor } from "../hooks/useColor"
 import { useLayout } from "../hooks/useLayout"
 
+import {FavoriteContext, FavoriteProvider} from "../context/favorite"
 
 
+const Tickets = ({item, colors, handlerColor}) => {
 
-const Tickets = ({item, colors, handlerColor, tickets, setTickets}) => {
+
     return (
-        <DisableProvider>
-            <DisableContext.Consumer>
-                {(({isDisabled}) => (
-                    <View>
-                        <View style={styleTicket.container}>
-                            <Image source={item.image} style={styleTicket.img} />
-                        </View>
-                        <View>
-                            <Text style={styleTicket.title}>
-                                {item.question}
-                            </Text>
-                            <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
-                            <Favorites item={item} tickets={tickets} setTickets={setTickets}/>
-                        </View>
-                        { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : <></> }
-                    </View>
-                ))}
-            </DisableContext.Consumer>
-        </DisableProvider>
+       <FavoriteProvider>
+           <FavoriteContext.Consumer>
+               {(({isFavorite, setIsFavorite}) => (
+                   <View>
+                       <View style={styleTicket.container}>
+                           <Image source={item.image} style={styleTicket.img} />
+                       </View>
+                       <View>
+                           <Text style={styleTicket.title}>
+                               {item.question}
+                           </Text>
+                           <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
+                           <Favorites item={item} setIsFavorite={setIsFavorite} />
+                       </View>
+                       <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />
+                   </View>
+               ))}
+           </FavoriteContext.Consumer>
+       </FavoriteProvider>
     )
 }
 
@@ -108,6 +109,8 @@ export const ExamScreen = ({navigation}) => {
         )
     }
 
+
+    console.log(favorites)
 
     const handlerColor = (answer, buttonId) => {
         if (!answer.is_correct) {

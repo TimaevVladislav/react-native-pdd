@@ -6,10 +6,8 @@ export const CountContext = React.createContext({
 })
 
 export const CountProvider = ({children}) => {
-    const [countResults, setCountResults] = useState(0)
-    const [passExam, setPassExam] = useState(false)
-    const ref = useRef(null)
     const [isScrollId, setIsScrollId] = useState(0)
+
 
     const defaultValue = {
        isScrollId, setIsScrollId

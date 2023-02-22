@@ -15,10 +15,9 @@ import { favorites } from "../store/questions/A_B/tickets/favorites.js"
 
 import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
-import {useLayout} from "../hooks/useLayout"
+
 
 const Tickets = ({item}) => {
-
 
     return (
         <DisableProvider>
@@ -67,7 +66,9 @@ export const FavouriteScreen = () => {
         }
     }
 
-    const TicketScrollFavorites = ({data, setData}) => {
+    const TicketScrollFavorites = () => {
+
+
 
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
