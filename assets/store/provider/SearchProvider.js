@@ -26,18 +26,15 @@ export const SearchProvider = ({children}) => {
                 return itemData.indexOf(textData) > -1
             })
 
-
             if (newData.length > 0) {
                 setLoading(false)
             } else {
                 setLoading(true)
             }
 
-
             setFiltered(newData)
             setSearch(text)
         } else {
-
             setFiltered(results)
             setSearch(text)
         }
