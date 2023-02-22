@@ -20,10 +20,7 @@ import {FavouriteScreen} from "../screens/FavouriteScreen"
 import MistakeScreen from "../screens/MistakeScreen"
 import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
-
 import Router from "./router"
-import {CountContext} from "../store/provider/CountProvider";
-import {Text, TouchableOpacity, View} from "react-native";
 
 
 const TicketsScreens = (Stack) => (

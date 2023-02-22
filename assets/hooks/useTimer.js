@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useNavigation, useRoute} from "@react-navigation/native"
 
 import {Alert} from "react-native"
+import {CountContext} from "../store/provider/CountProvider"
 
 
 const START_MINUTES = '20'
@@ -104,7 +105,7 @@ const useTimer = () => {
 
     )
 
-    const handlerConfirm = () => (
+    const handlerConfirm = (setIsScrollId) => (
 
         Alert.alert(
             "Хотите выйти?",
@@ -112,21 +113,22 @@ const useTimer = () => {
             [
                 {
                     text: "Продолжить",
-                    onPress: () => handlerResume(),
+                    onPress: () => console.log("swsw"),
                     style: "cancel",
 
                 },
                 {   text: `Выйти`,
                     style: "cancel",
-                    onPress: () => { {
+                    onPress: () => {
+                        setIsScrollId(0)
                         navigation.goBack()
+                    }
 
-                    }}
                 }
             ]
         )
-
     )
+
 
     return { currentMinutes, currentSeconds, handlerConfirm }
 }

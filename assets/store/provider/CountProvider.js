@@ -2,9 +2,7 @@ import React, {useRef, useState, useEffect} from "react"
 
 export const CountContext = React.createContext({
     ref: null,
-    correct: false,
-    incorrect: false,
-    countResult: false
+
 })
 
 export const CountProvider = ({children}) => {

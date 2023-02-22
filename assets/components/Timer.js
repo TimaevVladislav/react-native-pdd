@@ -8,22 +8,26 @@ import {
 } from "react-native"
 
 import {useTimer} from "../hooks/useTimer"
-
+import {CountContext} from "../store/provider/CountProvider"
 
 
 export const ArrowBack = () => {
     const { handlerConfirm } = useTimer()
 
     return (
-        <View style={{marginRight: 35}}>
-            <TouchableOpacity onPress={handlerConfirm}>
-                <Ionicons
-                    name="arrow-back-outline"
-                    size={23}
-                    color="white"
-                />
-            </TouchableOpacity>
-        </View>
+        <CountContext.Consumer>
+            {(({setIsScrollId}) => (
+                <View style={{marginRight: 35}}>
+                    <TouchableOpacity onPress={() => handlerConfirm(setIsScrollId)}>
+                        <Ionicons
+                            name="arrow-back-outline"
+                            size={23}
+                            color="white"
+                        />
+                    </TouchableOpacity>
+                </View>
+            ))}
+        </CountContext.Consumer>
     )
 
 }

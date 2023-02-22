@@ -26,13 +26,9 @@ const CountdownTimer = ({targetDate, key, names, showHandle}) => {
              minutes={minutes}
              seconds={seconds}
           />
-    );
+    )
+ }
 }
-    // if (minutes + seconds <= 0) {
-
-
-
-};
 
 const AlertExpired = ({names, navigation}) => {
 
