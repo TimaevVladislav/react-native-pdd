@@ -4,8 +4,8 @@ import Home from "../screens/HomeScreen"
 import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
-import {ExamScreen} from "../screens/ExamScreen"
-import Results, {CloseOutline} from "../screens/Results"
+import {ExamScreen, stylesVirtual} from "../screens/ExamScreen"
+import ResultScreen, {CloseOutline} from "../screens/ResultScreen"
 import {Policies} from "../screens/SettingScreen"
 
 import {FeedBack} from "../components/default/Feedback"
@@ -22,6 +22,9 @@ import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
 
 import Router from "./router"
+import {CountContext} from "../store/provider/CountProvider";
+import {Text, TouchableOpacity, View} from "react-native";
+import React from "react";
 
 const TicketsScreens = (Stack) => (
     <Stack.Group>
@@ -73,7 +76,7 @@ export default function Navigation () {
             />
             <Stack.Screen
                 name="Результат"
-                component={Results}
+                component={ResultScreen}
                 options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
             />
             <Stack.Screen

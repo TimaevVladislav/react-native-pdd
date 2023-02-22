@@ -1,23 +1,22 @@
-import React, {useState} from "react"
+import React, {useRef, useState, useEffect} from "react"
 
 export const CountContext = React.createContext({
+    ref: null,
     correct: false,
     incorrect: false,
     countResult: false
 })
+
 export const CountProvider = ({children}) => {
-    const [stopIntervalHandle, setStopIntervalHandle] = useState(false)
     const [countResults, setCountResults] = useState(0)
     const [passExam, setPassExam] = useState(false)
-
+    const ref = useRef(null)
+    const [isScrollId, setIsScrollId] = useState(0)
 
     const defaultValue = {
-        passExam,
-        countResults,
-        setCountResults,
-        setStopIntervalHandle,
-        stopIntervalHandle
-    };
+       isScrollId, setIsScrollId
+    }
+
 
     return (
         <CountContext.Provider value={defaultValue}>

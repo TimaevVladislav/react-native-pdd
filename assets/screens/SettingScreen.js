@@ -111,7 +111,7 @@ export default function SettingScreen({navigation}) {
                     </ScrollView>
                     ))}
             </ThemeContext.Consumer>
-    );
+    )
 }
 
 export const Policies = () => (

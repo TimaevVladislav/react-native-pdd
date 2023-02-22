@@ -2,7 +2,7 @@ import React from "react"
 import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
-export default function Results ({navigation, route}) {
+export default function ResultScreen ({navigation, route}) {
     return (
         <View style={style.container}>
             <View>
