@@ -1,13 +1,13 @@
-import {createNativeStackNavigator} from "@react-navigation/native-stack"
+import React from "react"
 
+import {createNativeStackNavigator} from "@react-navigation/native-stack"
 import Home from "../screens/HomeScreen"
 import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
-import {ExamScreen, stylesVirtual} from "../screens/ExamScreen"
+import {ExamScreen} from "../screens/ExamScreen"
 import ResultScreen, {CloseOutline} from "../screens/ResultScreen"
 import {Policies} from "../screens/SettingScreen"
-
 import {FeedBack} from "../components/default/Feedback"
 
 
@@ -24,7 +24,7 @@ import ExtraInformation, {Region} from "../components/ExtraInformation"
 import Router from "./router"
 import {CountContext} from "../store/provider/CountProvider";
 import {Text, TouchableOpacity, View} from "react-native";
-import React from "react";
+
 
 const TicketsScreens = (Stack) => (
     <Stack.Group>
@@ -66,7 +66,7 @@ export default function Navigation () {
                 options={({ route}) => {
                     return ({
                         headerLeft: () => {
-                            if(route.params.scrollIndex || route.params.scrollIndex === 0){
+                            if(route.params.id || route.params.id === 0){
                                 return <ArrowBack />
                             }
                         },
