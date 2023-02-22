@@ -24,7 +24,7 @@ const Tickets = ({item, colors, handlerColor}) => {
     return (
        <FavoriteProvider>
            <FavoriteContext.Consumer>
-               {(({isFavorite, setIsFavorite}) => (
+               {(({setIsFavorite}) => (
                    <View>
                        <View style={styleTicket.container}>
                            <Image source={item.image} style={styleTicket.img} />

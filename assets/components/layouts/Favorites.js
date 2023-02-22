@@ -16,7 +16,7 @@ export const Favorites = ({item, setIsFavorite}) => {
 
     const deleteTicketHandler = (ticket) => {
         setIsFavorite(false)
-        favorites.filter(item => item?.ticket_question !== ticket.ticket_question)
+        favorites.filter(item => item.ticket_question !== ticket.ticket_question)
     }
 
     return (

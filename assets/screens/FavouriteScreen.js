@@ -1,14 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, {useRef, useState, useEffect, useContext} from 'react'
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from 'react-native'
 
 import {useScroll} from "../hooks/useScroll"
 
 
 import {Favorites} from "../components/layouts/Favorites"
-import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
-import {DisableContext, DisableProvider} from "../context/disabled"
 
 import {colors as color} from "../store/data/colors"
 import { favorites } from "../store/questions/A_B/tickets/favorites.js"
@@ -18,27 +16,26 @@ import {useColor} from "../hooks/useColor"
 
 
 const Tickets = ({item}) => {
-
     return (
-        <DisableProvider>
-            <DisableContext.Consumer>
-                {(({isDisabled}) => (
-                    <View>
-                        <View style={styleTicket.container}>
-                            <Image source={item.image} style={styleTicket.img} />
-                        </View>
-                        <View>
-                            <Text style={styleTicket.title}>
-                                {item.question}
-                            </Text>
-                            <ButtonFavorites answers={item.answers} />
-                            <Favorites />
-                        </View>
-                        { isDisabled ? <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} /> : <></> }
-                    </View>
-                ))}
-            </DisableContext.Consumer>
-        </DisableProvider>
+        // <FavoriteProvider>
+        //     <FavoriteContext.Consumer>
+        //         {(({setIsFavorite}) => (
+        //         ))}
+        //     </FavoriteContext.Consumer>
+        // </FavoriteProvider>
+        <View>
+            <View style={styleTicket.container}>
+                <Image source={item.image} style={styleTicket.img} />
+            </View>
+            <View>
+                <Text style={styleTicket.title}>
+                    {item.question}
+                </Text>
+                <ButtonFavorites answers={item.answers} />
+                <Favorites />
+            </View>
+        </View>
+
     )
 }
 
