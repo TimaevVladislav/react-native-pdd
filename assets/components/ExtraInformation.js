@@ -3,7 +3,7 @@ import {StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-n
 
 import items from "../store/temp/regions.json"
 import {styles} from "./layouts/Sections";
-import {getNavigate} from "./MainButtons"
+import {getNavigate} from "./default/MenuButtons"
 
 
 export default function ExtraInformation({navigation}) {

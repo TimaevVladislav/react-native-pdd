@@ -1,19 +1,21 @@
 import React from "react"
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native"
-
 import Ionicons from "@expo/vector-icons/Ionicons"
+
+import {favorites} from "../../store/questions/A_B/tickets/favorites"
+import {mistakes} from "../../store/questions/A_B/tickets/mistakes";
 
 
 export const getNavigate = (navigation, item) => {
     navigation.navigate(item)
 }
 
-export default function MainButtons({navigation}) {
-    return (
-       <>
-           <ButtonsMain navigation={navigation} />
-           <Buttons navigation={navigation} />
-       </>
+export default function MenuButtons({navigation}) {
+    return(
+        <>
+            <ButtonsMain navigation={navigation} />
+            <Buttons navigation={navigation} />
+        </>
     )
 }
 
@@ -42,7 +44,7 @@ const ButtonsMain = ({navigation}) => (
 
 const Buttons = ({navigation}) => (
     <View style={style.container}>
-        <TouchableOpacity onPress={() => navigation.navigate("Ошибки")}>
+        <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : <></>}>
             <View style={style.item}>
                 <View>
                     <Ionicons name="alert-circle" size={25} color="#3AB4F2" />
@@ -52,7 +54,7 @@ const Buttons = ({navigation}) => (
                 </View>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Избранное")}>
+        <TouchableOpacity onPress={() => favorites.length > 0 ? navigation.navigate("Избранное") : <></>}>
             <View style={style.item}>
                 <View>
                     <Ionicons name="ios-star" size={25} color="#3AB4F2" />

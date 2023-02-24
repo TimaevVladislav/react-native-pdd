@@ -14,7 +14,7 @@ import {FeedBack} from "../components/default/Feedback"
 import Tickets from "../components/layouts/Tickets"
 import Card from "../components/default/Card"
 import SignsList from "../components/SignsList"
-import MainButtons from "../components/MainButtons"
+import MenuButtons from "../components/default/MenuButtons"
 import {Search} from "../components/SearchComponent"
 import {FavouriteScreen} from "../screens/FavouriteScreen"
 import MistakeScreen from "../screens/MistakeScreen"
@@ -38,7 +38,7 @@ const HomeScreens = (Stack) => (
         <Stack.Screen name="Правила дорожного движения" component={Profile} options={{title: "ПДД"}} />
         <Stack.Screen name="Дорожные знаки" component={Signs} />
         <Stack.Screen name="Дорожная разметка" component={Markup} />
-        <Stack.Screen name="Билеты" component={MainButtons} />
+        <Stack.Screen name="Билеты" component={MenuButtons} />
         <Stack.Screen name="Дополнительная информация" component={ExtraInformation} />
         <Stack.Screen name="Коды регионов" component={Region} />
     </Stack.Group>
@@ -66,7 +66,7 @@ export default function Navigation () {
                         title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
                     })}}
             />
-            <Stack.Screen name="Избранное" component={FavouriteScreen} options={({route}) => ({title: route.params.favorite === undefined ? 1 : route.params.favorite})} />
+            <Stack.Screen name="Избранное" component={FavouriteScreen} options={({route}) => ({title: `${55}`})} />
             <Stack.Screen name="Результат" component={ResultScreen}
                 options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
             />

@@ -1,8 +1,7 @@
 import React, {useState} from "react"
 
 export const FavoriteContext = React.createContext({
-   isFavorite: true,
-   setIsFavorite: false,
+
 })
 
 export const FavoriteProvider = ({children}) => {
