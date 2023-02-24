@@ -13,34 +13,36 @@ import { favorites } from "../store/questions/A_B/tickets/favorites.js"
 
 import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
-
+import {FavoriteContext, FavoriteProvider} from "../context/favorite"
+import {useNavigation} from "@react-navigation/native";
 
 const Tickets = ({item}) => {
     return (
-        // <FavoriteProvider>
-        //     <FavoriteContext.Consumer>
-        //         {(({setIsFavorite}) => (
-        //         ))}
-        //     </FavoriteContext.Consumer>
-        // </FavoriteProvider>
-        <View>
-            <View style={styleTicket.container}>
-                <Image source={item.image} style={styleTicket.img} />
-            </View>
-            <View>
-                <Text style={styleTicket.title}>
-                    {item.question}
-                </Text>
-                <ButtonFavorites answers={item.answers} />
-                <Favorites />
-            </View>
-        </View>
-
+        <FavoriteProvider>
+            <FavoriteContext.Consumer>
+                {(({setIsFavorite}) => (
+                    <View>
+                        <View style={styleTicket.container}>
+                            <Image source={item.image} style={styleTicket.img} />
+                        </View>
+                        <View>
+                            <Text style={styleTicket.title}>
+                                {item.question}
+                            </Text>
+                            <ButtonFavorites answers={item.answers} />
+                            <Favorites item={item} setIsFavorite={setIsFavorite} />
+                        </View>
+                    </View>
+                ))}
+            </FavoriteContext.Consumer>
+        </FavoriteProvider>
     )
 }
 
 export const FavouriteScreen = () => {
 
+
+    const navigation = useNavigation()
     const ref = useRef(null)
     const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)
@@ -66,7 +68,6 @@ export const FavouriteScreen = () => {
     const TicketScrollFavorites = () => {
 
 
-
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
 
@@ -77,6 +78,7 @@ export const FavouriteScreen = () => {
                         <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
                             <Text style={stylesVirtual.title} onPress={() => {
                                 setIsScrollId(idQuestion)
+                                navigation.setParams({favorite: idQuestion })
                             }}>
                                 {idQuestion}
                             </Text>

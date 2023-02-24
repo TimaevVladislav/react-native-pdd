@@ -23,13 +23,14 @@ import ExtraInformation, {Region} from "../components/ExtraInformation"
 import Router from "./router"
 
 
-const TicketsScreens = (Stack) => (
-    <Stack.Group>
-        <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
-        <Stack.Screen name="Избранное" component={FavouriteScreen} />
-        <Stack.Screen name="Ошибки" component={MistakeScreen} />
-    </Stack.Group>
-)
+const TicketsScreens = (Stack) => {
+    return(
+        <Stack.Group>
+            <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
+            <Stack.Screen name="Ошибки" component={MistakeScreen} />
+        </Stack.Group>
+    )
+}
 const HomeScreens = (Stack) => (
     <Stack.Group>
         <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
@@ -48,19 +49,13 @@ export default function Navigation () {
         <Stack.Group>
             {HomeScreens(Stack)}
             {TicketsScreens(Stack)}
-            <Stack.Screen name="Карточка" component={Card} options={({route}) => ({title: route.params.heading})} />
-            <Stack.Screen
-                name="Обратная связь"
-                component={FeedBack}
-            />
-            <Stack.Screen
-                name="Пользовательское соглашение"
-                component={Policies}
-            />
+            <Stack.Screen name="Карточка" component={Card} options={({route= {}}) => ({title: route.params.heading})} />
+            <Stack.Screen name="Обратная связь" component={FeedBack} />
+            <Stack.Screen name="Пользовательское соглашение" component={Policies} />
             <Stack.Screen
                 name="Экзамен"
                 component={ExamScreen}
-                options={({ route}) => {
+                options={({ route= {}}) => {
                     return ({
                         headerLeft: () => {
                             if(route.params.id || route.params.id === 0){
@@ -71,9 +66,8 @@ export default function Navigation () {
                         title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
                     })}}
             />
-            <Stack.Screen
-                name="Результат"
-                component={ResultScreen}
+            <Stack.Screen name="Избранное" component={FavouriteScreen} options={({route}) => ({title: route.params.favorite === undefined ? 1 : route.params.favorite})} />
+            <Stack.Screen name="Результат" component={ResultScreen}
                 options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
             />
             <Stack.Screen
