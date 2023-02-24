@@ -20,10 +20,8 @@ const Tickets = ({item}) => {
     return (
         <FavoriteProvider>
             <FavoriteContext.Consumer>
-                {(({setIsFavorite}) => (
+                {(({setIsFavorite, isFavorite = true}) => (
                    <>
-
-                       {setIsFavorite(true)}
                        <View>
                            <View style={styleTicket.container}>
                                <Image source={item.image} style={styleTicket.img} />
@@ -33,7 +31,7 @@ const Tickets = ({item}) => {
                                    {item.question}
                                </Text>
                                <ButtonFavorites answers={item.answers} />
-                               <Favorites item={item} setIsFavorite={setIsFavorite} />
+                               <Favorites item={item} setIsFavorite={setIsFavorite} isFavorite={isFavorite} />
                            </View>
                        </View>
                    </>

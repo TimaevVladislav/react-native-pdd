@@ -2,8 +2,9 @@ import React from "react"
 import {View, Text, StyleSheet, TouchableOpacity} from "react-native"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
+import {AlertComponent} from "./Alert"
 import {favorites} from "../../store/questions/A_B/tickets/favorites"
-import {mistakes} from "../../store/questions/A_B/tickets/mistakes";
+import {mistakes} from "../../store/questions/A_B/tickets/mistakes"
 
 
 export const getNavigate = (navigation, item) => {
@@ -42,28 +43,37 @@ const ButtonsMain = ({navigation}) => (
     </View>
 )
 
-const Buttons = ({navigation}) => (
-    <View style={style.container}>
-        <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : <></>}>
-            <View style={style.item}>
-                <View>
-                    <Ionicons name="alert-circle" size={25} color="#3AB4F2" />
+const Buttons = ({navigation}) => {
+
+    const alertFavorite = {
+        title: "Избранное",
+        message: "Здесь появятся вопросы, которые ты отметишь как избранные",
+        buttons: [{text: "Ок", style: "cancel"}]
+    }
+
+    return(
+        <View style={style.container}>
+            <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : <></>}>
+                <View style={style.item}>
+                    <View>
+                        <Ionicons name="alert-circle" size={25} color="#3AB4F2" />
+                    </View>
+                    <View>
+                        <Text style={style.heading}>Ошибки</Text>
+                    </View>
                 </View>
-                <View>
-                    <Text style={style.heading}>Ошибки</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => favorites.length > 0 ? navigation.navigate("Избранное") : AlertComponent(alertFavorite)}>
+                <View style={style.item}>
+                    <View>
+                        <Ionicons name="ios-star" size={25} color="#3AB4F2" />
+                    </View>
+                    <Text style={style.heading}>Избранное</Text>
                 </View>
-            </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => favorites.length > 0 ? navigation.navigate("Избранное") : <></>}>
-            <View style={style.item}>
-                <View>
-                    <Ionicons name="ios-star" size={25} color="#3AB4F2" />
-                </View>
-                <Text style={style.heading}>Избранное</Text>
-            </View>
-        </TouchableOpacity>
-    </View>
-)
+            </TouchableOpacity>
+        </View>
+    )
+}
 
 
 const ButtonsBottom = () => (
