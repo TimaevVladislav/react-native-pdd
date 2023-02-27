@@ -1,7 +1,8 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 7",
+    "ticket_question":  0,   
+    "ticket_number": 7,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Может ли владелец мотоцикла с рабочим объемом двигателя внутреннего сгорания, не превышающим 125 см3, и максимальной мощностью, не превышающей 11 квт, передавать управление этим транспортным средством в своем присутствии другому лицу, имея страховой полис обязательного страхования гражданской ответственности на бумажном носителе или в виде электронного документа либо его копии на бумажном носителе?",
@@ -31,8 +32,9 @@ export const ticket = [
     "id": "cf9282089e90f0cf7df65885c2596aee"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 7",
+    "ticket_question":  1,
+    "ticket_number": 7,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/543a9016557f8996cba404455671af3f.jpg"),
     "question": "О чем информируют Вас эти дорожные знаки?",
@@ -58,8 +60,9 @@ export const ticket = [
     "id": "c5619310610a938fa9c75960a1fdf00d"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 7",
+    "ticket_question":  2,
+    "ticket_number": 7,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/505bf5de2658d2b9a8e5bb4b5fa345e0.jpg"),
     "question": "Разрешено ли Вам произвести остановку в указанном месте?",
@@ -87,8 +90,9 @@ export const ticket = [
     "id": "e87372fea3b2cdb18d4ad6a480363e67"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 7",
+    "ticket_question":  3,
+    "ticket_number": 7,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8005827da4440d40f81e05929e379f9d.jpg"),
     "question": "Действие каких знаков из указанных распространяется только до ближайшего по ходу движения перекрёстка?",
@@ -114,8 +118,8 @@ export const ticket = [
     "id": "d3349eaf023aa109dc8749ebc312e709"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 7",
+    "ticket_question":  4,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/96985d06270c2d22da6a6328e923407c.jpg"),
     "question": "Что обозначают прерывистые линии разметки на перекрёстке?",
@@ -137,8 +141,8 @@ export const ticket = [
     "id": "a0ba1227528ba7e0e3a60da2cc4e6938"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 7",
+    "ticket_question":  5,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dba2285ba0161a6db7f9541df67f15af.jpg"),
     "question": "Вам разрешается движение:",
@@ -164,8 +168,8 @@ export const ticket = [
     "id": "979035bd365231e3d3f4df1781ff64a9"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 7",
+    "ticket_question":  6,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Когда следует выключить указатели левого поворота, выполняя обгон?",
@@ -191,8 +195,8 @@ export const ticket = [
     "id": "648589c1c04f3016a0a9db9432086dd8"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 7",
+    "ticket_question":  7,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ac77f80c11456ca7928c6c4277516cac.jpg"),
     "question": "Обязан ли водитель легкового автомобиля уступить дорогу водителю грузового автомобиля?",
@@ -218,8 +222,8 @@ export const ticket = [
     "id": "744b56480eff4d06f68d4d9a77e5c658"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 7",
+    "ticket_question":  8,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/520cdde8ace0f46b8eee90f7604cb596.jpg"),
     "question": "Разрешен ли Вам разворот на этом участке дороги?",
@@ -245,8 +249,8 @@ export const ticket = [
     "id": "e79644cf9bb01181aef22d4ea7bdc7f6"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 7",
+    "ticket_question":  9,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "С какой скоростью мотоциклам разрешается движение вне населенных пунктов на автомагистралях?",
@@ -272,8 +276,8 @@ export const ticket = [
     "id": "7c8e23258835ca5d1fa92749145c3e80"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 7",
+    "ticket_question":  10,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c152907d869a2d0d7fd74ae41e6e693d.jpg"),
     "question": "Разрешается ли Вам в конце подъёма перестроиться на среднюю полосу для опережения грузового автомобиля?",
@@ -299,8 +303,8 @@ export const ticket = [
     "id": "0b37dc470da0a9fd933b9f378e4c1398"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 7",
+    "ticket_question":  11,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/be2c5fa721a2a4283b9f9fbe4f6471eb.jpg"),
     "question": "В каком из указанных мест Вам можно поставить на стоянку легковой автомобиль?",
@@ -330,8 +334,8 @@ export const ticket = [
     "id": "1ab15bf82bbc2702abb009e21ac27be3"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 7",
+    "ticket_question":  12,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/cf624ed2daa0947f0708e4c4b3dc7fc8.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -357,8 +361,8 @@ export const ticket = [
     "id": "3b4b6092cf50c0e628ce0f2559df3f90"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 7",
+    "ticket_question":  13,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c149e9f2ca6afaf456691db1d9126d64.jpg"),
     "question": "Разрешено ли Вам выехать на перекресток, за которым образовался затор?",
@@ -384,8 +388,8 @@ export const ticket = [
     "id": "059bf18cc5917313c7c2e73e20d41726"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 7",
+    "ticket_question":  14,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1f52b5842f4d43019a8c6aaa844432cd.jpg"),
     "question": "Вы намерены продолжить движение прямо. Кому Вы обязаны уступить дорогу?",
@@ -411,8 +415,8 @@ export const ticket = [
     "id": "d30d4ea921f8cf6d97e3e484725cd7f6"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 7",
+    "ticket_question":  15,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Где могут двигаться пешеходы в жилой зоне?",
@@ -438,8 +442,8 @@ export const ticket = [
     "id": "236c2dca0e1e9849b53b70475d1fd264"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 7",
+    "ticket_question":  16,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9ce7f3f4ad95438308d54aa1ea1e761f.jpg"),
     "question": "На каком рисунке изображён автомобиль, водитель которого не нарушает правил перевозки грузов?",
@@ -465,8 +469,8 @@ export const ticket = [
     "id": "88ecd2a51c1b00b1c7cbc1b69ea51242"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 7",
+    "ticket_question":  17,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях разрешается эксплуатация транспортного средства?",
@@ -496,8 +500,8 @@ export const ticket = [
     "id": "72d058f7007b0ee350186bc5ec229bdf"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 7",
+    "ticket_question":  18,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Двигаться по глубокому снегу на грунтовой дороге следует:",
@@ -523,8 +527,8 @@ export const ticket = [
     "id": "816f15bad5e7b34d3af386e568b88ebb"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 7",
+    "ticket_question": 19,
+    "ticket_number": 7,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какую оптимальную позу следует придать пострадавшему, находящемуся в сознании, при подозрении на травму позвоночника?",

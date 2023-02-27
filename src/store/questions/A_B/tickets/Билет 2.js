@@ -5,6 +5,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1871b903ddd6b18d2bc45133234dd7fa.jpg"),
     "question": "Сколько полос для движения имеет данная дорога?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Две",
@@ -57,6 +58,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/77fa304dc7de7bbe2eb0b0a0a1f5e0ed.jpg"),
     "question": "Разрешено ли Вам произвести остановку для посадки пассажира?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Разрешено",
@@ -87,6 +89,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/0f751e9c5e75d0a7097691d052ed3a95.jpg"),
     "question": "Что запрещено в зоне действия этого знака?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Движение любых транспортных средств",
@@ -139,6 +142,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/128c28cac2abba6010bf89c55eb7be10.jpg"),
     "question": "В каких направлениях Вам разрешается продолжить движение?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только налево",
@@ -191,6 +195,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/328947fa3921f7c37a9d825b2e8b030b.jpg"),
     "question": "Двигаясь по левой полосе, водитель намерен перестроиться на правую. На каком из рисунков показана ситуация, в которой он обязан уступить дорогу?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "На левом",
@@ -243,6 +248,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": "./images/no_image.jpg",
     "question": "В каких случаях разрешается наезжать на прерывистые линии разметки, разделяющие проезжую часть на полосы движения?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только если на дороге нет других транспортных средств",
@@ -273,6 +279,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/ddd733bef00665b6608b3e08d9008821.jpg"),
     "question": "Разрешено ли Вам обогнать мотоцикл?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Разрешено",
@@ -325,6 +332,7 @@ export const ticket = [
     "ticket_number": 2,
     "image": require("../../../images/A_B/d2f620a80735b4205843f9b3d26cecc6.jpg"),
     "question": "Вы намерены повернуть налево. Кому Вы должны уступить дорогу?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только пешеходам",
@@ -352,6 +360,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/effa4b8d198a74e7eeb2460bffca22dc.jpg"),
     "question": "В каком случае Вы имеете преимущество?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только при повороте направо",
@@ -379,6 +388,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ac0d572e2be79ff28310b579eba034eb.jpg"),
     "question": "Обязан ли водитель мотоцикла уступить Вам дорогу?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Обязан",
@@ -402,6 +412,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/07bad44c13de4e79e02eda779e92eab6.jpg"),
     "question": "Разрешается ли водителю выполнить объезд грузового автомобиля?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Разрешается",
@@ -429,6 +440,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких из перечисленных случаев запрещена буксировка на гибкой сцепке?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только на горных дорогах",
@@ -460,6 +472,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Запрещается эксплуатация мототранспортных средств (категории L), если остаточная глубина рисунка протектора шин (при отсутствии индикаторов износа) составляет не более:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "0,8 мм",
@@ -491,6 +504,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Исключает ли антиблокировочная тормозная система возможность возникновения заноса или сноса при прохождении поворота?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Полностью исключает возможность возникновения только заноса",
@@ -518,6 +532,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях следует начинать сердечно-легочную реанимацию пострадавшего?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "При наличии болей в области сердца и затрудненного дыхания",

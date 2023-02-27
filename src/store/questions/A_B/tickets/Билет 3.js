@@ -5,6 +5,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e72bbb0a6d603fa37ff31ffd3bd2d515.jpg"),
     "question": "Выезжая с грунтовой дороги на перекресток, Вы попадаете:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "На главную дорогу",
@@ -32,6 +33,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e5ea59fb8c5d8f172d32af5c36053913.jpg"),
     "question": "Где Вы должны остановиться?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Перед знаком (А)",
@@ -59,6 +61,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/881aacfa9f384179233cec04baf14420.jpg"),
     "question": "Вам необходимо двигаться со скоростью не более 40 км/ч:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только во время дождя",
@@ -86,6 +89,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/26c59aae3c71753e36f2a139e38da9c2.jpg"),
     "question": "Какой из указанных знаков устанавливается в начале дороги с односторонним движением?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только А",
@@ -117,6 +121,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2609dd0293a8f2c0fce44244a3c6b40a.jpg"),
     "question": "Можно ли Вам остановиться в этом месте для посадки или высадки пассажиров?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Можно",
@@ -145,6 +150,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0935c1587cf1ad38e08e888fceff382f.jpg"),
     "question": "При повороте направо Вы:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Имеете право проехать перекресток первым",
@@ -172,6 +178,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях водитель не должен подавать сигнал указателями поворота?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только при отсутствии на дороге других участников движения",
@@ -199,6 +206,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/09a7e56d2c58551322f966dfa011da5f.jpg"),
     "question": "Вам разрешено выполнить поворот направо:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только по траектории А",
@@ -226,6 +234,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0ed1092b9a399736ca37393c2963c296.jpg"),
     "question": "Разрешается ли Вам выполнить разворот на перекрестке по указанной траектории?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Разрешается",
@@ -253,6 +262,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5688949120d0f6dad41a3699c5d53d96.jpg"),
     "question": "По какой полосе Вы имеете право двигаться с максимальной разрешенной скоростью вне населенного пункта?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только по правой",
@@ -280,6 +290,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае водитель может начать обгон, если такой маневр на данном участке дороги не запрещен?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только если полоса, предназначенная для встречного движения, свободна на достаточном для обгона расстоянии",
@@ -307,6 +318,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8fcf82e8373415484138ad71355732bb.jpg"),
     "question": "Кто из водителей нарушил правила стоянки?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Оба",
@@ -338,6 +350,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/715412530dd5d75884feb036874bd759.jpg"),
     "question": "При движении прямо Вы:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Должны остановиться перед стоп-линией",
@@ -365,6 +378,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/789a543e4b2c04f75abe487329d3fbda.jpg"),
     "question": "Вы намерены повернуть направо. Ваши действия?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Проедете перекрёсток первым",
@@ -392,6 +406,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/65f8dd2d800014138813ef003692857f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Трамваям А и Б",
@@ -423,6 +438,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3e744df2b7bb6b14d21ff1ee56e9e3e5.jpg"),
     "question": "Кто из водителей нарушил правила остановки?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только водитель легкового автомобиля",
@@ -450,6 +466,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какое оборудование должно иметь механическое транспортное средство, используемое для обучения вождению?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Дополнительные педали привода сцепления (кроме транспортных средств с автоматической трансмиссией) и тормоза",
@@ -481,6 +498,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие из перечисленных транспортных средств разрешается эксплуатировать без огнетушителя?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только мотоциклы без бокового прицепа",
@@ -508,6 +526,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "На повороте возник занос задней оси переднеприводного автомобиля. Ваши действия?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Уменьшите подачу топлива, рулевым колесом стабилизируете движение",
@@ -539,6 +558,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие сведения необходимо сообщить диспетчеру для вызова «Скорой медицинской помощи» при ДТП?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Указать общеизвестные ориентиры, ближайшие к месту ДТП. Сообщить о количестве пострадавших, указать их пол и возраст",

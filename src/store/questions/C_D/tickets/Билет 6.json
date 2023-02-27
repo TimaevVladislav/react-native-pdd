@@ -139,8 +139,8 @@
     "id": "f59bd498a0f49cc72a7be720d35f1d86"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 6",
+    "ticket_question": 6,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли продолжить движение, если регулировщик поднял руку вверх после того, как Вы въехали на перекресток?",
@@ -166,8 +166,8 @@
     "id": "eb06fb8a02bd96c433cf70708b3e310d"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 6",
+    "ticket_question": 7,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/471aa33f9e26b84daa3b502c2ecd1998.jpg",
     "question": "Вы намерены продолжить движение по главной дороге. Обязаны ли Вы включить указатели левого поворота?",
@@ -193,8 +193,8 @@
     "id": "cb57e6a2fa841818a28e7b2c49adc97b"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 6",
+    "ticket_question": 8,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/846839213a87175b6cba366c34240f8f.jpg",
     "question": "Кто должен уступить дорогу при взаимном перестроении?",
@@ -220,8 +220,8 @@
     "id": "17a1d1a9b907bab9cd4c3549e3b51fb3"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 6",
+    "ticket_question": 9,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/ecc6170216644c6b07cb4eaaebfa9bf9.jpg",
     "question": "В каких направлениях Вам можно продолжить движение?",
@@ -247,8 +247,8 @@
     "id": "65d9f6968baf5b7650a9dc870bbc0e6f"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 6",
+    "ticket_question": 10,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/cd8769e58ef4191370f65f849d492b47.jpg",
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на междугороднем или маломестном автобусе?",
@@ -274,8 +274,8 @@
     "id": "d0071f6a9c76683503aaefc80c5f0dad"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 6",
+    "ticket_question": 11,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/ded6130d6a4b9263f6ca8c8562b03ed7.jpg",
     "question": "Как Вам следует поступить в данной ситуации?",
@@ -301,8 +301,8 @@
     "id": "5add6690bf77353708c8168deb44df0e"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 6",
+    "ticket_question": 12,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/42a0339cdc2059a16c044804ea06e10d.jpg",
     "question": "Разрешено ли Вам поставить автомобиль на стоянку в этом месте?",
@@ -328,8 +328,8 @@
     "id": "36e5aedad346ac99cf5c037f5452cb04"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 6",
+    "ticket_question": 13,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/add20b0ec6135fd2f9fdf926517cca1b.jpg",
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -355,8 +355,8 @@
     "id": "3cea75a384dce7bbb69f0406c958476a"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 6",
+    "ticket_question": 14,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/d00c4a96d7be6ed51a565d93acf20761.jpg",
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -382,8 +382,8 @@
     "id": "c8d62f5f28653dbf66a1c44fa29197c0"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 6",
+    "ticket_question": 15,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/579d49f17afacae9a569c358e74bf3ba.jpg",
     "question": "В каком случае Вы должны будете уступить дорогу автомобилю ДПС?",
@@ -409,8 +409,8 @@
     "id": "8c3616674b46014b2338c7c719b2bc8d"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 6",
+    "ticket_question": 16,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "При приближении к остановившемуся транспортному средству с включенной аварийной сигнализацией, которое имеет опознавательные знаки \"Перевозка детей\", водитель должен:",
@@ -436,8 +436,8 @@
     "id": "a50d2f697b7e52de3b77abbd6ccc3c23"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 6",
+    "ticket_question": 17,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Дневные ходовые огни предназначены для:",
@@ -463,8 +463,8 @@
     "id": "820b63450c3ca532ff42a7d0ff009fe6"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 6",
+    "ticket_question": 18,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Эксплуатировать грузовой автомобиль с разрешенной максимальной массой более 3,5 т можно при отсутствии:",
@@ -498,8 +498,8 @@
     "id": "a441896f50f1a6b1a7998f42f38474b4"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 6",
+    "ticket_question": 19,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/e70a22698081ad129568283a5ee6a656.jpg",
     "question": "В случае остановки на подъеме (спуске) при наличии обочины можно предотвратить самопроизвольное скатывание автобуса на проезжую часть, повернув его передние колеса в положение:",
@@ -529,8 +529,8 @@
     "id": "ab378d1a32842c6ca18a1fdce0e5c153"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 6",
+    "ticket_question":  20,
+    "ticket_number": 6,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Установленный факт употребления водителем вызывающих алкогольное опьянение веществ определяется наличием в его организме абсолютного этилового спирта в концентрации, превышающей:",

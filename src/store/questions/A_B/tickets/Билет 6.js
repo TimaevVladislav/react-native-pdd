@@ -1,7 +1,8 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 6",
+    "ticket_question": 0,
+    "ticket_number": 6,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что называется разрешённой максимальной массой транспортного средства?",
@@ -27,8 +28,9 @@ export const ticket = [
     "id": "fa54532665a63fbf58eaf24a4f44134d"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 6",
+    "ticket_question": 1,
+    "ticket_number": 6,
+    "favorite": false,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c41efe94d0ad813cd4fcd63cff2553a5.jpg"),
     "question": "Вам разрешено продолжить движение?",
@@ -54,8 +56,8 @@ export const ticket = [
     "id": "93b74e94b0f3ac89f63e159a464db6a9"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 6",
+    "ticket_question": 2,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2d4752b12702549f18b106d303f9d550.jpg"),
     "question": "Какие из указанных знаков разрешают проезд на автомобиле к месту проживания или работы?",
@@ -85,8 +87,8 @@ export const ticket = [
     "id": "6a4ad28934938be20ae26980b213ef0f"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 6",
+    "ticket_question": 3,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/51c764b043333b277cef40fa8d1e62fa.jpg"),
     "question": "Что обозначают эти дорожные знаки?",
@@ -112,8 +114,8 @@ export const ticket = [
     "id": "14bac0907c2773e8618b1772d131c6f3"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 6",
+    "ticket_question": 4,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8f56e3b61d4e053f2af24af9878a6f82.jpg"),
     "question": "Разметка в виде треугольника на полосе движения:",
@@ -139,8 +141,8 @@ export const ticket = [
     "id": "f59bd498a0f49cc72a7be720d35f1d86"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 6",
+    "ticket_question": 5,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли продолжить движение, если регулировщик поднял руку вверх после того, как Вы въехали на перекрёсток?",
@@ -166,8 +168,8 @@ export const ticket = [
     "id": "079a95a7d1cfd3cad0b2ea3507af96ec"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 6",
+    "ticket_question": 6,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/815b0c662f4110b4065f47e9f0d5b411.jpg"),
     "question": "Вы намерены продолжить движение по главной дороге. Обязаны ли Вы включить указатели левого поворота?",
@@ -193,8 +195,8 @@ export const ticket = [
     "id": "cb57e6a2fa841818a28e7b2c49adc97b"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 6",
+    "ticket_question": 7,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a450a0e7eb0e4235fa9bec6c20dfa1ff.jpg"),
     "question": "Кто должен уступить дорогу при взаимном перестроении?",
@@ -220,8 +222,8 @@ export const ticket = [
     "id": "17a1d1a9b907bab9cd4c3549e3b51fb3"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 6",
+    "ticket_question": 8,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9dd03825285f67f4f1fb4962d35c32e3.jpg"),
     "question": "В каких направлениях Вам можно продолжить движение?",
@@ -247,8 +249,8 @@ export const ticket = [
     "id": "65d9f6968baf5b7650a9dc870bbc0e6f"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 6",
+    "ticket_question": 9,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/912c11e435dbe941191ac47cac98bb96.jpg"),
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на легковом автомобиле?",
@@ -274,8 +276,8 @@ export const ticket = [
     "id": "98fb437543d9b1d123cf0cebeec7be6e"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 6",
+    "ticket_question": 10,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/68cadb0bc1911d5e5dc75f3e2ce15694.jpg"),
     "question": "Как Вам следует поступить в данной ситуации?",
@@ -301,8 +303,8 @@ export const ticket = [
     "id": "5add6690bf77353708c8168deb44df0e"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 6",
+    "ticket_question": 11,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/45a39cf318af16d3e7d4c3aba37e4323.jpg"),
     "question": "Разрешено ли Вам поставить автомобиль на стоянку в этом месте?",
@@ -328,8 +330,8 @@ export const ticket = [
     "id": "36e5aedad346ac99cf5c037f5452cb04"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 6",
+    "ticket_question": 12,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d3e0ee856afc28d7e3a358adf2fb08f8.jpg"),
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -355,8 +357,8 @@ export const ticket = [
     "id": "efbcfdb7079213f773fc4bcbe6ef186c"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 6",
+    "ticket_question": 13,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5b920a5d15ec9a4b3dbd200f36baee31.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -382,8 +384,8 @@ export const ticket = [
     "id": "c8d62f5f28653dbf66a1c44fa29197c0"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 6",
+    "ticket_question": 14,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6d10de1adbad3dfa4e761a78b170d887.jpg"),
     "question": "В каком случае Вы должны будете уступить дорогу автомобилю ДПС?",
@@ -409,8 +411,8 @@ export const ticket = [
     "id": "8c3616674b46014b2338c7c719b2bc8d"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 6",
+    "ticket_question": 15,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При приближении к остановившемуся транспортному средству с включенной аварийной сигнализацией, которое имеет опознавательные знаки «Перевозка детей», водитель должен:",
@@ -436,8 +438,8 @@ export const ticket = [
     "id": "22d811fa404442380a90d95236280d45"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 6",
+    "ticket_question": 16,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях водители мопедов нарушают Правила?",
@@ -463,8 +465,8 @@ export const ticket = [
     "id": "15cd2e2c2c063925b3a2eecb294fffae"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 6",
+    "ticket_question": 17,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Эксплуатировать грузовой автомобиль с разрешенной максимальной массой не более 3,5 т можно при отсутствии:",
@@ -494,8 +496,8 @@ export const ticket = [
     "id": "99a0ef8396819342d729e47af54ea674"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 6",
+    "ticket_question": 18,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c2975107ea070a3ffd8713df2de2354f.jpg"),
     "question": "В случае остановки на подъеме(спуске) при наличии обочины можно предотвратить самопроизвольное скатывание автомобиля на проезжую часть, повернув его передние колеса в положение:",
@@ -525,8 +527,8 @@ export const ticket = [
     "id": "3c0e879b932d3546d1616091fd318aee"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 6",
+    "ticket_question": 19,
+    "ticket_number": 6,"favorite": false, 
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Установленный факт употребления водителем вызывающих алкогольное опьянение веществ определяется наличием в его организме абсолютного этилового спирта в концентрации, превышающей:",

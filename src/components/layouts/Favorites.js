@@ -10,7 +10,8 @@ export const Favorites = ({item}) => {
     const [isFavorite, setIsFavorite] = useState(item.favorite)
 
     const addTicketHandler = (ticket) => {
-        setIsFavorite(true)
+        setIsFavorite(item.favorite = true)
+
     if (!favorites.includes(ticket)) {
             favorites.push(ticket)
         }
@@ -18,7 +19,7 @@ export const Favorites = ({item}) => {
 
     const deleteTicketHandler = (ticket) => {
         favorites.filter(item => item.ticket_question !== ticket.ticket_question)
-        setIsFavorite(false)
+        setIsFavorite(item.favorite = false)
     }
 
     return (

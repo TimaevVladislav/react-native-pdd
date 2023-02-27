@@ -472,7 +472,7 @@
   },
   {
     "ticket_question": 18,
-    "ticket_number": 4,
+    "ticket_number": 4, "favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В каком случае разрешается эксплуатация транспортного средства?",
@@ -503,7 +503,7 @@
   },
   {
     "ticket_question": 19,
-    "ticket_number": 4,
+    "ticket_number": 4, "favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что следует предпринять водителю для предотвращения опасных последствий заноса автомобиля при резком повороте рулевого колеса на скользкой дороге?",
@@ -530,7 +530,7 @@
   },
   {
     "ticket_question": 20,
-    "ticket_number": 4,
+    "ticket_number": 4, "favorite": false,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Как следует расположить руки на грудной клетке пострадавшего при проведении сердечно-легочной реанимации?",
