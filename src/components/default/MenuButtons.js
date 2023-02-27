@@ -51,9 +51,15 @@ const Buttons = ({navigation}) => {
         buttons: [{text: "Ок", style: "cancel"}]
     }
 
+    const alertError = {
+        title: "Ошибки",
+        message: "Здесь появятся вопросы, которые нужно будет повторить :(",
+        buttons: [{text: "Ок", style: "cancel"}]
+    }
+
     return(
         <View style={style.container}>
-            <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : <></>}>
+            <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(alertError)}>
                 <View style={style.item}>
                     <View>
                         <Ionicons name="alert-circle" size={25} color="#3AB4F2" />

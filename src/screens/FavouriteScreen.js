@@ -1,47 +1,35 @@
-import React, {useRef, useState, useEffect, useContext} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from 'react-native'
 
-import {useScroll} from "../hooks/useScroll"
-
+import {stylesVirtual, styleTicket} from "./ExamScreen"
+import {colors as color} from "../store/data/colors"
+import {favorites} from "../store/questions/A_B/tickets/favorites.js"
 
 import {Favorites} from "../components/layouts/Favorites"
-
-import {stylesVirtual, styleTicket} from "./ExamScreen"
-
-import {colors as color} from "../store/data/colors"
-import { favorites } from "../store/questions/A_B/tickets/favorites.js"
-
 import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
-import {FavoriteContext, FavoriteProvider} from "../context/favorite"
+import {useScroll} from "../hooks/useScroll"
 
 
 const Tickets = ({item}) => {
     return (
-        <FavoriteProvider>
-            <FavoriteContext.Consumer>
-                {(({setIsFavorite, isFavorite = true}) => (
-                   <>
-                       <View>
-                           <View style={styleTicket.container}>
-                               <Image source={item.image} style={styleTicket.img} />
-                           </View>
-                           <View>
-                               <Text style={styleTicket.title}>
-                                   {item.question}
-                               </Text>
-                               <ButtonFavorites answers={item.answers} />
-                               <Favorites item={item} setIsFavorite={setIsFavorite} isFavorite={isFavorite} />
-                           </View>
-                       </View>
-                   </>
-                ))}
-            </FavoriteContext.Consumer>
-        </FavoriteProvider>
+        <View>
+            <View style={styleTicket.container}>
+                <Image source={item.image} style={styleTicket.img} />
+            </View>
+            <View>
+                <Text style={styleTicket.title}>
+                    {item.question}
+                </Text>
+                <ButtonFavorites answers={item.answers} />
+                <Favorites item={item} />
+            </View>
+        </View>
     )
 }
 
 export const FavouriteScreen = ({navigation}) => {
+
     const ref = useRef(null)
     const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)

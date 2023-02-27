@@ -4,7 +4,7 @@ import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity}
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
-import {CorrectAnswer} from "../components/layouts/CorrectAnswers"
+import {Description} from "../components/layouts/Description"
 
 import {CountContext} from "../store/provider/CountProvider"
 import {colors as color} from "../store/data/colors"
@@ -22,25 +22,19 @@ const Tickets = ({item, colors, handlerColor}) => {
 
 
     return (
-       <FavoriteProvider>
-           <FavoriteContext.Consumer>
-               {(({setIsFavorite, isFavorite}) => (
-                   <View>
-                       <View style={styleTicket.container}>
-                           <Image source={item.image} style={styleTicket.img} />
-                       </View>
-                       <View>
-                           <Text style={styleTicket.title}>
-                               {item.question}
-                           </Text>
-                           <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
-                           <Favorites item={item} setIsFavorite={setIsFavorite} isFavorite={isFavorite} />
-                       </View>
-                       <CorrectAnswer correct={item.correct_answer} tip={item.answer_tip} />
-                   </View>
-               ))}
-           </FavoriteContext.Consumer>
-       </FavoriteProvider>
+        <View>
+            <View style={styleTicket.container}>
+                <Image source={item.image} style={styleTicket.img} />
+            </View>
+            <View>
+                <Text style={styleTicket.title}>
+                    {item.question}
+                </Text>
+                <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
+                <Favorites item={item} />
+            </View>
+            {/*<Description correct={item.correct_answer} tip={item.answer_tip} />*/}
+        </View>
     )
 }
 
@@ -98,7 +92,7 @@ export const ExamScreen = ({navigation}) => {
                                 initialScrollIndex={isScrollId}
                                 getItemLayout={getItemLayout}
                                 data={uriTicket.ticket}
-                                renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question - 1} ticket_number={item.ticket_number} /> }
+                                renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
                                 showsHorizontalScrollIndicator={false}
                                 keyExtractor={item => item.id}
                             />
@@ -108,9 +102,6 @@ export const ExamScreen = ({navigation}) => {
             </>
         )
     }
-
-
-    console.log(favorites)
 
     const handlerColor = (answer, buttonId) => {
         if (!answer.is_correct) {

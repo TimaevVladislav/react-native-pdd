@@ -1,12 +1,12 @@
 import React from "react"
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import Navigation from "./assets/navigation/navigation"
-import {ThemeContext, ThemeProvider} from "./assets/store/provider/ThemeProvider"
-import {DARK_COLORS, LIGHT_COLORS} from "./assets/store/data/colors"
+import Navigation from "./src/navigation/navigation"
+import {ThemeContext, ThemeProvider} from "./src/store/provider/ThemeProvider"
+import {DARK_COLORS, LIGHT_COLORS} from "./src/store/data/colors"
 
-import {SearchProvider} from "./assets/store/provider/SearchProvider"
-import {CountProvider} from "./assets/store/provider/CountProvider"
+import {SearchProvider} from "./src/store/provider/SearchProvider"
+import {CountProvider} from "./src/store/provider/CountProvider"
 
 export default function App() {
   const Stack = createNativeStackNavigator()

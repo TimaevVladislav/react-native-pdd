@@ -5,6 +5,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"),
     "question": "В каком случае водитель совершит вынужденную остановку?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Остановившись непосредственно перед пешеходным переходом, чтобы уступить дорогу пешеходу",
@@ -32,6 +33,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/eca08a0e2b5ffcd12bdd8ffee34afcc3.jpg"),
     "question": "Разрешен ли Вам съезд на дорогу с грунтовым покрытием?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Разрешен",
@@ -59,6 +61,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "5fa33b65fe52f38ad87c4b5226c5d3ba.jpg",
     "question": "Можно ли Вам остановиться в указанном месте для посадки пассажира?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Можно",
@@ -86,6 +89,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/620fde366bcda9940db20a0019eeeeb4.jpg"),
     "question": "Какие из указанных знаков запрещают движение водителям мопедов?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только А",
@@ -117,6 +121,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/92730be6f1618ab24232b6c3092607b5.jpg"),
     "question": "Вы намерены повернуть налево. Где следует остановиться, чтобы уступить дорогу легковому автомобилю?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Перед знаком",
@@ -148,6 +153,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает мигание зелёного сигнала светофора?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Предупреждает о неисправности светофора",
@@ -175,6 +181,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водитель обязан подавать сигналы световыми указателями поворота (рукой):",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Перед началом движения или перестроением",
@@ -206,6 +213,7 @@ export const ticket = [
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b61a6e1c048076e6b8ba01ef6e3ae2d1.jpg"),
     "question": "Как Вам следует поступить при повороте направо?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Перестроиться на правую полосу, затем осуществить поворот",
@@ -232,6 +240,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0de3a44f154b8a1dc98c83ccb64a0c6c.jpg"),
     "question": "По какой траектории Вам разрешено выполнить разворот?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только по А",
@@ -258,6 +267,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/e25d143aa53eb44b06b020415b6bee54.jpg"),
     "question": "С какой скоростью Вы можете продолжить движение вне населённого пункта по левой полосе на легковом автомобиле?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Не более 50 км/ч",
@@ -284,6 +294,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/573bb9e760618405e89c02b09f248404.jpg"),
     "question": "Можно ли водителю легкового автомобиля выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Можно",
@@ -310,6 +321,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/544ea7fd090765e47fa3b71f060b5f22.jpg"),
     "question": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только если расстояние до сплошной линии разметки не менее 3 м",
@@ -336,6 +348,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/3bca6590a23e621ade16916c7de64e44.jpg"),
     "question": "При повороте направо Вы должны уступить дорогу:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только велосипедисту",
@@ -366,6 +379,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/6a8f690af1b507fc0b56db742709f1e8.jpg"),
     "question": "Вы намерены проехать перекресток в прямом направлении. Кому Вы должны уступить дорогу?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Обоим трамваям",
@@ -396,6 +410,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/dd7e958840da9ddd1c102a65d8d5c03f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Только автобусу",
@@ -422,6 +437,7 @@ export const ticket = [
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0211b865b53f26534158a13f8886262f.jpg"),
     "question": "С какой максимальной скоростью можно продолжить движение за знаком?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "60 км/ч",
@@ -449,9 +465,11 @@ export const ticket = [
   },
   {
     "ticket_question": 17,
-    "ticket_number": 1,    "ticket_category": "A,B",
+    "ticket_number": 1,
+    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Для перевозки людей на мотоцикле водитель должен иметь водительское удостоверение на право управления транспортными средствами:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Категории «A» или подкатегории «A1»",
@@ -475,9 +493,11 @@ export const ticket = [
   },
   {
     "ticket_question": 18,
-    "ticket_number": 1,    "ticket_category": "A,B",
+    "ticket_number": 1,
+    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При какой неисправности разрешается эксплуатация транспортного средства?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Не работают пробки топливных баков",
@@ -505,9 +525,11 @@ export const ticket = [
   },
   {
     "ticket_question": 19,
-    "ticket_number": 1,    "ticket_category": "A,B",
+    "ticket_number": 1,
+    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В случае, когда правые колёса автомобиля наезжают на неукреплённую влажную обочину, рекомендуется:",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Затормозить и полностью остановиться",
@@ -531,9 +553,11 @@ export const ticket = [
   },
   {
     "ticket_question": 20,
-    "ticket_number": 1,    "ticket_category": "A,B",
+    "ticket_number": 1,
+    "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что понимается под временем реакции водителя?",
+    "favorite": false,
     "answers": [
       {
         "answer_text": "Время с момента обнаружения водителем опасности до полной остановки транспортного средства",

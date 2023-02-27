@@ -1,15 +1,17 @@
-import React from "react"
+import React, {useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
 import {styleTicket} from "../../screens/ExamScreen"
 import {favorites} from "../../store/questions/A_B/tickets/favorites"
 
-export const Favorites = ({item, setIsFavorite, isFavorite}) => {
+export const Favorites = ({item}) => {
+
+    const [isFavorite, setIsFavorite] = useState(item.favorite)
 
     const addTicketHandler = (ticket) => {
         setIsFavorite(true)
-        if (!favorites.includes(ticket)) {
+    if (!favorites.includes(ticket)) {
             favorites.push(ticket)
         }
     }
