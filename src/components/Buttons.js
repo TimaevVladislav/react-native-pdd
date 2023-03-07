@@ -8,9 +8,9 @@ import {CountContext} from "../store/provider/CountProvider"
 import {useNavigation} from "@react-navigation/native"
 
 
-export const ButtonsExam = ({answers}) => {
+export const ButtonsExam = ({answers, item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
-    const {handlerColorChange, colors} = useColor()
+    const {handlerColorChange, colors} = useColor(item)
     const navigation = useNavigation()
 
     return (

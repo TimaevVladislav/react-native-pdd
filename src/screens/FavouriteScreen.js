@@ -1,5 +1,5 @@
-import React, {useRef, useState, useEffect} from 'react'
-import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from 'react-native'
+import React, {useRef, useState, useEffect} from "react"
+import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
 import {colors as color} from "../store/data/colors"
@@ -44,13 +44,7 @@ export const FavouriteScreen = ({navigation}) => {
     }, [isScrollId])
 
 
-    const handlerColor = (answer, buttonId) => {
-        if (!answer.is_correct) {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
-        } else {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
-        }
-    }
+
 
     const TicketScrollFavorites = () => {
 
@@ -107,7 +101,7 @@ export const FavouriteScreen = ({navigation}) => {
                 scrollEnabled={true}
                 showsHorizontalScrollIndicator={false}
                 data={favorites}
-                renderItem={({item}) => <Tickets item={item} colors={colors} handlerColor={handlerColor} /> }
+                renderItem={({item}) => <Tickets item={item} colors={colors} /> }
                 keyExtractor={item => item.id}
             />
         </SafeAreaView>

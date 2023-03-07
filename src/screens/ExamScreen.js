@@ -8,18 +8,12 @@ import {Description} from "../components/layouts/Description"
 
 import {CountContext} from "../store/provider/CountProvider"
 import {colors as color} from "../store/data/colors"
-import {favorites} from "../store/questions/A_B/tickets/favorites.js"
-
 
 import { useSwitcher } from "../store/questions"
 import { useColor } from "../hooks/useColor"
 import { useLayout } from "../hooks/useLayout"
 
-import {FavoriteContext, FavoriteProvider} from "../context/favorite"
-
-
-const Tickets = ({item, colors, handlerColor}) => {
-
+const Tickets = ({item}) => {
 
     return (
         <View>
@@ -30,7 +24,7 @@ const Tickets = ({item, colors, handlerColor}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam answers={item.answers} colors={colors} handlerColor={handlerColor} />
+                <ButtonsExam answers={item.answers} item={item} />
                 <Favorites item={item} />
             </View>
             {/*<Description correct={item.correct_answer} tip={item.answer_tip} />*/}
@@ -40,10 +34,10 @@ const Tickets = ({item, colors, handlerColor}) => {
 
 export const ExamScreen = ({navigation}) => {
     const ref = useContext(CountContext)
-    const [tickets, setTickets] = useState(favorites)
     const [colors, setColor] = useState(color)
     const { uriTicket } = useSwitcher()
     const { scrollItemLayout } = useLayout()
+
 
     const TicketScrollButton = ({isScrollId}) => {
         const {colors, colorId, handlerColorChange} = useColor()
@@ -103,14 +97,6 @@ export const ExamScreen = ({navigation}) => {
         )
     }
 
-    const handlerColor = (answer, buttonId) => {
-        if (!answer.is_correct) {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
-        } else {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
-        }
-    }
-
     return (
         <CountContext.Consumer>
             {(({isScrollId, setIsScrollId}) => (
@@ -125,7 +111,8 @@ export const ExamScreen = ({navigation}) => {
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
                         data={uriTicket.ticket}
-                        renderItem={({item}) => <Tickets tickets={tickets} setTickets={setTickets} item={item} colors={colors} handlerColor={handlerColor} /> }
+                        renderItem={({item}) => <Tickets item={item} />
+                    }
                         keyExtractor={item => item.id}
                     />
                 </SafeAreaView>
