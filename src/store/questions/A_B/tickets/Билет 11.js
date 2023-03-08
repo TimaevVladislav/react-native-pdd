@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 11",
+    "ticket_question":  0,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие транспортные средства относятся к маршрутным транспортным средствам?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "92a42c0ef29bbbd79e9bc037002e3839"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 11",
+    "ticket_question":  1,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/725d54cf06b01e98374c9225c8d49798.jpg"),
     "question": "Двигаясь в населенном пункте, вы можете продолжить движение:",
@@ -55,8 +55,8 @@ export const ticket = [
     "id": "c8e222d12b27f9800c3612cb0813081a"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 11",
+    "ticket_question":  2,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/27c48ce18c45d1a42cf7d8d2d2a419e4.jpg"),
     "question": "Этот знак указывает?",
@@ -82,8 +82,8 @@ export const ticket = [
     "id": "0dd08ae3307d5d72c13e5171e8678956"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 11",
+    "ticket_question":  3,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a4c74890d335d4855f31ebfa7a0f7853.jpg"),
     "question": "До какого места действует требование данного знака?",
@@ -109,8 +109,8 @@ export const ticket = [
     "id": "7940e7c7e439f6cdd903a90c56495362"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 11",
+    "ticket_question":  4,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5fcc7f385b38e454b4ff0eb29ee993da.jpg"),
     "question": "Эта разметка, нанесённая на полосе движения:",
@@ -136,8 +136,8 @@ export const ticket = [
     "id": "90d6d040aad074f089e452f978f289dc"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 11",
+    "ticket_question":  5,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Запрещается выполнять обгон транспортного средства, имеющего нанесенные на наружные поверхности специальные цветографические схемы:",
@@ -163,8 +163,8 @@ export const ticket = [
     "id": "aeae3591ecaffe326feba0543b3b5d95"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 11",
+    "ticket_question":  6,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2aa10519e6590fdd7a0e4b0130c045ef.jpg"),
     "question": "Обязаны ли Вы в данной ситуации подать сигнал правого поворота?",
@@ -190,8 +190,8 @@ export const ticket = [
     "id": "646c61864ee467f5dff54f05d82bb3a6"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 11",
+    "ticket_question":  7,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6e34e82ac37d347d62466671b1bc5515.jpg"),
     "question": "По какой траектории Вам разрешено выполнить поворот направо?",
@@ -217,8 +217,8 @@ export const ticket = [
     "id": "6c30a3fdc531f5746e42aa0c15ae83ce"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 11",
+    "ticket_question":  8,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/32ef6f3b61534285746eceb37d5ce183.jpg"),
     "question": "Вам можно выполнить разворот:",
@@ -244,8 +244,8 @@ export const ticket = [
     "id": "a397830e8d1ecd3df6062ab68221da55"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 11",
+    "ticket_question":  9,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях разрешается выезжать за пределы правой полосы, если Вы управляете транспортным средством, скорость которого по техническим причинам не может быть более 40 км/ч?",
@@ -271,8 +271,8 @@ export const ticket = [
     "id": "0269fd114073a4b27374f7ca37520379"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 11",
+    "ticket_question":  10,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водитель обгоняемого транспортного средства:",
@@ -298,8 +298,8 @@ export const ticket = [
     "id": "feef8cf71cd40fe4306f594a162d0b9d"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 11",
+    "ticket_question":  11,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/25b9ec9eace7b64df065e6a6f585cbb2.jpg"),
     "question": "Кто из водителей нарушил правила стоянки?",
@@ -329,8 +329,8 @@ export const ticket = [
     "id": "e03321951e398a8ece149876a819e0e5"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 11",
+    "ticket_question":  12,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6e40b9704037f2543ec1560a342e4d71.jpg"),
     "question": "Обязаны ли Вы при повороте направо уступить дорогу автомобилю, выполняющему разворот?",
@@ -352,8 +352,8 @@ export const ticket = [
     "id": "f0e8b486407c5e33be8d2af0fb28a632"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 11",
+    "ticket_question":  13,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/bc2a0abc48c739079cef9e12b2232b84.jpg"),
     "question": "В каком случае Вы имеете право проехать перекресток первым?",
@@ -379,8 +379,8 @@ export const ticket = [
     "id": "51626a271b7cc0a56285573791689c24"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 11",
+    "ticket_question":  14,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/243644fb9fbf5f97fcf695335ccebca0.jpg"),
     "question": "Вы намерены продолжить движение прямо. При жёлтом мигающем сигнале светофора следует:",
@@ -410,8 +410,8 @@ export const ticket = [
     "id": "2b4ce6ab61c50ff4b97eddf27dbc3699"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 11",
+    "ticket_question":  15,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "С какой максимальной скоростью разрешается движение транспортных средств в жилых зонах и на дворовых территориях?",
@@ -438,8 +438,8 @@ export const ticket = [
     "id": "ac428a62958b33b1786865922b25ceae"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 11",
+    "ticket_question":  16,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении в темное время суток вне населенных пунктов необходимо использовать:",
@@ -465,8 +465,8 @@ export const ticket = [
     "id": "3ddd5b02b71428f540900d18ca9f7033"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 11",
+    "ticket_question":  17,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях водители привлекаются к уголовной ответственности за нарушения Правил, повлекшие тяжкие последствия?",
@@ -492,8 +492,8 @@ export const ticket = [
     "id": "055d75b994695e8b4259b2fee1af8464"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 11",
+    "ticket_question":  18,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e89185b8691dc7965ad22c76db00759f.jpg"),
     "question": "В случае остановки на подъеме (спуске) при наличии тротуара можно предотвратить самопроизвольное скатывание автомобиля, повернув его передние колеса в положение:",
@@ -523,8 +523,8 @@ export const ticket = [
     "id": "22c5a58dcd71e105cff3976b223c3f2e"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 11",
+    "ticket_question":  19,
+    "ticket_number": 11,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какое расстояние проедет транспортное средство за время, равное среднему времени реакции водителя, при скорости движения около 90 км/час?",

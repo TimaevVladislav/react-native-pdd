@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 25",
+    "ticket_question":  0,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b8016524f7883eab87a1055d157df559.jpg"),
     "question": "На каком рисунке изображена дорога с разделительной полосой?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "c9ab952375a74b4767b1c80faa3d81ff"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 25",
+    "ticket_question":  1,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d4f677829faedd4457fc971be0acfc79.jpg"),
     "question": "Вам разрешено продолжить движение на грузовом автомобиле с разрешенной максимальной массой не более 3,5 т:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "1879397cafb687b2e594fac27abf4368"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 25",
+    "ticket_question":  2,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/73cb4fcbc7b19ba0f8a08e2f28c3b627.jpg"),
     "question": "Какие из указанных знаков отменяют все ограничения, введённые ранее запрещающими знаками?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "378fb563f908b70a43e939b69390f063"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 25",
+    "ticket_question":  3,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/43c8ce4013a2dbe0886a3eef837278c5.jpg"),
     "question": "Этот знак указывает, что:",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "3bf37620f061d6e9d1578b4939bdbb20"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 25",
+    "ticket_question":  4,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/cb0d50cc6d43aa4f484c589ae1ba0677.jpg"),
     "question": "Какой маневр Вам запрещается выполнить при наличии данной линии разметки?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "47ccf276664a128954065ef61a7a3991"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 25",
+    "ticket_question":  5,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/db5a181413cacf4720bf4f9d6db9b18f.jpg"),
     "question": "Сигналы такого светофора распространяются на:",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "4a8582d32feff5d8cf35e54ed376d9ba"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 25",
+    "ticket_question":  6,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8dcad54c06148fbc02af406d9b35d7e7.jpg"),
     "question": "Обязаны ли Вы включить указатели поворота в данной ситуации?",
@@ -197,8 +197,8 @@ export const ticket = [
     "id": "cdcd81894d611369779ffd8f740425dc"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 25",
+    "ticket_question":  7,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b95d27c6cd83436b637c2c4275d7841c.jpg"),
     "question": "Кто должен уступить дорогу?",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "817090ed729b5f85e18039159fd22e48"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 25",
+    "ticket_question":  8,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7d95c7e6c210f8819ac26e23be0d98fb.jpg"),
     "question": "Водитель случайно проехал перекрёсток. Разрешено ли ему в этой ситуации использовать задний ход, чтобы затем продолжить движение налево?",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "5aecb82ecc62fdbc9cbb38da332c7ffe"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 25",
+    "ticket_question":  9,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Каким автомобилям и в каких случаях разрешается движение вне населенных пунктов со скоростью не более 90 км/ч?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "23a5f6a3e229490930b1f271980d3fd1"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 25",
+    "ticket_question":  10,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/be407463566c8ada84f21a8b64614bdc.jpg"),
     "question": "Можно ли Вам выполнить обгон?",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "590d83686b1575d0cc4988abc1cf8d72"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 25",
+    "ticket_question":  11,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6328042eed06e2a17c8354741aafb562.jpg"),
     "question": "Разрешена ли остановка в этом месте?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "fc6178a44afea0f9b27abd3554c85a3c"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 25",
+    "ticket_question":  12,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Значения каких дорожных знаков отменяются сигналами светофора?",
@@ -359,8 +359,8 @@ export const ticket = [
     "id": "11f95f78b08a1345c915bf497456c7a7"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 25",
+    "ticket_question":  13,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dbf478a372fce6b2dde05c10f72f7986.jpg"),
     "question": "При повороте направо Вы должны уступить дорогу:",
@@ -386,8 +386,8 @@ export const ticket = [
     "id": "19b4650f7767ad3e821804e9d30435a5"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 25",
+    "ticket_question":  14,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dac4ba131120d6ad409d6cc081cb2b01.jpg"),
     "question": "Вы намерены повернуть налево. Кому Вы обязаны уступить дорогу?",
@@ -417,8 +417,8 @@ export const ticket = [
     "id": "6387787456d1a6601771764b2e486d60"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 25",
+    "ticket_question":  15,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d1e953c443ffa8d0aa46d6c557681410.jpg"),
     "question": "Как Вам следует поступить в данной ситуации?",
@@ -444,8 +444,8 @@ export const ticket = [
     "id": "8c70cfbd4c17574f4ce71f69a2e6b603"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 25",
+    "ticket_question":  16,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Привлечь внимание водителя обгоняемого автомобиля при движении в населенном пункте в светлое время суток можно:",
@@ -475,8 +475,8 @@ export const ticket = [
     "id": "b3410d5fdd6d2cfd0ad7809c42f67d23"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 25",
+    "ticket_question":  17,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае запрещается эксплуатация транспортного средства?",
@@ -506,8 +506,8 @@ export const ticket = [
     "id": "106835b177113ba549950dc3f58cbd56"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 25",
+    "ticket_question":  18,
+     "ticket_number": 25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как зависит величина тормозного пути транспортного средства от скорости движения?",
@@ -533,8 +533,8 @@ export const ticket = [
     "id": "a9abe4631ca18a998d99fcb341100dd3"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 25",
+    "ticket_question":  19,
+    "ticket_number":  25,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как остановить кровотечение при ранении вены и некрупных артерий?",

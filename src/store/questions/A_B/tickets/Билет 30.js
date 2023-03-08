@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 30",
+    "ticket_question":  0,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/53a63dcdfaf75ab897e0e990ee0340b5.jpg"),
     "question": "На каком рисунке изображён перекрёсток?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "63fc29e4257754d37d0d5939a5f09ee8"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 30",
+    "ticket_question":  1,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3967ea92f049121b27547528fd472093.jpg"),
     "question": "Вам можно выполнить разворот:",
@@ -55,8 +55,8 @@ export const ticket = [
     "id": "5ccc967d70f19d41f276ce69b2ad1334"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 30",
+    "ticket_question":  2,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/763206c7477819a1d3a755f0fa9114f9.jpg"),
     "question": "Разрешено ли Вам поставить автомобиль на стоянку в указанном месте по нечетным числам месяца?",
@@ -82,8 +82,8 @@ export const ticket = [
     "id": "96937669ae4a705961649636de88ac62"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 30",
+    "ticket_question":  3,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1824b97cef7ed21d938afb96fd1a5270.jpg"),
     "question": "Какие из указанных знаков обозначают участки, на которых водитель обязан уступать дорогу пешеходам, находящимся на проезжей части?",
@@ -109,8 +109,8 @@ export const ticket = [
     "id": "25d83dd77612d5cb18ce9c145a0292d7"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 30",
+    "ticket_question":  4,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/51943a0c25349911786ef508f8d7e7b6.jpg"),
     "question": "Что означает разметка А100, нанесенная на проезжую часть дороги?",
@@ -136,8 +136,8 @@ export const ticket = [
     "id": "276e007ea74c6f62f1b3c4c9b2c530b8"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 30",
+    "ticket_question":  5,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5363fd42869791c45431ddeded782d30.jpg"),
     "question": "Вам можно продолжить движение:",
@@ -163,8 +163,8 @@ export const ticket = [
     "id": "fafd80435bdbe1161cbc2ece51d29f77"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 30",
+    "ticket_question":  6,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как следует действовать, выполняя поворот налево на двухполосной дороге?",
@@ -190,8 +190,8 @@ export const ticket = [
     "id": "b27c8f7165405b0eea9e8c69c5403f28"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 30",
+    "ticket_question":  7,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3c97c72379175042c43a75a5b560d084.jpg"),
     "question": "Вы намерены начать движение от тротуара. Должны ли Вы уступить дорогу мотоциклу, выполняющему разворот?",
@@ -217,8 +217,8 @@ export const ticket = [
     "id": "63744162ad7f15c3fa7861e2b1070718"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 30",
+    "ticket_question":  8,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/735e8ac5b261318324912e579ade29a1.jpg"),
     "question": "Разрешено ли водителю легкового автомобиля движение задним ходом для посадки пассажира в тоннеле?",
@@ -244,8 +244,8 @@ export const ticket = [
     "id": "2a5158fac700eb172a786bcad80ff1bc"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 30",
+    "ticket_question":  9,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b2e41414ff25e3e972105856d82459c3.jpg"),
     "question": "В данной ситуации Вам разрешается движение:",
@@ -271,8 +271,8 @@ export const ticket = [
     "id": "f3c5693f8a27e4408a2b04bb05874973"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 30",
+    "ticket_question":  10,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешено ли выполнить обгон в тоннеле?",
@@ -298,8 +298,8 @@ export const ticket = [
     "id": "80d78b1b15cffb64538428f0ad5697f1"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 30",
+    "ticket_question":  11,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8578f56da82a57ddacac6b70d2062801.jpg"),
     "question": "Можно ли водителю поставить автомобиль на стоянку указанным способом?",
@@ -325,8 +325,8 @@ export const ticket = [
     "id": "ca2f8de35f579bc67164e04ef7382e2e"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 30",
+    "ticket_question":  12,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/67265f78f0ca4a16421a7ae2e6b24ea0.jpg"),
     "question": "В каком случае Вы обязаны уступить дорогу грузовому автомобилю?",
@@ -352,8 +352,8 @@ export const ticket = [
     "id": "046f455eca340576d92893709ada3c35"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 30",
+    "ticket_question":  13,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/771b5f6c781573cd2d6f7ac434b4ebb0.jpg"),
     "question": "Вы намерены продолжить движение прямо при желтом мигающем сигнале светофора. Ваши действия?",
@@ -379,8 +379,8 @@ export const ticket = [
     "id": "c854f4303bdf755360a23237894f66d0"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 30",
+    "ticket_question":  14,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/57c2ea30a0bb017bc686ad4adca1f013.jpg"),
     "question": "Вы намерены повернуть налево. Кому Вы обязаны уступить дорогу?",
@@ -410,8 +410,8 @@ export const ticket = [
     "id": "dc8722f25c39215350c9d79fd37ccc27"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 30",
+    "ticket_question":  15,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае водитель транспортного средства, приближающегося к нерегулируемому пешеходному переходу, обязан уступить дорогу пешеходам?",
@@ -437,8 +437,8 @@ export const ticket = [
     "id": "86a4890b10dd50246a275da472478825"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 30",
+    "ticket_question":  16,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Должны ли Вы переключить дальний свет на ближний, если водитель встречного транспортного средства периодическим переключением света фар покажет необходимость этого?",
@@ -464,8 +464,8 @@ export const ticket = [
     "id": "cf35ca9e291ba13645e7e8f0ead0c664"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 30",
+    "ticket_question":  17,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какое административное наказание может быть назначено водителю транспортного средства за оставление в нарушение Правил места дорожно-транспортного происшествия, участником которого он является?",
@@ -491,8 +491,8 @@ export const ticket = [
     "id": "104939abd61d57813920f83fae83640a"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 30",
+    "ticket_question":  18,
+     "ticket_number": 30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Для предупреждения скатывания автомобиля с механической трансмиссией при кратковременной остановке на подъеме следует:",
@@ -518,8 +518,8 @@ export const ticket = [
     "id": "95796450d2254b5dadb138b864f41d4d"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 30",
+    "ticket_question":  19,
+    "ticket_number":  30,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Зависит ли выбор бокового интервала от скорости движения?",

@@ -27,7 +27,7 @@
     "id": "1531ace809b1025c70912695ad7a7b90"
   },
   {
-    "title": "Вопрос 2",
+    "ticket_question":  1,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/f8b4d6d9f328835e3543d6ac0b5b992d.jpg",
@@ -54,7 +54,7 @@
     "id": "eb1f842c85c2aa28e5702e4a48bdacdc"
   },
   {
-    "title": "Вопрос 3",
+    "ticket_question":  2,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/e5ea59fb8c5d8f172d32af5c36053913.jpg",
@@ -81,7 +81,7 @@
     "id": "f1c6fd3f16557349c986a37c59b0efa7"
   },
   {
-    "title": "Вопрос 4",
+    "ticket_question":  3,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/ba16db3fa770eb19b3ca99219c2df2c7.jpg",
@@ -108,7 +108,7 @@
     "id": "0f172f2c9a5243acc91d3f22fad845ca"
   },
   {
-    "title": "Вопрос 5",
+    "ticket_question":  4,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/54a3b241d955aedbde9a46400f9265dd.jpg",
@@ -139,7 +139,7 @@
     "id": "e632f22e2729108273f99b70fbcb51a0"
   },
   {
-    "title": "Вопрос 6",
+    "ticket_question":  5,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/c41efe94d0ad813cd4fcd63cff2553a5.jpg",
@@ -166,7 +166,7 @@
     "id": "93b74e94b0f3ac89f63e159a464db6a9"
   },
   {
-    "title": "Вопрос 7",
+    "ticket_question":  6,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/543a9016557f8996cba404455671af3f.jpg",
@@ -193,7 +193,7 @@
     "id": "c5619310610a938fa9c75960a1fdf00d"
   },
   {
-    "title": "Вопрос 8",
+    "ticket_question":  7,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/23aec8182761364dca90c69366d65f96.jpg",
@@ -220,7 +220,7 @@
     "id": "df85bfa11498b2d45823faeb4a7504ab"
   },
   {
-    "title": "Вопрос 9",
+    "ticket_question":  8,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/ccfaa71247b7717e204220f439c65a8a.jpg",
@@ -247,7 +247,7 @@
     "id": "b19ba2cc652a455dca7a9a44381932be"
   },
   {
-    "title": "Вопрос 10",
+    "ticket_question":  9,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/32587e9605a801bccdd520e3c38c893f.jpg",
@@ -274,7 +274,7 @@
     "id": "a3d23da8b5c909f442e112620c7a163b"
   },
   {
-    "title": "Вопрос 11",
+    "ticket_question":  10,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/725d54cf06b01e98374c9225c8d49798.jpg",
@@ -301,7 +301,7 @@
     "id": "c8e222d12b27f9800c3612cb0813081a"
   },
   {
-    "title": "Вопрос 12",
+    "ticket_question":  11,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/327848f33bb2815be5de7fba594a9e04.jpg",
@@ -328,7 +328,7 @@
     "id": "c9334e92840e0a9bee92139be21cabeb"
   },
   {
-    "title": "Вопрос 13",
+    "ticket_question":  12,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/393e60fa622eb38d508db835f84ffd57.jpg",
@@ -355,7 +355,7 @@
     "id": "1f22edcb767713e2962a048ad2c5544e"
   },
   {
-    "title": "Вопрос 14",
+    "ticket_question":  13,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/4ccdddd3c39cafc8b550561ba057ba10.jpg",
@@ -382,7 +382,7 @@
     "id": "0e888d95c358ab212e8ddc923f5c2fbf"
   },
   {
-    "title": "Вопрос 15",
+    "ticket_question":  14,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/39333327bfa4ea7672436c3a6e246685.jpg",
@@ -409,7 +409,7 @@
     "id": "78d0e0698678ea87eb3d965f16eb3a31"
   },
   {
-    "title": "Вопрос 16",
+    "ticket_question":  15,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/402925527d34bf47e227a9b363d010b6.jpg",
@@ -440,7 +440,7 @@
     "id": "43c7d1df676cc2c46e9ad63da072fc72"
   },
   {
-    "title": "Вопрос 17",
+    "ticket_question":  16,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/A_B/c3283fd18856944d0c3408e50036f46c.jpg",

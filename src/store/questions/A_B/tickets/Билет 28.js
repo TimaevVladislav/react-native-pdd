@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 28",
+    "ticket_question":  0,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Обязан ли водитель предоставить транспортное средство медицинским и фармацевтическим работникам для перевозки граждан в ближайшее лечебно-профилактическое учреждение в случаях, угрожающих их жизни?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "b7ccb9c2503a03ce3b80118623a13c76"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 28",
+    "ticket_question":  1,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/212bb2624926feace0b27846207b572d.jpg"),
     "question": "Вам можно продолжить движение:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "e84f0e98039633616f523d31b28d53c2"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 28",
+    "ticket_question":  2,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/de54f8f107e2e7202efbe97fd5e228dc.jpg"),
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на грузовом автомобиле с разрешённой максимальной массой не более 3,5 т?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "b77873478d9ea2d7619b64947087a76f"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 28",
+    "ticket_question":  3,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/df0ae05661e6c2ce8efc51237bb9a82a.jpg"),
     "question": "Какие из указанных знаков используются для обозначения номера, присвоенного дороге (маршруту)?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "d9c11a5d9bb8cf7ce1adbd1eb10ba111"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 28",
+    "ticket_question":  4,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8956e06e6128f89b96978d6508a393a8.jpg"),
     "question": "Движение по предназначенной для велосипедистов полосе проезжей части, которая обозначена данной разметкой, разрешается:",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "39258095fd0949c0405305b80c491d8e"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 28",
+    "ticket_question":  5,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f9d97d5111f5413e4bef0d024d358f9e.jpg"),
     "question": "Вы имеете право двигаться:",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "f09d468cf994b3ded816392247a6771e"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 28",
+    "ticket_question":  6,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как необходимо обозначить своё транспортное средство при дорожно-транспортном происшествии?",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "47e947448552d5e8d501d98b54e15cf5"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 28",
+    "ticket_question":  7,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/75ffa9ae59ac6ee4985e2954c4fd90b1.jpg"),
     "question": "Кто имеет преимущество в движении?",
@@ -216,8 +216,8 @@ export const ticket = [
     "id": "066e8516d6848e710ad6d2e1201c00aa"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 28",
+    "ticket_question":  8,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/50e53b449d35319ad1ae0223b174246b.jpg"),
     "question": "Разрешено ли водителю движение задним ходом для посадки пассажира на этом участке дороги?",
@@ -243,8 +243,8 @@ export const ticket = [
     "id": "4d36908846dde1015bae088d4aa6aa9f"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 28",
+    "ticket_question":  9,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/de4e260e8ae4615986e36735cbc78c9a.jpg"),
     "question": "Разрешается ли Вам, управляя грузовым автомобилем с разрешённой максимальной массой более 2,5 т, выехать на третью полосу в данной ситуации?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "e6cf107bd0c937f0371625861e9ad77e"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 28",
+    "ticket_question":  10,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/03c1ce26bdd5a92e4af2afb2aa7b725e.jpg"),
     "question": "Можно ли Вам обогнать трактор, управляя грузовым автомобилем с разрешенной максимальной массой не более 3,5 т?",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "feb411b0cca6c240570954bc30fe9b51"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 28",
+    "ticket_question":  11,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/42b6a5df48bdf5425236bd44ab304710.jpg"),
     "question": "В каком месте и направлении Вам разрешено остановиться?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "480eb14d4300a8d49aaf9fb441d32339"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 28",
+    "ticket_question":  12,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6db8da8e6662b83c48123cd092e1771e.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -359,8 +359,8 @@ export const ticket = [
     "id": "140ad005345a757a4fb89dd112e4de8d"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 28",
+    "ticket_question":  13,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/123f8b53e1476f5a8aa61ab26b14585a.jpg"),
     "question": "Вы должны уступить дорогу грузовому автомобилю:",
@@ -386,8 +386,8 @@ export const ticket = [
     "id": "3ec9b6dcda1ca2631c07dac3deb9cce6"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 28",
+    "ticket_question":  14,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/eb4d6e5d4486be60b8b832fe1add36a9.jpg"),
     "question": "Вы намерены развернуться. Кому Вам необходимо уступить дорогу?",
@@ -413,8 +413,8 @@ export const ticket = [
     "id": "b907d05ccbf9954a077bd46fab5e4863"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 28",
+    "ticket_question":  15,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/13ddd93620c6554216f0758cb7ef547f.jpg"),
     "question": "Где Вам разрешается остановиться при движении по автомагистрали?",
@@ -440,8 +440,8 @@ export const ticket = [
     "id": "31baeca65ed49e9d9042d70500c951de"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 28",
+    "ticket_question":  16,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Двигаясь в темное время суток вне населенного пункта с включенными фарами дальнего света, Вы догнали движущееся впереди транспортное средство. Ваши действия?",
@@ -467,8 +467,8 @@ export const ticket = [
     "id": "0f290a8c6cc3d9b5ef22d05cfd6b59a6"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 28",
+    "ticket_question":  17,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как обязан поступить водитель, если во время движения отказал в работе спидометр?",
@@ -494,8 +494,8 @@ export const ticket = [
     "id": "616191b127e6d11989587ab5acfc884a"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 28",
+    "ticket_question":  18,
+     "ticket_number": 28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что следует предпринять, если на повороте возник занос задней оси заднеприводного автомобиля?",
@@ -525,8 +525,8 @@ export const ticket = [
     "id": "7148dea7a2f786c2d3cd01452ad3a92f"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 28",
+    "ticket_question":  19,
+    "ticket_number":  28,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае водителю необходимо оценивать обстановку сзади?",

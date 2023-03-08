@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 40",
+    "ticket_question":  0,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "По требованию каких лиц необходимо передавать для проверки водительское удостоверение на право управления транспортным средством соответствующей категории или подкатегории и представлять для проверки страховой полис обязательного страхования гражданской ответственности на бумажном носителе или в виде электронного документа либо его копии на бумажном носителе?",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "d1198a8891db07958815762154b7aeac"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 40",
+    "ticket_question":  1,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a6581948fd1281ca73b9d604a3ab9fe4.jpg"),
     "question": "Вам разрешено продолжить движение на перекрёстке?",
@@ -62,8 +62,8 @@ export const ticket = [
     "id": "9e3ad55e0ddb97091fb7001938af0e51"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 40",
+    "ticket_question":  2,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b151bd850a7eb12a96a3a4054cc98ea9.jpg"),
     "question": "Какие из указанных знаков разрешают разворот?",
@@ -89,8 +89,8 @@ export const ticket = [
     "id": "1448e19dc088b8bca69ba0adbb089679"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 40",
+    "ticket_question":  3,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d45d8113cd910c59a0150fe80b274dfc.jpg"),
     "question": "Поставить на стоянку указанным на табличке способом можно:",
@@ -117,8 +117,8 @@ export const ticket = [
     "id": "b8d1716fa37db5d9a7cef3d5ca070175"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 40",
+    "ticket_question":  4,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/52373814fec06d28a820803472e97d36.jpg"),
     "question": "Разметкой в виде буквы «А» обозначают?",
@@ -144,8 +144,8 @@ export const ticket = [
     "id": "474e5e179dfdf4cd9d166da22d84d887"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 40",
+    "ticket_question":  5,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/600ab149171da16a6ac1ae93254db49a.jpg"),
     "question": "Разрешено ли Вам движение?",
@@ -171,8 +171,8 @@ export const ticket = [
     "id": "3a9ee3f82cc38aeb07ca64d3a6d32c28"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 40",
+    "ticket_question":  6,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1cb33c7b6f1803fa0c5f6f0c38454cfe.jpg"),
     "question": "Какой опознавательный знак должен быть закреплен на задней части буксируемого механического транспортного средства при отсутствии или неисправности аварийной сигнализации?",
@@ -198,8 +198,8 @@ export const ticket = [
     "id": "7656238d77262b83e5a8c3f361efe4d4"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 40",
+    "ticket_question":  7,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a39b43925866fd589d602b7340b7ff7c.jpg"),
     "question": "На перекрестке Вы намерены повернуть направо. Как Вам следует поступить?",
@@ -225,8 +225,8 @@ export const ticket = [
     "id": "fc9c06b46f78ad9a1f2bd9b5925c065d"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 40",
+    "ticket_question":  8,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6b466297702c7b98d6744adb34684f41.jpg"),
     "question": "Кто должен уступить дорогу при одновременном развороте?",
@@ -252,8 +252,8 @@ export const ticket = [
     "id": "b1f4e326ed2825a9034cfd21f8864dca"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 40",
+    "ticket_question":  9,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7aa701f3bd1edd5b83bd5106d7be4336.jpg"),
     "question": "Кто из водителей занял правильное положение на полосе движения?",
@@ -283,8 +283,8 @@ export const ticket = [
     "id": "f94e80e332142df4a8a060f2e6df253b"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 40",
+    "ticket_question":  10,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/16a0636cf86df70b567201832c9fd9dd.jpg"),
     "question": "Как Вам следует поступить в данной ситуации?",
@@ -310,8 +310,8 @@ export const ticket = [
     "id": "3186ebd3f5ace8003f749c381934cc10"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 40",
+    "ticket_question":  11,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9bfc1438303942c67fb84b48deef7542.jpg"),
     "question": "Нарушил ли водитель автомобиля правила остановки?",
@@ -337,8 +337,8 @@ export const ticket = [
     "id": "9731750ceee00c14575c32e22146ef62"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 40",
+    "ticket_question":  12,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c0287ade19f8188c803ec16d54557dc3.jpg"),
     "question": "Вы намерены повернуть направо. Ваши действия?",
@@ -368,8 +368,8 @@ export const ticket = [
     "id": "7ee9a94829288afc1e31af2c66b417b1"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 40",
+    "ticket_question":  13,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dbbcca4938d90636c630cfcb94670373.jpg"),
     "question": "При движении прямо Вы:",
@@ -399,8 +399,8 @@ export const ticket = [
     "id": "aade1a68ba6cdfb7cc0f1519206bfac1"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 40",
+    "ticket_question":  14,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7f4f1b8b2f32f862293979c54ea03682.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -426,8 +426,8 @@ export const ticket = [
     "id": "26f3cdc938cef35c5baa748a9e521a49"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 40",
+    "ticket_question":  15,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/031ee339b5c4588d0f70898f99180468.jpg"),
     "question": "Можно ли Вам въехать на железнодорожный переезд?",
@@ -453,8 +453,8 @@ export const ticket = [
     "id": "6ae445efd94ccf774f586391384059c7"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 40",
+    "ticket_question":  16,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли перевозка людей в салоне легкового автомобиля, буксирующего неисправное транспортное средство?",
@@ -480,8 +480,8 @@ export const ticket = [
     "id": "e0cf6231c7251e2db03599d7628f0a68"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 40",
+    "ticket_question":  17,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водитель, в отношении которого имеются достаточные основания полагать, что он находится в состоянии опьянения, направляется на медицинское освидетельствование на состояние опьянения:",
@@ -511,8 +511,8 @@ export const ticket = [
     "id": "a209ae8bce0600d02cc5c865188f5844"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 40",
+    "ticket_question":  18,
+     "ticket_number": 40,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как следует поступить водителю при посадке в автомобиль, стоящий у тротуара или на обочине?",
@@ -538,8 +538,8 @@ export const ticket = [
     "id": "16c70e320af6a0c36d6402f0c17f2528"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 40",
+    "ticket_question":  19,
+    "ticket_number":  40,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какова первая помощь при наличии признаков поверхностного термического ожога (покраснение и отек кожи, образование на месте ожога пузырей, наполненных прозрачной жидкостью, сильная боль)?",

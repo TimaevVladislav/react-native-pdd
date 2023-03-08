@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 12",
+    "ticket_question":  0,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях владелец легкового автомобиля может передавать управление этим транспортным средством в своем присутствии другому лицу, имея страховой полис обязательного страхования гражданской ответственности на бумажном носителе или в виде электронного документа либо его копии на бумажном носителе?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "e461bcd1a9d3d04ffe8c473bb56e293a"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 12",
+    "ticket_question":  1,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/327848f33bb2815be5de7fba594a9e04.jpg"),
     "question": "Этот знак:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "c9334e92840e0a9bee92139be21cabeb"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 12",
+    "ticket_question":  2,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/69c9343c1d6d9ef251e048b9b1fedad3.jpg"),
     "question": "В каких направлениях Вам можно продолжить движение на перекрёстке?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "20c75dad5060cad85178952f8543262a"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 12",
+    "ticket_question":  3,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f7c934beadde275ed332f01bc1d6d5c5.jpg"),
     "question": "Какие из указанных знаков разрешают движение мопедов?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "d3968400c01de395aafd0e7ee9313004"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 12",
+    "ticket_question":  4,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e8237bab04b14d71dd0f27a6a30e2abf.jpg"),
     "question": "Движение разрешается:",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "6532585f70efb2d6b01a0ebe668c3cf3"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 12",
+    "ticket_question":  5,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какое значение имеет сигнал свистком, подаваемый регулировщиком?",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "2f8adb9763d4c4e47b02bf37b8f0c76a"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 12",
+    "ticket_question":  6,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2b0f3c08d7d87bc3b72cc967f4aa8ff9.jpg"),
     "question": "Вы намерены повернуть налево на этом перекрёстке. В какой момент следует включить указатели левого поворота?",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "70ff7967e6af90c07cbb6e9416d46874"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 12",
+    "ticket_question":  7,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2adaa246a624f1f6759b6b1cff797dbd.jpg"),
     "question": "Кто должен уступить дорогу при одновременном перестроении?",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "1c039b62c895602472e8441ffe43ad14"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 12",
+    "ticket_question":  8,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8f0ff8f89e30a8c8a755fa781b2745ae.jpg"),
     "question": "Разрешено ли Вам выполнить разворот на мосту по указанной траектории?",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "b69a025195b78740b40aa0df3cc36778"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 12",
+    "ticket_question":  9,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1e705619216f7727620196fe657675dd.jpg"),
     "question": "С какой скоростью Вы имеете право продолжить движение в населённом пункте по правой полосе?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "433127439544633941d7e20012cc1963"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 12",
+    "ticket_question":  10,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dfcdfe8499bd05570a8c33ebf0d97611.jpg"),
     "question": "Разрешено ли Вам выполнить обгон в данной ситуации?",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "65bb67bbaf1798938a78e2c76565be6f"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 12",
+    "ticket_question":  11,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4fc423e88c78dc69482145396d5b8714.jpg"),
     "question": "Можно ли Вам поставить автомобиль на стоянку в указанном месте?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "1a31264160e72af7b52a5bcd0977ebdb"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 12",
+    "ticket_question":  12,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/15598370865aaa7a33d3221b521d408b.jpg"),
     "question": "Вы намерены повернуть направо. Ваши действия?",
@@ -355,8 +355,8 @@ export const ticket = [
     "id": "d72dcc8b68b6d5a24de5e002d7c2b9eb"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 12",
+    "ticket_question":  13,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b0ba587013475581dd72731cbc816d54.jpg"),
     "question": "При движении в каком направлении Вы должны уступить дорогу автомобилю с включенными проблесковым маячком и специальным звуковым сигналом?",
@@ -383,8 +383,8 @@ export const ticket = [
     "id": "e636c28bb84f0b1776a2da35ad1fe4f4"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 12",
+    "ticket_question":  14,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1d55fde9be6beff7612cc3910c03b3fd.jpg"),
     "question": "Вы намерены продолжить движение прямо. Ваши действия при жёлтом мигающем сигнале светофора?",
@@ -414,8 +414,8 @@ export const ticket = [
     "id": "3b0778d393beaf09d4da768802a87a1d"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 12",
+    "ticket_question":  15,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли учебная езда на автомагистрали?",
@@ -441,8 +441,8 @@ export const ticket = [
     "id": "b488af899e21064b5ce905c3587b3b20"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 12",
+    "ticket_question":  16,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении в тёмное время суток на неосвещённых участках дорог можно использовать противотуманные фары:",
@@ -468,8 +468,8 @@ export const ticket = [
     "id": "928ca060450ba05f1f98579c12dc0b6e"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 12",
+    "ticket_question":  17,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При какой неисправности тормозной системы запрещается эксплуатация транспортного средства?",
@@ -495,8 +495,8 @@ export const ticket = [
     "id": "fd78481ac06b96c8b90438468008bd52"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 12",
+    "ticket_question":  18,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f688bc3a0ec802b68e3d83de9a0df096.jpg"),
     "question": "Способ разворота с использованием прилегающей территории справа, обеспечивающий безопасность движения, показан:",
@@ -522,8 +522,8 @@ export const ticket = [
     "id": "6ee380e47bee3d5f38528cf87ca8f9f8"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 12",
+    "ticket_question":  19,
+    "ticket_number": 12,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как следует уложить пострадавшего при потере им сознания и наличии дыхания и кровообращения для оказания первой помощи?",

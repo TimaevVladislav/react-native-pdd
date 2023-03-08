@@ -8,9 +8,7 @@ const useColor = (item) => {
 
     const handlerColorChange = (answer, buttonId) => {
         if (!answer.is_correct) {
-            if (!mistakes.includes(item)) {
-                mistakes.push(item)
-            }
+            !mistakes.includes(item) && mistakes.push(item)
             setColor(prevColor => prevColor.map((color, id) => id === buttonId ? "red" : prevColor))
             setColorId(prevColor => prevColor.map((color, id) => id === buttonId ? "red" : prevColor ))
         } else {

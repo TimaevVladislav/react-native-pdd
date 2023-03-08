@@ -1,7 +1,7 @@
 [
   {
     "title": "Вопрос 1",
-    "ticket_number": "Билет 25",
+     "ticket_number": 25,
     "ticket_category": "C,D",
     "image": "./images/C_D/dad09aad1a325d604f823b0bbbb42200.jpg",
     "question": "На каком рисунке изображена дорога с разделительной полосой?",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Вопрос 2",
-    "ticket_number": "Билет 25",
+     "ticket_number": 25,
     "ticket_category": "C,D",
     "image": "./images/C_D/581024e73922184eaeadc28c1a4c0ce2.jpg",
     "question": "Вам разрешено продолжить движение на грузовом автомобиле, имеющем разрешенную максимальную массу более 3,5 т, с прицепом:",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Вопрос 3",
-    "ticket_number": "Билет 25",
+     "ticket_number": 25,
     "ticket_category": "C,D",
     "image": "./images/C_D/dfb36ae37d8a36a7de8e3e0cb9a0fb63.jpg",
     "question": "Какие из указанных знаков отменяют все ограничения, введенные ранее запрещающими знаками?",
@@ -86,7 +86,7 @@
   },
   {
     "title": "Вопрос 4",
-    "ticket_number": "Билет 25",
+     "ticket_number": 25,
     "ticket_category": "C,D",
     "image": "./images/C_D/f8344622b88c8597698e0fb9c762919f.jpg",
     "question": "Этот знак указывает, что:",

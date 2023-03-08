@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 19",
+    "ticket_question":  0,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1871b903ddd6b18d2bc45133234dd7fa.jpg"),
     "question": "Сколько проезжих частей имеет данная дорога?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "c016b781a5d47a61c557adbc1dfc1829"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 19",
+    "ticket_question":  1,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c139b008d7f298babdc55bb66733e052.jpg"),
     "question": "В каком направлении Вам можно продолжить движение на легковом автомобиле?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "2c2ffb9cc588c3bf92d2ceed2ce5e1e0"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 19",
+    "ticket_question":  2,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ccd31d35180c583ce32eefa65134cfd3.jpg"),
     "question": "Разрешено ли осуществлять посадку (высадку) пассажиров либо загрузку (разгрузку) транспортного средства в зоне действия этого знака?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "04b1a8d935ab3e0efb7dec84e3bdf141"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 19",
+    "ticket_question": 3,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/eae8df76f6985c39abbbe3b218236f8f.jpg"),
     "question": "Какие из указанных знаков разрешают выполнить разворот?",
@@ -108,8 +108,8 @@ export const ticket = [
     "id": "b8284a729a1321406c601282b75bc95b"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 19",
+    "ticket_question": 4,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Чем необходимо руководствоваться, если значения дорожных знаков и линий горизонтальной разметки противоречат друг другу?",
@@ -135,8 +135,8 @@ export const ticket = [
     "id": "57e370c482206289a3156050685bf636"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 19",
+    "ticket_question": 5,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/401b32d6422ac7a76bf7588cf75e1a2f.jpg"),
     "question": "Как Вы должны поступить в данной ситуации?",
@@ -162,8 +162,8 @@ export const ticket = [
     "id": "2db795b077d4d6be1db9ed2773f910e5"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 19",
+    "ticket_question": 6,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Когда должна быть прекращена подача сигнала указателями поворота?",
@@ -189,8 +189,8 @@ export const ticket = [
     "id": "c0b30cfafb49c881b96acc51adb74b06"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 19",
+    "ticket_question": 7,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6433c8a4315c9de2ede205e2f3ea9187.jpg"),
     "question": "Вам можно выполнить поворот налево:",
@@ -216,8 +216,8 @@ export const ticket = [
     "id": "1a342f3a407df4c3154abf8c0e739b0c"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 19",
+    "ticket_question": 8,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2d5fb45e4f325d94099db8c39fd400c0.jpg"),
     "question": "Водитель случайно проехал нужный въезд во двор. Разрешено ли в этой ситуации использовать задний ход, чтобы затем повернуть направо?",
@@ -243,8 +243,8 @@ export const ticket = [
     "id": "ee0e5990842df97eef4aed8a7506ff16"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 19",
+    "ticket_question": 9,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c98167548f6dad5417b3e5aa77e6db07.jpg"),
     "question": "С какой скоростью Вы имеете право продолжить движение в населённом пункте по левой полосе?",
@@ -271,8 +271,8 @@ export const ticket = [
     "id": "dd0383ec40c74757c842c3059403a79e"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 19",
+    "ticket_question": 10,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e4f45f7c5c43044accbeda568927b59c.jpg"),
     "question": "По какой полосе Вам можно продолжить движение в населённом пункте после опережения грузового автомобиля?",
@@ -298,8 +298,8 @@ export const ticket = [
     "id": "6fcf9e9e13a2602cfb9273eb8fcf070c"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 19",
+    "ticket_question": 11,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/46b07099dd98f734c8f6980aeca681ab.jpg"),
     "question": "Кто из водителей нарушил правила стоянки?",
@@ -329,8 +329,8 @@ export const ticket = [
     "id": "f0db713807b683836f871b30b02e7047"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 19",
+    "ticket_question": 12,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9a24813a3292e581eb60ee0fde93d54c.jpg"),
     "question": "Вы намерены проехать перекрёсток в прямом направлении. Ваши действия?",
@@ -356,8 +356,8 @@ export const ticket = [
     "id": "6e816892a71cd93ee5e905c4355bfdee"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 19",
+    "ticket_question": 13,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4fc7fcf44288e61dd11e2248f6f3cd79.jpg"),
     "question": "Как Вам следует поступить при повороте направо?",
@@ -383,8 +383,8 @@ export const ticket = [
     "id": "e17b107b4651ebfd63b330cdd5d3a776"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 19",
+    "ticket_question": 14,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Если невозможно определить наличие покрытия на дороге (темное время суток, грязь, снег и тому подобное), а знаков приоритета нет, то:",
@@ -410,8 +410,8 @@ export const ticket = [
     "id": "482eaefb70b2a4832dac632b70810951"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 19",
+    "ticket_question": 15,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/05ebf1a08d1756e295daad67fe2fa4b4.jpg"),
     "question": "В данной ситуации Вы:",
@@ -433,8 +433,8 @@ export const ticket = [
     "id": "21abaf3f3a353c2b05b5f3a8c882c385"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 19",
+    "ticket_question": 16,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие внешние световые приборы должны быть включены в темное время суток и в условиях недостаточной видимости независимо от освещения дороги, а также в тоннелях на буксируемых механических транспортных средствах?",
@@ -460,8 +460,8 @@ export const ticket = [
     "id": "5ceda2cdaf64800d6c2b95fb92d2f199"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 19",
+    "ticket_question": 17,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "У водителя, совершившего административное правонарушение, водительское удостоверение изымается:",
@@ -487,8 +487,8 @@ export const ticket = [
     "id": "378960213bd2ecdc8ab85ea7c6f598d4"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 19",
+    "ticket_question": 18,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Для прекращения заноса, вызванного торможением, водитель в первую очередь должен:",
@@ -514,8 +514,8 @@ export const ticket = [
     "id": "1656362f178c7e8643bfdccec968cd27"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 19",
+    "ticket_question": 19,
+    "ticket_number": 19,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что необходимо сделать для извлечения инородного тела, попавшего в дыхательные пути пострадавшего?",

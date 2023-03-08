@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 14",
+    "ticket_question":  0,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает термин «Ограниченная видимость»?",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "8aa547594ac945a577dfe3cb3b140c10"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 14",
+    "ticket_question":  1,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4ccdddd3c39cafc8b550561ba057ba10.jpg"),
     "question": "О чем предупреждают Вас эти знаки:",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "0e888d95c358ab212e8ddc923f5c2fbf"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 14",
+    "ticket_question":  2,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/90b40555c5539d69ab7a6d381386e445.jpg"),
     "question": "Какие из указанных знаков разрешают движение грузовым автомобилям с разрешённой максимальной массой не более 3,5 т?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "93d4ec3fa830ea3af252d70b0697bfc7"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 14",
+    "ticket_question":  3,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/37a2e2cad7d52d8d5d2fe12956f3f5e3.jpg"),
     "question": "Вам можно продолжить движение по крайней левой полосе на легковом автомобиле:",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "f97752d7d47c089c0578db029244f4d2"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 14",
+    "ticket_question":  4,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e67a843e51d4890c4c5e1ff3bdfa12ac.jpg"),
     "question": "В каком из указанных мест Вам разрешено пересечь сплошную линию разметки и остановиться?",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "673468ed8f01b7b41af7344961c11ccb"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 14",
+    "ticket_question":  5,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0700dacc27c1af557dcf4ea1eece9898.jpg"),
     "question": "Должны ли Вы остановиться по требованию регулировщика в указанном им месте?",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "71dbaa23b39d01c14970f301e069f4f5"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 14",
+    "ticket_question":  6,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e528564f75b6d8e88501e68c43f668bc.jpg"),
     "question": "Такой сигнал рукой, подаваемый водителем мотоцикла, информирует Вас:",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "9af41013614f90bb60ae60236606112c"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 14",
+    "ticket_question":  7,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1164f37fcc05a994db6405a510100b22.jpg"),
     "question": "По какой траектории Вам разрешается выполнить поворот налево?",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "cbce3c78c6539efdb47bc9045d62301d"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 14",
+    "ticket_question":  8,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9cd53e74212814d14900204fc64976c1.jpg"),
     "question": "Можно ли Вам развернуться в этом месте?",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "9c5ccf7ac0c8810fb6f07fbcebd87f06"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 14",
+    "ticket_question":  9,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Допускается ли движение автомобилей по тротуарам или пешеходным дорожкам?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "cc759387b03f468bb711923a490ae859"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 14",
+    "ticket_question":  10,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b28b2b40d3f03f5c2ffd3ecde7541ea5.jpg"),
     "question": "В данной ситуации, Вы:",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "08324845c8ee61d411379adde4c25454"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 14",
+    "ticket_question":  11,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b4505e7eecfe9ff9672af15cc58a9105.jpg"),
     "question": "Разрешено ли Вам остановиться на мосту в этом месте?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "d6115df8c2fbd25596d686a477814179"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 14",
+    "ticket_question":  12,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dd15c5c92a1b7c94fdb3e7dc31b52742.jpg"),
     "question": "При включении зелёного сигнала светофора Вы должны уступить дорогу:",
@@ -355,8 +355,8 @@ export const ticket = [
     "id": "0d98d1d61f57dd4f66f07e984bb07668"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 14",
+    "ticket_question":  13,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/11f039da164d6a869116a1ecf0aa5a18.jpg"),
     "question": "Вы намерены проехать перекрёсток в прямом направлении. Кому Вы обязаны уступить дорогу?",
@@ -382,8 +382,8 @@ export const ticket = [
     "id": "f110bdab640dcf5443d62c6b0be3d76e"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 14",
+    "ticket_question":  14,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/84e8cb2bde0226c0b037e892ac66149a.jpg"),
     "question": "При повороте налево Вы:",
@@ -409,8 +409,8 @@ export const ticket = [
     "id": "799fcc9cd0bb95dcd359cba8e53d205a"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 14",
+    "ticket_question":  15,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/51759c26b47f5e5951180e6f1fb45fba.jpg"),
     "question": "Кто из водителей нарушает правила разворота на автомагистрали?",
@@ -440,8 +440,8 @@ export const ticket = [
     "id": "091225e80401115d5bc7e187231c8c78"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 14",
+    "ticket_question":  16,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Буксировка двухколесного мотоцикла разрешается:",
@@ -467,8 +467,8 @@ export const ticket = [
     "id": "adabe4ecd902c4eed624e35ed5e949ce"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 14",
+    "ticket_question":  17,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком из перечисленных случаев разрешается эксплуатация автомобиля?",
@@ -494,8 +494,8 @@ export const ticket = [
     "id": "f45a0a50555b90ac6ffab0b7ab7e4313"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 14",
+    "ticket_question":  18,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как влияет длительный разгон транспортного средства с включенной первой передачей на расход топлива?",
@@ -521,8 +521,8 @@ export const ticket = [
     "id": "c8606085eeafe66637244e52c8bf47e3"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 14",
+    "ticket_question":  19,
+    "ticket_number": 14,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Является ли безопасным движение вне населенного пункта на легковом автомобиле в темное время суток с включенным ближним светом фар по неосвещенному участку дороги со скоростью 90 км/ч?",

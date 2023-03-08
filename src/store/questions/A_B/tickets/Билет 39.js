@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 39",
+    "ticket_question":  0,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком виде предусмотрено представление для проверки страхового полиса обязательного страхования гражданской ответственности?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "5ae48ab6af8a98def5df222d7a78c7e2"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 39",
+    "ticket_question":  1,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a112b25aeaf6f2f2523c0c26ecf7f102.jpg"),
     "question": "Этот знак предупреждает о приближении к тоннелю, в котором:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "31e0a631596121ff296f78ee1ae2b8a7"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 39",
+    "ticket_question":  2,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/62edd3fce902d3b7c87869e4562c141b.jpg"),
     "question": "Вы имеете право продолжить движение на перекрестке:",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "04c2fe6daa3103bb464b1c5f1cfbeda1"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 39",
+    "ticket_question":  3,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/21465116866437deb217fe91f1fa4576.jpg"),
     "question": "Какие из указанных знаков разрешают выполнить поворот налево?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "fcb92cebf0d357eb5c6762233ff2f69d"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 39",
+    "ticket_question":  4,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b2cb71bd032148c7945b4b8d3816e499.jpg"),
     "question": "При наличии данной разметки, нанесенной на полосе движения, Вам разрешено выполнить:",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "ab0a47ab069ff73eabce0581cfe084ad"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 39",
+    "ticket_question":  5,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5935ab466e699e045bc2eba3e38979a2.jpg"),
     "question": "Вам можно двигаться:",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "2eb7fbb0d64434723fff1b230cc52987"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 39",
+    "ticket_question":  6,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие внешние световые приборы должны быть включены на транспортном средстве, имеющем опознавательные знаки «Перевозка детей», при посадке и высадке из него детей?",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "1ec886cfa06e744ffb5e1a805e80dbeb"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 39",
+    "ticket_question":  7,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5ece9b9e7d648f3ce4c78e4569a0f68f.jpg"),
     "question": "Водитель автомобиля, выполняющий перестроение на правую полосу, в данной ситуации:",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "37418b099a680ea57a4e3891fd349d25"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 39",
+    "ticket_question":  8,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/515953587d8936d88cfd30a24c0f6d11.jpg"),
     "question": "Разрешается ли Вам выполнить разворот в указанном месте?",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "0630c8d0565877605a1621e241edfd75"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 39",
+    "ticket_question":  9,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7dfc987548310102696e4dce45b97bfb.jpg"),
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на легковом автомобиле с прицепом?",
@@ -278,8 +278,8 @@ export const ticket = [
     "id": "43895c0492b3f74a7b646741b44fd221"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 39",
+    "ticket_question":  10,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/14dd467596b814205e1698078d56fc12.jpg"),
     "question": "По какой траектории водитель легкового автомобиля может выполнить обгон?",
@@ -305,8 +305,8 @@ export const ticket = [
     "id": "4a466acba60ebf47313bf0c7badcf4ab"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 39",
+    "ticket_question":  11,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5a9395c998f0953ada0e4b294c2826e0.jpg"),
     "question": "Разрешается ли Вам остановка в указанном месте?",
@@ -332,8 +332,8 @@ export const ticket = [
     "id": "5ffa1803a6731c9211f05d97fc83375c"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 39",
+    "ticket_question":  12,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/77c8e3a311319e8e3a8063e6308c7ba8.jpg"),
     "question": "Вы намерены проехать перекресток в прямом направлении. Ваши действия?",
@@ -359,8 +359,8 @@ export const ticket = [
     "id": "c25a0a5ea893eba71ea32a1fe2ae73b2"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 39",
+    "ticket_question":  13,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d1c8cf4e98294d96c1248065fa90d102.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -382,8 +382,8 @@ export const ticket = [
     "id": "e4d2b95f9da3fa2aa7feb82c91f8041f"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 39",
+    "ticket_question":  14,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/60974448467920683882fc52599c1b81.jpg"),
     "question": "Кому Вы должны уступить дорогу при движении прямо?",
@@ -409,8 +409,8 @@ export const ticket = [
     "id": "8aa84bd348c85dec8fa9dea32991515d"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 39",
+    "ticket_question":  15,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/569f8ee1d44c45befdc45ff17bd0944e.jpg"),
     "question": "Нарушил ли водитель Правила при вынужденной остановке на автомагистрали?",
@@ -436,8 +436,8 @@ export const ticket = [
     "id": "280bd95f107215a8c09d9b8af71c1ee3"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 39",
+    "ticket_question":  16,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли буксировка в гололедицу, если у буксируемого транспортного средства исправны тормоза и рулевое управление?",
@@ -463,8 +463,8 @@ export const ticket = [
     "id": "433df8223b67a3837ddbb7a808c03694"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 39",
+    "ticket_question":  17,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли устанавливать на транспортном средстве шипованные шины совместно с неошипованными?",
@@ -490,8 +490,8 @@ export const ticket = [
     "id": "16a886ada325cd0cf2c46b50be075d06"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 39",
+    "ticket_question":  18,
+     "ticket_number": 39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При трогании на подъеме на автомобиле с механической коробкой передач следует начинать отключать (отпускать) стояночный тормоз:",
@@ -517,8 +517,8 @@ export const ticket = [
     "id": "ac70a1e665460f4f341127d541b97c89"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 39",
+    "ticket_question":  19,
+    "ticket_number":  39,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что понимается под остановочным путем?",

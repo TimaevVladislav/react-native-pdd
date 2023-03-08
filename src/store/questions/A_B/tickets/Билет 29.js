@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 29",
+    "ticket_question":  0,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает требование уступить дорогу?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "de65dc486ba54646b73010483f5dc177"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 29",
+    "ticket_question":  1,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/99e59a6b98fa301f860b6565c84b8150.jpg"),
     "question": "Какие из указанных знаков предоставляют право преимущественного проезда нерегулируемых перекрестков?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "220940809a22d2b242566b7936ccece9"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 29",
+    "ticket_question":  2,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/73f3b5299584c45589bcfcd949f03e07.jpg"),
     "question": "Разрешено ли Вам выполнить обгон?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "a4b56b832895b21c610340152732b743"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 29",
+    "ticket_question":  3,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/952de68c6a21c16013dd07686568477f.jpg"),
     "question": "Можно ли водителю поставить грузовой автомобиль на стоянку в этом месте указанным способом?",
@@ -109,8 +109,8 @@ export const ticket = [
     "id": "d7543b23770c93ca52abfc74ab301c9f"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 29",
+    "ticket_question":  4,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0c3649d70b8e069ac13386976bd29e81.jpg"),
     "question": "Такой вертикальной разметкой обозначают:",
@@ -136,8 +136,8 @@ export const ticket = [
     "id": "af91b8c7fede01cff83e2b4e7e0b3fa0"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 29",
+    "ticket_question":  5,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7ae9b7b0d982731511e27ceaee9764a2.jpg"),
     "question": "В каком месте Вы должны остановиться?",
@@ -163,8 +163,8 @@ export const ticket = [
     "id": "a1010f11d0df5f7f07907a1c45d8d65e"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 29",
+    "ticket_question":  6,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Должны ли водители подавать сигналы указателями поворота при маневрировании на территории автостоянки или АЗС?",
@@ -190,8 +190,8 @@ export const ticket = [
     "id": "333911236cfc99151b313df8740cbab3"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 29",
+    "ticket_question":  7,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1464c9c8b3c83d77349a5129c1a284a8.jpg"),
     "question": "Кто из водителей нарушает правила поворота на перекрёстке?",
@@ -221,8 +221,8 @@ export const ticket = [
     "id": "efad9b6b062a6b2ddcde1a7df4220dae"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 29",
+    "ticket_question":  8,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3eb70f430b0427cee6afa9cc3af305e9.jpg"),
     "question": "Разрешено ли водителю движение задним ходом при отсутствии других участников движения?",
@@ -248,8 +248,8 @@ export const ticket = [
     "id": "376a1614d403d0b92ddd30408215944a"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 29",
+    "ticket_question":  9,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3176b8d47092f1062bc7c503e56bc3e7.jpg"),
     "question": "Можно ли Вам выехать на крайнюю левую полосу в данной ситуации?",
@@ -275,8 +275,8 @@ export const ticket = [
     "id": "0e2434049750535347356953a9e0f653"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 29",
+    "ticket_question":  10,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/328c10153f93fc5212d3d691bc74479a.jpg"),
     "question": "Разрешается ли Вам выполнить обгон?",
@@ -302,8 +302,8 @@ export const ticket = [
     "id": "8b0addcc697856fee116ab77f4d1efae"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 29",
+    "ticket_question":  11,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ec86d9e4bba13f88a707b9303dbb3327.jpg"),
     "question": "Кто из водителей нарушил правила остановки?",
@@ -333,8 +333,8 @@ export const ticket = [
     "id": "7d796ec720745d48640215f005715dc2"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 29",
+    "ticket_question":  12,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/776ffb02265e620cb05901b5818b520b.jpg"),
     "question": "При выполнении какого маневра водитель легкового автомобиля имеет преимущество в движении?",
@@ -360,8 +360,8 @@ export const ticket = [
     "id": "3a222a442ae126ad0bd8c7d576ae7af0"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 29",
+    "ticket_question":  13,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/65bc169b36cdfc3af1aad956a5a5b5a3.jpg"),
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -383,8 +383,8 @@ export const ticket = [
     "id": "a0c837edb523d8fad9df0cbaf029c280"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 29",
+    "ticket_question":  14,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/762991bf5f396b227bed4d0559d890d5.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при движении в прямом направлении?",
@@ -410,8 +410,8 @@ export const ticket = [
     "id": "d7f2cfb6c6b84a055b3a86a84440af72"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 29",
+    "ticket_question":  15,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a5c3ed06da826a9d024036e2b40b7e43.jpg"),
     "question": "Можно ли Вам, управляя грузовым автомобилем, осуществить опережение в данной ситуации?",
@@ -437,8 +437,8 @@ export const ticket = [
     "id": "10cb8c080b8864b0f54fe9a476a9b5d9"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 29",
+    "ticket_question":  16,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении в светлое время суток на транспортном средстве должны быть включены:",
@@ -468,8 +468,8 @@ export const ticket = [
     "id": "442cf868e87c883a373f11daecc7b691"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 29",
+    "ticket_question":  17,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Запрещается эксплуатация легкового автомобиля (категория М1), если остаточная глубина рисунка протектора шин (при отсутствии индикаторов износа) составляет не более:",
@@ -499,8 +499,8 @@ export const ticket = [
     "id": "9bc3f862f600fcec262f510a1423acf2"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 29",
+    "ticket_question":  18,
+     "ticket_number": 29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что следует предпринять для быстрого восстановления эффективности тормозов транспортного средства после проезда через водную преграду?",
@@ -526,8 +526,8 @@ export const ticket = [
     "id": "579b49ea17cefa8e43f32d1be917ae8f"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 29",
+    "ticket_question":  19,
+    "ticket_number":  29,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Каковы первоначальные действия при оказании первой помощи в случае ранения, полученного в результате ДТП?",

@@ -1,7 +1,6 @@
 [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 10",
+   " ticket_number": 5,"favorite": false,
     "ticket_category": "C,D",
     "image": "./images/C_D/76878233c8a8bc7bacfcf642332135ee.jpg",
     "question": "Главная дорога показана:",

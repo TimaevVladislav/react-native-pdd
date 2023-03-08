@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 34",
+    "ticket_question":  0,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/bd10a7d4e35d9e14c7f76c98ba4311dd.jpg"),
     "question": "Главная дорога показана:",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "52b9459be7a75ff92ec726da3034e0bb"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 34",
+    "ticket_question":  1,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d3f85921878a51db1c7197d22f5b8962.jpg"),
     "question": "На каком расстоянии до скользкого участка дороги устанавливается данный знак в населённом пункте?",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "407900ffd680aecd7c3eb05441687823"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 34",
+    "ticket_question":  2,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/40e68617cce95ec2ae0e7c7e1bf6b529.jpg"),
     "question": "Остановка в зоне действия этого знака разрешена:",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "6913ae1f5836793bb47fe343cf6896f0"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 34",
+    "ticket_question":  3,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/35c54aefd134adf49707b153f96b2f55.jpg"),
     "question": "Какие из указанных знаков используются для обозначения кемпинга?",
@@ -116,8 +116,8 @@ export const ticket = [
     "id": "1a67b3580fe1aba650c629d98042e92f"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 34",
+    "ticket_question":  4,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/83382033528eda1cd21ed53a9d6d939c.jpg"),
     "question": "Если реверсивные светофоры выключились, Вам следует:",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "926b8169f79732aabd5e38086c251a97"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 34",
+    "ticket_question":  5,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/71be6e3e70691947b42589cbe99ced4b.jpg"),
     "question": "Вам разрешено продолжить движение:",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "ab35fc2f8658290515f5910f7c2c6b26"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 34",
+    "ticket_question":  6,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как необходимо обозначить буксируемый автомобиль при отсутствии или неисправности аварийной сигнализации?",
@@ -197,8 +197,8 @@ export const ticket = [
     "id": "680a5e0a12ad8a41760f1cccee1b0b28"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 34",
+    "ticket_question":  7,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/fa8e614c162efa9963c34741f225ae70.jpg"),
     "question": "Можно ли водителю легкового автомобиля в данной ситуации начать движение от тротуара?",
@@ -224,8 +224,8 @@ export const ticket = [
     "id": "3cfb7001cda943a18b2b1cb5980926de"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 34",
+    "ticket_question":  8,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d0cc50dee93f2a2f9d05a7fa7acda818.jpg"),
     "question": "Водитель случайно проехал нужный въезд во двор. Разрешается ли ему в этой ситуации использовать задний ход, чтобы затем повернуть направо?",
@@ -251,8 +251,8 @@ export const ticket = [
     "id": "a439fefbdd6228827ef219099dd522a4"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 34",
+    "ticket_question":  9,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/bf2ac58cc3245402a8710905b203f9f9.jpg"),
     "question": "Кто из водителей мопедов занял правильное положение на полосе движения?",
@@ -278,8 +278,8 @@ export const ticket = [
     "id": "8a2c95ca180120f8e2f2b007929d8164"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 34",
+    "ticket_question":  10,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1d8973c9b7892a5df603b8c4a57e0765.jpg"),
     "question": "Можно ли Вам продолжить движение по средней полосе после опережения автомобиля, движущегося по правой полосе?",
@@ -305,8 +305,8 @@ export const ticket = [
     "id": "f5405e4ab81d2c0b7c27cd460818e86b"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 34",
+    "ticket_question":  11,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2c7e7e3a617223291f5052fa9ac0d03a.jpg"),
     "question": "Водители каких автомобилей нарушили правила остановки?",
@@ -336,8 +336,8 @@ export const ticket = [
     "id": "b21eb67e2bbfb09b0075b630e86f32ed"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 34",
+    "ticket_question":  12,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a2fc332291bee5203413a0113c388641.jpg"),
     "question": "Как Вам следует поступить при движении в прямом направлении?",
@@ -363,8 +363,8 @@ export const ticket = [
     "id": "add9966132410cba8598d7a5dd978eb8"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 34",
+    "ticket_question":  13,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/74163a8ad5ac65673ea835173fa5feec.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -390,8 +390,8 @@ export const ticket = [
     "id": "cfee8e0cf87df768dce22252491672ec"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 34",
+    "ticket_question":  14,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8f84380bd94b68627c59fdc5e599e095.jpg"),
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -417,8 +417,8 @@ export const ticket = [
     "id": "d762f6de72dd3e6243854e1fe3737c2d"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 34",
+    "ticket_question":  15,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Сигналом остановки для машиниста поезда служит следующее расположение руки или рук (днем с лоскутом яркой материи либо каким-нибудь хорошо видимым предметом, ночью — с факелом или фонарем):",
@@ -448,8 +448,8 @@ export const ticket = [
     "id": "32eaed4368e5914a97cee3e50fbf46b2"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 34",
+    "ticket_question":  16,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В тоннеле с искусственным освещением должны быть включены:",
@@ -475,8 +475,8 @@ export const ticket = [
     "id": "28da96643006af8596045794844195fb"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 34",
+    "ticket_question":  17,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Уголовная ответственность предусмотрена за управление транспортным средством, не повлекшее причинение тяжкого вреда здоровью или смерть человека, лицом, находящимся в состоянии опьянения, если оно ранее было подвергнуто административному наказанию:",
@@ -502,8 +502,8 @@ export const ticket = [
     "id": "2373f4132055949f6f372017f65185a4"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 34",
+    "ticket_question":  18,
+     "ticket_number": 34,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8dbb3de365e8c033da2888608c07613c.jpg"),
     "question": "При движении по двухполосной дороге за грузовым автомобилем у Вас появилась возможность совершить обгон. Ваши действия?",
@@ -529,8 +529,8 @@ export const ticket = [
     "id": "2c89f94cd878850827e8c0511a4938cb"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 34",
+    "ticket_question":  19,
+    "ticket_number":  34,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Каким образом проводится сердечно-легочная реанимация пострадавшего?",

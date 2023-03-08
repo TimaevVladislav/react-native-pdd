@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 15",
+    "ticket_question":  0,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какой неподвижный объект, не позволяющий продолжить движение по полосе, не относится к понятию «Препятствие»?",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "f034f55b098ac593ef3fbe1f2e718abe"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 15",
+    "ticket_question":  1,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/39333327bfa4ea7672436c3a6e246685.jpg"),
     "question": "Вам можно продолжить движение на перекрёстке:",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "78d0e0698678ea87eb3d965f16eb3a31"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 15",
+    "ticket_question":  2,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/53c85c589d028478469bd806d0fe5b44.jpg"),
     "question": "Этот дорожный знак:",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "a658c95ab38c606cb86155435a56a8d4"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 15",
+    "ticket_question":  3,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0f3ea6b92e7936763e7f31e71369b482.jpg"),
     "question": "Какие из указанных табличек указывают протяжённость зоны действия знаков, с которыми они применяются?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "fe431ab388538471611a69f290d42c0e"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 15",
+    "ticket_question":  4,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/47dbadc338d88d511ee8167206f30c7e.jpg"),
     "question": "Разрешён ли Вам такой маневр при выключенных реверсивных светофорах?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "de7f75553889519cbc8839150f55ec63"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 15",
+    "ticket_question":  5,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9a3d0dbd51d32c85d61a089d285e7335.jpg"),
     "question": "При таких сигналах светофора и жесте регулировщика Вы должны:",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "1fb70c24de235d014ec10b22daea3ca3"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 15",
+    "ticket_question":  6,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9e6a35bbbb7b463adf4264050cc26763.jpg"),
     "question": "Обязан ли в этой ситуации водитель, остановившийся из-за неисправности, выставить знак аварийной остановки?",
@@ -197,8 +197,8 @@ export const ticket = [
     "id": "cf2587f346584d94ec4b58c5939badf3"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 15",
+    "ticket_question":  7,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c18b6b32710d9d3be9e9398ea8501c19.jpg"),
     "question": "По какой траектории Вам разрешено продолжить движение налево?",
@@ -224,8 +224,8 @@ export const ticket = [
     "id": "ee8e73a9a85c8b19e396962d1ffe9c84"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 15",
+    "ticket_question":  8,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7b65d963dfd2884d611eaf29258ab2ad.jpg"),
     "question": "Как Вам следует действовать, выезжая с места стоянки одновременно с другим автомобилем?",
@@ -251,8 +251,8 @@ export const ticket = [
     "id": "92356c3a8ebed311599a61484111a14f"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 15",
+    "ticket_question":  9,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "К резкому торможению можно прибегнуть:",
@@ -278,8 +278,8 @@ export const ticket = [
     "id": "5e9ef5b54f8dd2fe12d16f9e7217162e"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 15",
+    "ticket_question":  10,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли на двухполосной дороге выполнять обгон на перекрёстках?",
@@ -309,8 +309,8 @@ export const ticket = [
     "id": "2baae7be995c64c9d450512326139645"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 15",
+    "ticket_question":  11,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/33c782d613cfec360e0a7b92282c4ef4.jpg"),
     "question": "Кто из водителей нарушил правила остановки?",
@@ -340,8 +340,8 @@ export const ticket = [
     "id": "cc9e0ad6d760e094d2ccaff98ae4ed6d"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 15",
+    "ticket_question":  12,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/972568e0368e212d3e544299c1cf9e6c.jpg"),
     "question": "В каком случае Вы обязаны уступить дорогу трамваю?",
@@ -367,8 +367,8 @@ export const ticket = [
     "id": "51ebf32b740b7647008449a42e183a59"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 15",
+    "ticket_question":  13,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/027cbb3db9e957610325cddf7cf6a5ed.jpg"),
     "question": "При движении в прямом направлении, Вам следует:",
@@ -394,8 +394,8 @@ export const ticket = [
     "id": "300e9333ae2c626e63f181922b27eff9"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 15",
+    "ticket_question":  14,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1d93395fcc55702c1381825d1b12da43.jpg"),
     "question": "Кому Вы должны уступить дорогу при повороте налево?",
@@ -422,8 +422,8 @@ export const ticket = [
     "id": "1ff83cfa25d8634e88ee581fe7e7ba35"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 15",
+    "ticket_question":  15,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e85d838592ee2c2eff19795e2fa30b9a.jpg"),
     "question": "Вам разрешено продолжить движение:",
@@ -457,8 +457,8 @@ export const ticket = [
     "id": "3e8d2366f6de759bf50772fbf741f055"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 15",
+    "ticket_question":  16,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Привлечь внимание водителя обгоняемого автомобиля при движении вне населенного пункта в светлое время суток можно:",
@@ -488,8 +488,8 @@ export const ticket = [
     "id": "5c698fc4bf8bcf1f57a983894354a09f"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 15",
+    "ticket_question":  17,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Эксплуатация мотоцикла запрещается:",
@@ -515,8 +515,8 @@ export const ticket = [
     "id": "3ef94b3e5a3b25b26d78db0fd12c915f"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 15",
+    "ticket_question":  18,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как следует выбирать передачу при торможении двигателем с учетом крутизны спуска?",
@@ -542,8 +542,8 @@ export const ticket = [
     "id": "3952975be53a41080f30b2a9ba0ebf96"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 15",
+    "ticket_question":  19,
+    "ticket_number": 15,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "О каких травмах у пострадавшего может свидетельствовать поза «лягушки» (ноги согнуты в коленях и разведены, а стопы развернуты подошвами друг к другу) и какую первую помощь необходимо при этом оказать?",

@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 20",
+    "ticket_question":0,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие условия являются обязательными для оформления документа о дорожно-транспортном происшествии (ДТП) без участия уполномоченных на то сотрудников полиции?",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "3a674c947d2095f0e5d2ed079f688887"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 20",
+    "ticket_question":1,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0c412b262aaa742de73313de9d5cd245.jpg"),
     "question": "Можно ли Вам за перекрёстком въехать во двор?",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "b0c3e008ad80ee5abd88a966bad8c67b"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 20",
+    "ticket_question":2,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/caba243f0898a9ed727e68868e95441e.jpg"),
     "question": "Разрешается ли Вам остановка за знаком?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "96c5f0f9f2898962f9b6a3d02e65a644"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 20",
+    "ticket_question":3,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2f384d485a0ebe68e54fc16481e92e43.jpg"),
     "question": "Какие из указанных знаков запрещают дальнейшее движение без остановки?",
@@ -116,8 +116,8 @@ export const ticket = [
     "id": "b932f2cdf5501d125e2fd603a8b8bbd8"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 20",
+    "ticket_question": 4,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Чем необходимо руководствоваться, если нанесённые на проезжей части белые и оранжевые линии разметки противоречат друг другу?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "7635641d9406ee6d4b3955d84eeaad75"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 20",
+    "ticket_question": 5,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2ca11d0dccb59f266b9fb6e526961521.jpg"),
     "question": "Вы намеревались проехать перекрёсток в прямом направлении. Как следует поступить, если Вы не успели заранее перестроиться на левую полосу?",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "caa010b565514c41a511df05cadd7da5"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 20",
+    "ticket_question": 6,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b03abac1933f69c66b9737d4644af87c.jpg"),
     "question": "Какой знак используется для обозначения транспортного средства при вынужденной остановке в местах, где с учетом условий видимости оно не может быть своевременно замечено другими водителями?",
@@ -197,8 +197,8 @@ export const ticket = [
     "id": "e4c11890e1367756c1bc23d597dc04fe"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 20",
+    "ticket_question": 7,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3c42fb6a0f6a5a8830b3d205bae7f6c3.jpg"),
     "question": "Вам можно выполнить поворот налево?",
@@ -224,8 +224,8 @@ export const ticket = [
     "id": "6130f16e6e2ae77450efb6f0c4998e38"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 20",
+    "ticket_question": 8,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d378a7ff917731810d151e85331013fb.jpg"),
     "question": "Разрешается ли Вам выполнить разворот с заездом во двор задним ходом?",
@@ -251,8 +251,8 @@ export const ticket = [
     "id": "11869dc41b6e77d55c2e3d34b3a005d4"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 20",
+    "ticket_question": 9,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/86331928deadad76d4d7f10f9a3b4b0f.jpg"),
     "question": "Укажите расстояние, под которым в Правилах понимается дистанция:",
@@ -282,8 +282,8 @@ export const ticket = [
     "id": "4b84ae562934f9b7681c017fe98f5bf4"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 20",
+    "ticket_question": 10,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d4dd33fd3bc937cc4a7afa64f5bf5cac.jpg"),
     "question": "Можно ли Вам начать обгон грузового автомобиля в данной ситуации?",
@@ -309,8 +309,8 @@ export const ticket = [
     "id": "a4beacf74ef3ce64eaa2a68340c86f84"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 20",
+    "ticket_question": 11,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d5026d02d7f19eb9e5ffb5034c748542.jpg"),
     "question": "Какой автомобиль разрешено поставить на стоянку указанным на табличке способом?",
@@ -337,8 +337,8 @@ export const ticket = [
     "id": "530be726bc320d2cbdb970ab6ee5b6f9"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 20",
+    "ticket_question": 12,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e2b9425804c73c5ca16eb6277d7a44d2.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -364,8 +364,8 @@ export const ticket = [
     "id": "e864d1ee6774acf69d5f8b24bcf221b7"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 20",
+    "ticket_question": 13,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d7c90e14e7bec22a2c8515b5cc3fd16d.jpg"),
     "question": "При повороте направо Вам следует:",
@@ -387,8 +387,8 @@ export const ticket = [
     "id": "69e32b0a26f5ca5233e683e3aa0b6067"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 20",
+    "ticket_question": 14,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6213aca51e52eb845a5608a69d366076.jpg"),
     "question": "Кому Вы обязаны уступить дорогу?",
@@ -414,8 +414,8 @@ export const ticket = [
     "id": "41fe413138ce960636eb45afa5f9814f"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 20",
+    "ticket_question": 15,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0eeec7de547a46b1794c4ed0270ae8ef.jpg"),
     "question": "В данной ситуации Вы должны остановиться:",
@@ -441,8 +441,8 @@ export const ticket = [
     "id": "bd4f573520417e67f4a9e559f5d4d7cc"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 20",
+    "ticket_question": 16,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Противотуманные фары и задние противотуманные фонари могут быть включены одновременно:",
@@ -468,8 +468,8 @@ export const ticket = [
     "id": "3e06d2a0e8d3bec2d10a29e249c73256"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 20",
+    "ticket_question": 17,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие меры административного принуждения предусмотрены за управление транспортным средством, на котором установлены стекла (в том числе покрытые прозрачными цветными пленками), светопропускание которых не соответствует требованиям технического регламента о безопасности колесных транспортных средств?",
@@ -495,8 +495,8 @@ export const ticket = [
     "id": "54f45add3112a9b17568d4fcba2bf4ed"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 20",
+    "ticket_question": 18,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как правильно произвести экстренное торможение, если автомобиль оборудован антиблокировочной тормозной системой?",
@@ -522,8 +522,8 @@ export const ticket = [
     "id": "fadddd0bb3e52ae22fe26516a9793d85"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 20",
+    "ticket_question": 19,
+    "ticket_number": 20,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении по какому участку дороги действие сильного бокового ветра наиболее опасно?",

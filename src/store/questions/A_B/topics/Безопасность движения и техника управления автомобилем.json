@@ -54,7 +54,7 @@
     "id": "e9f447c2c017515177c3654a447cc12f"
   },
   {
-    "title": "Вопрос 3",
+    "ticket_question":  2,
     "ticket_number": null,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",

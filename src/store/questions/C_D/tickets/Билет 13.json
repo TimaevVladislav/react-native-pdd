@@ -219,8 +219,8 @@
     "id": "533edbb5b0d53cc157822bfc4c38474c"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 13",
+    "ticket_question":  8,
+    "ticket_number": 13,
     "ticket_category": "C,D",
     "image": "./images/C_D/114cbf907b419317a3a7a6feea3e71b3.jpg",
     "question": "Разрешается ли Вам выполнить разворот на данном участке дороги?",

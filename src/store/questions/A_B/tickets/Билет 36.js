@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 36",
+    "ticket_question":  0,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Главной на перекрестке является:",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "88971f86663e2f4bfcd21115c010b403"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 36",
+    "ticket_question":  1,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/40d2bca0ca567a29f9d58adaa74629a4.jpg"),
     "question": "Разрешается ли Вам въехать на мост одновременно с водителем мотоцикла?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "06ddc1376fa2fea13855854a10c9c8e2"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 36",
+    "ticket_question":  2,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/24d049f439bb6e16fc8d252d1f073127.jpg"),
     "question": "Водители каких автомобилей нарушили правила стоянки?",
@@ -82,8 +82,8 @@ export const ticket = [
     "id": "ffc1f7fb184a971add67346daa47f56e"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 36",
+    "ticket_question":  3,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2c6f996423f7f66b57773574c9dd761b.jpg"),
     "question": "Какие из указанных табличек распространяют действие установленных с ними знаков на грузовые автомобили с разрешённой максимальной массой не более 3,5 т?",
@@ -113,8 +113,8 @@ export const ticket = [
     "id": "b32be09010a971020875628765f8c545"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 36",
+    "ticket_question":  4,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c07508d76a222057cbd0349583cbc009.jpg"),
     "question": "Правая полоса предназначена для движения:",
@@ -141,8 +141,8 @@ export const ticket = [
     "id": "934b2331f4c66f676b0c52e84c0cda9c"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 36",
+    "ticket_question":  5,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/09c20b040fda57302b263f0c92375d47.jpg"),
     "question": "Как следует поступить водителю легкового автомобиля при приближении автомобиля оперативной службы?",
@@ -168,8 +168,8 @@ export const ticket = [
     "id": "f24dce6d265a78a6a0d50cd7093a8430"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 36",
+    "ticket_question":  6,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d0efc35b84dd44ebda7b22168924ab36.jpg"),
     "question": "Согнутая в локте рука водителя автомобиля является сигналом, информирующим Вас о его намерении:",
@@ -195,8 +195,8 @@ export const ticket = [
     "id": "361aa35ffcd00ed75c270eb18b2e1307"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 36",
+    "ticket_question":  7,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4e15d45df5db3c7fefd5855eb0fe2f24.jpg"),
     "question": "Вам можно продолжить движение при повороте налево:",
@@ -222,8 +222,8 @@ export const ticket = [
     "id": "52db334fc6e09a00b53bfafef7fe16c4"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 36",
+    "ticket_question":  8,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Если траектории движения транспортных средств пересекаются, а очерёдность проезда не оговорена Правилами, следует:",
@@ -249,8 +249,8 @@ export const ticket = [
     "id": "4c6d8ce57660925a91be8413497cfa82"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 36",
+    "ticket_question":  9,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях на дорогах, проезжая часть которых разделена линиями разметки, водители обязаны двигаться строго по полосам?",
@@ -276,8 +276,8 @@ export const ticket = [
     "id": "a040d489100aff8f3b55d960bba789c2"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 36",
+    "ticket_question":  10,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водитель обгоняемого транспортного средства:",
@@ -303,8 +303,8 @@ export const ticket = [
     "id": "6e13a9f663974b1225e4d5962aec53b2"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 36",
+    "ticket_question":  11,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/afb157bf3b28baf60ce1f523a8bcf45a.jpg"),
     "question": "Разрешена ли Вам остановка для высадки пассажиров в указанном месте?",
@@ -330,8 +330,8 @@ export const ticket = [
     "id": "5894f909b190fc2c5e5a497d3d8a43e6"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 36",
+    "ticket_question":  12,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/df136d027092614b011523de3c55cd7c.jpg"),
     "question": "Вы намерены повернуть направо. Ваши действия?",
@@ -357,8 +357,8 @@ export const ticket = [
     "id": "6bd322a1a33eae11f34384124eff1fc3"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 36",
+    "ticket_question":  13,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/cbe52a2e674c9d996830af35933d7309.jpg"),
     "question": "В каких случаях Вы должны уступить дорогу трамваю?",
@@ -384,8 +384,8 @@ export const ticket = [
     "id": "e4a5f6e4ed72cd46626ab1f7902f5af6"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 36",
+    "ticket_question":  14,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/312810054bc2d1094d55dbd5fdd3d334.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -411,8 +411,8 @@ export const ticket = [
     "id": "bdb3fff5e0823619159549b39230377f"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 36",
+    "ticket_question":  15,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/02a115a72436b6ccb3f33d666fb792f6.jpg"),
     "question": "Вы обязаны уступить дорогу грузовому автомобилю:",
@@ -438,8 +438,8 @@ export const ticket = [
     "id": "b7542c49db444d1461561becaa9beb92"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 36",
+    "ticket_question":  16,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях необходимо включать фары ближнего света или дневные ходовые огни в светлое время суток?",
@@ -465,8 +465,8 @@ export const ticket = [
     "id": "5a951d7de3e8166354635324fa00139b"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 36",
+    "ticket_question":  17,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Административная ответственность установлена за нарушение Правил дорожного движения или правил эксплуатации транспортного средства, повлекшее причинение:",
@@ -492,8 +492,8 @@ export const ticket = [
     "id": "057714c5f1a7e58373b90c4ee75d2424"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 36",
+    "ticket_question":  18,
+     "ticket_number": 36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как правильно произвести экстренное торможение на скользкой дороге, если автомобиль не оборудован антиблокировочной тормозной системой?",
@@ -519,8 +519,8 @@ export const ticket = [
     "id": "a6726b6609bbfaa15373792767b3b0df"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 36",
+    "ticket_question":  19,
+    "ticket_number":  36,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как воспринимается водителем скорость своего автомобиля при длительном движении по равнинной дороге на большой скорости?",

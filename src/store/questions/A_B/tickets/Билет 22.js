@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 22",
+    "ticket_question":  0,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f21b81e234f1ca7345a387e45d7a7bb2.jpg"),
     "question": "Сколько перекрёстков изображено на рисунке?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "8d6890b4ae6486d1eda7a3f65a1e9a6b"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 22",
+    "ticket_question":  1,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие из предупреждающих и запрещающих знаков являются временными?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "4c2f66042aa429a72908e5fd53197008"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 22",
+    "ticket_question":  2,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3843592ae9229f3bfbe1fe98184106cf.jpg"),
     "question": "Как Вы должны поступить в данной ситуации?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "43bcfb4709af3a4c5c549e02430b3169"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 22",
+    "ticket_question":  3,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/48011958d07fe959ef4e72d9ee9ac4ac.jpg"),
     "question": "Что означают эти дорожные знаки?",
@@ -108,8 +108,8 @@ export const ticket = [
     "id": "0fa4712a556e14c6e633a42bc5caced7"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 22",
+    "ticket_question":  4,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Допускается ли пересекать сплошную линию разметки, обозначающую край проезжей части?",
@@ -135,8 +135,8 @@ export const ticket = [
     "id": "8ad989184830ea856e0f486bb7291cb2"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 22",
+    "ticket_question":  5,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/60576ad098e1256f40f78f971738c9ad.jpg"),
     "question": "В данной ситуации водитель автомобиля с включенными проблесковыми маячками:",
@@ -162,8 +162,8 @@ export const ticket = [
     "id": "c9243a942dcca6943e24b6c44968ccdb"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 22",
+    "ticket_question":  6,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f713876149d9bf8f88fb53682357348f.jpg"),
     "question": "Обязаны ли Вы в данной ситуации включить указатели левого поворота?",
@@ -189,8 +189,8 @@ export const ticket = [
     "id": "9e90595d3479ca4f87cfbf95312da7ea"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 22",
+    "ticket_question":  7,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f4bc800015e352a0fe4da2a3c3aed466.jpg"),
     "question": "По какой траектории Вам можно выполнить поворот налево?",
@@ -216,8 +216,8 @@ export const ticket = [
     "id": "f138f2d78060ee34ddaa4aea06ac6b7b"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 22",
+    "ticket_question":  8,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4f47670b39a068656f8884a8f8c10107.jpg"),
     "question": "Разрешено ли водителю движение задним ходом на путепроводе для посадки пассажира?",
@@ -243,8 +243,8 @@ export const ticket = [
     "id": "90ad7ea14a576825c99e52345b847cdf"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 22",
+    "ticket_question":  9,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли использовать для движения трамвайные пути встречного направления?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "87ce63659dc2b758dd508f34c98adc0a"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 22",
+    "ticket_question":  10,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие ограничения, относящиеся к обгону, действуют на железнодорожных переездах и вблизи них?",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "45333ae163e293d813118b96f53175da"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 22",
+    "ticket_question":  11,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f5896207879e71211e2b149210a15174.jpg"),
     "question": "Разрешено ли водителю грузового автомобиля остановиться в этом месте?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "713c43bbf072c8d1852e8fa836ac9d39"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 22",
+    "ticket_question":  12,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c0350d150566247cda0fe38265910249.jpg"),
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -351,8 +351,8 @@ export const ticket = [
     "id": "60a802b2c206c76ee1d42a0e6f600ccd"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 22",
+    "ticket_question":  13,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d81d448331c17eeeda60ac25ef5d955c.jpg"),
     "question": "В каком случае Вы должны уступить дорогу трамваю?",
@@ -378,8 +378,8 @@ export const ticket = [
     "id": "e55e5a2b43963a7103cb95f06b502242"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 22",
+    "ticket_question":  14,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/03f046ba3450f74d69f1c2fd20cc277f.jpg"),
     "question": "Вы намерены повернуть направо. Можете ли Вы приступить к повороту?",
@@ -405,8 +405,8 @@ export const ticket = [
     "id": "0d96bb9fdd652d8374191502428318f3"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 22",
+    "ticket_question":  15,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Водители должны уступать дорогу другим участникам движения:",
@@ -432,8 +432,8 @@ export const ticket = [
     "id": "0ff67e40ef9f950b7df0eb014602542a"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 22",
+    "ticket_question":  16,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие внешние световые приборы следует включать на мотоцикле в светлое время суток?",
@@ -459,8 +459,8 @@ export const ticket = [
     "id": "305d5beeeb13c1acb0e434bf92ea1081"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 22",
+    "ticket_question":  17,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Допускается ли применять шторки и жалюзи на заднем стекле легкового автомобиля?",
@@ -486,8 +486,8 @@ export const ticket = [
     "id": "b06e297f57f2fdf4acd06f5f6ba4d572"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 22",
+    "ticket_question":  18,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При каком стиле вождения будет обеспечен наименьший расход топлива?",
@@ -513,8 +513,8 @@ export const ticket = [
     "id": "313b35a9339b10c665f7569ed610b9e3"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 22",
+    "ticket_question":  19,
+    "ticket_number":  22,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Если во время движения по сухой дороге с асфальтобетонным покрытием начал моросить дождь, водителю следует:",

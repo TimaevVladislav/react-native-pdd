@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 21",
+    "ticket_question": 0,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли водителю пользоваться телефоном во время движения?",
@@ -31,8 +31,8 @@ export const ticket = [
     "id": "bfeb45b418f435b0027fc6e4a9f8ddd6"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 21",
+    "ticket_question": 1,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7e9c82a8f35f2de7bf11f6dd3a22a926.jpg"),
     "question": "Этот знак предупреждает о приближении к перекрёстку, на котором Вы:",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "60fea4fbd01056060bb56caf7bf51a7a"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 21",
+    "ticket_question": 2,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/07d8a6379a82d0cb4a8858a43f6ac4b2.jpg"),
     "question": "Продолжить буксировку можно?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "fdb254f8c7d9d5d56b483138b9860da3"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 21",
+    "ticket_question": 3,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/77be4b7ad656fc6e68f2718c412ac5e5.jpg"),
     "question": "Какой из указанных знаков информирует о начале дороги с реверсивным движением?",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "b8d75b8eedb937181eb781d1143381d2"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 21",
+    "ticket_question": 4,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d79665a72e1fb0b5f05040d35cd4e2a6.jpg"),
     "question": "Данная вертикальная разметка:",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "e28de80478b175e3b19e4c1f77fb5530"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 21",
+    "ticket_question": 5,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/fb54243e2bc7d0fa521efeedebc902ee.jpg"),
     "question": "Разрешено ли Вам за перекрёстком выехать на полосу с реверсивным движением?",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "06fd03743fa4f4ba63a1a23f3a6d811c"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 21",
+    "ticket_question": 6,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/246b9e4aa52dae7cb8b4ed26216f3d5e.jpg"),
     "question": "Такой сигнал рукой, подаваемый водителем легкового автомобиля, информирует Вас:",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "043d643bb464d056209bda5e636b9209"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 21",
+    "ticket_question": 7,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1dd6b687890715e1401c53ffbccace73.jpg"),
     "question": "При повороте налево для въезда во двор Вы обязаны уступить дорогу:",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "9f829716fb2580d2d195e6f9b98e65e1"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 21",
+    "ticket_question": 8,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Движение транспортных средств задним ходом разрешается:",
@@ -251,8 +251,8 @@ export const ticket = [
     "id": "2f07d432d0a224b7e2428582c05bd903"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 21",
+    "ticket_question": 9,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1517fd90f3391baa0f81dd87d68d740b.jpg"),
     "question": "Разрешается ли Вам, управляя легковым автомобилем, продолжить движение по трамвайным путям попутного направления?",
@@ -278,8 +278,8 @@ export const ticket = [
     "id": "74cb69122f330dfac8b2f12ac5c74d7d"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 21",
+    "ticket_question": 10,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/53238441d57b3b4fe3844515985c9173.jpg"),
     "question": "Вы можете начать обгон:",
@@ -305,8 +305,8 @@ export const ticket = [
     "id": "6599c01f0c6ecae5b89db87f4d108b10"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 21",
+    "ticket_question": 11,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/135c7772caca269ac17e7266b0e467c5.jpg"),
     "question": "В каком месте Вам следует поставить автомобиль на стоянку с правой стороны дороги?",
@@ -332,8 +332,8 @@ export const ticket = [
     "id": "889f18745b966f0d7bc25f977e840673"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 21",
+    "ticket_question": 12,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ffba0bf110789ce65c59d24e0c517681.jpg"),
     "question": "Кому Вы должны уступить дорогу при повороте налево.",
@@ -359,8 +359,8 @@ export const ticket = [
     "id": "5faec87eddbfad14e447f6e5d26ada4a"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 21",
+    "ticket_question": 13,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f1028c678a0f5114591ae93179594f4b.jpg"),
     "question": "Вы намерены повернуть налево. Ваши действия?",
@@ -386,8 +386,8 @@ export const ticket = [
     "id": "ea229a9249d127ca88ccd2a0f1fef07a"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 21",
+    "ticket_question": 14,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2ff31ee4b65b6293d30eb98390981647.jpg"),
     "question": "Как Вам следует поступить при движении в прямом направлении?",
@@ -409,8 +409,8 @@ export const ticket = [
     "id": "14178439b95029370567a4a1baec73f9"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 21",
+    "ticket_question": 15,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При выезде из жилой зоны необходимо уступить дорогу:",
@@ -440,8 +440,8 @@ export const ticket = [
     "id": "5bf9ea6509e9215ac22644cb3285582e"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 21",
+    "ticket_question": 16,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/89f95d529808e983321e2d65e3bb12fe.jpg"),
     "question": "В зоне действия каких знаков Правила разрешают подачу звуковых сигналов только для предотвращения дорожно-транспортного происшествия?",
@@ -471,8 +471,8 @@ export const ticket = [
     "id": "1f51d2c50e642e5829277f6a10db2a1c"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 21",
+    "ticket_question": 17,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие административные наказания предусмотрены за управление транспортным средством, если обязательное страхование гражданской ответственности владельца этого транспортного средства заведомо отсутствует?",
@@ -498,8 +498,8 @@ export const ticket = [
     "id": "78919bd5e64e96440f8c41a58cb73f14"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 21",
+    "ticket_question": 18,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/13ec3f53b512d18199b2abd748af58b7.jpg"),
     "question": "В месте выезда из лесистого участка, где установлен знак «Боковой ветер» Вам следует?",
@@ -525,8 +525,8 @@ export const ticket = [
     "id": "d1da8cceb97eece49feaf2998f8235fa"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 21",
+    "ticket_question": 19,
+    "ticket_number": 21,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Каковы признаки кровотечения из крупной артерии и с чего начинается первая помощь при ее ранении?",

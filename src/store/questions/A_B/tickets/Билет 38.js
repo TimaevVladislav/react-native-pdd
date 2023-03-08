@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 38",
+    "ticket_question":  0,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/74b185800c36d3b6228f4bc0dfbad844.jpg"),
     "question": "Сколько пересечений проезжих частей имеет этот перекрёсток?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "d6378c5bddd1d7d45347aaef5c39b75c"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 38",
+    "ticket_question":  1,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ca26500216150e5dadbc4ec5e79a74b3.jpg"),
     "question": "Данные знаки предупреждают о приближении:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "ca145798cf517a59402ed3228e9398ab"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 38",
+    "ticket_question":  2,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/93ee0871f12b1c1e1bdb41f94b636572.jpg"),
     "question": "Действие каких из указанных знаков не распространяется на транспортные средства, управляемые инвалидами I и II групп, перевозящие таких инвалидов или детей-инвалидов, если на транспортных средствах установлен опознавательный знак «Инвалид»?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "c111efee674e5108cea1f79dbca300ba"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 38",
+    "ticket_question":  3,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b2157d3a74e665a02fbca4803d43ab8d.jpg"),
     "question": "Вы можете продолжить движение по крайней левой полосе:",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "a39eb7274c52aca53b8b54ee95bb03d4"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 38",
+    "ticket_question":  4,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9d41967d29912d2d0a3e92a64a80fe32.jpg"),
     "question": "Разрешается ли Вам остановка в этом месте?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "620c7b1982c5fff9ccd7a7f8837ac56f"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 38",
+    "ticket_question":  5,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Преимущество перед другими участниками движения имеет водитель автомобиля:",
@@ -174,8 +174,8 @@ export const ticket = [
     "id": "d4f5eaa0b94cf3c3473378af6c126fd4"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 38",
+    "ticket_question":  6,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2313c0ee31c57c00b977f13516df9ad9.jpg"),
     "question": "Вы намерены остановиться сразу за перекрестком. В каком месте необходимо включить указатели правого поворота?",
@@ -201,8 +201,8 @@ export const ticket = [
     "id": "6c2fa98c02de77712ba786713e055f06"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 38",
+    "ticket_question":  7,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/45cbca0db117189d812b04f0754870d2.jpg"),
     "question": "При съезде с дороги на прилегающую справа территорию, Вы:",
@@ -232,8 +232,8 @@ export const ticket = [
     "id": "f1988d048362094818e2ede4f8bcab04"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 38",
+    "ticket_question":  8,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/bd57128b5f3c84ab14d95c5342a063f4.jpg"),
     "question": "Разрешено ли Вам выполнить разворот при движении на подъеме?",
@@ -259,8 +259,8 @@ export const ticket = [
     "id": "210388eec8e249aeacbe75a2c990eeb5"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 38",
+    "ticket_question":  9,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9adf205146d665e1b2453537ac79f612.jpg"),
     "question": "С какой максимальной скоростью разрешается продолжить движение при буксировке неисправного механического транспортного средства?",
@@ -286,8 +286,8 @@ export const ticket = [
     "id": "b332d62ba55928a1b99154207a758311"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 38",
+    "ticket_question":  10,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/02220a1ffa64ea9a4ee7539a113e2ff6.jpg"),
     "question": "Можно ли Вам начать обгон?",
@@ -313,8 +313,8 @@ export const ticket = [
     "id": "71fc9623189673d56b891f0bbe7d9fe3"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 38",
+    "ticket_question":  11,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6ac703acc15a324e076348f28b753cd1.jpg"),
     "question": "Водители каких автомобилей нарушили правила остановки?",
@@ -344,8 +344,8 @@ export const ticket = [
     "id": "8c539dd9e8514fe5a1a1ae3bbb340766"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 38",
+    "ticket_question":  12,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9b0a81c0dc7bd92103d6a9b820721960.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -371,8 +371,8 @@ export const ticket = [
     "id": "9b912c313bf75d3e458c3e617fa76a89"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 38",
+    "ticket_question":  13,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/25729cfd373a1fa54dcf761adb9427de.jpg"),
     "question": "При движении в каком направлении Вы обязаны уступить дорогу трамваю?",
@@ -398,8 +398,8 @@ export const ticket = [
     "id": "a88b1fb896c9dd6bf8a701b2aa8e3b1c"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 38",
+    "ticket_question":  14,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1ccb76faa35294e55b621d74b99feb30.jpg"),
     "question": "Вы намерены повернуть направо. Можете ли Вы приступить к повороту?",
@@ -425,8 +425,8 @@ export const ticket = [
     "id": "d1190c8b29c8a876b4c4737a2144c8c0"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 38",
+    "ticket_question":  15,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Подъехав к трамваю попутного направления, остановившемуся у посадочной площадки, которая расположена посередине дороги, водитель должен:",
@@ -452,8 +452,8 @@ export const ticket = [
     "id": "68317efe0545e9b627064f72a3cb5b04"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 38",
+    "ticket_question":  16,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Запрещается перевозка детей в легковом автомобиле без использования соответствующих детских удерживающих систем (устройств):",
@@ -479,8 +479,8 @@ export const ticket = [
     "id": "94c06c8a44413bb4eafb5450b2949642"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 38",
+    "ticket_question":  17,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Владелец транспортного средства обязан возместить вред, причинённый этим транспортным средством, если не докажет, что вред возник:",
@@ -506,8 +506,8 @@ export const ticket = [
     "id": "176cb01958f9e4f83863cfd392fdf67b"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 38",
+    "ticket_question":  18,
+     "ticket_number": 38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении ночью во время сильной метели наилучшую видимость дороги обеспечивает включение",
@@ -533,8 +533,8 @@ export const ticket = [
     "id": "3f0196f281b456988a057a38b8c06988"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 38",
+    "ticket_question":  19,
+    "ticket_number":  38,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях пострадавшего следует извлекать из салона автомобиля",

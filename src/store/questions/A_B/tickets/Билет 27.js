@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 27",
+    "ticket_question":  0,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Если в результате дорожно-транспортного происшествия (ДТП) вред причинен только имуществу, то, предварительно зафиксировав положение транспортных средств по отношению друг другу и объектам дорожной инфраструктуры, следы и предметы, относящиеся к ДТП, повреждения транспортных средств, водитель, причастный к ДТП:",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "ba2a2d67de14def0fec0f73a21c9023a"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 27",
+    "ticket_question":  1,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/6e00c765e08f27fb105ffafa1f8b87cb.jpg"),
     "question": "Какие из указанных знаков используются для обозначения границ искусственной неровности?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "4ebee9655805bc6fde97e71fe02909c3"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 27",
+    "ticket_question":  2,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/92c47bbf0ca878640288b11f11a663ad.jpg"),
     "question": "В данной ситуации остановка:",
@@ -82,8 +82,8 @@ export const ticket = [
     "id": "083c5fe721761c038be3faa6d7930633"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 27",
+    "ticket_question":  3,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/21ff4a0e43bb54ae4908b363ee8d830e.jpg"),
     "question": "Управляя каким автомобилем, можно осуществить опережение в данной ситуации?",
@@ -109,8 +109,8 @@ export const ticket = [
     "id": "ede98db81e7fd416922e15074c6a517b"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 27",
+    "ticket_question":  4,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/21d1dbdca228cf2c864a76c875534f4d.jpg"),
     "question": "Что обозначает эта разметка:",
@@ -136,8 +136,8 @@ export const ticket = [
     "id": "173ab7781d1cd909fa94e5efbefde166"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 27",
+    "ticket_question":  5,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Чем должны руководствоваться водители, если указания регулировщика противоречат значениям сигналов светофоров и требованиям дорожных знаков?",
@@ -163,8 +163,8 @@ export const ticket = [
     "id": "5a18c9d571852f92f9d411179b652c38"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 27",
+    "ticket_question":  6,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/70865a506c998edb746739921147e03a.jpg"),
     "question": "Такой сигнал рукой, подаваемый водителем мотоцикла, который движется по левой полосе, информирует о его намерении:",
@@ -190,8 +190,8 @@ export const ticket = [
     "id": "30ce8a93cdfab5aa195cc7799394b145"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 27",
+    "ticket_question":  7,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/05cb84846907e5244d2b42ae8732cc2e.jpg"),
     "question": "При перестроении на правую полосу в данной ситуации Вы:",
@@ -213,8 +213,8 @@ export const ticket = [
     "id": "7fa50cbef5803e5be9c55787170713c7"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 27",
+    "ticket_question":  8,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0829b48da9a7acb2498ee29a1b7d10ed.jpg"),
     "question": "По какой траектории Вам разрешается выполнить разворот?",
@@ -240,8 +240,8 @@ export const ticket = [
     "id": "e19196306e3ed1dd1b8233747ccd19dd"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 27",
+    "ticket_question":  9,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/c25b5b48b72a9780927878a5eea20343.jpg"),
     "question": "Каковы Ваши действия в данной ситуации?",
@@ -267,8 +267,8 @@ export const ticket = [
     "id": "121b4b2aed2993af493b5f76e7dfea00"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 27",
+    "ticket_question":  10,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Запрещено ли выполнить обгон на подъеме?",
@@ -294,8 +294,8 @@ export const ticket = [
     "id": "87e95153c8d60febd40616e6e28681eb"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 27",
+    "ticket_question":  11,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b85658718ed032f21d74082892292800.jpg"),
     "question": "Разрешается ли водителям транспортных средств остановка в указанных местах?",
@@ -321,8 +321,8 @@ export const ticket = [
     "id": "c50665aba10e746a83a6a1e8f4f44cc9"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 27",
+    "ticket_question":  12,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/2fc27e8b51d2e03c4f003bf1d74b9c5e.jpg"),
     "question": "Как Вам следует поступить при повороте направо?",
@@ -348,8 +348,8 @@ export const ticket = [
     "id": "fd51389e45b471cac4cf18d494f575dc"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 27",
+    "ticket_question":  13,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/68c21bd8ca46704ed05ae1eea191986e.jpg"),
     "question": "Как Вам следует поступить, двигаясь по перекрестку с круговым движением?",
@@ -375,8 +375,8 @@ export const ticket = [
     "id": "319a9e608325bd5a9d2827c2111eaa91"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 27",
+    "ticket_question":  14,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/4f4585dffa725aab876a591694287ab0.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -402,8 +402,8 @@ export const ticket = [
     "id": "86d77a7c42e92969915940a86952629f"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 27",
+    "ticket_question":  15,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/cc304ec70100f050c1abe513d466dd78.jpg"),
     "question": "На каком наименьшем расстоянии до ближайшего рельса Вы должны остановиться?",
@@ -433,8 +433,8 @@ export const ticket = [
     "id": "e39eb1550e29981315bfa208f63a6713"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 27",
+    "ticket_question":  16,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При буксировке на гибкой сцепке между буксирующим и буксируемым транспортными средствами должно быть обеспечено расстояние:",
@@ -460,8 +460,8 @@ export const ticket = [
     "id": "f4bdf85088acfb9d87a21754d0b2ebed"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 27",
+    "ticket_question":  17,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие административные правонарушения, совершенные водителем, который лишен права управления транспортными средствами, влекут административный арест?",
@@ -487,8 +487,8 @@ export const ticket = [
     "id": "412ccb04a83de280fbc78c492ef3da62"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 27",
+    "ticket_question":  18,
+     "ticket_number": 27,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Устранение заноса задней оси путем увеличения скорости возможно:",
@@ -514,8 +514,8 @@ export const ticket = [
     "id": "7640da82ece531b89a264edf2af1c4b7"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 27",
+    "ticket_question":  19,
+    "ticket_number":  25,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e40fdb893e4b640927089fdd6ff8065a.jpg"),
     "question": "На каком рисунке показано правильное положение рук на рулевом колесе?",

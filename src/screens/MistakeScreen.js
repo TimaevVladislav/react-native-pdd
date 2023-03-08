@@ -44,17 +44,9 @@ export default function MistakeScreen({navigation}) {
     }, [isScrollId])
 
 
-    const handlerColor = (answer, buttonId) => {
-        if (!answer.is_correct) {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "red" : prevState))
-        } else {
-            setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
-        }
-    }
+
 
     const TicketScrollFavorites = () => {
-
-
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
 
@@ -105,9 +97,9 @@ export default function MistakeScreen({navigation}) {
                 initialNumToRender={5}
                 initialScrollIndex={isScrollId}
                 scrollEnabled={true}
-                showsHorizontaavoritelScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
                 data={mistakes}
-                renderItem={({item}) => <Tickets item={item} colors={colors} handlerColor={handlerColor} /> }
+                renderItem={({item}) => <Tickets item={item} colors={colors} /> }
                 keyExtractor={item => item.id}
             />
         </SafeAreaView>

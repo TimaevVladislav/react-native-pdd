@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 32",
+    "ticket_question":  0,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "По требованию каких лиц водители обязаны проходить освидетельствование на состояние алкогольного опьянения и медицинское освидетельствование на состояние опьянения?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "d6d4efe16ad894fc15a60f2b3fcc74c7"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 32",
+    "ticket_question":  1,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9e18d0d4efbabdcddae4738b159c6b3d.jpg"),
     "question": "Какие из указанных знаков информируют о том, что на перекрёстке необходимо уступить дорогу транспортным средствам, приближающимся слева?",
@@ -58,8 +58,8 @@ export const ticket = [
     "id": "141f2e74a3a17b2393fcf69ab117877d"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 32",
+    "ticket_question":  2,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/881f2638f5669baec1bbc3c9cc73b35f.jpg"),
     "question": "Разрешено ли Вам при управлении легковым автомобилем с прицепом продолжить движение в прямом направлении?",
@@ -85,8 +85,8 @@ export const ticket = [
     "id": "488095a0fc90c5e07b77a7a69e9f1dca"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 32",
+    "ticket_question":  3,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/591bb1f7ed9e6de766dcb13966bc70ad.jpg"),
     "question": "Вам разрешается движение:",
@@ -116,8 +116,8 @@ export const ticket = [
     "id": "dc46cdaf611ddaa0d97f37bed701c284"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 32",
+    "ticket_question":  4,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"),
     "question": "О чем информирует Вас увеличение длины штриха прерывистой линии разметки?",
@@ -143,8 +143,8 @@ export const ticket = [
     "id": "e1992ff1f95999ec9c4c8efca9793a5b"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 32",
+    "ticket_question":  5,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a531057131b6da9200c63e8c277fcc41.jpg"),
     "question": "Можно ли Вам перестроиться на соседнюю полосу?",
@@ -170,8 +170,8 @@ export const ticket = [
     "id": "672f64dd5b41e6ba3eaae13f43652d54"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 32",
+    "ticket_question":  6,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/232019703b3080a2a564855ccbcd9d7f.jpg"),
     "question": "Обязаны ли Вы включить указатели правого поворота перед въездом на этот перекрёсток?",
@@ -197,8 +197,8 @@ export const ticket = [
     "id": "94280282d9b0fd4a766a52cc6ddeb983"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 32",
+    "ticket_question":  7,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Выезжая с прилегающей территории, необходимо уступить дорогу:",
@@ -224,8 +224,8 @@ export const ticket = [
     "id": "4651f728aa4845d30c17f37cfa6d6b9a"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 32",
+    "ticket_question":  8,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9e0b69c07aa6b295b327d32118395f6b.jpg"),
     "question": "Разрешено ли выполнить разворот на участке дороги, обозначенном этим знаком?",
@@ -255,8 +255,8 @@ export const ticket = [
     "id": "3b9f8be4dd74e747096b0a71dbfa6c01"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 32",
+    "ticket_question":  9,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каких случаях водителю запрещается движение со скоростью более 50 км/ч?",
@@ -286,8 +286,8 @@ export const ticket = [
     "id": "9a9ea9f90567fa78a04caa8bdb214261"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 32",
+    "ticket_question":  10,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли выполнить обгон на пешеходном переходе?",
@@ -313,8 +313,8 @@ export const ticket = [
     "id": "e6bf2168cfb953461fa8d1f5ac6716c6"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 32",
+    "ticket_question":  11,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7a679f4c406644c20c7274dda0e67f67.jpg"),
     "question": "В каком месте Вам можно остановиться?",
@@ -344,8 +344,8 @@ export const ticket = [
     "id": "574723fbb679603e95601fc95fd11fa3"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 32",
+    "ticket_question":  12,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a15be16d01a1b86b2da2cef9be0e6396.jpg"),
     "question": "Как Вам следует поступить при повороте налево?",
@@ -371,8 +371,8 @@ export const ticket = [
     "id": "170e6f98bfe67f1184d3406de7fcc3c4"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 32",
+    "ticket_question":  13,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b81f985c93326a84af3790ca710901d3.jpg"),
     "question": "Вы намерены развернуться. Ваши действия?",
@@ -398,8 +398,8 @@ export const ticket = [
     "id": "30d313c6161d9a85fb8d012e74d8dcc7"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 32",
+    "ticket_question":  14,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/76e8ace06d939a11ad53700fa4151134.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при движении прямо?",
@@ -429,8 +429,8 @@ export const ticket = [
     "id": "fa7783b5b924b993c4ecdc8d949fb254"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 32",
+    "ticket_question":  15,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли движение по автомагистрали на транспортном средстве, скорость которого по техническому состоянию менее 40 км/ч?",
@@ -456,8 +456,8 @@ export const ticket = [
     "id": "d303667a7da1561a95d785aeb013ac46"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 32",
+    "ticket_question":  16,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Перевозка груза запрещена, если он:",
@@ -483,8 +483,8 @@ export const ticket = [
     "id": "40a88ec13d100c045ae9cbe0b0258c62"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 32",
+    "ticket_question":  17,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Разрешено ли движение транспортного средства до места ремонта или стоянки в тёмное время суток с не горящими (из-за неисправности) фарами и задними габаритными огнями?",
@@ -510,8 +510,8 @@ export const ticket = [
     "id": "ff2150277031a74aed287cefccb0d271"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 32",
+    "ticket_question":  18,
+     "ticket_number": 32,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a562f95287af8bdc6a4e848cbb5b7bda.jpg"),
     "question": "При повороте налево обеспечение безопасности движения достигается путем выполнения поворота по траектории, которая показана:",
@@ -537,8 +537,8 @@ export const ticket = [
     "id": "a58afb66c3e2dd7c9958b8cba0d14eec"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 32",
+    "ticket_question":  19,
+    "ticket_number":  32,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как обеспечить восстановление проходимости дыхательных путей пострадавшего при подготовке его к проведению сердечно-легочной реанимации?",

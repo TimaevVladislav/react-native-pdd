@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 35",
+    "ticket_question":  0,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает термин «Недостаточная видимость»?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "8f368ff7eb797d130c78b037f06e7a40"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 35",
+    "ticket_question":  1,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f9616f4e30fcb3329404536e95ec93e2.jpg"),
     "question": "Вы можете продолжить движение на следующем перекрестке:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "487d481cf971872bb0fd6545d4831d38"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 35",
+    "ticket_question":  2,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ede5b45caf1581b732ac2bc07315bf48.jpg"),
     "question": "Какие из указанных знаков разрешают движение со скоростью 60 км/ч?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "d75f9713092c453f116b4d0b2b1a6dc0"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 35",
+    "ticket_question":  3,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/9e8a8a32c281b9be4b7d280c5c01a90e.jpg"),
     "question": "Кто из водителей нарушил правила стоянки:",
@@ -112,8 +112,8 @@ export const ticket = [
     "id": "e741296f1ec1accd8affa6cbecdc70ff"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 35",
+    "ticket_question":  4,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0b3c7cb3d24384033e0438ae7ea4c267.jpg"),
     "question": "Вы можете объехать препятствие:",
@@ -139,8 +139,8 @@ export const ticket = [
     "id": "003122179e28d84d4f206d1a080fdadd"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 35",
+    "ticket_question":  5,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что означает сочетание красного и жёлтого сигналов светофора?",
@@ -166,8 +166,8 @@ export const ticket = [
     "id": "28b46f2445e998ca662adeaf0f4220b5"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 35",
+    "ticket_question":  6,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/184d8ac28d8abf9e84f7af789ab1a797.jpg"),
     "question": "На каком расстоянии от транспортного средства должен быть выставлен знак аварийной остановки в данной ситуации?",
@@ -193,8 +193,8 @@ export const ticket = [
     "id": "67d099cded203818d94343ab89460040"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 35",
+    "ticket_question":  7,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/af343153fdc4115986507e1eb8d05d6a.jpg"),
     "question": "Кому Вы должны уступить дорогу при повороте во двор?",
@@ -220,8 +220,8 @@ export const ticket = [
     "id": "e25150e8d953d32f233ca128d885b4f0"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 35",
+    "ticket_question":  8,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Для обеспечения безопасности при выезде задним ходом с места стоянки, имеющего ограниченную видимость, необходимо:",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "0f3e9752eb76852048c741a77865ea04"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 35",
+    "ticket_question":  9,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/18bc26934d95932c68b43565bc570e0b.jpg"),
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на грузовом автомобиле с разрешённой максимальной массой не более 3,5 т после въезда на примыкающую слева дорогу?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "e5e87b0df4853f7e8586081e7d837917"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 35",
+    "ticket_question":  10,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/47e5769f3967560ac3dd94383895234c.jpg"),
     "question": "Как Вам следует поступить в данной ситуации?",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "e74f7d53ecedd513d8127923ae09bb0d"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 35",
+    "ticket_question":  11,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b54d57e8e0ac818623218c291ca901f4.jpg"),
     "question": "Водители каких автомобилей не нарушили правила остановки?",
@@ -332,8 +332,8 @@ export const ticket = [
     "id": "0a89863f5bb1f3c2893465458912f771"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 35",
+    "ticket_question":  12,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/307fb23bc1a6d08efdb42da12547ee9d.jpg"),
     "question": "Вам необходимо уступить дорогу другим участникам движения:",
@@ -359,8 +359,8 @@ export const ticket = [
     "id": "d77dfb4fd0696d5335aff9ae9207624a"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 35",
+    "ticket_question":  13,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5e66fab807bfc2b3113649ab943ef664.jpg"),
     "question": "Вы намерены продолжить движение прямо. Ваши действия?",
@@ -386,8 +386,8 @@ export const ticket = [
     "id": "34240fe02bdf67f29ffc35570de19688"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 35",
+    "ticket_question":  14,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0eb6dfeff3c39a57de1445b80ff14d87.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -413,8 +413,8 @@ export const ticket = [
     "id": "bac222f29b219e432d28ae6b51b48d5b"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 35",
+    "ticket_question":  15,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При вынужденной остановке на железнодорожном переезде, если в транспортном средстве находятся пассажиры, водитель должен:",
@@ -440,8 +440,8 @@ export const ticket = [
     "id": "e23bed590f0c3c667adb8dc46e32d7f9"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 35",
+    "ticket_question":  16,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При остановке и стоянке на неосвещённых участках дорог в тёмное время суток необходимо:",
@@ -467,8 +467,8 @@ export const ticket = [
     "id": "a17770556921d9f40bcdb5a21d56e792"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 35",
+    "ticket_question":  17,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае разрешается эксплуатация автомобиля?",
@@ -494,8 +494,8 @@ export const ticket = [
     "id": "959b397d6bef1a0016deb41571100470"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 35",
+    "ticket_question":  18,
+     "ticket_number": 35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "По какой траектории двигается прицеп легкового автомобиля при прохождении поворота?",
@@ -521,8 +521,8 @@ export const ticket = [
     "id": "3c8d7daa6df847843bfdbbb3d0e7b484"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 35",
+    "ticket_question":  19,
+    "ticket_number":  35,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Принято считать, что среднее время реакции водителя составляет:",

@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 10",
+    "ticket_question":  0,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5304ee903e2a324d612d8d5feca607c1.jpg"),
     "question": "Главная дорога показана:",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "36fa12e33b02ee6e1cc4ecfdc5c54d90"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 10",
+    "ticket_question":  1,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/32587e9605a801bccdd520e3c38c893f.jpg"),
     "question": "Какие из указанных знаков распространяют своё действие только на период времени, когда покрытие проезжей части влажное?",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "a3d23da8b5c909f442e112620c7a163b"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 10",
+    "ticket_question":  2,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/dcf57f26ee7985780863c789cee91c66.jpg"),
     "question": "Разрешается ли Вам поставить автомобиль на стоянку в указанном месте?",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "6a1c11c9544ea40744863668b84d01b6"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 10",
+    "ticket_question":  3,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d97a526ff4eb109f45d92c28aaad15c6.jpg"),
     "question": "Вы управляете грузовым автомобилем с разрешённой максимальной массой не более 3,5 т. В каком направлении Вам разрешено дальнейшее движение?",
@@ -108,8 +108,8 @@ export const ticket = [
     "id": "51e3fd82339d7b1f2234c92cb9480687"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 10",
+    "ticket_question":  4,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/8fce86c612f55498ea6134d9212ddf28.jpg"),
     "question": "Такой вертикальной разметкой обозначают:",
@@ -131,8 +131,8 @@ export const ticket = [
     "id": "b7dcb1154bd19106abb2ee4fcdeda593"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 10",
+    "ticket_question":  5,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/3ea61713556e6024901f63298ce95eda.jpg"),
     "question": "Каким транспортным средствам разрешено продолжить движение?",
@@ -162,8 +162,8 @@ export const ticket = [
     "id": "331f35c949e98e27d6e9de6e63c90f33"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 10",
+    "ticket_question":  6,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/d2a625a236c040561c3b816ee1628e8b.jpg"),
     "question": "Вы намерены произвести разворот на перекрестке. Какие указатели поворота необходимо включить перед въездом на перекресток?",
@@ -189,8 +189,8 @@ export const ticket = [
     "id": "4a8183284b98e8d591aae99e978c79f9"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 10",
+    "ticket_question":  7,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e5c4d4989ef9427567d3944a43de239c.jpg"),
     "question": "По какой траектории Вам разрешается выполнить поворот налево?",
@@ -216,8 +216,8 @@ export const ticket = [
     "id": "76c1351bb5fb6e68489cabe11aa628ec"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 10",
+    "ticket_question":  8,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b52f8913fdd60784ce519a5ec775c75d.jpg"),
     "question": "Водитель легкового автомобиля в данной ситуации:",
@@ -243,8 +243,8 @@ export const ticket = [
     "id": "d076db93e865ce173ef802f21efe95df"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 10",
+    "ticket_question":  9,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что должно иметь решающее значение при выборе водителем скорости движения в тёмное время суток?",
@@ -270,8 +270,8 @@ export const ticket = [
     "id": "bbff6b07958968588de3f04b33a8573a"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 10",
+    "ticket_question":  10,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/ee408ecd1f2cfad89a7aef5a05dda155.jpg"),
     "question": "Можно ли Вам обогнать трактор?",
@@ -297,8 +297,8 @@ export const ticket = [
     "id": "406ecb824188cb24e008ce80d5e4e6ae"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 10",
+    "ticket_question":  11,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Где разрешается стоянка в целях длительного отдыха или ночлега на дорогах вне населённого пункта?",
@@ -324,8 +324,8 @@ export const ticket = [
     "id": "8ee7a8edf16a574dc5a2728edb3b15eb"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 10",
+    "ticket_question":  12,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/7a60498d12d7f8dcb3630c7a3e3f7312.jpg"),
     "question": "При включении зелёного сигнала светофора Вам следует:",
@@ -351,8 +351,8 @@ export const ticket = [
     "id": "194ef8a5284cdc1f00c190c4939e0943"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 10",
+    "ticket_question":  13,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/46b0ff6c1e56e5f5f1fccee3cf90e2dd.jpg"),
     "question": "Вы намерены проехать перекрёсток в прямом направлении. Кому Вы обязаны уступить дорогу?",
@@ -378,8 +378,8 @@ export const ticket = [
     "id": "868bee359407c776996137ee312c6e0e"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 10",
+    "ticket_question":  14,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5fe7a0f5a57a556d3012e3623f54e738.jpg"),
     "question": "Кому Вы должны уступить дорогу при повороте налево?",
@@ -405,8 +405,8 @@ export const ticket = [
     "id": "850f07c45a86afbcd4b4f09f017c6edc"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 10",
+    "ticket_question":  15,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e0026ac62cdcf685a947a07878573d3c.jpg"),
     "question": "Разрешён ли Вам въезд на железнодорожный переезд в данной ситуации?",
@@ -432,8 +432,8 @@ export const ticket = [
     "id": "8203a4ca99a8ad83bd1e9c263f5db79d"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 10",
+    "ticket_question":  16,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При движении в условиях недостаточной видимости можно использовать противотуманные фары:",
@@ -459,8 +459,8 @@ export const ticket = [
     "id": "02885733083bd592bdf45cefcc6ab532"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 10",
+    "ticket_question":  17,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какие из перечисленных транспортных средств разрешается эксплуатировать без медицинской аптечки?",
@@ -490,8 +490,8 @@ export const ticket = [
     "id": "0ea21137e2b2161ec7286d1f91267c1f"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 10",
+    "ticket_question":  18,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "При приближении к вершине подъема в темное время суток водителю следует:",
@@ -517,8 +517,8 @@ export const ticket = [
     "id": "cb0778a2cf31e5cc57626e817532277e"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 10",
+    "ticket_question":  19,
+    "ticket_number": 10,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Какова первая помощь при черепно-мозговой травме, сопровождающейся ранением волосистой части головы?",

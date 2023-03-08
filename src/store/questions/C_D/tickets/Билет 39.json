@@ -1,7 +1,7 @@
 [
   {
     "title": "Вопрос 1",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "В каком виде предусмотрено представление для проверки страхового полиса обязательного страхования гражданской ответственности?",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Вопрос 2",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/2458b9392b35a1b2ae4b7fae1848b241.jpg",
     "question": "Этот знак предупреждает о приближении к тоннелю, в котором:",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Вопрос 3",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/ed2fe2df24d514225d47c9e9ce92deeb.jpg",
     "question": "Вы имеете право продолжить движение на перекрестке:",
@@ -83,7 +83,7 @@
   },
   {
     "title": "Вопрос 4",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/9ccee42465f173cd04dd9e05aa3dcb45.jpg",
     "question": "Какие из указанных знаков разрешают выполнить поворот налево?",
@@ -114,7 +114,7 @@
   },
   {
     "title": "Вопрос 5",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/ea3edeb4073be09b955fea34b8ae4c93.jpg",
     "question": "При наличии данной разметки, нанесенной на полосе движения, Вам разрешено выполнить:",
@@ -141,7 +141,7 @@
   },
   {
     "title": "Вопрос 6",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/368f3181c80237d94dfa38fae1614aff.jpg",
     "question": "Вам можно двигаться:",
@@ -168,7 +168,7 @@
   },
   {
     "title": "Вопрос 7",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Какие внешние световые приборы должны быть включены на транспортном средстве, имеющем опознавательные знаки «Перевозка детей», при посадке и высадке из него детей?",
@@ -195,7 +195,7 @@
   },
   {
     "title": "Вопрос 8",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/eca8245dd963677ba533658575f93e6d.jpg",
     "question": "Водитель маломестного автобуса, выполняющий перестроение на правую полосу, в данной ситуации:",
@@ -222,7 +222,7 @@
   },
   {
     "title": "Вопрос 9",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/60c09f882614c524f14ab14b14fe425b.jpg",
     "question": "Разрешается ли Вам выполнить разворот в указанном месте?",
@@ -249,7 +249,7 @@
   },
   {
     "title": "Вопрос 10",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/86017db0e54d413e6a32895e94a8a805.jpg",
     "question": "С какой максимальной скоростью Вы имеете право продолжить движение на грузовом автомобиле с разрешенной максимальной массой более 3,5 т?",
@@ -280,7 +280,7 @@
   },
   {
     "title": "Вопрос 11",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/0e0393c1694f098f78a7845e3ef0f8d2.jpg",
     "question": "По какой траектории водителю маломестного автобуса можно выполнить обгон?",
@@ -307,7 +307,7 @@
   },
   {
     "title": "Вопрос 12",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/6a125e99ddcb0b3c33c31d6a11ee243f.jpg",
     "question": "Разрешается ли Вам остановка в указанном месте?",
@@ -334,7 +334,7 @@
   },
   {
     "title": "Вопрос 13",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/bfba1b2ea035398d3c61867d3ce86ddf.jpg",
     "question": "Вы намерены проехать перекресток в прямом направлении. Ваши действия?",
@@ -361,7 +361,7 @@
   },
   {
     "title": "Вопрос 14",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/0f58824f4b1ba1f350daa9be348aa82c.jpg",
     "question": "Как Вам следует поступить при повороте налево?",
@@ -384,7 +384,7 @@
   },
   {
     "title": "Вопрос 15",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/3dd54987ea40498ecfc682a8d5457bd1.jpg",
     "question": "Кому Вы должны уступить дорогу при движении прямо?",
@@ -412,7 +412,7 @@
   },
   {
     "title": "Вопрос 16",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/C_D/2050d876af7b033afbfeec9fa0738008.jpg",
     "question": "Нарушил ли водитель Правила при вынужденной остановке на автомагистрали?",
@@ -440,7 +440,7 @@
   },
   {
     "title": "Вопрос 17",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли буксировка в гололедицу, если у буксируемого транспортного средства исправны тормоза и рулевое управление?",
@@ -467,7 +467,7 @@
   },
   {
     "title": "Вопрос 18",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Разрешается ли устанавливать на транспортном средстве ошипованные шины совместно с неошипованными?",
@@ -494,7 +494,7 @@
   },
   {
     "title": "Вопрос 19",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "При постановке грузового автомобиля с разрешенной максимальной массой более 3,5 т на стоянку для исключения его самопроизвольного движения на подъеме или спуске следует:",
@@ -521,7 +521,7 @@
   },
   {
     "title": "Вопрос 20",
-    "ticket_number": "Билет 39",
+     "ticket_number": 39,
     "ticket_category": "C,D",
     "image": "./images/no_image.jpg",
     "question": "Что понимается под остановочным путем?",

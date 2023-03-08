@@ -1,6 +1,6 @@
 export const ticket = [
   {
-    "ticket_question": 1,
+    "ticket_question": 0,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/0a8c64af8a46c7ceb8e9dbc0943bb56a.jpg"),
@@ -28,7 +28,7 @@ export const ticket = [
     "id": "ffd0c95b28a89bd4faff45a8874c4fb3"
   },
   {
-    "ticket_question": 2,
+    "ticket_question": 1,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/eca08a0e2b5ffcd12bdd8ffee34afcc3.jpg"),
@@ -56,7 +56,7 @@ export const ticket = [
     "id": "1531ace809b1025c70912695ad7a7b90"
   },
   {
-    "ticket_question": 3,
+    "ticket_question": 2,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "5fa33b65fe52f38ad87c4b5226c5d3ba.jpg",
@@ -84,7 +84,7 @@ export const ticket = [
     "id": "7d6121c8ec64a113baa6047a457e9c10"
   },
   {
-    "ticket_question": 4,
+    "ticket_question": 3,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/620fde366bcda9940db20a0019eeeeb4.jpg"),
@@ -116,7 +116,7 @@ export const ticket = [
     "id": "d2e3295129c877898159a3c4e9050771"
   },
   {
-    "ticket_question": 5,
+    "ticket_question": 4,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/92730be6f1618ab24232b6c3092607b5.jpg"),
@@ -148,7 +148,7 @@ export const ticket = [
     "id": "7c97d4c309cb475c0f1309aba4c40e71"
   },
   {
-    "ticket_question": 6,
+    "ticket_question": 5,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
@@ -176,7 +176,7 @@ export const ticket = [
     "id": "627f7626e7460498d50c0570c86d82f4"
   },
   {
-    "ticket_question": 7,
+    "ticket_question": 6,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
@@ -208,7 +208,7 @@ export const ticket = [
     "id": "ca976eeda460719cc594c0a40bb82616"
   },
   {
-    "ticket_question": 8,
+    "ticket_question": 7,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b61a6e1c048076e6b8ba01ef6e3ae2d1.jpg"),
@@ -236,7 +236,7 @@ export const ticket = [
     "id": "14452bb58352a0cd0f19b3f3c48f2459"
   },
   {
-    "ticket_question": 9,
+    "ticket_question": 8,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0de3a44f154b8a1dc98c83ccb64a0c6c.jpg"),
     "question": "По какой траектории Вам разрешено выполнить разворот?",
@@ -263,7 +263,7 @@ export const ticket = [
     "id": "461cfbf602ac658c04d0db29322e9b2e"
   },
   {
-    "ticket_question": 10,
+    "ticket_question": 9,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/e25d143aa53eb44b06b020415b6bee54.jpg"),
     "question": "С какой скоростью Вы можете продолжить движение вне населённого пункта по левой полосе на легковом автомобиле?",
@@ -290,7 +290,7 @@ export const ticket = [
     "id": "13240b68ca2e4475deb368dc5781c48f"
   },
   {
-    "ticket_question": 11,
+    "ticket_question": 10,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/573bb9e760618405e89c02b09f248404.jpg"),
     "question": "Можно ли водителю легкового автомобиля выполнить опережение грузовых автомобилей вне населенного пункта по такой траектории?",
@@ -317,7 +317,7 @@ export const ticket = [
     "id": "b66d8c08aba6ec232a4c6669efbbe61a"
   },
   {
-    "ticket_question": 12,
+    "ticket_question": 11,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/544ea7fd090765e47fa3b71f060b5f22.jpg"),
     "question": "В каком случае водителю разрешается поставить автомобиль на стоянку в указанном месте?",
@@ -344,7 +344,7 @@ export const ticket = [
     "id": "297e2e1b88020c6dc2849cd6b990d08a"
   },
   {
-    "ticket_question": 13,
+    "ticket_question": 12,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/3bca6590a23e621ade16916c7de64e44.jpg"),
     "question": "При повороте направо Вы должны уступить дорогу:",
@@ -375,7 +375,7 @@ export const ticket = [
     "id": "d0063ffc0bad8476f04187c35b74b917"
   },
   {
-    "ticket_question": 14,
+    "ticket_question": 13,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/6a8f690af1b507fc0b56db742709f1e8.jpg"),
     "question": "Вы намерены проехать перекресток в прямом направлении. Кому Вы должны уступить дорогу?",
@@ -406,7 +406,7 @@ export const ticket = [
     "id": "09c728e5fcea9efdbd7c74d6f656b64d"
   },
   {
-    "ticket_question": 15,
+    "ticket_question": 14,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/dd7e958840da9ddd1c102a65d8d5c03f.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -433,7 +433,7 @@ export const ticket = [
     "id": "c64eefab25596af3056aa4b69e92516e"
   },
   {
-    "ticket_question": 16,
+    "ticket_question": 15,
     "ticket_number": 1,    "ticket_category": "A,B",
     "image": require("../../../images/A_B/0211b865b53f26534158a13f8886262f.jpg"),
     "question": "С какой максимальной скоростью можно продолжить движение за знаком?",
@@ -464,7 +464,7 @@ export const ticket = [
     "id": "764a2188d8c6e13d0b510eca4f241cbf"
   },
   {
-    "ticket_question": 17,
+    "ticket_question": 16,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
@@ -492,7 +492,7 @@ export const ticket = [
     "id": "ededa6779bdb9da60ca372a5eacb5335"
   },
   {
-    "ticket_question": 18,
+    "ticket_question": 17,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
@@ -524,7 +524,7 @@ export const ticket = [
     "id": "3782633d3e8941d82131d75858b75a8c"
   },
   {
-    "ticket_question": 19,
+    "ticket_question": 18,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
@@ -552,7 +552,7 @@ export const ticket = [
     "id": "e9f447c2c017515177c3654a447cc12f"
   },
   {
-    "ticket_question": 20,
+    "ticket_question": 19,
     "ticket_number": 1,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",

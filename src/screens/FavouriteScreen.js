@@ -28,7 +28,7 @@ const Tickets = ({item}) => {
     )
 }
 
-export const FavouriteScreen = ({navigation}) => {
+export default function FavoriteScreen({navigation}) {
 
     const ref = useRef(null)
     const [isScrollId, setIsScrollId] = useState(0)

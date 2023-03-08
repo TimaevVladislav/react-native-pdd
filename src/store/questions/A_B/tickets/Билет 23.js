@@ -1,7 +1,7 @@
 export const ticket = [
   {
-    "title": "Вопрос 1",
-    "ticket_number": "Билет 23",
+    "ticket_question":  0,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/74b185800c36d3b6228f4bc0dfbad844.jpg"),
     "question": "Сколько пересечений проезжих частей имеет этот перекрёсток?",
@@ -27,8 +27,8 @@ export const ticket = [
     "id": "d6378c5bddd1d7d45347aaef5c39b75c"
   },
   {
-    "title": "Вопрос 2",
-    "ticket_number": "Билет 23",
+    "ticket_question":  1,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/5c9712e0ce29dcfa5a66f316de8382b0.jpg"),
     "question": "Данный дорожный знак:",
@@ -54,8 +54,8 @@ export const ticket = [
     "id": "a31a93feaf20cb7b8e22d9517bfc8691"
   },
   {
-    "title": "Вопрос 3",
-    "ticket_number": "Билет 23",
+    "ticket_question":  2,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/08ce3d58f673e7f662a6d9c06de7a9c9.jpg"),
     "question": "Эти знаки обязывают соблюдать дистанцию:",
@@ -81,8 +81,8 @@ export const ticket = [
     "id": "53f2f59003f956e111d79ee5f848761a"
   },
   {
-    "title": "Вопрос 4",
-    "ticket_number": "Билет 23",
+    "ticket_question":  3,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/14d625173f147d87b21123ff143ab856.jpg"),
     "question": "В каких направлениях Вам разрешено продолжить движение:",
@@ -108,8 +108,8 @@ export const ticket = [
     "id": "20709fa7c03808dd034feb05bdfefc36"
   },
   {
-    "title": "Вопрос 5",
-    "ticket_number": "Билет 23",
+    "ticket_question":  4,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/f0786637b0a0eded6f0b89858be4f026.jpg"),
     "question": "Разрешается ли Вам поставить автомобиль на стоянку в этом месте?",
@@ -135,8 +135,8 @@ export const ticket = [
     "id": "24720e946d8800902286987ee59d35b7"
   },
   {
-    "title": "Вопрос 6",
-    "ticket_number": "Билет 23",
+    "ticket_question":  5,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/1b1b13b54e45b710fdf0dfb250ff892c.jpg"),
     "question": "Вам можно продолжить движение:",
@@ -162,8 +162,8 @@ export const ticket = [
     "id": "2994ed3dc6769516fa65bf95d3523048"
   },
   {
-    "title": "Вопрос 7",
-    "ticket_number": "Билет 23",
+    "ticket_question":  6,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Обязан ли водитель подавать сигналы указателями поворота при начале движения в жилой зоне, обозначенной соответствующим знаком?",
@@ -189,8 +189,8 @@ export const ticket = [
     "id": "d963598de0ba5f0b0da32670569e87e5"
   },
   {
-    "title": "Вопрос 8",
-    "ticket_number": "Билет 23",
+    "ticket_question":  7,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/400b6e6e38f6ca4e3c818f7dffe4074b.jpg"),
     "question": "По какой траектории Вам разрешено продолжить движение?",
@@ -216,8 +216,8 @@ export const ticket = [
     "id": "97af027edf5b74eb7fd25f9082223216"
   },
   {
-    "title": "Вопрос 9",
-    "ticket_number": "Билет 23",
+    "ticket_question":  8,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b897850c898749bf9318888c7a2f84f8.jpg"),
     "question": "На этом участке дороги Вам запрещается:",
@@ -247,8 +247,8 @@ export const ticket = [
     "id": "98e663d9e71d48aea7658d3add0b8c6d"
   },
   {
-    "title": "Вопрос 10",
-    "ticket_number": "Билет 23",
+    "ticket_question":  9,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/bc2d9bc1134da560e69026519debee4f.jpg"),
     "question": "Разрешается ли Вам выехать на трамвайные пути встречного направления в данной ситуации?",
@@ -274,8 +274,8 @@ export const ticket = [
     "id": "78af1d3df54a13904b712d8554e5f718"
   },
   {
-    "title": "Вопрос 11",
-    "ticket_number": "Билет 23",
+    "ticket_question":  10,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/e652931cb78ed7925703d4d13b813e1d.jpg"),
     "question": "В данной ситуации Вы:",
@@ -301,8 +301,8 @@ export const ticket = [
     "id": "961bfb23c16fa63c832ccca03cabf84a"
   },
   {
-    "title": "Вопрос 12",
-    "ticket_number": "Билет 23",
+    "ticket_question":  11,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/011c87847a6e97caf914b64e369dcc10.jpg"),
     "question": "На каком расстоянии от знака Вам разрешено поставить автомобиль на стоянку?",
@@ -328,8 +328,8 @@ export const ticket = [
     "id": "3bd5fde76ae3cc923aa131a822a04c36"
   },
   {
-    "title": "Вопрос 13",
-    "ticket_number": "Билет 23",
+    "ticket_question":  12,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/b31567d201933f7a654ffa51951f3c60.jpg"),
     "question": "Как следует поступить в этой ситуации, если Вам необходимо повернуть направо?",
@@ -355,8 +355,8 @@ export const ticket = [
     "id": "9bcb772941579769fea4240d333a85ac"
   },
   {
-    "title": "Вопрос 14",
-    "ticket_number": "Билет 23",
+    "ticket_question":  13,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/55c56f2a24223c48a426dbe65d07e5dc.jpg"),
     "question": "Вы намерены проехать перекрёсток в прямом направлении. В данной ситуации:",
@@ -378,8 +378,8 @@ export const ticket = [
     "id": "bb6072d144f614f9e1f5f860ad8b64c0"
   },
   {
-    "title": "Вопрос 15",
-    "ticket_number": "Билет 23",
+    "ticket_question":  14,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/a8966c5a12e4f0d1b72cbfefc7864d74.jpg"),
     "question": "Кому Вы обязаны уступить дорогу при повороте налево?",
@@ -410,8 +410,8 @@ export const ticket = [
     "id": "1d5e655583f8405445497ef4e373949e"
   },
   {
-    "title": "Вопрос 16",
-    "ticket_number": "Билет 23",
+    "ticket_question":  15,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": require("../../../images/A_B/94066ff9d7afccd4349557d092cad23e.jpg"),
     "question": "Кто из водителей правильно остановился для высадки пассажиров?",
@@ -441,8 +441,8 @@ export const ticket = [
     "id": "60ecc976d362530660ba5daf9865000d"
   },
   {
-    "title": "Вопрос 17",
-    "ticket_number": "Билет 23",
+    "ticket_question":  16,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "В каком случае при движении в светлое время суток недостаточно включения дневных ходовых огней?",
@@ -468,8 +468,8 @@ export const ticket = [
     "id": "9f794646f5aa73c955533a26d1227aec"
   },
   {
-    "title": "Вопрос 18",
-    "ticket_number": "Билет 23",
+    "ticket_question":  17,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Что требуется для возврата водительского удостоверения после истечения срока лишения права управления, назначенного за оставление водителем в нарушение Правил дорожного движения места дорожно-транспортного происшествия, участником которого он являлся?",
@@ -495,8 +495,8 @@ export const ticket = [
     "id": "4588efaa5a8e8df19e69fad27251a5f0"
   },
   {
-    "title": "Вопрос 19",
-    "ticket_number": "Билет 23",
+    "ticket_question":  18,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Чем опасно длительное торможение с выключенными передачей или сцеплением на крутом спуске?",
@@ -522,8 +522,8 @@ export const ticket = [
     "id": "9962394ed588b26beb9b4db1daeb02d6"
   },
   {
-    "title": "Вопрос 20",
-    "ticket_number": "Билет 23",
+    "ticket_question":  19,
+    "ticket_number":  23,
     "ticket_category": "A,B",
     "image": "./images/no_image.jpg",
     "question": "Как изменяется поле зрения водителя с увеличением скорости движения?",
