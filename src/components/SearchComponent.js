@@ -8,14 +8,14 @@ import {Entypo, Feather} from "@expo/vector-icons"
 import {ContextSigns} from "../screens/Signs"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
-import {SearchContext} from "../store/provider/SearchProvider"
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../context/theme"
+import {SearchContext} from "../context/search"
 
 
 export const Search = () => (
-    <View style={{marginRight: 20, justifyContent: "center", width: 300,}}>
-        <SearchComponent />
-    </View>
+        <View style={{marginRight: 20, justifyContent: "center", width: 300,}}>
+            <SearchComponent />
+        </View>
 )
 
 
@@ -68,45 +68,45 @@ const SearchComponent = () => {
         },[])
 
     return (
-                <ThemeContext.Consumer>
-                    {(({isDark}) => (
-                        <SearchContext.Consumer>
-                            {(({search, clicked, setClicked, setDropdown, setSearch, setLoading, searchFilterFunction}) => (
-                                <SafeAreaView>
-                                    <View style={styleSearch.container}>
-                                        <TextInput
-                                            style={[styleSearch.input]}
-                                            placeholderTextColor={isDark ? "white" : "#fff"}
-                                            placeholder="Поиск"
-                                            value={search}
-                                            onChangeText={text => searchFilterFunction(text)}
-                                            onFocus={() => {
-                                                setClicked(true)
-                                                setDropdown(true)
-                                            }}
-                                        />
-                                        {clicked ?
-                                            <View>
-                                                <Entypo name="cross" size={19} color={isDark ? "white" : "#fff"}
-                                                        onPress={() => {
-                                                            Keyboard.dismiss()
-                                                            setSearch("")
-                                                            setLoading(false)
-                                                            setClicked(false)
-                                                            setDropdown(false)
-                                                        }}
-                                                />
-                                            </View>
-                                            :
+                    <ThemeContext.Consumer>
+                        {(({isDark}) => (
+                            <SearchContext.Consumer>
+                                {(({search, clicked, setClicked, setDropdown, setSearch, setLoading, searchFilterFunction}) => (
+                                    <SafeAreaView>
+                                        <View style={styleSearch.container}>
+                                            <TextInput
+                                                style={[styleSearch.input]}
+                                                placeholderTextColor={isDark ? "white" : "#fff"}
+                                                placeholder="Поиск"
+                                                value={search}
+                                                onChangeText={text => searchFilterFunction(text)}
+                                                onFocus={() => {
+                                                    setClicked(true)
+                                                    setDropdown(true)
+                                                }}
+                                            />
+                                            {clicked ?
+                                                <View>
+                                                    <Entypo name="cross" size={19} color={isDark ? "white" : "#fff"}
+                                                            onPress={() => {
+                                                                Keyboard.dismiss()
+                                                                setSearch("")
+                                                                setLoading(false)
+                                                                setClicked(false)
+                                                                setDropdown(false)
+                                                            }}
+                                                    />
+                                                </View>
+                                                :
 
-                                            <Feather name="search" size={20} color={isDark ? "white" : "#fff"} />
-                                        }
-                                    </View>
-                                </SafeAreaView>
-                            ))}
-                        </SearchContext.Consumer>
-                    ))}
-                </ThemeContext.Consumer>
+                                                <Feather name="search" size={20} color={isDark ? "white" : "#fff"} />
+                                            }
+                                        </View>
+                                    </SafeAreaView>
+                                ))}
+                            </SearchContext.Consumer>
+                        ))}
+                    </ThemeContext.Consumer>
     )
 }
 

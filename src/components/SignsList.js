@@ -1,15 +1,15 @@
 import React, {useState, useEffect, useContext} from "react"
 import {useNavigation, useRoute} from "@react-navigation/native"
-import {Text, View, VirtualizedList, ScrollView} from "react-native"
+import {Text, View, VirtualizedList} from "react-native"
 
 
 import {styleSigns} from "../store/data/styles"
 import {ContextMarkup} from "../screens/Markup"
 import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
-import {SearchContext} from "../store/provider/SearchProvider"
+import {SearchContext, SearchProvider} from "../context/search"
 
 import Dropdown from "./layouts/Dropdown"
 import {LocalSvg} from "./default/LocalSvg"
@@ -17,13 +17,13 @@ import {Loader} from "./default/Loader"
 
 
 const SignsList = () => (
-        <ThemeContext.Consumer>
-            {(({isDark}) => (
-                <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
-                    <FloatList />
-                </ScrollView>
-            ))}
-        </ThemeContext.Consumer>
+               <ThemeContext.Consumer>
+                   {(({isDark}) => (
+                       <View style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
+                           <FloatList />
+                       </View>
+                   ))}
+               </ThemeContext.Consumer>
 )
 
 
@@ -87,7 +87,7 @@ function FloatList () {
     const Item = ({heading, title, text, img}) => (
         <ThemeContext.Consumer>
             {(({isDark}) => (
-                <ScrollView>
+                <View>
                     <View style={styleSigns.p}>
                         <LocalSvg asset={img} />
                     </View>
@@ -102,29 +102,30 @@ function FloatList () {
                             {text}
                         </Text>
                     </View>
-                </ScrollView>
+                </View>
             ))}
         </ThemeContext.Consumer>
     )
 
     return (
-        <SearchContext.Consumer>
-                       {(({dropdown, filtered, results, loading}) => (
-                           <>
-                               { loading && <Loader /> }
+            <SearchContext.Consumer>
+                {(({dropdown, filtered, results, loading}) => (
+                    <>
+                        { loading && <Loader /> }
 
-                               {dropdown ? <Dropdown /> :
-                                   <VirtualizedList
-                                       data={state}
-                                       initialNumToRender={4}
-                                       renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
-                                       keyExtractor={item => item.key}
-                                       getItemCount={data => data.length}
-                                       getItem={getItem}
-                                   />
-                               }
-                           </>
-                       ))}
-        </SearchContext.Consumer>
+                        {dropdown ? <Dropdown /> :
+                            <VirtualizedList
+                                data={state}
+                                initialNumToRender={4}
+                                renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
+                                keyExtractor={item => item.key}
+                                getItemCount={data => data.length}
+                                ListFooterComponent={Item}
+                                getItem={getItem}
+                            />
+                        }
+                    </>
+                ))}
+            </SearchContext.Consumer>
     )
 }

@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
 
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../context/theme"
 import {items} from "../store/data/item"
 
 

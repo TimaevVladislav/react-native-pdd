@@ -2,19 +2,26 @@ import React, {useState} from "react"
 import {ScrollView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
 
 import {useNavigation, useRoute} from "@react-navigation/native"
-import {ThemeContext} from "../../store/provider/ThemeProvider"
+import {ThemeContext} from "../../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
+import {SearchContext} from "../../context/search"
 
 const List = props => (
-    <ThemeContext.Consumer>
-        {(({isDark}) => (
-            <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
-                <Sections data={props.data} />
-            </ScrollView>
-        ))}
-    </ThemeContext.Consumer>
+       <SearchContext.Consumer>
+           {(({}) => (
+               <ThemeContext.Consumer>
+                   {(({isDark}) => (
+                       <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
+                           <Sections data={props.data} />
+                       </ScrollView>
+                   ))}
+               </ThemeContext.Consumer>
+           ))}
+       </SearchContext.Consumer>
 )
+
 export default List
+
 function Sections(props) {
     const route = useRoute()
     const [data, setData] = useState(props.data);

@@ -7,7 +7,7 @@ import {
 
 
 import Ionicons from '@expo/vector-icons/Ionicons'
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 
 import Home from "../screens/HomeScreen"

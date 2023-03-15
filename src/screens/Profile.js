@@ -2,7 +2,6 @@ import React, {createContext} from "react"
 import List from "../components/layouts/Sections"
 import {items, item} from "../store/temp/rules.json"
 
-
 export const ContextRules = createContext({
      rules: [
          item.list, item.list2, item.list3,

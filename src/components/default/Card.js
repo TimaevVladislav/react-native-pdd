@@ -2,9 +2,9 @@ import React, {useEffect, useContext} from "react"
 import {ScrollView, Text, View} from "react-native"
 
 import {styleSigns} from "../../store/data/styles"
-import {ThemeContext} from "../../store/provider/ThemeProvider"
+import {ThemeContext} from "../../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
-import {SearchContext} from "../../store/provider/SearchProvider"
+import {SearchContext} from "../../context/search"
 import {LocalSvg} from "./LocalSvg"
 
 export default function Card({route, navigation}) {

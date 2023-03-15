@@ -3,7 +3,7 @@ import {Text, TouchableOpacity, View} from "react-native"
 
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
-import {CountContext} from "../store/provider/CountProvider"
+import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {useNavigation} from "@react-navigation/native"
 

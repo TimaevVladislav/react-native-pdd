@@ -4,9 +4,8 @@ import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity}
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
-import {Description} from "../components/layouts/Description"
 
-import {CountContext} from "../store/provider/CountProvider"
+import {CountContext} from "../context/counter"
 import {colors as color} from "../store/data/colors"
 
 import { useSwitcher } from "../store/questions"
@@ -27,7 +26,6 @@ const Tickets = ({item}) => {
                 <ButtonsExam answers={item.answers} item={item} />
                 <Favorites item={item} />
             </View>
-            {/*<Description correct={item.correct_answer} tip={item.answer_tip} />*/}
         </View>
     )
 }

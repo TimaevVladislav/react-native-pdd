@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useNavigation, useRoute} from "@react-navigation/native"
 
 import {Alert} from "react-native"
-import {CountContext} from "../store/provider/CountProvider"
+import {CountContext} from "../context/counter"
 
 
 const START_MINUTES = '20'

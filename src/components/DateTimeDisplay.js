@@ -2,7 +2,7 @@ import React  from 'react'
 import {View, Text, StyleSheet} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
-import {CountContext, CountProvider} from "../store/provider/CountProvider"
+import {CountContext, CountProvider} from "../context/counter"
 
 const DateTimeDisplay = ({ min, seconds }) => {
 

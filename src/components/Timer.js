@@ -8,7 +8,7 @@ import {
 } from "react-native"
 
 import {useTimer} from "../hooks/useTimer"
-import {CountContext} from "../store/provider/CountProvider"
+import {CountContext} from "../context/counter"
 
 
 export const ArrowBack = () => {

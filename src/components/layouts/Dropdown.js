@@ -2,27 +2,28 @@ import React from 'react'
 import {useNavigation} from "@react-navigation/native"
 
 import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
-import {SearchContext} from "../../store/provider/SearchProvider"
+import {SearchContext} from "../../context/search"
 import {LocalSvg} from "../default/LocalSvg"
 
 export default function Dropdown() {
     const navigation = useNavigation()
     const RenderDropdown = () => (
-        <SearchContext.Consumer>
-            {(({filtered}) => (
-                <FlatList
-                    data={filtered}
-                    ItemSeparatorComponent={ItemSeparator}
-                    keyExtractor={(item, index) => index.toString()}
-                    renderItem={({item}) => <DropdownMenu item={item} icon={item.img} heading={item.heading} text={item.text} />}
-                />
-            ))}
-        </SearchContext.Consumer>
+         <SearchContext.Consumer>
+             {(({filtered}) => (
+                 <FlatList
+                     data={filtered}
+                     ItemSeparatorComponent={ItemSeparator}
+                     keyExtractor={(item, index) => index.toString()}
+                     renderItem={({item}) => <DropdownMenu item={item} icon={item.img} heading={item.heading} text={item.text} />}
+                 />
+             ))}
+         </SearchContext.Consumer>
     )
 
     const dropdownHandler = (setSearch, setDropdown, setClicked) => {
         setSearch(""), setDropdown(false), setClicked(false)
     }
+
     const ItemSeparator = () => (
         <View style={style.separator}></View>
     )
@@ -34,22 +35,22 @@ export default function Dropdown() {
     )
 
     const DropdownMenu = ({item, icon, heading, text}) => (
-        <SearchContext.Consumer>
-            {(({setSearch, setClicked, setDropdown}) => (
-                <TouchableOpacity style={style.container} onPress={() => {navigation.navigate("Карточка", {
-                    heading: heading,
-                    item: item,
-                    icon: icon,
-                    text: text
-                }), dropdownHandler(setSearch, setDropdown, setClicked)
-                }}>
-                    <View style={style.row}>
-                        <LocalSvg asset={icon} />
-                        <Heading heading={item.heading} />
-                    </View>
-                </TouchableOpacity>
-            ))}
-        </SearchContext.Consumer>
+           <SearchContext.Consumer>
+               {(({setSearch, setClicked, setDropdown}) => (
+                   <TouchableOpacity style={style.container} onPress={() => {navigation.navigate("Карточка", {
+                       heading: heading,
+                       item: item,
+                       icon: icon,
+                       text: text
+                   }), dropdownHandler(setSearch, setDropdown, setClicked)
+                   }}>
+                       <View style={style.row}>
+                           <LocalSvg asset={icon} />
+                           <Heading heading={item.heading} />
+                       </View>
+                   </TouchableOpacity>
+               ))}
+           </SearchContext.Consumer>
     )
 
     return <RenderDropdown />
