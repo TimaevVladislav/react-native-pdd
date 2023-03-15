@@ -2,35 +2,21 @@ import React, {useState} from "react"
 import {Text, View, ScrollView, StyleSheet, TouchableOpacity} from "react-native"
 
 import CheckBox from 'expo-checkbox'
-import {ThemeContext} from "../store/provider/ThemeProvider"
+import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 
 export default function SettingScreen({navigation}) {
-    const [isLanguage, setLanguage] = useState(false)
-    const [isLanguageRus, setLanguageRus] = useState(false)
+    const [isLanguage, setLanguage] = useState(true)
 
     return (
             <ThemeContext.Consumer>
-                {(({isDark,  isLight, isSelected, setIsSelected, setIsDark, setIsLight, colors}) => (
+                {(({isDark,  isLight, setIsSelected, setIsDark, setIsLight, colors}) => (
                     <ScrollView style={{backgroundColor: isDark ? "#181818" : LIGHT_COLORS.layout}}>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}, style.containerLogo]}>
 
                         </View>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                                 <Text style={style.heading}>Тема приложения</Text>
-                                <View style={style.checkboxContainer}>
-                                    <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Системная</Text>
-                                    <CheckBox
-                                        value={isSelected}
-                                        onValueChange={() => {
-                                            setIsLight("")
-                                            setIsDark("")
-                                            setIsSelected("light")
-                                        }}
-                                        style={style.checkbox}
-                                        color="#47B5FF"
-                                    />
-                                </View>
                                 <View style={style.checkboxContainer}>
                                     <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Светлая</Text>
                                     <CheckBox
@@ -63,19 +49,10 @@ export default function SettingScreen({navigation}) {
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                             <Text style={style.heading}>Язык приложения</Text>
                             <View style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Руский</Text>
+                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Русский</Text>
                                 <CheckBox
                                     value={isLanguage}
                                     onValueChange={setLanguage}
-                                    style={style.checkbox}
-                                    color="#47B5FF"
-                                />
-                            </View>
-                            <View style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Кыргызча</Text>
-                                <CheckBox
-                                    value={isLanguageRus}
-                                    onValueChange={setLanguageRus}
                                     style={style.checkbox}
                                     color="#47B5FF"
                                 />
