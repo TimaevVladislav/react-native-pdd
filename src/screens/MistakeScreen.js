@@ -1,12 +1,14 @@
 import React, {useRef, useState, useEffect} from "react"
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
+
 import {stylesVirtual, styleTicket} from "./ExamScreen"
 import {colors as color} from "../store/data/colors"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 
+import {Description} from "../components/layouts/Description"
 import {Favorites} from "../components/layouts/Favorites"
-import {ButtonFavorites} from "../components/Buttons"
+import {ButtonsExam} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
 
@@ -21,8 +23,9 @@ const Tickets = ({item}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonFavorites answers={item.answers} />
+                <ButtonsExam answers={item.answers} item={item} />
                 <Favorites item={item} />
+                <Description correct={item.correct_answer} tip={item.answer_tip} />
             </View>
         </View>
     )
@@ -42,8 +45,6 @@ export default function MistakeScreen({navigation}) {
             animated: true,
         })
     }, [isScrollId])
-
-
 
 
     const TicketScrollFavorites = () => {

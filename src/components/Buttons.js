@@ -3,15 +3,23 @@ import {Text, TouchableOpacity, View} from "react-native"
 
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
-
 import {CountContext} from "../store/provider/CountProvider"
+import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {useNavigation} from "@react-navigation/native"
 
-
 export const ButtonsExam = ({answers, item}) => {
+
     const [isDisabled, setIsDisabled] = useState(false)
     const {handlerColorChange, colors} = useColor(item)
     const navigation = useNavigation()
+
+    const addTicketHandler = (ticket) => {
+        !mistakes.includes(ticket) && mistakes.push(ticket)
+    }
+
+    const deleteTicketHandler = (ticket) => {
+        mistakes.pop(ticket)
+    }
 
     return (
         answers.map((answer, i) => (
@@ -30,7 +38,10 @@ export const ButtonsExam = ({answers, item}) => {
                             <TouchableOpacity
                                 key={i}
                                 disabled={isDisabled}
-                                onPress={buttonHandler}
+                                onPress={() => {
+                                    buttonHandler()
+                                    answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
+                                }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
                                     {`${i + 1}.  ${answer.answer_text}`}
