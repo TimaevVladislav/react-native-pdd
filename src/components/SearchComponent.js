@@ -87,7 +87,7 @@ const SearchComponent = () => {
                                         />
                                         {clicked ?
                                             <View>
-                                                <Entypo name="cross" size={19}
+                                                <Entypo name="cross" size={19} color={isDark ? "white" : "#fff"}
                                                         onPress={() => {
                                                             Keyboard.dismiss()
                                                             setSearch("")
@@ -99,7 +99,7 @@ const SearchComponent = () => {
                                             </View>
                                             :
 
-                                            <Feather name="search" size={20} />
+                                            <Feather name="search" size={20} color={isDark ? "white" : "#fff"} />
                                         }
                                     </View>
                                 </SafeAreaView>
