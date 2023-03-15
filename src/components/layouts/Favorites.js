@@ -11,10 +11,7 @@ export const Favorites = ({item}) => {
 
     const addTicketHandler = (ticket) => {
         setIsFavorite(item.favorite = true)
-
-    if (!favorites.includes(ticket)) {
-            favorites.push(ticket)
-        }
+        !favorites.includes(ticket) && favorites.push(ticket)
     }
 
     const deleteTicketHandler = (ticket) => {
