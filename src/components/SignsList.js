@@ -85,22 +85,26 @@ function FloatList () {
 
 
     const Item = ({heading, title, text, img}) => (
-        <ScrollView>
-            <View style={styleSigns.p}>
-                <LocalSvg asset={img} />
-            </View>
-            <View>
-                <Text style={[styleSigns.heading]}>
-                    {heading}
-                </Text>
-                <Text style={[styleSigns.title]}>
-                    {title}
-                </Text>
-                <Text style={[styleSigns.text]}>
-                    {text}
-                </Text>
-            </View>
-        </ScrollView>
+        <ThemeContext.Consumer>
+            {(({isDark}) => (
+                <ScrollView>
+                    <View style={styleSigns.p}>
+                        <LocalSvg asset={img} />
+                    </View>
+                    <View>
+                        <Text style={[styleSigns.heading, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>
+                            {heading}
+                        </Text>
+                        <Text style={[styleSigns.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>
+                            {title}
+                        </Text>
+                        <Text style={[styleSigns.text, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>
+                            {text}
+                        </Text>
+                    </View>
+                </ScrollView>
+            ))}
+        </ThemeContext.Consumer>
     )
 
     return (
