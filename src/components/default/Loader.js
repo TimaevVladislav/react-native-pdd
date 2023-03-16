@@ -16,6 +16,7 @@ export const ErrorMessage = () => (
     </View>
 )
 
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
