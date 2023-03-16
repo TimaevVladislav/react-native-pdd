@@ -111,7 +111,7 @@ function FloatList () {
             <SearchContext.Consumer>
                 {(({dropdown, filtered, results, loading}) => (
                     <>
-                        { loading ? <Loader /> : filtered.length > 0 ? null : <ErrorMessage /> }
+                        { loading ? <Loader /> : filtered.length > 0 ? null : !dropdown ? null : <ErrorMessage /> }
 
                         {dropdown ? <Dropdown /> :
                             <VirtualizedList
