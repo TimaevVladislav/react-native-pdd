@@ -11,7 +11,7 @@ const List = props => (
            {(({}) => (
                <ThemeContext.Consumer>
                    {(({isDark}) => (
-                       <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
+                       <ScrollView>
                            <Sections data={props.data} />
                        </ScrollView>
                    ))}

@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {Text} from "react-native"
 
 // контекст с параметрами по умолчанию
 export const SearchContext = React.createContext({
@@ -30,6 +31,10 @@ export const SearchProvider = ({children}) => {
                 setLoading(false)
             } else {
                 setLoading(true)
+
+                setTimeout(() => {
+                    setLoading(false)
+                }, 5000)
             }
 
             setFiltered(newData)

@@ -20,26 +20,17 @@ export default function MenuButtons({navigation}) {
     )
 }
 
-const Content = () => (
-    <View style={style.containerContent}>
-      <Text></Text>
-    </View>
-)
 
 const ButtonsMain = ({navigation}) => (
     <View style={style.btnMain}>
         <TouchableOpacity onPress={() => getNavigate(navigation, "Список билетов")}>
             <View style={[style.item, {backgroundColor: "#0d6efd"}]}>
                 <View>
-                    <Text style={style.heading}>Билеты</Text>
+                    <Text style={style.heading}>Билеты A,B</Text>
                 </View>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity>
-            <View style={[style.item, {backgroundColor: "#dc3545"}]}>
-                <Text style={style.heading}>Экзамен</Text>
-            </View>
-        </TouchableOpacity>
+        <ButtonsBottom navigation={navigation} />
     </View>
 )
 
@@ -82,24 +73,16 @@ const Buttons = ({navigation}) => {
 }
 
 
-const ButtonsBottom = () => (
+const ButtonsBottom = ({navigation}) => (
     <View style={style.container}>
-        <TouchableOpacity>
-            <View style={style.item}>
-                <View>
-                    <Ionicons name="ios-star" size={25} color="#3AB4F2" />
-                </View>
-                <View>
-                    <Text style={style.heading}></Text>
-                </View>
-            </View>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => getNavigate(navigation, "Главная")}>
+        <TouchableOpacity onPress={() => navigation.navigate("")}>
             <View style={style.item}>
                 <View>
                     <Ionicons name="ios-star" size={25} color="#dc3545" />
                 </View>
-                <Text style={style.heading}></Text>
+                <Text style={style.heading}>
+                    Билеты C,D
+                </Text>
             </View>
         </TouchableOpacity>
     </View>
@@ -144,7 +127,7 @@ const style = StyleSheet.create({
     heading: {
         fontSize: 18,
         fontWeight: "normal",
-        color: "#000",
+        color: "#FFFFFF",
         paddingHorizontal: 10
     },
     btnContainer: {

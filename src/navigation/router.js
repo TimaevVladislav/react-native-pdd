@@ -1,22 +1,18 @@
 import React from "react"
-import {
-    createDrawerNavigator,
-    DrawerContentScrollView,
-    DrawerItemList,
-} from '@react-navigation/drawer'
 
-
+import {View, Text} from "react-native"
+import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
 
 import Home from "../screens/HomeScreen"
 import SettingScreen from "../screens/SettingScreen"
-import WebView from "../components/default/WebView"
-import {LogoDrawer} from "../components/default/ShareButton"
+import ShareButton from "../components/default/ShareButton"
 
 
-export default function Router({navigation}) {
+
+export default function Router() {
     const Drawer = createDrawerNavigator()
     return (
         <ThemeContext.Consumer>
@@ -25,8 +21,11 @@ export default function Router({navigation}) {
                     initialRouteName="Главная"
                     drawerContent={(props) => (
                         <DrawerContentScrollView {...props}>
-                            {/*<LogoDrawer />*/}
+                            <View>
+                                <Text>Header</Text>
+                            </View>
                             <DrawerItemList {...props} />
+                            <ShareButton />
                         </DrawerContentScrollView>
                     )}
                     drawerType="front"
@@ -51,17 +50,12 @@ const DrawerRouter = (Drawer) => (
         <Drawer.Screen
             name="Главная"
             component={Home}
-            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="cube-outline" size={size} color={focused ? '#7cc' : '#ccc'} />),}}
-        />
-        <Drawer.Screen
-            name="Проверка штрафов"
-            component={WebView}
-            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="checkmark-done-circle-outline" size={size} color={focused ? '#7cc' : '#ccc'} />), }}
+            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="cube-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
         />
         <Drawer.Screen
             name="Настройки"
             component={SettingScreen}
-            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="settings-outline" size={size} color={focused ? '#7cc' : '#ccc'} />),}}
+            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="settings-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
         />
     </Drawer.Group>
 )

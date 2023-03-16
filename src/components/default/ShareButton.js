@@ -3,7 +3,7 @@ import {DrawerItem} from "@react-navigation/drawer"
 import Ionicons from "@expo/vector-icons/Ionicons"
 import React from "react"
 
-export const ShareButton = () => {
+export default function ShareButton() {
     const onShare = async () => {
         try {
             const result = await Share.share({
@@ -25,7 +25,9 @@ export const ShareButton = () => {
 
     return (
         <DrawerItem
-            icon={({size, focused}) => (<Ionicons name="share-social-outline" size={size} color={focused ? '#7cc' : '#ccc'}/>)}
+            icon={({size, focused}) => (
+                <Ionicons name="share-social-outline" size={size} color={focused ? '#7cc' : '#ccc'}/>
+            )}
             labelStyle={{color: "black"}}
             label="Поделиться"
             onPress={onShare}

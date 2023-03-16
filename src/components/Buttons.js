@@ -9,9 +9,9 @@ import {useNavigation} from "@react-navigation/native"
 
 export const ButtonsExam = ({answers, item}) => {
 
+    const navigation = useNavigation()
     const [isDisabled, setIsDisabled] = useState(false)
     const {handlerColorChange, colors} = useColor(item)
-    const navigation = useNavigation()
 
     const addTicketHandler = (ticket) => {
         !mistakes.includes(ticket) && mistakes.push(ticket)

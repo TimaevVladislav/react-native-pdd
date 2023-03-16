@@ -13,7 +13,7 @@ import {SearchContext, SearchProvider} from "../context/search"
 
 import Dropdown from "./layouts/Dropdown"
 import {LocalSvg} from "./default/LocalSvg"
-import {Loader} from "./default/Loader"
+import {ErrorMessage, Loader} from "./default/Loader"
 
 
 const SignsList = () => (
@@ -111,7 +111,7 @@ function FloatList () {
             <SearchContext.Consumer>
                 {(({dropdown, filtered, results, loading}) => (
                     <>
-                        { loading && <Loader /> }
+                        { loading ? <Loader /> : filtered.length > 0 ? null : <ErrorMessage /> }
 
                         {dropdown ? <Dropdown /> :
                             <VirtualizedList

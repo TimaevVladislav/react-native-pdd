@@ -1,5 +1,5 @@
 import React from 'react'
-import {ActivityIndicator, StyleSheet, View} from 'react-native'
+import {ActivityIndicator, StyleSheet, Text, View} from 'react-native'
 
 
 export const Loader = () => {
@@ -10,6 +10,12 @@ export const Loader = () => {
     )
 }
 
+export const ErrorMessage = () => (
+    <View style={[styles.horizontal]}>
+        <Text>Ничего не найдено...</Text>
+    </View>
+)
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -19,6 +25,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         padding: 10,
+        marginTop: 70
     },
 })
 

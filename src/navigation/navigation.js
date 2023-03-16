@@ -66,7 +66,11 @@ export default function Navigation () {
                         title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
                     })}}
             />
-            <Stack.Screen name="Избранное" component={FavouriteScreen} options={({route}) => ({title: `${55}`})} />
+            <Stack.Screen name="Избранное" component={FavouriteScreen}  options={({ route= {}}) => {
+                return ({
+                    title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
+                })}}
+            />
             <Stack.Screen name="Результат" component={ResultScreen}
                 options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
             />

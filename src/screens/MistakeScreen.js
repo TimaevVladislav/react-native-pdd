@@ -6,7 +6,6 @@ import {stylesVirtual, styleTicket} from "./ExamScreen"
 import {colors as color} from "../store/data/colors"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 
-import {Description} from "../components/layouts/Description"
 import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsExam} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
@@ -25,7 +24,6 @@ const Tickets = ({item}) => {
                 </Text>
                 <ButtonsExam answers={item.answers} item={item} />
                 <Favorites item={item} />
-                <Description correct={item.correct_answer} tip={item.answer_tip} />
             </View>
         </View>
     )
@@ -37,6 +35,10 @@ export default function MistakeScreen({navigation}) {
     const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)
     const { scrollItemLayout } = useScroll()
+
+    if (mistakes.length < 0) {
+        navigation.navigate("Билеты")
+    }
 
     useEffect(() => {
         ref.current.scrollToOffset({
