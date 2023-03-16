@@ -13,7 +13,6 @@ import { useColor } from "../hooks/useColor"
 import { useLayout } from "../hooks/useLayout"
 
 const Tickets = ({item}) => {
-
     return (
         <View>
             <View style={styleTicket.container}>
@@ -52,16 +51,17 @@ export const ExamScreen = ({navigation}) => {
         const IdQuestion = ({answers, idQuestion, ticket_number}) => {
             return (
                 <CountContext.Consumer>
-                    {(({isScrollId, setIsScrollId}) => {
+                    {(({isScrollId, setIsScrollId, setTicketId}) => {
                         return (
                             <View style={stylesVirtual.container}>
                                 <TouchableOpacity style={stylesVirtual.container}>
                                     <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
                                         <Text style={stylesVirtual.title} onPress={() => {
                                             setIsScrollId(idQuestion)
+                                            setTicketId(ticket_number)
                                             navigation.setParams({id: idQuestion })
                                         }}>
-                                            {idQuestion}
+                                            {idQuestion + 1}
                                         </Text>
                                     </View>
                                 </TouchableOpacity>

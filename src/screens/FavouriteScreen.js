@@ -45,10 +45,7 @@ export default function FavoriteScreen({navigation}) {
 
 
 
-
     const TicketScrollFavorites = () => {
-
-
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
 
@@ -61,7 +58,7 @@ export default function FavoriteScreen({navigation}) {
                                 setIsScrollId(idQuestion)
                                 navigation.setParams({favorite: 13})
                             }}>
-                                {idQuestion}
+                                {idQuestion + 1}
                             </Text>
                         </View>
                     </TouchableOpacity>
@@ -98,7 +95,7 @@ export default function FavoriteScreen({navigation}) {
                 getItemLayout={scrollItemLayout}
                 initialNumToRender={5}
                 initialScrollIndex={isScrollId}
-                scrollEnabled={true}
+                scrollEnabled={false}
                 showsHorizontalScrollIndicator={false}
                 data={favorites}
                 renderItem={({item}) => <Tickets item={item} colors={colors} /> }

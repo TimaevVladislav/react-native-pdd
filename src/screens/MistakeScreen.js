@@ -62,7 +62,7 @@ export default function MistakeScreen({navigation}) {
                                 setIsScrollId(idQuestion)
                                 navigation.setParams({favorite: 13})
                             }}>
-                                {idQuestion}
+                                {idQuestion + 1}
                             </Text>
                         </View>
                     </TouchableOpacity>
@@ -99,7 +99,7 @@ export default function MistakeScreen({navigation}) {
                 getItemLayout={scrollItemLayout}
                 initialNumToRender={5}
                 initialScrollIndex={isScrollId}
-                scrollEnabled={true}
+                scrollEnabled={false}
                 showsHorizontalScrollIndicator={false}
                 data={mistakes}
                 renderItem={({item}) => <Tickets item={item} colors={colors} /> }
