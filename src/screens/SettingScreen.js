@@ -18,7 +18,7 @@ export default function SettingScreen({navigation}) {
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                                 <Text style={style.heading}>Тема приложения</Text>
                                 <View style={style.checkboxContainer}>
-                                    <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Светлая</Text>
+                                    <Text style={[style.title, {color: colors.textColor}]}>Светлая</Text>
                                     <CheckBox
                                         value={isLight}
                                         onValueChange={() => {
@@ -31,7 +31,7 @@ export default function SettingScreen({navigation}) {
                                     />
                                 </View>
                                 <View style={style.checkboxContainer}>
-                                    <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Тёмная</Text>
+                                    <Text style={[style.title, {color: colors.textColor}]}>Тёмная</Text>
                                     <CheckBox
                                         colorScheme="danger" defaultIsChecked
                                         style={style.checkbox}
@@ -49,7 +49,7 @@ export default function SettingScreen({navigation}) {
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                             <Text style={style.heading}>Язык приложения</Text>
                             <View style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]}>Русский</Text>
+                                <Text style={[style.title, {color: colors.textColor}]}>Русский</Text>
                                 <CheckBox
                                     value={isLanguage}
                                     onValueChange={setLanguage}
@@ -61,26 +61,26 @@ export default function SettingScreen({navigation}) {
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                             <Text style={style.heading}>Уведомления</Text>
                             <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]} onPress={() => navigation.navigate("Главная")}>Настроить</Text>
+                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Главная")}>Настроить</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
                             <Text style={style.heading}>Прочее</Text>
                             <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]} onPress={() => navigation.navigate("Обратная связь")}>Обратная связь</Text>
+                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Обратная связь")}>Обратная связь</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}]} onPress={() => navigation.navigate("Пользовательское соглашение")}>Пользовательское соглашение</Text>
+                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Пользовательское соглашение")}>Пользовательское соглашение</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={style.version}>
                             <View>
-                                <Text style={{color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}}>
+                                <Text style={{color: colors.textColor}}>
                                     Версия приложения
                                 </Text>
                             </View>
                             <View>
-                                <Text style={{color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}}>
+                                <Text style={{color: colors.textColor}}>
                                     1.1
                                 </Text>
                             </View>

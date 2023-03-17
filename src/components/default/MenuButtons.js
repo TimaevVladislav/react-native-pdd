@@ -53,7 +53,7 @@ const Buttons = ({navigation}) => {
             <TouchableOpacity onPress={() => mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(alertError)}>
                 <View style={style.item}>
                     <View>
-                        <Ionicons name="alert-circle" size={25} color="#3AB4F2" />
+                        <Ionicons name="alert-circle" size={25} color="#dc3545" />
                     </View>
                     <View>
                         <Text style={style.heading}>Ошибки</Text>
@@ -77,9 +77,6 @@ const ButtonsBottom = ({navigation}) => (
     <View style={style.container}>
         <TouchableOpacity onPress={() => navigation.navigate("")}>
             <View style={style.item}>
-                <View>
-                    <Ionicons name="ios-star" size={25} color="#dc3545" />
-                </View>
                 <Text style={style.heading}>
                     Билеты C,D
                 </Text>
@@ -113,7 +110,7 @@ const style = StyleSheet.create({
       alignItems: "center",
     },
     item: {
-      backgroundColor: "#3AB4F2",
+      backgroundColor: "#0d6efd",
       opacity: 0.9,
       borderRadius: 5,
       marginHorizontal: 10,

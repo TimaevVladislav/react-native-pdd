@@ -14,7 +14,7 @@ export default function App() {
                      <CountProvider>
                            <SearchProvider>
                                <ThemeContext.Consumer>
-                                   {(({isDark, name}) => (
+                                   {(({isDark}) => (
                                        <NavigationContainer>
                                            <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: isDark ? DARK_COLORS.layout : "#0d6efd"}, headerTintColor: '#fff'}}>
                                                {Navigation()}

@@ -2,6 +2,9 @@ import {Share} from "react-native"
 import {DrawerItem} from "@react-navigation/drawer"
 import Ionicons from "@expo/vector-icons/Ionicons"
 import React from "react"
+import {ThemeContext} from "../../context/theme"
+import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
+
 
 export default function ShareButton() {
     const onShare = async () => {
@@ -24,13 +27,17 @@ export default function ShareButton() {
     }
 
     return (
-        <DrawerItem
-            icon={({size, focused}) => (
-                <Ionicons name="share-social-outline" size={size} color={focused ? '#7cc' : '#ccc'}/>
-            )}
-            labelStyle={{color: "black"}}
-            label="Поделиться"
-            onPress={onShare}
-        />
+        <ThemeContext.Consumer>
+            {(({isDark}) => (
+                <DrawerItem
+                    icon={({size, focused}) => (
+                        <Ionicons name="share-social-outline" size={size} color={focused ? '#7cc' : '#ccc'}/>
+                    )}
+                    labelStyle={{color: isDark ? DARK_COLORS.textColor : LIGHT_COLORS.textColor}}
+                    label="Поделиться"
+                    onPress={onShare}
+                />
+            ))}
+        </ThemeContext.Consumer>
     )
 }
