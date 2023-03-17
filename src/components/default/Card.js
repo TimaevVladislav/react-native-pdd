@@ -34,7 +34,7 @@ export default function Card({route, navigation}) {
         <ThemeContext.Consumer>
             {(({isDark, colors}) => (
                 <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
-                    <Text style={[styleSigns.heading, {color: colors.textColor}]}>
+                    <Text style={[styleSigns.heading]}>
                         {route.params.item.heading}
                     </Text>
                     <View style={styleSigns.p}>
