@@ -22,35 +22,22 @@ import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
 import Router from "./router"
 
-
-const TicketsScreens = (Stack) => {
-    return(
-        <Stack.Group>
-            <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
-        </Stack.Group>
-    )
-}
-const HomeScreens = (Stack) => (
-    <Stack.Group>
-        <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
-        <Stack.Screen name="Главная" component={Home} />
-        <Stack.Screen name="Правила дорожного движения" component={Profile} options={{title: "ПДД"}} />
-        <Stack.Screen name="Дорожные знаки" component={Signs} />
-        <Stack.Screen name="Дорожная разметка" component={Markup} />
-        <Stack.Screen name="Билеты" component={MenuButtons} />
-        <Stack.Screen name="Дополнительная информация" component={ExtraInformation} />
-        <Stack.Screen name="Коды регионов" component={Region} />
-    </Stack.Group>
-)
 export default function Navigation () {
     const Stack = createNativeStackNavigator()
     return (
         <Stack.Group>
-            {HomeScreens(Stack)}
-            {TicketsScreens(Stack)}
+            <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
+            <Stack.Screen name="Главная" component={Home} />
+            <Stack.Screen name="Правила дорожного движения" component={Profile} options={{title: "ПДД"}} />
+            <Stack.Screen name="Дорожные знаки" component={Signs} />
+            <Stack.Screen name="Дорожная разметка" component={Markup} />
+            <Stack.Screen name="Билеты" component={MenuButtons} />
+            <Stack.Screen name="Дополнительная информация" component={ExtraInformation} />
+            <Stack.Screen name="Коды регионов" component={Region} />
             <Stack.Screen name="Карточка" component={Card} />
             <Stack.Screen name="Обратная связь" component={FeedBack} />
             <Stack.Screen name="Пользовательское соглашение" component={Policies} />
+            <Stack.Screen name="Список билетов" component={Tickets} />
             <Stack.Screen name="Экзамен" component={ExamScreen}
                 options={() => {
                     return ({
