@@ -9,7 +9,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
-
+import {CountContext} from "../context/counter"
 
 const Tickets = ({item}) => {
     return (
@@ -29,40 +29,43 @@ const Tickets = ({item}) => {
 }
 
 export default function FavoriteScreen({navigation}) {
-
     const ref = useRef(null)
-    const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)
     const { scrollItemLayout } = useScroll()
 
-    useEffect(() => {
-        ref.current.scrollToOffset({
-            index: isScrollId,
-            offset: 390 * isScrollId,
-            animated: true,
-        })
-    }, [isScrollId])
-
-
-
-    const TicketScrollFavorites = () => {
+    const TicketScrollFavorites = ({isScrollId}) => {
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
 
+        useEffect(() => {
+            ref.current.scrollToOffset({
+                index: isScrollId,
+                offset: 390 * isScrollId,
+                animated: true,
+            })
+        }, [isScrollId])
+
         const IdQuestion = ({answers, idQuestion, ticket_number}) => {
             return (
-                <View style={stylesVirtual.container}>
-                    <TouchableOpacity style={stylesVirtual.container}>
-                        <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
-                            <Text style={stylesVirtual.title} onPress={() => {
-                                setIsScrollId(idQuestion)
-                                navigation.setParams({favorite: 13})
-                            }}>
-                                {idQuestion + 1}
-                            </Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                <CountContext.Consumer>
+                    {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
+                        return (
+                            <View style={stylesVirtual.container}>
+                                <TouchableOpacity style={stylesVirtual.container}>
+                                    <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                        <Text style={stylesVirtual.title} onPress={() => {
+                                            setIsScrollId(idQuestion)
+                                            setTicketId(ticket_number)
+                                            navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
+                                        }}>
+                                            {idQuestion + 1}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        )
+                    })}
+                </CountContext.Consumer>
             )
         }
 
@@ -87,8 +90,10 @@ export default function FavoriteScreen({navigation}) {
 
 
     return (
-        <SafeAreaView>
-            <TicketScrollFavorites />
+        <CountContext.Consumer>
+            {(({isScrollId, setIsScrollId}) => (
+          <SafeAreaView>
+            <TicketScrollFavorites isScrollId={isScrollId} setIsScrollId={setIsScrollId} />
             <FlatList
                 ref={ref}
                 horizontal
@@ -101,6 +106,8 @@ export default function FavoriteScreen({navigation}) {
                 renderItem={({item}) => <Tickets item={item} colors={colors} /> }
                 keyExtractor={item => item.id}
             />
-        </SafeAreaView>
+          </SafeAreaView>
+            ))}
+       </CountContext.Consumer>
     )
 }

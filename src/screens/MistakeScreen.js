@@ -10,6 +10,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsExam} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
+import {CountContext} from "../context/counter";
 
 
 const Tickets = ({item}) => {
@@ -55,18 +56,24 @@ export default function MistakeScreen({navigation}) {
 
         const IdQuestion = ({answers, idQuestion, ticket_number}) => {
             return (
-                <View style={stylesVirtual.container}>
-                    <TouchableOpacity style={stylesVirtual.container}>
-                        <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
-                            <Text style={stylesVirtual.title} onPress={() => {
-                                setIsScrollId(idQuestion)
-                                navigation.setParams({favorite: 13})
-                            }}>
-                                {idQuestion + 1}
-                            </Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                <CountContext.Consumer>
+                    {(({isScrollId, setIsScrollId}) => {
+                        return (
+                            <View style={stylesVirtual.container}>
+                                <TouchableOpacity style={stylesVirtual.container}>
+                                    <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                        <Text style={stylesVirtual.title} onPress={() => {
+                                            setIsScrollId(idQuestion)
+                                            navigation.setOptions({title: `Билет ${ticket_number} вопрос ${isScrollId}`})
+                                        }}>
+                                            {idQuestion + 1}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        )
+                    })}
+                </CountContext.Consumer>
             )
         }
 

@@ -24,12 +24,12 @@ export const ButtonsExam = ({answers, item}) => {
     return (
         answers.map((answer, i) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId}) => {
+                {(({isScrollId, setIsScrollId, ticketId}) => {
 
                     const buttonHandler = () => {
                         handlerColorChange(answer, i)
                         setIsScrollId(isScrollId + 1)
-                        navigation.setParams({id: isScrollId + 1 })
+                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${isScrollId + 2}`})
                         setIsDisabled(true)
                     }
 

@@ -59,7 +59,7 @@ export const ExamScreen = ({navigation}) => {
                                         <Text style={stylesVirtual.title} onPress={() => {
                                             setIsScrollId(idQuestion)
                                             setTicketId(ticket_number)
-                                            navigation.setParams({id: idQuestion })
+                                            navigation.setOptions({title: `Билет ${ticket_number} вопрос ${idQuestion + 1}`})
                                         }}>
                                             {idQuestion + 1}
                                         </Text>
@@ -109,8 +109,7 @@ export const ExamScreen = ({navigation}) => {
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
                         data={uriTicket.ticket}
-                        renderItem={({item}) => <Tickets item={item} />
-                    }
+                        renderItem={({item}) => <Tickets item={item} /> }
                         keyExtractor={item => item.id}
                     />
                 </SafeAreaView>

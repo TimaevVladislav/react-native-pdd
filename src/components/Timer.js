@@ -1,12 +1,6 @@
 import React from 'react'
 import Ionicons from "@expo/vector-icons/Ionicons"
-import {
-    View,
-    Text,
-    StyleSheet,
-    TouchableOpacity
-} from "react-native"
-
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native"
 import {useTimer} from "../hooks/useTimer"
 import {CountContext} from "../context/counter"
 

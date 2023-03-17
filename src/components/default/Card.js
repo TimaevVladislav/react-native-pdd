@@ -11,6 +11,8 @@ export default function Card({route, navigation}) {
 
     const { setDropdown, setSearch, setClicked } = useContext(SearchContext)
 
+    navigation.setOptions({title: route.params.heading})
+
     const closeDropdownHandler = () => {
         setSearch(""),
         setDropdown(true),

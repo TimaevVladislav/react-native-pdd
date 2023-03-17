@@ -27,7 +27,6 @@ const TicketsScreens = (Stack) => {
     return(
         <Stack.Group>
             <Stack.Screen name="Список билетов" component={Tickets} options={{title: "Билеты для экзамена"}} />
-            <Stack.Screen name="Ошибки" component={MistakeScreen} />
         </Stack.Group>
     )
 }
@@ -49,30 +48,24 @@ export default function Navigation () {
         <Stack.Group>
             {HomeScreens(Stack)}
             {TicketsScreens(Stack)}
-            <Stack.Screen name="Карточка" component={Card} options={({route= {}}) => ({title: route.params.heading})} />
+            <Stack.Screen name="Карточка" component={Card} />
             <Stack.Screen name="Обратная связь" component={FeedBack} />
             <Stack.Screen name="Пользовательское соглашение" component={Policies} />
-            <Stack.Screen
-                name="Экзамен"
-                component={ExamScreen}
-                options={({ route= {}}) => {
+            <Stack.Screen name="Экзамен" component={ExamScreen}
+                options={() => {
                     return ({
-                        headerLeft: () => {
-                            if(route.params.id || route.params.id === 0){
-                                return <ArrowBack />
-                            }
-                        },
-                        headerRight: () => <Timer />,
-                        title: `${route.params.name}` + ` вопрос ${route.params.id === undefined ? 1 : route.params.id}`,
+                        headerLeft: () => <ArrowBack />,
+                        headerRight: () => <Timer />
                     })}}
             />
-            <Stack.Screen name="Избранное" component={FavouriteScreen}  />
+            <Stack.Screen name="Избранное" component={FavouriteScreen} />
+            <Stack.Screen name="Ошибки" component={MistakeScreen} />
             <Stack.Screen name="Результат" component={ResultScreen}
                 options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
             />
             <Stack.Screen
                 name="Signs"
-                options={({ route, navigation }) => ({
+                options={() => ({
                     headerTitleAlign: "center",
                     headerTitle: () => <Search /> })}>
                 {(props) => <SignsList {...props} />}
