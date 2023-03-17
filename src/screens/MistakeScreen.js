@@ -10,7 +10,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsExam} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
-import {CountContext} from "../context/counter";
+import {CountContext} from "../context/counter"
 
 
 const Tickets = ({item}) => {
@@ -33,7 +33,6 @@ const Tickets = ({item}) => {
 export default function MistakeScreen({navigation}) {
 
     const ref = useRef(null)
-    const [isScrollId, setIsScrollId] = useState(0)
     const [colors, setColor] = useState(color)
     const { scrollItemLayout } = useScroll()
 
@@ -41,41 +40,40 @@ export default function MistakeScreen({navigation}) {
         navigation.navigate("Билеты")
     }
 
-    useEffect(() => {
-        ref.current.scrollToOffset({
-            index: isScrollId,
-            offset: 390 * isScrollId,
-            animated: true,
-        })
-    }, [isScrollId])
-
-
-    const TicketScrollFavorites = () => {
+    const TicketScrollFavorites = ({isScrollId}) => {
         const {colors, colorId} = useColor()
         const { getItemLayout } = useScroll()
 
-        const IdQuestion = ({answers, idQuestion, ticket_number}) => {
-            return (
-                <CountContext.Consumer>
-                    {(({isScrollId, setIsScrollId}) => {
-                        return (
-                            <View style={stylesVirtual.container}>
-                                <TouchableOpacity style={stylesVirtual.container}>
-                                    <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
-                                        <Text style={stylesVirtual.title} onPress={() => {
-                                            setIsScrollId(idQuestion)
-                                            navigation.setOptions({title: `Билет ${ticket_number} вопрос ${isScrollId}`})
-                                        }}>
-                                            {idQuestion + 1}
-                                        </Text>
-                                    </View>
-                                </TouchableOpacity>
-                            </View>
-                        )
-                    })}
-                </CountContext.Consumer>
-            )
-        }
+        useEffect(() => {
+            ref.current.scrollToOffset({
+                index: isScrollId,
+                offset: 390 * isScrollId,
+                animated: true,
+            })
+        }, [isScrollId])
+
+
+        const IdQuestion = ({answers, idQuestion, ticket_number}) => (
+            <CountContext.Consumer>
+                {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
+                    return (
+                        <View style={stylesVirtual.container}>
+                            <TouchableOpacity style={stylesVirtual.container}>
+                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                    <Text style={stylesVirtual.title} onPress={() => {
+                                        setIsScrollId(idQuestion)
+                                        setTicketId(ticket_number)
+                                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
+                                    }}>
+                                        {idQuestion + 1}
+                                    </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                })}
+            </CountContext.Consumer>
+        )
 
         return (
             <>
@@ -98,20 +96,25 @@ export default function MistakeScreen({navigation}) {
 
 
     return (
-        <SafeAreaView>
-            <TicketScrollFavorites />
-            <FlatList
-                ref={ref}
-                horizontal
-                getItemLayout={scrollItemLayout}
-                initialNumToRender={5}
-                initialScrollIndex={isScrollId}
-                scrollEnabled={false}
-                showsHorizontalScrollIndicator={false}
-                data={mistakes}
-                renderItem={({item}) => <Tickets item={item} colors={colors} /> }
-                keyExtractor={item => item.id}
-            />
-        </SafeAreaView>
+        <CountContext.Consumer>
+            {(({isScrollId, setIsScrollId}) => (
+                <SafeAreaView>
+                    <TicketScrollFavorites isScrollId={isScrollId} setIsScrollId={setIsScrollId} />
+                    <FlatList
+                        ref={ref}
+                        horizontal
+                        getItemLayout={scrollItemLayout}
+                        initialNumToRender={5}
+                        initialScrollIndex={isScrollId}
+                        scrollEnabled={false}
+                        showsHorizontalScrollIndicator={false}
+                        data={mistakes}
+                        renderItem={({item}) => <Tickets item={item} colors={colors} /> }
+                        keyExtractor={item => item.id}
+                    />
+                </SafeAreaView>
+            ))}
+        </CountContext.Consumer>
     )
 }
+

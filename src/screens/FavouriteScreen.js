@@ -45,29 +45,27 @@ export default function FavoriteScreen({navigation}) {
             })
         }, [isScrollId])
 
-        const IdQuestion = ({answers, idQuestion, ticket_number}) => {
-            return (
-                <CountContext.Consumer>
-                    {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
-                        return (
-                            <View style={stylesVirtual.container}>
-                                <TouchableOpacity style={stylesVirtual.container}>
-                                    <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
-                                        <Text style={stylesVirtual.title} onPress={() => {
-                                            setIsScrollId(idQuestion)
-                                            setTicketId(ticket_number)
-                                            navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
-                                        }}>
-                                            {idQuestion + 1}
-                                        </Text>
-                                    </View>
-                                </TouchableOpacity>
-                            </View>
-                        )
-                    })}
-                </CountContext.Consumer>
-            )
-        }
+        const IdQuestion = ({answers, idQuestion, ticket_number}) => (
+            <CountContext.Consumer>
+                {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
+                    return (
+                        <View style={stylesVirtual.container}>
+                            <TouchableOpacity style={stylesVirtual.container}>
+                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                    <Text style={stylesVirtual.title} onPress={() => {
+                                        setIsScrollId(idQuestion)
+                                        setTicketId(ticket_number)
+                                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
+                                    }}>
+                                        {idQuestion + 1}
+                                    </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                })}
+            </CountContext.Consumer>
+        )
 
         return (
             <>
