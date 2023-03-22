@@ -11,7 +11,7 @@ export const ButtonsExam = ({answers, item, ticket_number}) => {
 
     const navigation = useNavigation()
     const [isDisabled, setIsDisabled] = useState(false)
-    const {handlerColorChange, colors} = useColor(item)
+    const {handlerColorChange, colors} = useColor()
 
     const addTicketHandler = (ticket) => {
         !mistakes.includes(ticket) && mistakes.push(ticket)

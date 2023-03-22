@@ -4,25 +4,23 @@ import {View, Text, StyleSheet} from "react-native"
 import Ionicons from "@expo/vector-icons/Ionicons"
 import {CountContext, CountProvider} from "../context/counter"
 
-const DateTimeDisplay = ({ min, seconds }) => {
+export default function DateTimeDisplay({ min, seconds }) {
+    return(
+        <CountProvider>
+            <CountContext.Consumer>
+                {(({stopIntervalHandle}) => (
+                    <View style={style.container}>
+                        <Text style={style.icon}>
+                            <Ionicons name="ios-timer" size={24} color="white" />
+                        </Text>
+                        {stopIntervalHandle ? null : <Text style={style.title}>{min} : {seconds}</Text> }
+                    </View>
+                ))}
+            </CountContext.Consumer>
+        </CountProvider>
+    )
+}
 
-    return (
-       <CountProvider>
-           <CountContext.Consumer>
-               {(({stopIntervalHandle}) => (
-                   <View style={style.container}>
-                       <Text style={style.icon}>
-                           <Ionicons name="ios-timer" size={24} color="white" />
-                       </Text>
-                       {stopIntervalHandle ? null : <Text style={style.title}>{min} : {seconds}</Text> }
-                   </View>
-               ))}
-           </CountContext.Consumer>
-       </CountProvider>
-    );
-};
-
-export default DateTimeDisplay;
 
 const style = StyleSheet.create({
     container: {

@@ -1,15 +1,13 @@
 import React, {useState, useEffect} from "react"
 import {useNavigation, useRoute} from "@react-navigation/native"
-
 import {Alert} from "react-native"
-import {CountContext} from "../context/counter"
-
+import {AlertComponent} from "../components/default/Alert"
 
 const START_MINUTES = '20'
 const START_SECOND = '00'
 const START_DERATION = 10
 
-const useTimer = () => {
+export const useTimer = () => {
 
     const route = useRoute()
     const navigation = useNavigation()
@@ -105,32 +103,11 @@ const useTimer = () => {
 
     )
 
-    const handlerConfirm = (setIsScrollId) => (
+    const handlerConfirm = (setIsScrollId) => {
+        const confirm = { title: "Хотите выйти?", message: "Можно продолжить потом", buttons: [{text: "Продолжить", onPress: () => console.log("swsw"), style: "cancel"}, {text: `Выйти`, style: "cancel", onPress: () => {setIsScrollId(0), navigation.goBack()}}]}
 
-        Alert.alert(
-            "Хотите выйти?",
-            `Можно продолжить потом`,
-            [
-                {
-                    text: "Продолжить",
-                    onPress: () => console.log("swsw"),
-                    style: "cancel",
+        return AlertComponent(confirm)
+    }
 
-                },
-                {   text: `Выйти`,
-                    style: "cancel",
-                    onPress: () => {
-                        setIsScrollId(0)
-                        navigation.goBack()
-                    }
-
-                }
-            ]
-        )
-    )
-
-
-    return { currentMinutes, currentSeconds, handlerConfirm }
+    return {currentMinutes, currentSeconds, handlerConfirm}
 }
-
-export { useTimer }

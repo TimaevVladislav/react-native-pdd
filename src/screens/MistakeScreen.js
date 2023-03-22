@@ -41,8 +41,8 @@ export default function MistakeScreen({navigation}) {
     }
 
     const TicketScrollFavorites = ({isScrollId}) => {
-        const {colors, colorId} = useColor()
-        const { getItemLayout } = useScroll()
+        const {colorId} = useColor()
+        const {getItemLayout} = useScroll()
 
         useEffect(() => {
             ref.current.scrollToOffset({
@@ -59,7 +59,7 @@ export default function MistakeScreen({navigation}) {
                     return (
                         <View style={stylesVirtual.container}>
                             <TouchableOpacity style={stylesVirtual.container}>
-                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
                                     <Text style={stylesVirtual.title} onPress={() => {
                                         setIsScrollId(idQuestion)
                                         setTicketId(ticket_number)

@@ -15,7 +15,7 @@ export default function ResultScreen ({navigation, route}) {
                 <Button
                     title="Мои ошибки"
                     color="red"
-                    onPress={ () => navigation.navigate("Ошибки") }
+                    onPress={ () => navigation.navigate("Ошибки")}
                 />
                 <Button
                     title="Пройти ещё раз"

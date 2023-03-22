@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {View, StyleSheet, Alert} from "react-native"
 import {useCountdown} from "../hooks/useCountdown"
 import {useNavigation, useRoute} from "@react-navigation/native"

@@ -1,10 +1,8 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
-
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
-
 import {CountContext} from "../context/counter"
 import { useSwitcher } from "../store/questions"
 import { useColor } from "../hooks/useColor"
@@ -29,7 +27,7 @@ const Tickets = ({item}) => {
 }
 
 export const ExamScreen = ({navigation}) => {
-    const ref = useContext(CountContext)
+    const ref = useRef()
     const [ticketNumber, setTicketNumber] = useState(1)
     const route = useRoute()
     const {uriTicket} = useSwitcher()
@@ -39,13 +37,13 @@ export const ExamScreen = ({navigation}) => {
 
     const TicketScrollButton = ({isScrollId}) => {
         const {getItemLayout} = useLayout()
-        const {colorId, handlerColorChange} = useColor()
+        const {colorId} = useColor()
 
         useEffect(() => {
-            ref.current.scrollToOffset({
-                isScrollId,
+            ref.current.scrollToIndex({
                 offset: 390 * isScrollId,
                 animated: true,
+                index: isScrollId,
             })
         }, [isScrollId])
 

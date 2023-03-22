@@ -34,8 +34,8 @@ export default function FavoriteScreen({navigation}) {
     const { scrollItemLayout } = useScroll()
 
     const TicketScrollFavorites = ({isScrollId}) => {
-        const {colors, colorId} = useColor()
-        const { getItemLayout } = useScroll()
+        const {colorId} = useColor()
+        const {getItemLayout} = useScroll()
 
         useEffect(() => {
             ref.current.scrollToOffset({
@@ -45,13 +45,13 @@ export default function FavoriteScreen({navigation}) {
             })
         }, [isScrollId])
 
-        const IdQuestion = ({answers, idQuestion, ticket_number}) => (
+        const IdQuestion = ({idQuestion, ticket_number}) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
                     return (
                         <View style={stylesVirtual.container}>
                             <TouchableOpacity style={stylesVirtual.container}>
-                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
+                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
                                     <Text style={stylesVirtual.title} onPress={() => {
                                         setIsScrollId(idQuestion)
                                         setTicketId(ticket_number)
