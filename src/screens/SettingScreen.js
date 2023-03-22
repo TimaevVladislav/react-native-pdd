@@ -4,6 +4,7 @@ import {Text, View, ScrollView, StyleSheet, TouchableOpacity} from "react-native
 import CheckBox from 'expo-checkbox'
 import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {version} from "../../package.json"
 
 export default function SettingScreen({navigation}) {
     const [isLanguage, setLanguage] = useState(true)
@@ -81,7 +82,7 @@ export default function SettingScreen({navigation}) {
                             </View>
                             <View>
                                 <Text style={{color: colors.textColor}}>
-                                    1.1
+                                    {version}
                                 </Text>
                             </View>
                         </View>

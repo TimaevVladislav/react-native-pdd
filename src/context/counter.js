@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useRef, useState} from "react"
 
 export const CountContext = React.createContext({
     ref: null,
@@ -9,8 +9,8 @@ export const CountProvider = ({children}) => {
     const [ticketId, setTicketId] = useState(0)
 
     const defaultValue = {
-       isScrollId, setIsScrollId,
-       ticketId, setTicketId
+       ticketId, setTicketId,
+        isScrollId, setIsScrollId
     }
 
     return (

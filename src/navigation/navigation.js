@@ -10,7 +10,6 @@ import ResultScreen, {CloseOutline} from "../screens/ResultScreen"
 import {Policies} from "../screens/SettingScreen"
 import {FeedBack} from "../components/default/Feedback"
 
-
 import Tickets from "../components/layouts/Tickets"
 import Card from "../components/default/Card"
 import SignsList from "../components/SignsList"

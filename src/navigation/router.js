@@ -1,6 +1,4 @@
 import React from "react"
-
-import {View, Text} from "react-native"
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import {ThemeContext} from "../context/theme"
@@ -21,9 +19,6 @@ export default function Router() {
                     initialRouteName="Главная"
                     drawerContent={(props) => (
                         <DrawerContentScrollView {...props}>
-                            <View>
-                                <Text>Header</Text>
-                            </View>
                             <DrawerItemList {...props} />
                             <ShareButton />
                         </DrawerContentScrollView>
@@ -37,25 +32,18 @@ export default function Router() {
                         backgroundColor: isDark ? DARK_COLORS.layout : "#0d6efd"},
                         headerTintColor: '#fff',
                     }}>
-                    {DrawerRouter(Drawer)}
+                    <Drawer.Screen
+                        name="Главная"
+                        component={Home}
+                        options= {{drawerIcon: ({focused, size}) => (<Ionicons name="cube-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
+                    />
+                    <Drawer.Screen
+                        name="Настройки"
+                        component={SettingScreen}
+                        options= {{drawerIcon: ({focused, size}) => (<Ionicons name="settings-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
+                    />
                 </Drawer.Navigator>
             ))}
         </ThemeContext.Consumer>
     )
 }
-
-
-const DrawerRouter = (Drawer) => (
-    <Drawer.Group>
-        <Drawer.Screen
-            name="Главная"
-            component={Home}
-            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="cube-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
-        />
-        <Drawer.Screen
-            name="Настройки"
-            component={SettingScreen}
-            options= {{drawerIcon: ({focused, size}) => (<Ionicons name="settings-outline" size={size} color={focused ? '#7cc' : '#ccc'} />)}}
-        />
-    </Drawer.Group>
-)

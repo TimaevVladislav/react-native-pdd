@@ -11,6 +11,7 @@ import {colors as color} from "../store/data/colors"
 import { useSwitcher } from "../store/questions"
 import { useColor } from "../hooks/useColor"
 import { useLayout } from "../hooks/useLayout"
+import {useRoute} from "@react-navigation/native"
 
 const Tickets = ({item}) => {
     return (
@@ -22,7 +23,7 @@ const Tickets = ({item}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam answers={item.answers} item={item} />
+                <ButtonsExam answers={item.answers} item={item} ticket_number={item.ticket_number} />
                 <Favorites item={item} />
             </View>
         </View>
@@ -31,10 +32,13 @@ const Tickets = ({item}) => {
 
 export const ExamScreen = ({navigation}) => {
     const ref = useContext(CountContext)
+    const [ticketNumber, setTicketNumber] = useState(1)
+    const route = useRoute()
     const [colors, setColor] = useState(color)
     const { uriTicket } = useSwitcher()
     const { scrollItemLayout } = useLayout()
 
+    navigation.setOptions({title: `Билет ${route.params.key} вопрос ${ticketNumber}`})
 
     const TicketScrollButton = ({isScrollId}) => {
         const {colors, colorId, handlerColorChange} = useColor()
@@ -48,18 +52,17 @@ export const ExamScreen = ({navigation}) => {
             })
         }, [isScrollId])
 
-        const IdQuestion = ({answers, idQuestion, ticket_number}) => {
+        const IdQuestion = ({idQuestion}) => {
             return (
                 <CountContext.Consumer>
-                    {(({isScrollId, setIsScrollId, setTicketId}) => {
+                    {(({isScrollId, setIsScrollId}) => {
                         return (
                             <View style={stylesVirtual.container}>
                                 <TouchableOpacity style={stylesVirtual.container}>
                                     <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId[idQuestion] }]}>
                                         <Text style={stylesVirtual.title} onPress={() => {
                                             setIsScrollId(idQuestion)
-                                            setTicketId(ticket_number)
-                                            navigation.setOptions({title: `Билет ${ticket_number} вопрос ${idQuestion + 1}`})
+                                            setTicketNumber(idQuestion + 1)
                                         }}>
                                             {idQuestion + 1}
                                         </Text>
@@ -73,7 +76,6 @@ export const ExamScreen = ({navigation}) => {
         }
 
         return (
-            <>
                 <CountContext.Consumer>
                     {(({isScrollId}) => (
                         <SafeAreaView>
@@ -91,7 +93,6 @@ export const ExamScreen = ({navigation}) => {
                         </SafeAreaView>
                     ))}
                 </CountContext.Consumer>
-            </>
         )
     }
 

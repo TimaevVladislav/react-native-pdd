@@ -7,7 +7,7 @@ import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {useNavigation} from "@react-navigation/native"
 
-export const ButtonsExam = ({answers, item}) => {
+export const ButtonsExam = ({answers, item, ticket_number}) => {
 
     const navigation = useNavigation()
     const [isDisabled, setIsDisabled] = useState(false)
@@ -24,11 +24,12 @@ export const ButtonsExam = ({answers, item}) => {
     return (
         answers.map((answer, i) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId, ticketId}) => {
+                {(({isScrollId, setIsScrollId, ticketId, setTicketId}) => {
 
                     const buttonHandler = () => {
                         handlerColorChange(answer, i)
                         setIsScrollId(isScrollId + 1)
+                        setTicketId(ticket_number)
                         navigation.setOptions({title: `Билет ${ticketId} вопрос ${isScrollId + 2}`})
                         setIsDisabled(true)
                     }
