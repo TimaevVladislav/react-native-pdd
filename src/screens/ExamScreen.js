@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useRef} from 'react'
 import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -29,13 +29,12 @@ const Tickets = ({item}) => {
 
 export function ExamScreen({navigation}) {
     const ref = useRef()
-    const [ticketNumber, setTicketNumber] = useState(1)
     const {isScrollId} = useContext(CountContext)
     const route = useRoute()
     const {uriTicket} = useSwitcher()
     const {scrollItemLayout} = useLayout()
 
-    navigation.setOptions({title: `Билет ${route.params.key} вопрос ${ticketNumber}`})
+    navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
     useEffect(() => {
         ref.current.scrollToOffset({
@@ -59,26 +58,23 @@ export function ExamScreen({navigation}) {
         }, [isScrollId])
 
 
-        const IdQuestion = ({idQuestion}) => {
-            return (
-                <CountContext.Consumer>
-                    {(({isScrollId, setIsScrollId}) => (
-                        <View style={stylesVirtual.container}>
-                            <TouchableOpacity style={stylesVirtual.container}>
-                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
-                                    <Text style={stylesVirtual.title} onPress={() => {
-                                        setIsScrollId(idQuestion)
-                                        setTicketNumber(idQuestion + 1)
-                                    }}>
-                                        {idQuestion + 1}
-                                    </Text>
-                                </View>
-                            </TouchableOpacity>
-                        </View>
-                    ))}
-                </CountContext.Consumer>
-            )
-        }
+        const IdQuestion = ({idQuestion}) => (
+            <CountContext.Consumer>
+                {(({isScrollId, setIsScrollId}) => (
+                    <View style={stylesVirtual.container}>
+                        <TouchableOpacity style={stylesVirtual.container}>
+                            <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
+                                <Text style={stylesVirtual.title} onPress={() => {
+                                    setIsScrollId(idQuestion)
+                                }}>
+                                    {idQuestion + 1}
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                ))}
+            </CountContext.Consumer>
+        )
 
         return (
                 <CountContext.Consumer>
@@ -87,7 +83,7 @@ export function ExamScreen({navigation}) {
                             <FlatList
                                 ref={ref}
                                 horizontal
-                                initialNumToRender={10}
+                                initialNumToRender={20}
                                 initialScrollIndex={isScrollId}
                                 getItemLayout={getItemLayout}
                                 data={uriTicket.ticket}
