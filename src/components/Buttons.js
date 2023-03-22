@@ -25,22 +25,17 @@ export const ButtonsExam = ({answers, item, ticket_number}) => {
         answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, ticketId, setTicketId}) => {
-
-                    const buttonHandler = () => {
-                        handlerColorChange(answer, i)
-                        setIsScrollId(isScrollId + 1)
-                        setTicketId(ticket_number)
-                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${isScrollId + 2}`})
-                        setIsDisabled(true)
-                    }
-
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
                                 key={i}
                                 disabled={isDisabled}
                                 onPress={() => {
-                                    buttonHandler()
+                                    handlerColorChange(answer, i, isScrollId)
+                                    setIsScrollId(isScrollId + 1)
+                                    setTicketId(ticket_number)
+                                    navigation.setOptions({title: `Билет ${ticketId} вопрос ${isScrollId + 2}`})
+                                    setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>

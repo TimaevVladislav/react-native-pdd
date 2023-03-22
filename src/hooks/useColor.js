@@ -1,18 +1,19 @@
-import {useState} from 'react'
+import {useRef, useState} from 'react'
 import {colors as colorIndex} from "../store/data/colors"
 
-export const useColor = (item) => {
+export const useColor = () => {
     const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
-    const [colorId, setColorId] = useState(colorIndex)
+    const colorId = useRef(colorIndex)
 
-    const handlerColorChange = (answer, buttonId) => {
+    const handlerColorChange = (answer, buttonId, id) => {
         if (!answer.is_correct) {
             setColor(prevColor => prevColor.map((color, id) => id === buttonId ? "red" : prevColor))
-            setColorId(prevColor => prevColor.map((color, id) => id === buttonId ? "red" : prevColor ))
+            colorId.current[id] = "red"
         } else {
             setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
+            colorId.current[id] = "green"
         }
     }
 
-    return { colors, colorId, handlerColorChange }
+    return {colors, colorId, handlerColorChange}
 }
