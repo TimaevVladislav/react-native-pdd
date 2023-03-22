@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useRef, useState} from 'react'
 import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -26,26 +26,27 @@ const Tickets = ({item}) => {
     )
 }
 
-export const ExamScreen = ({navigation}) => {
+export function ExamScreen({navigation}) {
     const ref = useRef()
     const [ticketNumber, setTicketNumber] = useState(1)
+    const {isScrollId} = useContext(CountContext)
     const route = useRoute()
     const {uriTicket} = useSwitcher()
     const {scrollItemLayout} = useLayout()
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${ticketNumber}`})
 
-    const TicketScrollButton = ({isScrollId}) => {
+    useEffect(() => {
+        ref.current.scrollToIndex({
+            offset: 390 * isScrollId,
+            animated: true,
+            index: isScrollId
+        })
+    }, [isScrollId])
+
+    const TicketScrollButton = () => {
         const {getItemLayout} = useLayout()
         const {colorId} = useColor()
-
-        useEffect(() => {
-            ref.current.scrollToIndex({
-                offset: 390 * isScrollId,
-                animated: true,
-                index: isScrollId,
-            })
-        }, [isScrollId])
 
         const IdQuestion = ({idQuestion}) => {
             return (
@@ -91,9 +92,9 @@ export const ExamScreen = ({navigation}) => {
 
     return (
         <CountContext.Consumer>
-            {(({isScrollId, setIsScrollId}) => (
+            {(({isScrollId}) => (
                 <SafeAreaView>
-                    <TicketScrollButton isScrollId={isScrollId} setIsScrollId={setIsScrollId} />
+                    <TicketScrollButton />
                     <FlatList
                         ref={ref}
                         horizontal
