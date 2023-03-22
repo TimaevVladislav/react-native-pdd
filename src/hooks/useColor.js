@@ -8,10 +8,10 @@ export const useColor = () => {
     const handlerColorChange = (answer, buttonId, id) => {
         if (!answer.is_correct) {
             setColor(prevColor => prevColor.map((color, id) => id === buttonId ? "red" : prevColor))
-            colorId.current[id] = "red"
+            colorId.current[id] = "#DF2E38"
         } else {
             setColor(prevState => prevState.map((color, id) => id === buttonId ? "green" : prevState))
-            colorId.current[id] = "green"
+            colorId.current[id] = "#5D9C59"
         }
     }
 
