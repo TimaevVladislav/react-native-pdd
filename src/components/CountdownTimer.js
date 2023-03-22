@@ -4,8 +4,7 @@ import {useCountdown} from "../hooks/useCountdown"
 import {useNavigation, useRoute} from "@react-navigation/native"
 import DateTimeDisplay from "./DateTimeDisplay"
 
-
-const CountdownTimer = ({targetDate, key, names, showHandle}) => {
+export default function CountdownTimer({targetDate, key, names, showHandle}) {
     const navigation = useNavigation()
     const [minutes, seconds] = useCountdown(targetDate)
 
@@ -63,10 +62,6 @@ const ShowCounter = ({ minutes, seconds }) => (
         <DateTimeDisplay min={minutes} seconds={seconds} isDanger={false} />
     </View>
 )
-
-
-export default CountdownTimer;
-
 
 
 const style = StyleSheet.create({

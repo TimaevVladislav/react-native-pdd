@@ -4,9 +4,10 @@ import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity}
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CountContext} from "../context/counter"
-import { useSwitcher } from "../store/questions"
-import { useColor } from "../hooks/useColor"
-import { useLayout } from "../hooks/useLayout"
+
+import {useSwitcher} from "../store/questions"
+import {useColor} from "../hooks/useColor"
+import {useLayout} from "../hooks/useLayout"
 import {useRoute} from "@react-navigation/native"
 
 const Tickets = ({item}) => {
@@ -37,7 +38,7 @@ export function ExamScreen({navigation}) {
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${ticketNumber}`})
 
     useEffect(() => {
-        ref.current.scrollToIndex({
+        ref.current.scrollToOffset({
             offset: 390 * isScrollId,
             animated: true,
             index: isScrollId
@@ -47,6 +48,16 @@ export function ExamScreen({navigation}) {
     const TicketScrollButton = () => {
         const {getItemLayout} = useLayout()
         const {colorId} = useColor()
+        const ref = useRef()
+
+        useEffect(() => {
+            ref.current.scrollToIndex({
+                offset: 390 * isScrollId,
+                animated: true,
+                index: isScrollId
+            })
+        }, [isScrollId])
+
 
         const IdQuestion = ({idQuestion}) => {
             return (
@@ -76,7 +87,7 @@ export function ExamScreen({navigation}) {
                             <FlatList
                                 ref={ref}
                                 horizontal
-                                initialNumToRender={7}
+                                initialNumToRender={10}
                                 initialScrollIndex={isScrollId}
                                 getItemLayout={getItemLayout}
                                 data={uriTicket.ticket}
@@ -99,7 +110,7 @@ export function ExamScreen({navigation}) {
                         ref={ref}
                         horizontal
                         getItemLayout={scrollItemLayout}
-                        initialNumToRender={7}
+                        initialNumToRender={20}
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
