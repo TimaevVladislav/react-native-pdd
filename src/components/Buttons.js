@@ -5,11 +5,9 @@ import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
-import {useNavigation} from "@react-navigation/native"
 
-export const ButtonsExam = ({answers, item, ticket_number}) => {
+export const ButtonsExam = ({answers, item}) => {
 
-    const navigation = useNavigation()
     const [isDisabled, setIsDisabled] = useState(false)
     const {handlerColorChange, colors} = useColor()
 
@@ -24,7 +22,7 @@ export const ButtonsExam = ({answers, item, ticket_number}) => {
     return (
         answers.map((answer, i) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId, ticketId, setTicketId}) => {
+                {(({isScrollId, setIsScrollId}) => {
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -33,8 +31,6 @@ export const ButtonsExam = ({answers, item, ticket_number}) => {
                                 onPress={() => {
                                     handlerColorChange(answer, i, isScrollId)
                                     setIsScrollId(isScrollId + 1)
-                                    setTicketId(ticket_number)
-                                    navigation.setOptions({title: `Билет ${ticketId} вопрос ${isScrollId + 2}`})
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
@@ -51,24 +47,33 @@ export const ButtonsExam = ({answers, item, ticket_number}) => {
     )
 }
 
-export const ButtonFavorites = ({answers}) => {
-
+export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
     const {handlerColorChange, colors} = useColor()
     const [isDisabled, setIsDisabled] = useState(false)
 
     return (
-        answers.map((answer, i) =>  (
-            <View style={styleTicket.container} >
-                <TouchableOpacity
-                    key={i}
-                    disabled={isDisabled}
-                    onPress={() => {setIsDisabled(true), handlerColorChange(answer, i)}}
-                    style={[{backgroundColor: colors[i] }, styleTicket.item]}>
-                    <Text style={styleTicket.itemText}>
-                        {`${i + 1}.  ${answer.answer_text}`}
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        item.answers.map((answer, i) =>  (
+            <CountContext.Consumer>
+                {(({isScrollId, setIsScrollId}) => (
+                    <View style={styleTicket.container} >
+                        <TouchableOpacity
+                            key={i}
+                            disabled={isDisabled}
+                            onPress={() => {
+                                setIsDisabled(true)
+                                handlerColorChange(answer, i, isScrollId)
+                                setIsScrollId(isScrollId + 1)
+                                ticketNumber.current = item.ticket_number
+                                ticketId.current = item.ticket_question
+                            }}
+                            style={[{backgroundColor: colors[i] }, styleTicket.item]}>
+                            <Text style={styleTicket.itemText}>
+                                {`${i + 1}.  ${answer.answer_text}`}
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                ))}
+            </CountContext.Consumer>
         ))
     )
 }

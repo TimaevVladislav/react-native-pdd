@@ -20,7 +20,7 @@ const Tickets = ({item}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam answers={item.answers} item={item} ticket_number={item.ticket_number} />
+                <ButtonsExam answers={item.answers} item={item} />
                 <Favorites item={item} />
             </View>
         </View>
@@ -38,11 +38,11 @@ export function ExamScreen({navigation}) {
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
     useEffect(() => {
-        const unsubscribe = navigation.addListener('beforeRemove', () => {
+        const clearColor = navigation.addListener('beforeRemove', () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
         })
 
-        return unsubscribe
+        return clearColor
     }, [navigation])
 
 
@@ -56,7 +56,6 @@ export function ExamScreen({navigation}) {
 
     const TicketScrollButton = () => {
         const {getItemLayout} = useLayout()
-        const {colorId} = useColor()
         const ref = useRef()
 
         useEffect(() => {

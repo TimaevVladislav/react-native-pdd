@@ -1,8 +1,7 @@
-import React, {useRef, useState, useEffect} from "react"
+import React, {useRef, useEffect, useContext} from "react"
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
-import {colors as color} from "../store/data/colors"
 import {favorites} from "../store/questions/A_B/tickets/favorites.js"
 
 import {Favorites} from "../components/layouts/Favorites"
@@ -11,7 +10,7 @@ import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
 import {CountContext} from "../context/counter"
 
-const Tickets = ({item}) => {
+const Tickets = ({item, ticketNumber, ticketId}) => {
     return (
         <View>
             <View style={styleTicket.container}>
@@ -21,7 +20,7 @@ const Tickets = ({item}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonFavorites answers={item.answers} />
+                <ButtonFavorites item={item} ticketNumber={ticketNumber} ticketId={ticketId} />
                 <Favorites item={item} />
             </View>
         </View>
@@ -29,13 +28,26 @@ const Tickets = ({item}) => {
 }
 
 export default function FavoriteScreen({navigation}) {
-    const ref = useRef(null)
-    const [colors, setColor] = useState(color)
-    const { scrollItemLayout } = useScroll()
+    const ref = useRef()
+    const ticketNumber = useRef(null)
+    const ticketId = useRef(null)
+    const {isScrollId} = useContext(CountContext)
+    const {colorId} = useColor()
+    const {scrollItemLayout} = useScroll()
 
-    const TicketScrollFavorites = ({isScrollId}) => {
-        const {colorId} = useColor()
+    navigation.setOptions({title: `Билет ${ticketNumber.current} вопрос ${ticketId.current + 1}`})
+
+    useEffect(() => {
+        ref.current.scrollToOffset({
+            offset: 390 * isScrollId,
+            animated: true,
+            index: isScrollId
+        })
+    }, [isScrollId])
+
+    const TicketScrollFavorites = () => {
         const {getItemLayout} = useScroll()
+        const ref = useRef()
 
         useEffect(() => {
             ref.current.scrollToOffset({
@@ -47,15 +59,15 @@ export default function FavoriteScreen({navigation}) {
 
         const IdQuestion = ({idQuestion, ticket_number}) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
+                {(({isScrollId, setIsScrollId}) => {
                     return (
                         <View style={stylesVirtual.container}>
                             <TouchableOpacity style={stylesVirtual.container}>
                                 <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
                                     <Text style={stylesVirtual.title} onPress={() => {
                                         setIsScrollId(idQuestion)
-                                        setTicketId(ticket_number)
-                                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
+                                        ticketNumber.current = ticket_number
+                                        ticketId.current = idQuestion
                                     }}>
                                         {idQuestion + 1}
                                     </Text>
@@ -77,7 +89,7 @@ export default function FavoriteScreen({navigation}) {
                         getItemLayout={getItemLayout}
                         data={favorites}
                         renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
-                        initialNumToRender={5}
+                        initialNumToRender={20}
                         showsHorizontalScrollIndicator={false}
                         keyExtractor={item => item.id}
                     />
@@ -89,19 +101,19 @@ export default function FavoriteScreen({navigation}) {
 
     return (
         <CountContext.Consumer>
-            {(({isScrollId, setIsScrollId}) => (
+            {(({isScrollId}) => (
           <SafeAreaView>
-            <TicketScrollFavorites isScrollId={isScrollId} setIsScrollId={setIsScrollId} />
+            <TicketScrollFavorites />
             <FlatList
                 ref={ref}
                 horizontal
                 getItemLayout={scrollItemLayout}
-                initialNumToRender={5}
+                initialNumToRender={20}
                 initialScrollIndex={isScrollId}
                 scrollEnabled={false}
                 showsHorizontalScrollIndicator={false}
                 data={favorites}
-                renderItem={({item}) => <Tickets item={item} colors={colors} /> }
+                renderItem={({item}) => <Tickets item={item} ticketNumber={ticketNumber} ticketId={ticketId} /> }
                 keyExtractor={item => item.id}
             />
           </SafeAreaView>
