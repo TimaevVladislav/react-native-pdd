@@ -30,11 +30,21 @@ const Tickets = ({item}) => {
 export function ExamScreen({navigation}) {
     const ref = useRef()
     const {isScrollId} = useContext(CountContext)
+    const {colorId} = useColor()
     const route = useRoute()
     const {uriTicket} = useSwitcher()
     const {scrollItemLayout} = useLayout()
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
+
+    useEffect(() => {
+        const unsubscribe = navigation.addListener('beforeRemove', () => {
+            colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
+        })
+
+        return unsubscribe
+    }, [navigation])
+
 
     useEffect(() => {
         ref.current.scrollToOffset({

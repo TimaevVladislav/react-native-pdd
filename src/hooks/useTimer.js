@@ -104,7 +104,14 @@ export const useTimer = () => {
     )
 
     const handlerConfirm = (setIsScrollId) => {
-        const confirm = { title: "Хотите выйти?", message: "Можно продолжить потом", buttons: [{text: "Продолжить", onPress: () => console.log("swsw"), style: "cancel"}, {text: `Выйти`, style: "cancel", onPress: () => {setIsScrollId(0), navigation.goBack()}}]}
+        const confirm = {
+            title: "Хотите выйти?", message: "Можно продолжить потом",
+            buttons: [
+                {text: "Продолжить", onPress: () => "", style: "cancel"},
+                {text: `Выйти`, style: "cancel", onPress: () => {
+                    setIsScrollId(0)
+                    navigation.goBack()
+                }}]}
 
         return AlertComponent(confirm)
     }
