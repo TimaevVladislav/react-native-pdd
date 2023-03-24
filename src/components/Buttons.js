@@ -7,8 +7,8 @@ import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 
 export const ButtonsExam = ({answers, item}) => {
-
     const [isDisabled, setIsDisabled] = useState(false)
+
     const {handlerColorChange, colors} = useColor()
 
     const addTicketHandler = (ticket) => {
@@ -22,7 +22,7 @@ export const ButtonsExam = ({answers, item}) => {
     return (
         answers.map((answer, i) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId}) => {
+                {(({isScrollId, setIsScrollId, results}) => {
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -30,11 +30,13 @@ export const ButtonsExam = ({answers, item}) => {
                                 disabled={isDisabled}
                                 onPress={() => {
                                     handlerColorChange(answer, i, isScrollId)
+                                    results.current++
                                     setIsScrollId(isScrollId + 1)
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
-                                style={[{backgroundColor: colors[i]}, styleTicket.item]}>
+                                style={[{backgroundColor: colors[i]}, styleTicket.item]}
+                            >
                                 <Text style={styleTicket.itemText}>
                                     {`${i + 1}.  ${answer.answer_text}`}
                                 </Text>

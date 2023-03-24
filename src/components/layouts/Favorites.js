@@ -15,8 +15,8 @@ export const Favorites = ({item}) => {
         !favorites.includes(ticket) && favorites.push(ticket)
     }
 
-    const deleteTicketHandler = (ticket) => {
-        favorites.splice(favorites.indexOf(ticket), isScrollId !== 0 ? isScrollId : favorites[0].ticket_question)
+    const deleteTicketHandler = () => {
+        favorites.splice(isScrollId, 1)
         setIsFavorite(item.favorite = false)
     }
 

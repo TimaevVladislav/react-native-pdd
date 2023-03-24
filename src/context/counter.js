@@ -1,7 +1,7 @@
 import React, {useRef, useState} from "react"
 
 export const CountContext = React.createContext({
-    ref: null,
+    results: null,
 })
 
 export const CountProvider = ({children}) => {
@@ -11,7 +11,8 @@ export const CountProvider = ({children}) => {
 
     const defaultValue = {
        ticketId, setTicketId,
-       isScrollId, setIsScrollId
+       isScrollId, setIsScrollId,
+       results
     }
 
     return (
