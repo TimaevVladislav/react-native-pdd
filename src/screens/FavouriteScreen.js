@@ -16,7 +16,7 @@ const Tickets = ({item, navigation, ticketNumber, ticketId}) => {
 
     useEffect(() => {
         setTicketNumberLocal(item.ticket_number)
-        setTicketIdLocal(item.ticket_question + 1)
+        setTicketIdLocal(favorites[0].ticket_question + 1)
     },[navigation])
 
     navigation.setOptions({title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`})
