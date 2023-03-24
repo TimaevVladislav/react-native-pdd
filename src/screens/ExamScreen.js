@@ -13,7 +13,7 @@ import {useRoute} from "@react-navigation/native"
 const Tickets = ({item, navigation, results}) => {
 
     if (results.current === 3) {
-        navigation.navigate("Результат", {results: results.current})
+        navigation.navigate("Результат")
     }
 
     return (

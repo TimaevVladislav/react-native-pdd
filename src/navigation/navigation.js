@@ -46,9 +46,7 @@ export default function Navigation () {
             />
             <Stack.Screen name="Избранное" component={FavouriteScreen} />
             <Stack.Screen name="Ошибки" component={MistakeScreen} />
-            <Stack.Screen name="Результат" component={ResultScreen}
-                options={({navigation}) => ({ headerLeft: () => <CloseOutline navigation={navigation} /> })}
-            />
+            <Stack.Screen name="Результат" component={ResultScreen} />
             <Stack.Screen
                 name="Signs"
                 options={() => ({
