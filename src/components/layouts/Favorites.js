@@ -1,13 +1,14 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import Ionicons from "@expo/vector-icons/Ionicons"
 import {styleTicket} from "../../screens/ExamScreen"
 import {favorites} from "../../store/questions/A_B/tickets/favorites"
+import {CountContext} from "../../context/counter"
 
 export const Favorites = ({item}) => {
-
     const [isFavorite, setIsFavorite] = useState(item.favorite)
+    const {isScrollId} = useContext(CountContext)
 
     const addTicketHandler = (ticket) => {
         setIsFavorite(item.favorite = true)
@@ -15,7 +16,7 @@ export const Favorites = ({item}) => {
     }
 
     const deleteTicketHandler = (ticket) => {
-        favorites.pop(ticket)
+        favorites.splice(favorites.indexOf(ticket), isScrollId !== 0 ? isScrollId : favorites[0].ticket_question)
         setIsFavorite(item.favorite = false)
     }
 
