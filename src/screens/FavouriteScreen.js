@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useContext} from "react"
+import React, {useRef, useEffect, useContext, useState} from "react"
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
@@ -10,7 +10,17 @@ import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
 import {CountContext} from "../context/counter"
 
-const Tickets = ({item, ticketNumber, ticketId}) => {
+const Tickets = ({item, navigation, ticketNumber, ticketId}) => {
+    const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
+    const [ticketIdLocal, setTicketIdLocal] = useState(null)
+
+    useEffect(() => {
+        setTicketNumberLocal(item.ticket_number)
+        setTicketIdLocal(item.ticket_question + 1)
+    },[navigation])
+
+    navigation.setOptions({title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`})
+
     return (
         <View>
             <View style={styleTicket.container}>
@@ -34,8 +44,6 @@ export default function FavoriteScreen({navigation}) {
     const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
     const {scrollItemLayout} = useScroll()
-
-    navigation.setOptions({title: `Билет ${ticketNumber.current} вопрос ${ticketId.current + 1}`})
 
     useEffect(() => {
         ref.current.scrollToOffset({
@@ -113,7 +121,7 @@ export default function FavoriteScreen({navigation}) {
                 scrollEnabled={false}
                 showsHorizontalScrollIndicator={false}
                 data={favorites}
-                renderItem={({item}) => <Tickets item={item} ticketNumber={ticketNumber} ticketId={ticketId} /> }
+                renderItem={({item}) => <Tickets item={item} ticketNumber={ticketNumber} ticketId={ticketId} navigation={navigation} /> }
                 keyExtractor={item => item.id}
             />
           </SafeAreaView>
