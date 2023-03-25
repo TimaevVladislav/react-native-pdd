@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useContext} from "react"
 import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import {CountContext} from "../context/counter"
 import Ionicons from "@expo/vector-icons/Ionicons"
@@ -8,12 +8,15 @@ import {useColor} from "../hooks/useColor"
 export default function ResultScreen () {
     const {colorId} = useColor()
     const navigation = useNavigation()
+    const {mistakeCounter, correctCounter} = useContext(CountContext)
 
     navigation.setOptions({title: "Результаты", headerLeft: () => <CloseOutline /> })
 
     useEffect(() => {
         const clearColor = navigation.addListener('beforeRemove', () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
+            mistakeCounter.current = []
+            correctCounter.current = []
         })
 
         return clearColor
@@ -21,14 +24,14 @@ export default function ResultScreen () {
 
     return (
         <CountContext.Consumer>
-            {(({setIsScrollId, results}) => (
+            {(({setIsScrollId, completedTickets}) => (
         <View style={style.container}>
             <View>
                 <Text style={[style.heading]}>
-                    {results.current === 0 ? "Экзамен сдан" : "Экзамен не сдан"}
+                    {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
                 </Text>
             </View>
-            <Text>{`${results.current} ошибок, 20 вопросов`}</Text>
+            <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
             <View style={style.btnContainer}>
                 <Button
                     title="Мои ошибки"
@@ -39,7 +42,7 @@ export default function ResultScreen () {
                     title="Пройти ещё раз"
                     onPress={() => {
                         navigation.goBack()
-                        results.current = 0
+                        completedTickets.current = 0
                         setIsScrollId(0)
                     }}
                 />
@@ -56,11 +59,11 @@ export const CloseOutline = () => {
 
     return (
         <CountContext.Consumer>
-            {(({setIsScrollId, results}) => (
+            {(({setIsScrollId, completedTickets}) => (
             <View style={{marginRight: 20}}>
                 <TouchableOpacity onPress={() => {
                     navigation.popToTop()
-                    results.current = 0
+                    completedTickets.current = 0
                     setIsScrollId(0)
                 }}>
                     <Ionicons name="close-outline" size={35} color="white" />

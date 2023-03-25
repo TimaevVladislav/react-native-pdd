@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useContext, useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import {styleTicket} from "../screens/ExamScreen"
@@ -8,21 +8,32 @@ import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 
 export const ButtonsExam = ({answers, item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
+    const {mistakeCounter, correctCounter} = useContext(CountContext)
 
     const {handlerColorChange, colors} = useColor()
 
     const addTicketHandler = (ticket) => {
         !mistakes.includes(ticket) && mistakes.push(ticket)
+        mistakeHandler()
     }
 
     const deleteTicketHandler = (ticket) => {
         mistakes.pop(ticket)
+        correctHandler()
+    }
+
+    const correctHandler = () => {
+        correctCounter.current.push(true)
+    }
+
+    const mistakeHandler = () => {
+       mistakeCounter.current.push(false)
     }
 
     return (
         answers.map((answer, i) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId, results}) => {
+                {(({isScrollId, setIsScrollId, completedTickets}) => {
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -30,7 +41,7 @@ export const ButtonsExam = ({answers, item}) => {
                                 disabled={isDisabled}
                                 onPress={() => {
                                     handlerColorChange(answer, i, isScrollId)
-                                    results.current++
+                                    completedTickets.current++
                                     setIsScrollId(isScrollId + 1)
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)

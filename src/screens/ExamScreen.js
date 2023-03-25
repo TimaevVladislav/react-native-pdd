@@ -10,9 +10,9 @@ import {useColor} from "../hooks/useColor"
 import {useLayout} from "../hooks/useLayout"
 import {useRoute} from "@react-navigation/native"
 
-const Tickets = ({item, navigation, results}) => {
+const Tickets = ({item, navigation, completedTickets}) => {
 
-    if (results.current === 3) {
+    if (completedTickets.current === 5) {
         navigation.navigate("Результат")
     }
 
@@ -34,7 +34,7 @@ const Tickets = ({item, navigation, results}) => {
 
 export function ExamScreen({navigation}) {
     const ref = useRef()
-    const {isScrollId, results} = useContext(CountContext)
+    const {isScrollId, completedTickets} = useContext(CountContext)
     const {colorId} = useColor()
     const route = useRoute()
     const {uriTicket} = useSwitcher()
@@ -125,7 +125,7 @@ export function ExamScreen({navigation}) {
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
                         data={uriTicket.ticket}
-                        renderItem={({item}) => <Tickets item={item} navigation={navigation} results={results} /> }
+                        renderItem={({item}) => <Tickets item={item} navigation={navigation} completedTickets={completedTickets} /> }
                         keyExtractor={item => item.id}
                     />
                 </SafeAreaView>
