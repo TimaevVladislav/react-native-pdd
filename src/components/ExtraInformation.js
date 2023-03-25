@@ -2,7 +2,7 @@ import React from "react"
 import {StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
 
 import items from "../store/temp/regions.json"
-import {styles} from "./layouts/Sections";
+import {styles} from "./layouts/Sections"
 import {getNavigate} from "./default/MenuButtons"
 
 
@@ -14,11 +14,6 @@ export default function ExtraInformation({navigation}) {
                    <Text>Коды регионов</Text>
                </View>
            </TouchableOpacity>
-           {/*<TouchableOpacity>*/}
-           {/*     <View style={style.item}>*/}
-           {/*         <Text>Действия при ДТП</Text>*/}
-           {/*     </View>*/}
-           {/* </TouchableOpacity>*/}
         </View>
     )
 };
@@ -31,21 +26,20 @@ export const Region = () => (
 
 function FloatList() {
 
-    const getItem = (data, index) => {
-        return data[index]
-    };
+    const getItem = (data, index) => { return data[index] }
+
     const Item = (item) => (
         <View style={styles.item}>
             <Text style={styles.titles}>
                 {item.title}
             </Text>
         </View>
-    );
+    )
 
     return (
         <VirtualizedList
             data={items}
-            initialNumToRender={3}
+            initialNumToRender={10}
             renderItem={({ item }) => <Item title={item.title} key={item.id} />}
             keyExtractor={item => item.key}
             getItemCount={data => data.length}

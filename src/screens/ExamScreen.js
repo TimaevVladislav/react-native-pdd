@@ -25,7 +25,7 @@ const Tickets = ({item, navigation, completedTickets}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam answers={item.answers} item={item} />
+                <ButtonsExam item={item} />
                 <Favorites item={item} />
             </View>
         </View>

@@ -14,7 +14,7 @@ export const CountProvider = ({children}) => {
     const mistakeCounter = useRef([])
     const correctCounter = useRef([])
 
-    const defaultValue = {ticketId, setTicketId, isScrollId, setIsScrollId, results, completedTickets, mistakeCounter, correctCounter}
+    const defaultValue = {ticketId, setTicketId, isScrollId, setIsScrollId, completedTickets, mistakeCounter, correctCounter}
 
     return (
         <CountContext.Provider value={defaultValue}>

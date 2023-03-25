@@ -109,14 +109,14 @@ function FloatList () {
 
     return (
             <SearchContext.Consumer>
-                {(({dropdown, filtered, results, loading}) => (
+                {(({dropdown, filtered, loading}) => (
                     <>
                         { loading ? <Loader /> : filtered.length > 0 ? null : !dropdown ? null : <ErrorMessage /> }
 
                         {dropdown ? <Dropdown /> :
                             <VirtualizedList
                                 data={state}
-                                initialNumToRender={4}
+                                initialNumToRender={50}
                                 renderItem={({ item }) => <Item title={item.title} heading={item.heading} text={item.text} img={item.img} id={item.key} />}
                                 keyExtractor={item => item.key}
                                 getItemCount={data => data.length}

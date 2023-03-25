@@ -41,7 +41,7 @@ function Sections(props) {
     return (
             <VirtualizedList
                 data={data}
-                initialNumToRender={4}
+                initialNumToRender={25}
                 renderItem={({item}) => <Item title={item.title} id={item.key} />}
                 keyExtractor={item => item.key}
                 getItemCount={data => data.length}

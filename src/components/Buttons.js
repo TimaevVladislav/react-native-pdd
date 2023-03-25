@@ -6,7 +6,7 @@ import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 
-export const ButtonsExam = ({answers, item}) => {
+export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
 
@@ -31,7 +31,7 @@ export const ButtonsExam = ({answers, item}) => {
     }
 
     return (
-        answers.map((answer, i) => (
+        item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
                     return (
