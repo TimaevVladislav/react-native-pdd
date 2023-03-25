@@ -1,16 +1,21 @@
-import React, {useContext, useState} from "react"
+import React, {useContext, useEffect, useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
+import {useNavigation} from "@react-navigation/native"
 
 export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
-    const {mistakeCounter, correctCounter} = useContext(CountContext)
-
+    const navigation = useNavigation()
+    const {mistakeCounter, correctCounter, completedTickets} = useContext(CountContext)
     const {handlerColorChange, colors} = useColor()
+
+    if (completedTickets.current === 20) {
+        navigation.navigate("Результат")
+    }
 
     const addTicketHandler = (ticket) => {
         !mistakes.includes(ticket) && mistakes.push(ticket)
@@ -42,7 +47,7 @@ export const ButtonsExam = ({item}) => {
                                 onPress={() => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
-                                    setIsScrollId(isScrollId + 1)
+                                    isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
