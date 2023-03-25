@@ -10,7 +10,6 @@ export const CountContext = React.createContext({
 export const CountProvider = ({children}) => {
     const [isScrollId, setIsScrollId] = useState(0)
     const [ticketId, setTicketId] = useState(0)
-    const results = useRef(null)
     const completedTickets = useRef(null)
     const mistakeCounter = useRef([])
     const correctCounter = useRef([])
