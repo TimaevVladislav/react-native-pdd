@@ -6,7 +6,7 @@ import {stylesVirtual, styleTicket} from "./ExamScreen"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {CountContext} from "../context/counter"
 import {Favorites} from "../components/layouts/Favorites"
-import {ButtonsExam} from "../components/Buttons"
+import {ButtonsMistakes} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
 
@@ -31,7 +31,7 @@ const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam item={item} />
+                <ButtonsMistakes item={item} />
                 <Favorites item={item} />
             </View>
         </View>
