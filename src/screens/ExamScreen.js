@@ -1,13 +1,12 @@
-import React, {useContext, useEffect, useRef} from 'react'
-import {SafeAreaView, View, FlatList, Text, Image, StyleSheet, TouchableOpacity} from 'react-native'
+import React, {useContext, useEffect, useRef, useState} from 'react'
+import {FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
 import {Favorites} from "../components/layouts/Favorites"
 import {CountContext} from "../context/counter"
-
-import {useSwitcher} from "../store/questions"
 import {useColor} from "../hooks/useColor"
 import {useLayout} from "../hooks/useLayout"
+import {useSwitcher} from "../store/questions"
 import {useRoute} from "@react-navigation/native"
 
 const Tickets = ({item}) => {
@@ -29,22 +28,26 @@ const Tickets = ({item}) => {
 
 export function ExamScreen({navigation}) {
     const ref = useRef()
-    const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
     const route = useRoute()
-    const {uriTicket} = useSwitcher()
+
     const {scrollItemLayout} = useLayout()
+    const {isScrollId, completedTickets} = useContext(CountContext)
+    const {uriTicket} = useSwitcher()
+    const renderTicket = useRef(uriTicket.ticket)
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
+
+    if (completedTickets.current === 5) {
+        navigation.navigate("Результат", {setRender: renderTicket})
+    }
 
     useEffect(() => {
         const clearColor = navigation.addListener('beforeRemove', () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
         })
-
         return clearColor
     }, [navigation])
-
 
     useEffect(() => {
         ref.current.scrollToOffset({
@@ -86,23 +89,23 @@ export function ExamScreen({navigation}) {
         )
 
         return (
-                <CountContext.Consumer>
-                    {(({isScrollId}) => (
-                        <SafeAreaView>
-                            <FlatList
-                                ref={ref}
-                                horizontal
-                                initialNumToRender={20}
-                                initialScrollIndex={isScrollId}
-                                getItemLayout={getItemLayout}
-                                data={uriTicket.ticket}
-                                renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
-                                showsHorizontalScrollIndicator={false}
-                                keyExtractor={item => item.id}
-                            />
-                        </SafeAreaView>
-                    ))}
-                </CountContext.Consumer>
+            <CountContext.Consumer>
+                {(({isScrollId}) => (
+                    <SafeAreaView>
+                        <FlatList
+                            ref={ref}
+                            horizontal
+                            initialNumToRender={20}
+                            initialScrollIndex={isScrollId}
+                            getItemLayout={getItemLayout}
+                            data={renderTicket.current}
+                            renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
+                            showsHorizontalScrollIndicator={false}
+                            keyExtractor={item => item.id}
+                        />
+                    </SafeAreaView>
+                ))}
+            </CountContext.Consumer>
         )
     }
 
@@ -110,7 +113,7 @@ export function ExamScreen({navigation}) {
         <CountContext.Consumer>
             {(({isScrollId}) => (
                 <SafeAreaView>
-                    <TicketScrollButton />
+                    <TicketScrollButton/>
                     <FlatList
                         ref={ref}
                         horizontal
@@ -119,7 +122,7 @@ export function ExamScreen({navigation}) {
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
-                        data={uriTicket.ticket}
+                        data={renderTicket.current}
                         renderItem={({item}) => <Tickets item={item} /> }
                         keyExtractor={item => item.id}
                     />

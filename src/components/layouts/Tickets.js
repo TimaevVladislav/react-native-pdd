@@ -30,7 +30,7 @@ export default function Tickets() {
         <SafeAreaView>
             <VirtualizedList
                 data={DATA}
-                initialNumToRender={40}
+                initialNumToRender={25}
                 renderItem={({item}) => <Item title={item.title} id={item.key} />}
                 keyExtractor={item => item.key}
                 getItemCount={getItemCount}

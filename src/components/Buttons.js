@@ -1,21 +1,15 @@
-import React, {useContext, useEffect, useState} from "react"
+import React, {useContext, useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
-import {useNavigation} from "@react-navigation/native"
 
 export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
-    const navigation = useNavigation()
-    const {mistakeCounter, correctCounter, completedTickets} = useContext(CountContext)
+    const {mistakeCounter, correctCounter} = useContext(CountContext)
     const {handlerColorChange, colors} = useColor()
-
-    if (completedTickets.current === 20) {
-        navigation.navigate("Результат")
-    }
 
     const addTicketHandler = (ticket) => {
         !mistakes.includes(ticket) && mistakes.push(ticket)

@@ -25,13 +25,11 @@ export default List
 function Sections(props) {
     const route = useRoute()
     const [data, setData] = useState(props.data);
-    const navigation = useNavigation();
+    const navigation = useNavigation()
     const getItem = (data, index) => data[index]
 
     const Item = (item) => (
-        <TouchableOpacity onPress={() => navigation.navigate("Signs", {
-            name: item.title, id: item.id
-        })}>
+        <TouchableOpacity onPress={() => navigation.navigate("Signs", {name: item.title, id: item.id})}>
             <View style={[styles.item]}>
                 <Text style={[styles.title]}>{item.title}</Text>
             </View>

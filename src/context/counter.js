@@ -1,8 +1,10 @@
 import React, {useRef, useState} from "react"
 
+
 export const CountContext = React.createContext({
     results: null,
     completedTickets: null,
+    renderTicket: null,
     mistakeCounter: [],
     correctCounter: []
 })
@@ -13,6 +15,7 @@ export const CountProvider = ({children}) => {
     const completedTickets = useRef(null)
     const mistakeCounter = useRef([])
     const correctCounter = useRef([])
+
 
     const defaultValue = {ticketId, setTicketId, isScrollId, setIsScrollId, completedTickets, mistakeCounter, correctCounter}
 
