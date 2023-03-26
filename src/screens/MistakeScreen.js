@@ -1,19 +1,27 @@
-import React, {useRef, useState, useEffect} from "react"
+import React, {useRef, useState, useEffect, useContext} from "react"
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
-import {colors as color} from "../store/data/colors"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
-
+import {CountContext} from "../context/counter"
 import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsExam} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
-import {CountContext} from "../context/counter"
 
 
-const Tickets = ({item}) => {
+const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
+    const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
+    const [ticketIdLocal, setTicketIdLocal] = useState(null)
+
+    useEffect(() => {
+        setTicketNumberLocal(item.ticket_number)
+        setTicketIdLocal(mistakes[0].ticket_question + 1)
+    },[navigation])
+
+    navigation.setOptions({title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`})
+
     return (
         <View>
             <View style={styleTicket.container}>
@@ -23,7 +31,7 @@ const Tickets = ({item}) => {
                 <Text style={styleTicket.title}>
                     {item.question}
                 </Text>
-                <ButtonsExam answers={item.answers} item={item} />
+                <ButtonsExam item={item} />
                 <Favorites item={item} />
             </View>
         </View>
@@ -31,18 +39,28 @@ const Tickets = ({item}) => {
 }
 
 export default function MistakeScreen({navigation}) {
-
-    const ref = useRef(null)
-    const [colors, setColor] = useState(color)
-    const { scrollItemLayout } = useScroll()
+    const ref = useRef()
+    const ticketNumber = useRef(null)
+    const ticketId = useRef(null)
+    const {isScrollId} = useContext(CountContext)
+    const {colorId} = useColor()
+    const {scrollItemLayout} = useScroll()
 
     if (mistakes.length < 0) {
         navigation.navigate("Билеты")
     }
 
-    const TicketScrollFavorites = ({isScrollId}) => {
-        const {colorId} = useColor()
+    useEffect(() => {
+        ref.current.scrollToOffset({
+            offset: 390 * isScrollId,
+            animated: true,
+            index: isScrollId
+        })
+    }, [isScrollId])
+
+    const TicketScrollFavorites = () => {
         const {getItemLayout} = useScroll()
+        const ref = useRef()
 
         useEffect(() => {
             ref.current.scrollToOffset({
@@ -53,17 +71,17 @@ export default function MistakeScreen({navigation}) {
         }, [isScrollId])
 
 
-        const IdQuestion = ({answers, idQuestion, ticket_number}) => (
+        const IdQuestion = ({idQuestion, ticket_number}) => (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId, setTicketId, ticketId}) => {
+                {(({isScrollId, setIsScrollId}) => {
                     return (
                         <View style={stylesVirtual.container}>
                             <TouchableOpacity style={stylesVirtual.container}>
                                 <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
                                     <Text style={stylesVirtual.title} onPress={() => {
                                         setIsScrollId(idQuestion)
-                                        setTicketId(ticket_number)
-                                        navigation.setOptions({title: `Билет ${ticketId} вопрос ${idQuestion + 1}`})
+                                        ticketNumber.current = ticket_number
+                                        ticketId.current = idQuestion
                                     }}>
                                         {idQuestion + 1}
                                     </Text>
@@ -85,7 +103,7 @@ export default function MistakeScreen({navigation}) {
                         getItemLayout={getItemLayout}
                         data={mistakes}
                         renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
-                        initialNumToRender={5}
+                        initialNumToRender={20}
                         showsHorizontalScrollIndicator={false}
                         keyExtractor={item => item.id}
                     />
@@ -97,19 +115,19 @@ export default function MistakeScreen({navigation}) {
 
     return (
         <CountContext.Consumer>
-            {(({isScrollId, setIsScrollId}) => (
+            {(({isScrollId}) => (
                 <SafeAreaView>
-                    <TicketScrollFavorites isScrollId={isScrollId} setIsScrollId={setIsScrollId} />
+                    <TicketScrollFavorites />
                     <FlatList
                         ref={ref}
                         horizontal
                         getItemLayout={scrollItemLayout}
-                        initialNumToRender={5}
+                        initialNumToRender={20}
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
                         data={mistakes}
-                        renderItem={({item}) => <Tickets item={item} colors={colors} /> }
+                        renderItem={({item}) => <Tickets item={item} ticketNumber={ticketNumber} ticketId={ticketId} navigation={navigation} />  }
                         keyExtractor={item => item.id}
                     />
                 </SafeAreaView>

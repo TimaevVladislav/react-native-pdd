@@ -4,7 +4,6 @@ import React, {useRef, useState} from "react"
 export const CountContext = React.createContext({
     results: null,
     completedTickets: null,
-    renderTicket: null,
     mistakeCounter: [],
     correctCounter: []
 })

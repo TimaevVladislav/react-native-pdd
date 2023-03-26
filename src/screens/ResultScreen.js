@@ -2,9 +2,8 @@ import React, {useEffect, useContext} from "react"
 import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import {CountContext} from "../context/counter"
 import Ionicons from "@expo/vector-icons/Ionicons"
-import {useNavigation, useRoute} from "@react-navigation/native"
+import {useNavigation} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
-import {useSwitcher} from "../store/questions"
 
 export default function ResultScreen () {
     const {colorId} = useColor()
