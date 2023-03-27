@@ -103,7 +103,10 @@ export const ButtonsMistakes = ({item}) => {
     }
 
     const deleteTicketHandler = (ticket) => {
-        mistakes.pop(ticket)
+        mistakes.filter((mistake, id) => {
+            console.log(id)
+            return id !== ticket.id
+        })
         mistakes.length === 0 ? navigation.navigate("Билеты") : null
         correctHandler()
     }

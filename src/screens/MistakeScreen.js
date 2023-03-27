@@ -15,10 +15,16 @@ const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
     const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
     const [ticketIdLocal, setTicketIdLocal] = useState(null)
 
-    useEffect(() => {
+    const optionFirstHandler = () => {
+        setTicketIdLocal(item.ticket_question + 1)
         setTicketNumberLocal(item.ticket_number)
-        setTicketIdLocal(mistakes[0].ticket_question + 1)
-    },[navigation])
+    }
+
+    useEffect(() => {
+        optionFirstHandler()
+        ticketNumber.current = item.ticket_number
+        ticketId.current = item.ticket_question
+    },[item.ticket_number, item.ticket_question])
 
     navigation.setOptions({title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`})
 
@@ -71,19 +77,19 @@ export default function MistakeScreen({navigation}) {
         }, [isScrollId])
 
 
-        const IdQuestion = ({idQuestion, ticket_number}) => (
+        const QuestionScroll = ({item, index}) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId}) => {
                     return (
                         <View style={stylesVirtual.container}>
                             <TouchableOpacity style={stylesVirtual.container}>
-                                <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
+                                <View style={[{backgroundColor: isScrollId === index ? "#FAF7F0" : colorId.current[index] }]}>
                                     <Text style={stylesVirtual.title} onPress={() => {
-                                        setIsScrollId(idQuestion)
-                                        ticketNumber.current = ticket_number
-                                        ticketId.current = idQuestion
+                                        setIsScrollId(index)
+                                        ticketNumber.current = item.ticket_number
+                                        ticketId.current = item.ticket_question
                                     }}>
-                                        {idQuestion + 1}
+                                        {index + 1}
                                     </Text>
                                 </View>
                             </TouchableOpacity>
@@ -94,7 +100,6 @@ export default function MistakeScreen({navigation}) {
         )
 
         return (
-            <>
                 <SafeAreaView>
                     <FlatList
                         ref={ref}
@@ -102,13 +107,12 @@ export default function MistakeScreen({navigation}) {
                         initialScrollIndex={isScrollId}
                         getItemLayout={getItemLayout}
                         data={mistakes}
-                        renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
+                        renderItem={({item, index}) => <QuestionScroll item={item} index={index} /> }
                         initialNumToRender={20}
                         showsHorizontalScrollIndicator={false}
                         keyExtractor={item => item.id}
                     />
                 </SafeAreaView>
-            </>
         )
     }
 

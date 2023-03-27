@@ -9,7 +9,7 @@ import {ContextRules} from "../screens/Profile"
 import {ContextSigns} from "../screens/Signs"
 import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
-import {SearchContext, SearchProvider} from "../context/search"
+import {SearchContext} from "../context/search"
 
 import Dropdown from "./layouts/Dropdown"
 import {LocalSvg} from "./default/LocalSvg"

@@ -41,7 +41,6 @@ export default function ResultScreen () {
                 <Button
                     title="Пройти ещё раз"
                     onPress={() => {
-                        navigation.goBack()
                         completedTickets.current = 0
                         setIsScrollId(0)
                     }}

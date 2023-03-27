@@ -39,7 +39,7 @@ export function ExamScreen({navigation}) {
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
     if (completedTickets.current === 5) {
-        navigation.navigate("Результат", {setRender: renderTicket})
+        navigation.navigate("Результат")
     }
 
     useEffect(() => {
@@ -48,6 +48,7 @@ export function ExamScreen({navigation}) {
         })
         return clearColor
     }, [navigation])
+
 
     useEffect(() => {
         ref.current.scrollToOffset({
