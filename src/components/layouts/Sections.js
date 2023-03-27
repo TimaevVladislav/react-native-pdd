@@ -3,7 +3,6 @@ import {ScrollView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} f
 
 import {useNavigation, useRoute} from "@react-navigation/native"
 import {ThemeContext} from "../../context/theme"
-import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
 import {SearchContext} from "../../context/search"
 
 const List = props => (
@@ -23,7 +22,6 @@ const List = props => (
 export default List
 
 function Sections(props) {
-    const route = useRoute()
     const [data, setData] = useState(props.data);
     const navigation = useNavigation()
     const getItem = (data, index) => data[index]

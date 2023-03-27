@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useRef} from 'react'
 import {FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -71,16 +71,16 @@ export function ExamScreen({navigation}) {
         }, [isScrollId])
 
 
-        const IdQuestion = ({idQuestion}) => (
+        const QuestionScroll = ({index}) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId}) => (
                     <View style={stylesVirtual.container}>
                         <TouchableOpacity style={stylesVirtual.container}>
-                            <View style={[{backgroundColor: isScrollId === idQuestion ? "#FAF7F0" : colorId.current[idQuestion] }]}>
+                            <View style={[{backgroundColor: isScrollId === index ? "#FAF7F0" : colorId.current[index] }]}>
                                 <Text style={stylesVirtual.title} onPress={() => {
-                                    setIsScrollId(idQuestion)
+                                    setIsScrollId(index)
                                 }}>
-                                    {idQuestion + 1}
+                                    {index + 1}
                                 </Text>
                             </View>
                         </TouchableOpacity>
@@ -100,7 +100,7 @@ export function ExamScreen({navigation}) {
                             initialScrollIndex={isScrollId}
                             getItemLayout={getItemLayout}
                             data={renderTicket.current}
-                            renderItem={({item}) => <IdQuestion answers={item.answers} idQuestion={item.ticket_question} ticket_number={item.ticket_number} /> }
+                            renderItem={({item, index}) => <QuestionScroll item={item} index={index} /> }
                             showsHorizontalScrollIndicator={false}
                             keyExtractor={item => item.id}
                         />
