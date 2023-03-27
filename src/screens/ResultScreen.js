@@ -2,8 +2,11 @@ import React, {useEffect, useContext} from "react"
 import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import {CountContext} from "../context/counter"
 import Ionicons from "@expo/vector-icons/Ionicons"
+
 import {useNavigation} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
+import {mistakes} from "../store/questions/A_B/tickets/mistakes"
+import {AlertComponent} from "../components/default/Alert"
 
 export default function ResultScreen () {
     const {colorId} = useColor()
@@ -22,6 +25,12 @@ export default function ResultScreen () {
         return clearColor
     }, [navigation])
 
+    const messageModal = {
+        title: "Ошибки",
+        message: "Здесь появятся вопросы, которые нужно будет повторить :(",
+        buttons: [{text: "Ок", style: "cancel"}]
+    }
+
     return (
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => (
@@ -36,7 +45,10 @@ export default function ResultScreen () {
                 <Button
                     title="Мои ошибки"
                     color="red"
-                    onPress={() => navigation.navigate("Ошибки")}
+                    onPress={() => {
+                        mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(messageModal)
+                        setIsScrollId(0)
+                    }}
                 />
                 <Button
                     title="Пройти ещё раз"

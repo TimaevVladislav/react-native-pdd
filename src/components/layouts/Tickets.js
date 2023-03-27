@@ -7,20 +7,17 @@ const DATA = []
 export default function Tickets() {
 
     const navigation = useNavigation()
-    const getItem = (data, index) => ({
-        id: Math.random().toString(12).substring(0),
-        title: index + 1
-    })
+    const getItem = (data, index) => ({id: Math.random().toString(12).substring(0), title: index + 1})
 
     const getItemCount = () => 40
 
     navigation.setOptions({title: "Билеты для экзамена"})
 
-    const Item = (item) => (
-        <TouchableOpacity onPress={() => navigation.navigate("Экзамен", {key: item.title})}>
+    const Item = ({title, index}) => (
+        <TouchableOpacity onPress={() => navigation.navigate("Экзамен", {key: title})}>
             <View style={style.item}>
-                <View style={style.indexItem}>
-                    <Text style={style.title}>{item.title}</Text>
+                <View style={style.indexItem} key={index}>
+                    <Text style={style.title}>{title}</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -31,7 +28,7 @@ export default function Tickets() {
             <VirtualizedList
                 data={DATA}
                 initialNumToRender={25}
-                renderItem={({item}) => <Item title={item.title} id={item.key} />}
+                renderItem={({item, index}) => <Item key={item} title={item.title} index={index} />}
                 keyExtractor={item => item.key}
                 getItemCount={getItemCount}
                 getItem={getItem}

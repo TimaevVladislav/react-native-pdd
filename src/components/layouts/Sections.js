@@ -1,7 +1,7 @@
 import React, {useState} from "react"
-import {ScrollView, StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
+import {StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
 
-import {useNavigation, useRoute} from "@react-navigation/native"
+import {useNavigation} from "@react-navigation/native"
 import {ThemeContext} from "../../context/theme"
 import {SearchContext} from "../../context/search"
 
@@ -10,9 +10,7 @@ const List = props => (
            {(({}) => (
                <ThemeContext.Consumer>
                    {(({isDark}) => (
-                       <ScrollView>
                            <Sections data={props.data} />
-                       </ScrollView>
                    ))}
                </ThemeContext.Consumer>
            ))}

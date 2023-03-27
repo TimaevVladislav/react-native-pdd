@@ -17,7 +17,7 @@ export const ButtonsExam = ({item}) => {
     }
 
     const deleteTicketHandler = (ticket) => {
-        mistakes.pop(ticket)
+        mistakes.filter((mistake, id) => id !== ticket.id)
         correctHandler()
     }
 
@@ -102,8 +102,9 @@ export const ButtonsMistakes = ({item}) => {
         mistakeHandler()
     }
 
-    const deleteTicketHandler = (ticket) => {
-        mistakes.filter((mistake, id) => id !== ticket.id)
+    const deleteTicketHandler = (ticket, is_correct) => {
+        console.log(is_correct)
+        is_correct ? mistakes.filter((mistake, id) => id !== ticket.id) :
         mistakes.length === 0 ? navigation.navigate("Билеты") : null
         correctHandler()
     }
@@ -114,6 +115,10 @@ export const ButtonsMistakes = ({item}) => {
 
     const mistakeHandler = () => {
         mistakeCounter.current.push(false)
+    }
+
+    const questionScrollHandler = () => {
+        isScrollId === mistakes.slice(-1) ? setIsScrollId(mistakes.pop()) : setIsScrollId(isScrollId + 1)
     }
 
     return (
@@ -128,9 +133,8 @@ export const ButtonsMistakes = ({item}) => {
                                 onPress={() => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
-                                    isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
                                     setIsDisabled(true)
-                                    answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
+                                    deleteTicketHandler(item, answer.is_correct)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}
                             >

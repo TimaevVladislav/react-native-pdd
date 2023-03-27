@@ -75,7 +75,7 @@ export function ExamScreen({navigation}) {
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId}) => (
                     <View style={stylesVirtual.container}>
-                        <TouchableOpacity style={stylesVirtual.container}>
+                        <TouchableOpacity style={stylesVirtual.container} key={index}>
                             <View style={[{backgroundColor: isScrollId === index ? "#FAF7F0" : colorId.current[index] }]}>
                                 <Text style={stylesVirtual.title} onPress={() => {
                                     setIsScrollId(index)
