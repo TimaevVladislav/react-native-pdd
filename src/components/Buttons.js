@@ -1,17 +1,14 @@
-import React, {useContext, useRef, useState} from "react"
+import React, {useContext, useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {useNavigation} from "@react-navigation/native"
-import {useSwitcher} from "../store/questions"
 
 export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
-    const {uriTicket} = useSwitcher()
-    const renderTicket = useRef(uriTicket.ticket)
 
     const {handlerColorChange, colors} = useColor()
 
@@ -42,7 +39,6 @@ export const ButtonsExam = ({item}) => {
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
-
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -113,9 +109,8 @@ export const ButtonsMistakes = ({item}) => {
     }
 
     const deleteTicketHandler = (ticket, is_correct) => {
-        console.log(is_correct)
         is_correct ? mistakes.filter((mistake, id) => id !== ticket.id) :
-            mistakes.length === 0 ? navigation.navigate("Билеты") : null
+        mistakes.length === 0 ? navigation.navigate("Билеты") : null
         correctHandler()
     }
 
@@ -144,6 +139,7 @@ export const ButtonsMistakes = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     setIsDisabled(true)
+                                    isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
                                     deleteTicketHandler(item, answer.is_correct)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}

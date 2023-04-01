@@ -9,6 +9,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsMistakes} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
+import {useRoute} from "@react-navigation/native";
 
 
 const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
@@ -47,6 +48,7 @@ const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
 export default function MistakeScreen({navigation}) {
     const ref = useRef()
     const ticketNumber = useRef(null)
+    const route = useRoute()
     const ticketId = useRef(null)
     const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
@@ -56,7 +58,6 @@ export default function MistakeScreen({navigation}) {
         navigation.navigate("Билеты")
     }
 
-
     useEffect(() => {
         const clearNavigate = navigation.addListener("beforeRemove", () => {
             navigation.navigate("Главная")
@@ -64,6 +65,14 @@ export default function MistakeScreen({navigation}) {
 
         return clearNavigate
     }, [navigation])
+
+    useEffect(() => {
+        const clearColor = navigation.addListener("beforeRemove", () => {
+            colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
+        })
+
+        return clearColor
+    }, [navigation, route])
 
 
 

@@ -37,12 +37,12 @@ export function ExamScreen({navigation}) {
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
-    if (completedTickets.current === 5) {
+    if (completedTickets.current === 20) {
         navigation.navigate("Результат", {number: route.params.key})
     }
 
     useEffect(() => {
-        const clearColor = navigation.addListener('focus', () => {
+        const clearColor = navigation.addListener("beforeRemove", () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
         })
 
