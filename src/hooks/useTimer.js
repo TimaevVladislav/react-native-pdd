@@ -110,7 +110,7 @@ export const useTimer = () => {
                 {text: "Продолжить", onPress: () => "", style: "cancel"},
                 {text: `Выйти`, style: "cancel", onPress: () => {
                     setIsScrollId(0)
-                    navigation.goBack()
+                    navigation.navigate("Список билетов")
                 }}]}
 
         return AlertComponent(confirm)

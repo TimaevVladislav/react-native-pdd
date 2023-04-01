@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef} from 'react'
+import React, {useContext, useEffect, useRef, useState} from 'react'
 import {FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -39,16 +39,16 @@ export function ExamScreen({navigation}) {
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
     if (completedTickets.current === 5) {
-        navigation.navigate("Результат")
+        navigation.navigate("Результат", {number: route.params.key})
     }
 
     useEffect(() => {
-        const clearColor = navigation.addListener('beforeRemove', () => {
+        const clearColor = navigation.addListener('focus', () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
         })
-        return clearColor
-    }, [navigation])
 
+        return clearColor
+    }, [navigation, route])
 
     useEffect(() => {
         ref.current.scrollToOffset({
@@ -96,7 +96,7 @@ export function ExamScreen({navigation}) {
                         <FlatList
                             ref={ref}
                             horizontal
-                            initialNumToRender={20}
+                            initialNumToRender={40}
                             initialScrollIndex={isScrollId}
                             getItemLayout={getItemLayout}
                             data={renderTicket.current}
@@ -110,6 +110,7 @@ export function ExamScreen({navigation}) {
         )
     }
 
+
     return (
         <CountContext.Consumer>
             {(({isScrollId}) => (
@@ -119,7 +120,7 @@ export function ExamScreen({navigation}) {
                         ref={ref}
                         horizontal
                         getItemLayout={scrollItemLayout}
-                        initialNumToRender={20}
+                        initialNumToRender={40}
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}

@@ -14,9 +14,9 @@ export default function Tickets() {
     navigation.setOptions({title: "Билеты для экзамена"})
 
     const Item = ({title, index}) => (
-        <TouchableOpacity onPress={() => navigation.navigate("Экзамен", {key: title})}>
+        <TouchableOpacity key={index} onPress={() => navigation.navigate("Экзамен", {key: title})}>
             <View style={style.item}>
-                <View style={style.indexItem} key={index}>
+                <View style={style.indexItem}>
                     <Text style={style.title}>{title}</Text>
                 </View>
             </View>

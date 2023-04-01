@@ -1,14 +1,18 @@
-import React, {useContext, useState} from "react"
+import React, {useContext, useRef, useState, useCallback} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {useNavigation} from "@react-navigation/native"
+import {useSwitcher} from "../store/questions"
 
 export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
+    const {uriTicket} = useSwitcher()
+    const renderTicket = useRef(uriTicket.ticket)
+
     const {handlerColorChange, colors} = useColor()
 
     const addTicketHandler = (ticket) => {
@@ -33,6 +37,11 @@ export const ButtonsExam = ({item}) => {
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
+
+                    const questionScrollHandler = () => {
+                        isScrollId === renderTicket.current.slice(-10) ? setIsScrollId(renderTicket.current.pop()) : setIsScrollId(isScrollId + 1)
+                    }
+
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -42,6 +51,7 @@ export const ButtonsExam = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
+                                    questionScrollHandler()
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
@@ -134,6 +144,7 @@ export const ButtonsMistakes = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     setIsDisabled(true)
+
                                     deleteTicketHandler(item, answer.is_correct)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}

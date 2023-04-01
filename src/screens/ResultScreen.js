@@ -3,20 +3,21 @@ import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import {CountContext} from "../context/counter"
 import Ionicons from "@expo/vector-icons/Ionicons"
 
-import {useNavigation} from "@react-navigation/native"
+import {useNavigation, useRoute} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
 import {AlertComponent} from "../components/default/Alert"
 
-export default function ResultScreen () {
+export default function ResultScreen ({navigation}) {
     const {colorId} = useColor()
-    const navigation = useNavigation()
     const {mistakeCounter, correctCounter} = useContext(CountContext)
+    const route = useRoute()
+    const {number} = route.params
 
     navigation.setOptions({title: "Результаты", headerLeft: () => <CloseOutline /> })
 
     useEffect(() => {
-        const clearColor = navigation.addListener('beforeRemove', () => {
+        const clearColor = navigation.addListener('focus', () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
             mistakeCounter.current = []
             correctCounter.current = []
@@ -53,6 +54,7 @@ export default function ResultScreen () {
                 <Button
                     title="Пройти ещё раз"
                     onPress={() => {
+                        navigation.push("Экзамен", {key: number})
                         completedTickets.current = 0
                         setIsScrollId(0)
                     }}
