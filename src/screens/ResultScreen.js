@@ -35,34 +35,34 @@ export default function ResultScreen ({navigation}) {
     return (
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => (
-        <View style={style.container}>
-            <View>
-                <Text style={[style.heading]}>
-                    {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
-                </Text>
-            </View>
-            <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
-            <View style={style.btnContainer}>
-                <Button
-                    title="Мои ошибки"
-                    color="red"
-                    onPress={() => {
-                        mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(messageModal)
-                        setIsScrollId(0)
-                    }}
-                />
-                <Button
-                    title="Пройти ещё раз"
-                    onPress={() => {
-                        navigation.push("Экзамен", {key: number})
-                        completedTickets.current = 0
-                        setIsScrollId(0)
-                    }}
-                />
-            </View>
-         </View>
+                <View style={style.container}>
+                    <View>
+                        <Text style={[style.heading]}>
+                            {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
+                        </Text>
+                    </View>
+                    <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
+                    <View style={style.btnContainer}>
+                        <Button
+                            title="Мои ошибки"
+                            color="red"
+                            onPress={() => {
+                                mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(messageModal)
+                                setIsScrollId(0)
+                            }}
+                        />
+                        <Button
+                            title="Пройти ещё раз"
+                            onPress={() => {
+                                navigation.push("Экзамен", {key: number})
+                                completedTickets.current = 0
+                                setIsScrollId(0)
+                            }}
+                        />
+                    </View>
+                </View>
             ))}
-      </CountContext.Consumer>
+        </CountContext.Consumer>
     )
 }
 
@@ -73,15 +73,15 @@ export const CloseOutline = () => {
     return (
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => (
-            <View style={{marginRight: 20}}>
-                <TouchableOpacity onPress={() => {
-                    navigation.popToTop()
-                    completedTickets.current = 0
-                    setIsScrollId(0)
-                }}>
-                    <Ionicons name="close-outline" size={35} color="white" />
-                </TouchableOpacity>
-            </View>
+                <View style={{marginRight: 20}}>
+                    <TouchableOpacity onPress={() => {
+                        navigation.popToTop()
+                        completedTickets.current = 0
+                        setIsScrollId(0)
+                    }}>
+                        <Ionicons name="close-outline" size={35} color="white" />
+                    </TouchableOpacity>
+                </View>
             ))}
         </CountContext.Consumer>
     )

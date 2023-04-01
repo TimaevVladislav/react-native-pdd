@@ -56,6 +56,17 @@ export default function MistakeScreen({navigation}) {
         navigation.navigate("Билеты")
     }
 
+
+    useEffect(() => {
+        const clearNavigate = navigation.addListener("beforeRemove", () => {
+            navigation.navigate("Главная")
+        })
+
+        return clearNavigate
+    }, [navigation])
+
+
+
     useEffect(() => {
         ref.current.scrollToOffset({
             offset: 390 * isScrollId,

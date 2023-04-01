@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef, useState} from 'react'
+import React, {useContext, useEffect, useRef} from 'react'
 import {FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -34,7 +34,6 @@ export function ExamScreen({navigation}) {
     const {scrollItemLayout} = useLayout()
     const {isScrollId, completedTickets} = useContext(CountContext)
     const {uriTicket} = useSwitcher()
-    const renderTicket = useRef(uriTicket.ticket)
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
@@ -99,7 +98,7 @@ export function ExamScreen({navigation}) {
                             initialNumToRender={40}
                             initialScrollIndex={isScrollId}
                             getItemLayout={getItemLayout}
-                            data={renderTicket.current}
+                            data={uriTicket.ticket}
                             renderItem={({item, index}) => <QuestionScroll item={item} index={index} /> }
                             showsHorizontalScrollIndicator={false}
                             keyExtractor={item => item.id}
@@ -124,7 +123,7 @@ export function ExamScreen({navigation}) {
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
-                        data={renderTicket.current}
+                        data={uriTicket.ticket}
                         renderItem={({item}) => <Tickets item={item} /> }
                         keyExtractor={item => item.id}
                     />

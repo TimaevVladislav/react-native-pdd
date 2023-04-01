@@ -1,4 +1,4 @@
-import React, {useContext, useRef, useState, useCallback} from "react"
+import React, {useContext, useRef, useState} from "react"
 import {Text, TouchableOpacity, View} from "react-native"
 import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
@@ -30,17 +30,18 @@ export const ButtonsExam = ({item}) => {
     }
 
     const mistakeHandler = () => {
-       mistakeCounter.current.push(false)
+        mistakeCounter.current.push(false)
+    }
+
+
+    const questionScrollHandler = () => {
+        isScrollId === renderTicket.current.slice(-10) ? setIsScrollId(renderTicket.current.pop()) : setIsScrollId(isScrollId + 1)
     }
 
     return (
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
-
-                    const questionScrollHandler = () => {
-                        isScrollId === renderTicket.current.slice(-10) ? setIsScrollId(renderTicket.current.pop()) : setIsScrollId(isScrollId + 1)
-                    }
 
                     return (
                         <View style={styleTicket.container}>
@@ -51,7 +52,6 @@ export const ButtonsExam = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
-                                    questionScrollHandler()
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
@@ -115,7 +115,7 @@ export const ButtonsMistakes = ({item}) => {
     const deleteTicketHandler = (ticket, is_correct) => {
         console.log(is_correct)
         is_correct ? mistakes.filter((mistake, id) => id !== ticket.id) :
-        mistakes.length === 0 ? navigation.navigate("Билеты") : null
+            mistakes.length === 0 ? navigation.navigate("Билеты") : null
         correctHandler()
     }
 
@@ -144,7 +144,6 @@ export const ButtonsMistakes = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     setIsDisabled(true)
-
                                     deleteTicketHandler(item, answer.is_correct)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}
@@ -160,6 +159,4 @@ export const ButtonsMistakes = ({item}) => {
         ))
     )
 }
-
-
 

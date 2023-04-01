@@ -1,8 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 
 export const useLayout = () => {
 
-    const [isScrollId, setIsScrollId] = useState(0)
     const getItemLayout = (data, index) => {
         const FIXED_ITEM_HEIGHT = 100
         const NUM_COLUMNS = 3
@@ -25,5 +24,5 @@ export const useLayout = () => {
         }
     }
 
-    return {isScrollId, setIsScrollId, getItemLayout, scrollItemLayout}
+    return {getItemLayout, scrollItemLayout}
 }
