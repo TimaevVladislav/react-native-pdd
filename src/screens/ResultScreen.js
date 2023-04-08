@@ -5,8 +5,6 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 
 import {useNavigation, useRoute} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
-import {mistakes} from "../store/questions/A_B/tickets/mistakes"
-import {AlertComponent} from "../components/default/Alert"
 
 export default function ResultScreen ({navigation}) {
     const {colorId} = useColor()
@@ -47,7 +45,7 @@ export default function ResultScreen ({navigation}) {
                             title="Мои ошибки"
                             color="red"
                             onPress={() => {
-                                mistakes.length > 0 ? navigation.navigate("Ошибки") : AlertComponent(messageModal)
+                                navigation.navigate("Ошибки")
                                 setIsScrollId(0)
                             }}
                         />
@@ -79,7 +77,7 @@ export const CloseOutline = () => {
                         completedTickets.current = 0
                         setIsScrollId(0)
                     }}>
-                        <Ionicons name="close-outline" size={35} color="white" />
+                        <Ionicons name="close-outline" size={34} color="white" />
                     </TouchableOpacity>
                 </View>
             ))}

@@ -30,16 +30,11 @@ export function ExamScreen({navigation}) {
     const ref = useRef()
     const {colorId} = useColor()
     const route = useRoute()
-
     const {scrollItemLayout} = useLayout()
     const {isScrollId, completedTickets} = useContext(CountContext)
     const {uriTicket} = useSwitcher()
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
-
-    if (completedTickets.current === 20) {
-        navigation.navigate("Результат", {number: route.params.key})
-    }
 
     useEffect(() => {
         const clearColor = navigation.addListener("beforeRemove", () => {
@@ -68,7 +63,6 @@ export function ExamScreen({navigation}) {
                 index: isScrollId
             })
         }, [isScrollId])
-
 
         const QuestionScroll = ({index}) => (
             <CountContext.Consumer>
