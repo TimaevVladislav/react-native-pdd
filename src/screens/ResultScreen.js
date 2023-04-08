@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from "react"
+import React, {useEffect, useContext, useState} from "react"
 import {View, Text, StyleSheet, Button, TouchableOpacity} from "react-native"
 import {CountContext} from "../context/counter"
 import Ionicons from "@expo/vector-icons/Ionicons"
@@ -8,6 +8,7 @@ import {useColor} from "../hooks/useColor"
 
 export default function ResultScreen ({navigation}) {
     const {colorId} = useColor()
+    const [passed, setPassed] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
     const route = useRoute()
     const {number} = route.params
@@ -24,42 +25,56 @@ export default function ResultScreen ({navigation}) {
         return clearColor
     }, [navigation])
 
-    const messageModal = {
-        title: "Ошибки",
-        message: "Здесь появятся вопросы, которые нужно будет повторить :(",
-        buttons: [{text: "Ок", style: "cancel"}]
-    }
-
     return (
         <CountContext.Consumer>
-            {(({setIsScrollId, completedTickets}) => (
-                <View style={style.container}>
-                    <View>
-                        <Text style={[style.heading]}>
-                            {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
-                        </Text>
+            {(({setIsScrollId, completedTickets}) => {
+
+                if (correctCounter.current.length > 18) {
+                    setPassed(true)
+                }
+
+                return(
+                    <View style={style.container}>
+                        <View>
+                            <Text style={[style.heading]}>
+                                {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
+                            </Text>
+                        </View>
+                        <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
+                        <View style={style.btnContainer}>
+                            { passed ?
+                                <Button
+                                    title="Пройти ещё раз"
+                                    onPress={() => {
+                                        navigation.push("Экзамен", {key: number})
+                                        completedTickets.current = 0
+                                        setIsScrollId(0)
+                                    }}
+                                />
+                                :
+                                <>
+                                    <Button
+                                        title="Мои ошибки"
+                                        color="red"
+                                        onPress={() => {
+                                            navigation.navigate("Ошибки")
+                                            setIsScrollId(0)
+                                        }}
+                                    />
+                                    <Button
+                                        title="Пройти ещё раз"
+                                        onPress={() => {
+                                            navigation.push("Экзамен", {key: number})
+                                            completedTickets.current = 0
+                                            setIsScrollId(0)
+                                        }}
+                                    />
+                                </>
+                            }
+                        </View>
                     </View>
-                    <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
-                    <View style={style.btnContainer}>
-                        <Button
-                            title="Мои ошибки"
-                            color="red"
-                            onPress={() => {
-                                navigation.navigate("Ошибки")
-                                setIsScrollId(0)
-                            }}
-                        />
-                        <Button
-                            title="Пройти ещё раз"
-                            onPress={() => {
-                                navigation.push("Экзамен", {key: number})
-                                completedTickets.current = 0
-                                setIsScrollId(0)
-                            }}
-                        />
-                    </View>
-                </View>
-            ))}
+                )
+            })}
         </CountContext.Consumer>
     )
 }
