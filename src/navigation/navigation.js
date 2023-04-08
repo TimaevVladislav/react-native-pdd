@@ -6,10 +6,8 @@ import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
 import {ExamScreen} from "../screens/ExamScreen"
-import ResultScreen, {CloseOutline} from "../screens/ResultScreen"
-import {Policies} from "../screens/SettingScreen"
+import ResultScreen from "../screens/ResultScreen"
 import {FeedBack} from "../components/default/Feedback"
-
 import Tickets from "../components/layouts/Tickets"
 import Card from "../components/default/Card"
 import SignsList from "../components/SignsList"
@@ -35,7 +33,6 @@ export default function Navigation () {
             <Stack.Screen name="Коды регионов" component={Region} />
             <Stack.Screen name="Карточка" component={Card} />
             <Stack.Screen name="Обратная связь" component={FeedBack} />
-            <Stack.Screen name="Пользовательское соглашение" component={Policies} />
             <Stack.Screen name="Список билетов" component={Tickets} />
             <Stack.Screen name="Экзамен" component={ExamScreen}
                 options={() => {
