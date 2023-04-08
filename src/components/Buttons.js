@@ -4,12 +4,13 @@ import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
-import {useNavigation} from "@react-navigation/native"
+import {useNavigation, useRoute} from "@react-navigation/native"
 
 export const ButtonsExam = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
-
+    const navigation = useNavigation()
+    const route = useRoute()
     const {handlerColorChange, colors} = useColor()
 
     const addTicketHandler = (ticket) => {
@@ -39,6 +40,11 @@ export const ButtonsExam = ({item}) => {
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
+
+                    if (completedTickets.current === 20) {
+                        navigation.navigate("Результат", {number: route.params.key})
+                        completedTickets.current = 0
+                    }
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -51,8 +57,7 @@ export const ButtonsExam = ({item}) => {
                                     setIsDisabled(true)
                                     answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
                                 }}
-                                style={[{backgroundColor: colors[i]}, styleTicket.item]}
-                            >
+                                style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
                                     {`${i + 1}.  ${answer.answer_text}`}
                                 </Text>
@@ -142,8 +147,7 @@ export const ButtonsMistakes = ({item}) => {
                                     isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
                                     deleteTicketHandler(item, answer.is_correct)
                                 }}
-                                style={[{backgroundColor: colors[i]}, styleTicket.item]}
-                            >
+                                style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
                                     {`${i + 1}.  ${answer.answer_text}`}
                                 </Text>
