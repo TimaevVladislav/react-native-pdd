@@ -9,8 +9,8 @@ import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsMistakes} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
-import {useRoute} from "@react-navigation/native";
-
+import {useRoute} from "@react-navigation/native"
+import {ArrowClose} from "../components/ArrowClose"
 
 const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
     const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
@@ -58,13 +58,7 @@ export default function MistakeScreen({navigation}) {
         navigation.navigate("Билеты")
     }
 
-    useEffect(() => {
-        const clearNavigate = navigation.addListener("beforeRemove", () => {
-            navigation.navigate("Главная")
-        })
-
-        return clearNavigate
-    }, [navigation])
+    navigation.setOptions({headerLeft: () => <ArrowClose /> })
 
     useEffect(() => {
         const clearColor = navigation.addListener("beforeRemove", () => {
