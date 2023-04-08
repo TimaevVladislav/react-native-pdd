@@ -29,7 +29,7 @@ export default function ResultScreen ({navigation}) {
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => {
 
-                if (correctCounter.current.length > 18) {
+                if (correctCounter.current.length >= 18) {
                     setPassed(true)
                 }
 
