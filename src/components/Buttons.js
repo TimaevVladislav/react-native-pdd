@@ -4,6 +4,7 @@ import {styleTicket} from "../screens/ExamScreen"
 import {useColor} from "../hooks/useColor"
 import {CountContext} from "../context/counter"
 import {mistakes} from "../store/questions/A_B/tickets/mistakes"
+import {favorites} from "../store/questions/A_B/tickets/favorites"
 import {useNavigation, useRoute} from "@react-navigation/native"
 
 export const ButtonsExam = ({item}) => {
@@ -29,11 +30,6 @@ export const ButtonsExam = ({item}) => {
 
     const mistakeHandler = () => {
         mistakeCounter.current.push(false)
-    }
-
-
-    const questionScrollHandler = () => {
-        isScrollId === renderTicket.current.slice(-10) ? setIsScrollId(renderTicket.current.pop()) : setIsScrollId(isScrollId + 1)
     }
 
     return (
@@ -77,25 +73,32 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
     return (
         item.answers.map((answer, i) =>  (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId}) => (
-                    <View style={styleTicket.container} >
-                        <TouchableOpacity
-                            key={i}
-                            disabled={isDisabled}
-                            onPress={() => {
-                                setIsDisabled(true)
-                                handlerColorChange(answer, i, isScrollId)
-                                setIsScrollId(isScrollId + 1)
-                                ticketNumber.current = item.ticket_number
-                                ticketId.current = item.ticket_question
-                            }}
-                            style={[{backgroundColor: colors[i] }, styleTicket.item]}>
-                            <Text style={styleTicket.itemText}>
-                                {`${i + 1}.  ${answer.answer_text}`}
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                ))}
+                {(({isScrollId, setIsScrollId}) => {
+
+                    const questionScrollHandler = () => {
+                        isScrollId === favorites.length - 1 ? setIsScrollId(favorites.length - 1) : setIsScrollId(isScrollId + 1)
+                    }
+
+                    return(
+                        <View style={styleTicket.container} >
+                            <TouchableOpacity
+                                key={i}
+                                disabled={isDisabled}
+                                onPress={() => {
+                                    setIsDisabled(true)
+                                    handlerColorChange(answer, i, isScrollId)
+                                    questionScrollHandler()
+                                    ticketNumber.current = item.ticket_number
+                                    ticketId.current = item.ticket_question
+                                }}
+                                style={[{backgroundColor: colors[i] }, styleTicket.item]}>
+                                <Text style={styleTicket.itemText}>
+                                    {`${i + 1}.  ${answer.answer_text}`}
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                })}
             </CountContext.Consumer>
         ))
     )
@@ -127,14 +130,15 @@ export const ButtonsMistakes = ({item}) => {
         mistakeCounter.current.push(false)
     }
 
-    const questionScrollHandler = () => {
-        isScrollId === mistakes.slice(-1) ? setIsScrollId(mistakes.pop()) : setIsScrollId(isScrollId + 1)
-    }
-
     return (
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
+
+                    const questionScrollHandler = () => {
+                        isScrollId === mistakes.length - 1 ? setIsScrollId(mistakes.length - 1) : setIsScrollId(isScrollId + 1)
+                    }
+
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -144,7 +148,7 @@ export const ButtonsMistakes = ({item}) => {
                                     handlerColorChange(answer, i, isScrollId)
                                     completedTickets.current++
                                     setIsDisabled(true)
-                                    isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
+                                    questionScrollHandler()
                                     deleteTicketHandler(item, answer.is_correct)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>
