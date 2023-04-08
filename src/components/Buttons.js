@@ -14,24 +14,6 @@ export const ButtonsExam = ({item}) => {
     const route = useRoute()
     const {handlerColorChange, colors} = useColor()
 
-    const addTicketHandler = (ticket) => {
-        !mistakes.includes(ticket) && mistakes.push(ticket)
-        mistakeHandler()
-    }
-
-    const deleteTicketHandler = (ticket) => {
-        mistakes.filter((mistake, id) => id !== ticket.id)
-        correctHandler()
-    }
-
-    const correctHandler = () => {
-        correctCounter.current.push(true)
-    }
-
-    const mistakeHandler = () => {
-        mistakeCounter.current.push(false)
-    }
-
     return (
         item.answers.map((answer, i) => (
             <CountContext.Consumer>
@@ -41,6 +23,12 @@ export const ButtonsExam = ({item}) => {
                         navigation.navigate("Результат", {number: route.params.key})
                         completedTickets.current = 0
                     }
+
+                    const addTicketHandler = (ticket) => {
+                        !mistakes.includes(ticket) && mistakes.push(ticket)
+                        mistakeCounter.current.push(false)
+                    }
+
                     return (
                         <View style={styleTicket.container}>
                             <TouchableOpacity
@@ -51,7 +39,7 @@ export const ButtonsExam = ({item}) => {
                                     completedTickets.current++
                                     isScrollId === 19 ? setIsScrollId(19) : setIsScrollId(isScrollId + 1)
                                     setIsDisabled(true)
-                                    answer.is_correct === true ? deleteTicketHandler(item) : addTicketHandler(item)
+                                    answer.is_correct === true ? correctCounter.current.push(true) : addTicketHandler(item)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
@@ -106,29 +94,10 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
 
 export const ButtonsMistakes = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
-    const {mistakeCounter, correctCounter} = useContext(CountContext)
+    const colorId = useColor()
+    const {correctCounter} = useContext(CountContext)
     const navigation = useNavigation()
     const {handlerColorChange, colors} = useColor()
-
-
-    const addTicketHandler = (ticket) => {
-        !mistakes.includes(ticket) && mistakes.push(ticket)
-        mistakeHandler()
-    }
-
-    const deleteTicketHandler = (ticket, is_correct) => {
-        is_correct ? mistakes.filter((mistake, id) => id !== ticket.id) :
-        mistakes.length === 0 ? navigation.navigate("Билеты") : null
-        correctHandler()
-    }
-
-    const correctHandler = () => {
-        correctCounter.current.push(true)
-    }
-
-    const mistakeHandler = () => {
-        mistakeCounter.current.push(false)
-    }
 
     return (
         item.answers.map((answer, i) => (
@@ -137,6 +106,10 @@ export const ButtonsMistakes = ({item}) => {
 
                     const questionScrollHandler = () => {
                         isScrollId === mistakes.length - 1 ? setIsScrollId(mistakes.length - 1) : setIsScrollId(isScrollId + 1)
+                    }
+
+                    const deleteTicketHandler = () => {
+                          mistakes.splice(isScrollId, 1)
                     }
 
                     return (
@@ -149,7 +122,7 @@ export const ButtonsMistakes = ({item}) => {
                                     completedTickets.current++
                                     setIsDisabled(true)
                                     questionScrollHandler()
-                                    deleteTicketHandler(item, answer.is_correct)
+                                    answer.is_correct === true ? deleteTicketHandler(item) : null
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
