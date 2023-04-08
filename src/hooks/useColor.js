@@ -2,7 +2,7 @@ import {useRef, useState} from 'react'
 import {colors as colorIndex} from "../store/data/colors"
 
 export const useColor = () => {
-    const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
+    const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])
     const colorId = useRef(colorIndex)
 
     const handlerColorChange = (answer, buttonId, id) => {
