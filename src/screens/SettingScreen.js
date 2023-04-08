@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import {Text, View, ScrollView, StyleSheet, TouchableOpacity} from "react-native"
-
 import CheckBox from 'expo-checkbox'
 import {ThemeContext} from "../context/theme"
 import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
@@ -52,6 +51,7 @@ export default function SettingScreen({navigation}) {
                             <View style={style.checkboxContainer}>
                                 <Text style={[style.title, {color: colors.textColor}]}>Русский</Text>
                                 <CheckBox
+                                    disabled={true}
                                     value={isLanguage}
                                     onValueChange={setLanguage}
                                     style={style.checkbox}
@@ -69,9 +69,6 @@ export default function SettingScreen({navigation}) {
                             <Text style={style.heading}>Прочее</Text>
                             <TouchableOpacity style={style.checkboxContainer}>
                                 <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Обратная связь")}>Обратная связь</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Пользовательское соглашение")}>Пользовательское соглашение</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={style.version}>
@@ -91,13 +88,6 @@ export default function SettingScreen({navigation}) {
             </ThemeContext.Consumer>
     )
 }
-
-export const Policies = () => (
-    <View>
-        <Text>hello</Text>
-    </View>
-)
-
 
 const style = StyleSheet.create({
     container: {
