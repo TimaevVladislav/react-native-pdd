@@ -20,7 +20,7 @@ export const ButtonsExam = ({item}) => {
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
 
                     if (completedTickets.current === 20) {
-                        navigation.navigate("Результат", {number: route.params.key})
+                        navigation.navigate("Результаты", {number: route.params.key})
                         completedTickets.current = 0
                     }
 
@@ -62,16 +62,17 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
     return (
         item.answers.map((answer, i) =>  (
             <CountContext.Consumer>
-                {(({isScrollId, setIsScrollId}) => {
+                {(({isScrollId, setIsScrollId, completedTickets}) => {
+
+                    if (completedTickets.current === favorites.length - 1 + 1) {
+                        navigation.navigate("Результат избранное")
+                        completedTickets.current = 0
+                    }
 
                     const questionScrollHandler = () => {
                         isScrollId === favorites.length - 1 ? setIsScrollId(favorites.length - 1) : setIsScrollId(isScrollId + 1)
                     }
 
-                    if (favorites.length - 1) {
-                        navigation.navigate("Результат избранное", {number: route.params.key})
-                        completedTickets.current = 0
-                    }
 
                     return(
                         <View style={styleTicket.container} >
@@ -79,6 +80,7 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
                                 key={i}
                                 disabled={isDisabled}
                                 onPress={() => {
+                                    completedTickets.current++
                                     setIsDisabled(true)
                                     handlerColorChange(answer, i, isScrollId)
                                     questionScrollHandler()
@@ -101,7 +103,6 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
 export const ButtonsMistakes = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
     const colorId = useColor()
-    const {correctCounter} = useContext(CountContext)
     const navigation = useNavigation()
     const {handlerColorChange, colors} = useColor()
 
@@ -110,17 +111,17 @@ export const ButtonsMistakes = ({item}) => {
             <CountContext.Consumer>
                 {(({isScrollId, setIsScrollId, completedTickets}) => {
 
+                    if (completedTickets.current === mistakes.length - 1 + 1) {
+                        navigation.navigate("Результат ошибки")
+                        completedTickets.current = 0
+                    }
+
                     const questionScrollHandler = () => {
                         isScrollId === mistakes.length - 1 ? setIsScrollId(mistakes.length - 1) : setIsScrollId(isScrollId + 1)
                     }
 
                     const deleteTicketHandler = () => {
                           mistakes.splice(isScrollId, 1)
-                    }
-
-                    if (mistakes.length - 1) {
-                        navigation.navigate("Результат ошибки", {number: route.params.key})
-                        completedTickets.current = 0
                     }
 
                     return (
