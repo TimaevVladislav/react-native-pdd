@@ -57,6 +57,7 @@ export const ButtonsExam = ({item}) => {
 export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
     const {handlerColorChange, colors} = useColor()
     const [isDisabled, setIsDisabled] = useState(false)
+    const navigation = useNavigation()
 
     return (
         item.answers.map((answer, i) =>  (
@@ -65,6 +66,11 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
 
                     const questionScrollHandler = () => {
                         isScrollId === favorites.length - 1 ? setIsScrollId(favorites.length - 1) : setIsScrollId(isScrollId + 1)
+                    }
+
+                    if (favorites.length - 1) {
+                        navigation.navigate("Результат избранное", {number: route.params.key})
+                        completedTickets.current = 0
                     }
 
                     return(
@@ -110,6 +116,11 @@ export const ButtonsMistakes = ({item}) => {
 
                     const deleteTicketHandler = () => {
                           mistakes.splice(isScrollId, 1)
+                    }
+
+                    if (mistakes.length - 1) {
+                        navigation.navigate("Результат ошибки", {number: route.params.key})
+                        completedTickets.current = 0
                     }
 
                     return (
