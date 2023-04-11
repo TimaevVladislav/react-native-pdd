@@ -6,14 +6,13 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 import {useNavigation, useRoute} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
 
-export default function ResultScreen ({navigation}) {
+export default function ResultExamScreen ({navigation}) {
     const {colorId} = useColor()
     const [passed, setPassed] = useState(false)
     const {mistakeCounter, correctCounter} = useContext(CountContext)
     const route = useRoute()
-    const {number} = route.params
 
-    navigation.setOptions({title: "Результаты", headerLeft: () => <CloseOutline /> })
+    navigation.setOptions({headerLeft: () => <CloseOutline /> })
 
     useEffect(() => {
         const clearColor = navigation.addListener('focus', () => {
@@ -46,7 +45,7 @@ export default function ResultScreen ({navigation}) {
                                 <Button
                                     title="Пройти ещё раз"
                                     onPress={() => {
-                                        navigation.push("Экзамен", {key: number})
+                                        navigation.push("Экзамен", {key: route.params.key})
                                         completedTickets.current = 0
                                         setIsScrollId(0)
                                     }}
@@ -64,7 +63,7 @@ export default function ResultScreen ({navigation}) {
                                     <Button
                                         title="Пройти ещё раз"
                                         onPress={() => {
-                                            navigation.push("Экзамен", {key: number})
+                                            navigation.push("Экзамен", {key: route.params.key})
                                             completedTickets.current = 0
                                             setIsScrollId(0)
                                         }}
