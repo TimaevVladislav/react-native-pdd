@@ -9,13 +9,13 @@ import {LocalSvg} from "./LocalSvg"
 
 export default function Card({route, navigation}) {
 
-    const { setDropdown, setSearch, setClicked } = useContext(SearchContext)
+    const {setDropdown, setSearch, setClicked} = useContext(SearchContext)
 
     navigation.setOptions({title: route.params.heading})
 
     const closeDropdownHandler = () => {
-        setSearch(""),
-        setDropdown(true),
+        setSearch("")
+        setDropdown(true)
         setClicked(true)
     }
 
@@ -34,7 +34,7 @@ export default function Card({route, navigation}) {
         <ThemeContext.Consumer>
             {(({isDark, colors}) => (
                 <ScrollView style={{backgroundColor: isDark ? DARK_COLORS.layout : LIGHT_COLORS.layout}}>
-                    <Text style={[styleSigns.heading]}>
+                    <Text style={[styleSigns.heading, {color: colors.textColor}]}>
                         {route.params.item.heading}
                     </Text>
                     <View style={styleSigns.p}>
