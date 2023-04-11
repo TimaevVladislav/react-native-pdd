@@ -6,7 +6,7 @@ import Profile from "../screens/Profile"
 import Signs from "../screens/Signs"
 import Markup from "../screens/Markup"
 import {ExamScreen} from "../screens/ExamScreen"
-import ResultScreen from "../screens/ResultScreen"
+import ResultExamScreen from "../screens/ResultExamScreen"
 import {FeedBack} from "../components/default/Feedback"
 import Tickets from "../components/layouts/Tickets"
 import Card from "../components/default/Card"
@@ -43,7 +43,9 @@ export default function Navigation () {
             />
             <Stack.Screen name="Избранное" component={FavouriteScreen} />
             <Stack.Screen name="Ошибки" component={MistakeScreen} />
-            <Stack.Screen name="Результат" component={ResultScreen} />
+            <Stack.Screen name="Результаты" component={ResultExamScreen} />
+            <Stack.Screen name="Результат избранное" component={ResultExamScreen} />
+            <Stack.Screen name="Результат ошибки" component={ResultExamScreen} />
             <Stack.Screen
                 name="Signs"
                 options={() => ({
