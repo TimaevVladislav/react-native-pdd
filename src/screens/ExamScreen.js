@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef} from 'react'
+import React, {useContext, useEffect, useMemo, useRef} from 'react'
 import {FlatList, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 import {ButtonsExam} from "../components/Buttons"
@@ -33,12 +33,14 @@ export function ExamScreen({navigation}) {
     const {scrollItemLayout} = useLayout()
     const {isScrollId, completedTickets} = useContext(CountContext)
     const {uriTicket} = useSwitcher()
+    const ticket = useMemo(() => uriTicket.ticket, [uriTicket.ticket])
 
     navigation.setOptions({title: `Билет ${route.params.key} вопрос ${isScrollId + 1}`})
 
     useEffect(() => {
         const clearColor = navigation.addListener("beforeRemove", () => {
             colorId.current.map((color, id) => colorId.current[id] = "#DDDDDD")
+            completedTickets.current = 0
         })
 
         return clearColor
@@ -89,10 +91,10 @@ export function ExamScreen({navigation}) {
                         <FlatList
                             ref={ref}
                             horizontal
-                            initialNumToRender={40}
+                            initialNumToRender={20}
                             initialScrollIndex={isScrollId}
                             getItemLayout={getItemLayout}
-                            data={uriTicket.ticket}
+                            data={ticket}
                             renderItem={({item, index}) => <QuestionScroll item={item} index={index} /> }
                             showsHorizontalScrollIndicator={false}
                             keyExtractor={item => item.id}
@@ -113,11 +115,11 @@ export function ExamScreen({navigation}) {
                         ref={ref}
                         horizontal
                         getItemLayout={scrollItemLayout}
-                        initialNumToRender={40}
+                        initialNumToRender={20}
                         initialScrollIndex={isScrollId}
                         scrollEnabled={false}
                         showsHorizontalScrollIndicator={false}
-                        data={uriTicket.ticket}
+                        data={ticket}
                         renderItem={({item}) => <Tickets item={item} /> }
                         keyExtractor={item => item.id}
                     />
