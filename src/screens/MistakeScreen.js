@@ -8,9 +8,9 @@ import {CountContext} from "../context/counter"
 import {Favorites} from "../components/layouts/Favorites"
 import {ButtonsMistakes} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
-import {useScroll} from "../hooks/useScroll"
 import {useRoute} from "@react-navigation/native"
 import {ArrowClose} from "../components/ArrowClose"
+import {useLayout} from "../hooks/useLayout"
 
 const Tickets = ({item, navigation, ticketId, ticketNumber}) => {
     const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
@@ -52,7 +52,7 @@ export default function MistakeScreen({navigation}) {
     const ticketId = useRef(null)
     const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
-    const {scrollItemLayout} = useScroll()
+    const {scrollItemLayout} = useLayout()
 
     if (mistakes.length < 0) {
         navigation.navigate("Билеты")
@@ -68,25 +68,23 @@ export default function MistakeScreen({navigation}) {
         return clearColor
     }, [navigation, route])
 
-
-
     useEffect(() => {
         ref.current.scrollToOffset({
+            index: isScrollId,
             offset: 390 * isScrollId,
-            animated: true,
-            index: isScrollId
+            animated: true
         })
     }, [isScrollId])
 
     const TicketScrollFavorites = () => {
-        const {getItemLayout} = useScroll()
+        const {getItemLayout} = useLayout()
         const ref = useRef()
 
         useEffect(() => {
-            ref.current.scrollToOffset({
+            ref.current.scrollToIndex({
                 index: isScrollId,
                 offset: 390 * isScrollId,
-                animated: true,
+                animated: true
             })
         }, [isScrollId])
 

@@ -7,9 +7,9 @@ import {favorites} from "../store/questions/A_B/tickets/favorites.js"
 import {Favorites} from "../components/layouts/Favorites"
 import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
-import {useScroll} from "../hooks/useScroll"
 import {CountContext} from "../context/counter"
 import {ArrowClose} from "../components/ArrowClose"
+import {useLayout} from "../hooks/useLayout"
 
 const Tickets = ({item, navigation, ticketNumber, ticketId}) => {
     const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
@@ -53,26 +53,25 @@ export default function FavoriteScreen({navigation}) {
     const ticketId = useRef(null)
     const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
-    const {scrollItemLayout} = useScroll()
-
+    const {scrollItemLayout} = useLayout()
 
     useEffect(() => {
         ref.current.scrollToOffset({
+            index: isScrollId,
             offset: 390 * isScrollId,
-            animated: true,
-            index: isScrollId
+            animated: true
         })
     }, [isScrollId])
 
     const TicketScrollFavorites = () => {
-        const {getItemLayout} = useScroll()
+        const {getItemLayout} = useLayout()
         const ref = useRef()
 
         useEffect(() => {
-            ref.current.scrollToOffset({
+            ref.current.scrollToIndex({
                 index: isScrollId,
                 offset: 390 * isScrollId,
-                animated: true,
+                animated: true
             })
         }, [isScrollId])
 
