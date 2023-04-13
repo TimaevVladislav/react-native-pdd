@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useContext, useState} from "react"
+import React, {useRef, useEffect, useContext, useState, useMemo} from "react"
 import {SafeAreaView, View, FlatList, Text, Image, TouchableOpacity} from "react-native"
 
 import {stylesVirtual, styleTicket} from "./ExamScreen"
@@ -9,6 +9,7 @@ import {ButtonFavorites} from "../components/Buttons"
 import {useColor} from "../hooks/useColor"
 import {useScroll} from "../hooks/useScroll"
 import {CountContext} from "../context/counter"
+import {ArrowClose} from "../components/ArrowClose"
 
 const Tickets = ({item, navigation, ticketNumber, ticketId}) => {
     const [ticketNumberLocal, setTicketNumberLocal] = useState(null)
@@ -25,7 +26,10 @@ const Tickets = ({item, navigation, ticketNumber, ticketId}) => {
         ticketId.current = item.ticket_question
     },[item.ticket_number, item.ticket_question])
 
-    navigation.setOptions({title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`})
+    navigation.setOptions({
+        title: `Билет ${ticketNumber.current === null ? ticketNumberLocal : ticketNumber.current} вопрос ${ticketId.current === null ? ticketIdLocal : ticketId.current + 1}`,
+        headerLeft: () => <ArrowClose />
+    })
 
     return (
         <View>
@@ -50,6 +54,7 @@ export default function FavoriteScreen({navigation}) {
     const {isScrollId} = useContext(CountContext)
     const {colorId} = useColor()
     const {scrollItemLayout} = useScroll()
+
 
     useEffect(() => {
         ref.current.scrollToOffset({
