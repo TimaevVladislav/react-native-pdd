@@ -56,6 +56,7 @@ export const ButtonsExam = ({item}) => {
 
 export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
     const {handlerColorChange, colors} = useColor()
+    const {mistakeCounter, correctCounter} = useContext(CountContext)
     const [isDisabled, setIsDisabled] = useState(false)
     const navigation = useNavigation()
 
@@ -86,6 +87,7 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
                                     questionScrollHandler()
                                     ticketNumber.current = item.ticket_number
                                     ticketId.current = item.ticket_question
+                                    answer.is_correct === true ? correctCounter.current.push(true) : mistakeCounter.current.push(false)
                                 }}
                                 style={[{backgroundColor: colors[i] }, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
@@ -102,7 +104,7 @@ export const ButtonFavorites = ({item, ticketNumber, ticketId}) => {
 
 export const ButtonsMistakes = ({item}) => {
     const [isDisabled, setIsDisabled] = useState(false)
-    const colorId = useColor()
+    const {mistakeCounter, correctCounter} = useContext(CountContext)
     const navigation = useNavigation()
     const {handlerColorChange, colors} = useColor()
 
@@ -121,6 +123,7 @@ export const ButtonsMistakes = ({item}) => {
                     }
 
                     const deleteTicketHandler = () => {
+                          correctCounter.current.push(true)
                           mistakes.splice(isScrollId, 1)
                     }
 
@@ -134,7 +137,7 @@ export const ButtonsMistakes = ({item}) => {
                                     completedTickets.current++
                                     setIsDisabled(true)
                                     questionScrollHandler()
-                                    answer.is_correct === true ? deleteTicketHandler(item) : null
+                                    answer.is_correct === true ? deleteTicketHandler(item) : mistakeCounter.current.push(false)
                                 }}
                                 style={[{backgroundColor: colors[i]}, styleTicket.item]}>
                                 <Text style={styleTicket.itemText}>
