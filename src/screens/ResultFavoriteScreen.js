@@ -27,15 +27,17 @@ export default function ResultFavoriteScreen ({navigation}) {
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => {
 
-                if (correctCounter.current.length >= 18) {
+                if (mistakeCounter.current.length <= 2) {
                     setPassed(true)
+                } else {
+                    setPassed(false)
                 }
 
                 return(
                     <View style={style.container}>
                         <View>
                             <Text style={[style.heading]}>
-                                {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
+                                {mistakeCounter.current.length <= 2 ?  "Экзамен сдан" : "Экзамен не сдан"}
                             </Text>
                         </View>
                         <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
@@ -44,7 +46,7 @@ export default function ResultFavoriteScreen ({navigation}) {
                                 <Button
                                     title="Пройти ещё раз"
                                     onPress={() => {
-                                        navigation.push("Результат избранное")
+                                        navigation.push("Избранное")
                                         completedTickets.current = 0
                                         setIsScrollId(0)
                                     }}
@@ -55,7 +57,7 @@ export default function ResultFavoriteScreen ({navigation}) {
                                         title="Мои ошибки"
                                         color="red"
                                         onPress={() => {
-                                            navigation.push("Ошибки")
+                                            navigation.navigate("Ошибки")
                                             setIsScrollId(0)
                                         }}
                                     />

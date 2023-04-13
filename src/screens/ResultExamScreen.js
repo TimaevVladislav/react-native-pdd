@@ -28,15 +28,17 @@ export default function ResultExamScreen ({navigation}) {
         <CountContext.Consumer>
             {(({setIsScrollId, completedTickets}) => {
 
-                if (correctCounter.current.length >= 18) {
+                if (mistakeCounter.current.length <= 2) {
                     setPassed(true)
+                } else {
+                    setPassed(false)
                 }
 
                 return(
                     <View style={style.container}>
                         <View>
                             <Text style={[style.heading]}>
-                                {correctCounter.current.length < 18 ?  "Экзамен не сдан" : "Экзамен сдан"}
+                                {mistakeCounter.current.length <= 2 ?  "Экзамен сдан" : "Экзамен не сдан"}
                             </Text>
                         </View>
                         <Text>{`${mistakeCounter.current.length} ошибок, 20 вопросов`}</Text>
@@ -45,7 +47,7 @@ export default function ResultExamScreen ({navigation}) {
                                 <Button
                                     title="Пройти ещё раз"
                                     onPress={() => {
-                                        navigation.push("Экзамен", {key: route.params.key})
+                                        navigation.push("Экзамен", {key: route.params.number})
                                         completedTickets.current = 0
                                         setIsScrollId(0)
                                     }}
@@ -63,7 +65,7 @@ export default function ResultExamScreen ({navigation}) {
                                     <Button
                                         title="Пройти ещё раз"
                                         onPress={() => {
-                                            navigation.push("Экзамен", {key: route.params.key})
+                                            navigation.push("Экзамен", {key: route.params.number})
                                             completedTickets.current = 0
                                             setIsScrollId(0)
                                         }}
