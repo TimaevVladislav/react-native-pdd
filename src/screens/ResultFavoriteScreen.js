@@ -5,6 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 
 import {useNavigation} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
+import {favorites} from "../store/questions/A_B/tickets/favorites"
 
 export default function ResultFavoriteScreen ({navigation}) {
     const {colorId} = useColor()
@@ -46,7 +47,7 @@ export default function ResultFavoriteScreen ({navigation}) {
                                 <Button
                                     title="Пройти ещё раз"
                                     onPress={() => {
-                                        navigation.push("Избранное")
+                                        favorites.length === 0 ? navigation.navigate("Билеты") : navigation.push("Избранное")
                                         completedTickets.current = 0
                                         setIsScrollId(0)
                                     }}
@@ -64,7 +65,7 @@ export default function ResultFavoriteScreen ({navigation}) {
                                     <Button
                                         title="Пройти ещё раз"
                                         onPress={() => {
-                                            navigation.push("Избранное")
+                                            favorites.length === 0 ? navigation.navigate("Билеты") : navigation.push("Избранное")
                                             completedTickets.current = 0
                                             setIsScrollId(0)
                                         }}

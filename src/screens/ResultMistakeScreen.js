@@ -5,6 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 
 import {useNavigation} from "@react-navigation/native"
 import {useColor} from "../hooks/useColor"
+import {mistakes} from "../store/questions/A_B/tickets/mistakes";
 
 export default function ResultMistakeScreen ({navigation}) {
     const {colorId} = useColor()
@@ -46,7 +47,7 @@ export default function ResultMistakeScreen ({navigation}) {
                                 <Button
                                     title="Пройти ещё раз"
                                     onPress={() => {
-                                        navigation.push("Ошибки")
+                                        mistakes.length === 0 ? navigation.navigate("Билеты") : navigation.push("Ошибки")
                                         completedTickets.current = 0
                                         setIsScrollId(0)
                                     }}
