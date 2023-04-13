@@ -124,7 +124,7 @@ export const ButtonsMistakes = ({item}) => {
 
                     const deleteTicketHandler = () => {
                           correctCounter.current.push(true)
-                          mistakes.splice(isScrollId, 1)
+                          navigation.addListener("beforeRemove", () => mistakes.splice(isScrollId, 1))
                     }
 
                     return (
