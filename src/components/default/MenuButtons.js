@@ -75,10 +75,10 @@ const Buttons = ({navigation}) => {
 
 const ButtonsBottom = ({navigation}) => (
     <View style={style.container}>
-        <TouchableOpacity onPress={() => navigation.navigate("")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Коды регионов")}>
             <View style={style.item}>
                 <Text style={style.heading}>
-                    Билеты C,D
+                    Коды регионов
                 </Text>
             </View>
         </TouchableOpacity>
