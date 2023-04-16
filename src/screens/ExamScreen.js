@@ -6,7 +6,7 @@ import {Favorites} from "../components/layouts/Favorites"
 import {CountContext} from "../context/counter"
 import {useColor} from "../hooks/useColor"
 import {useLayout} from "../hooks/useLayout"
-import {useSwitcher} from "../store/questions"
+import {useSwitcher} from "../store/questions/A_B"
 import {useRoute} from "@react-navigation/native"
 
 const Tickets = ({item}) => {

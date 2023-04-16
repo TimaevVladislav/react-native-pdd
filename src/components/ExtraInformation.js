@@ -1,7 +1,7 @@
 import React from "react"
 import {StyleSheet, Text, TouchableOpacity, View, VirtualizedList} from "react-native"
 
-import items from "../store/temp/regions.json"
+import items from "../store/topics/regions.json"
 import {styles} from "./layouts/Sections"
 import {getNavigate} from "./default/MenuButtons"
 

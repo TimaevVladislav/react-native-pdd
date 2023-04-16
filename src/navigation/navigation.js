@@ -2,12 +2,12 @@ import React from "react"
 
 import {createNativeStackNavigator} from "@react-navigation/native-stack"
 import Home from "../screens/HomeScreen"
-import Profile from "../screens/Profile"
-import Signs from "../screens/Signs"
-import Markup from "../screens/Markup"
+import ProfileScreen from "../screens/ProfileScreen"
+import RoadSignScreen from "../screens/RoadSignScreen"
+import MarkupScreen from "../screens/MarkupScreen"
 import {ExamScreen} from "../screens/ExamScreen"
 import ResultExamScreen from "../screens/ResultExamScreen"
-import {FeedBack} from "../components/default/Feedback"
+import {FeedbackScreen} from "../screens/FeedbackScreen"
 import Tickets from "../components/layouts/Tickets"
 import Card from "../components/default/Card"
 import SignsList from "../components/SignsList"
@@ -27,14 +27,14 @@ export default function Navigation () {
         <Stack.Group>
             <Stack.Screen name='Home' component={Router} options={{headerShown: false}} />
             <Stack.Screen name="Главная" component={Home} />
-            <Stack.Screen name="Правила дорожного движения" component={Profile} options={{title: "ПДД"}} />
-            <Stack.Screen name="Дорожные знаки" component={Signs} />
-            <Stack.Screen name="Дорожная разметка" component={Markup} />
+            <Stack.Screen name="Правила дорожного движения" component={ProfileScreen} options={{title: "ПДД"}} />
+            <Stack.Screen name="Дорожные знаки" component={RoadSignScreen} />
+            <Stack.Screen name="Дорожная разметка" component={MarkupScreen} />
             <Stack.Screen name="Билеты" component={MenuButtons} />
             <Stack.Screen name="Дополнительная информация" component={ExtraInformation} />
             <Stack.Screen name="Коды регионов" component={Region} />
             <Stack.Screen name="Карточка" component={Card} />
-            <Stack.Screen name="Обратная связь" component={FeedBack} />
+            <Stack.Screen name="Обратная связь" component={FeedbackScreen} />
             <Stack.Screen name="Список билетов" component={Tickets} />
             <Stack.Screen name="Экзамен" component={ExamScreen}
                 options={() => {

@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import {Text, View, ScrollView, StyleSheet, TouchableOpacity} from "react-native"
 import CheckBox from 'expo-checkbox'
 import {ThemeContext} from "../context/theme"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/dependencies/colors"
 import {version} from "../../package.json"
 
 export default function SettingScreen({navigation}) {
@@ -59,18 +59,12 @@ export default function SettingScreen({navigation}) {
                                 />
                             </View>
                         </View>
-                        <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
-                            <Text style={style.heading}>Уведомления</Text>
-                            <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Главная")}>Настроить</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>
-                            <Text style={style.heading}>Прочее</Text>
-                            <TouchableOpacity style={style.checkboxContainer}>
-                                <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Обратная связь")}>Обратная связь</Text>
-                            </TouchableOpacity>
-                        </View>
+                        {/*<View style={[style.container, {backgroundColor: isDark ? DARK_COLORS.layout : "white"}]}>*/}
+                        {/*    <Text style={style.heading}>Прочее</Text>*/}
+                        {/*    <TouchableOpacity style={style.checkboxContainer}>*/}
+                        {/*        <Text style={[style.title, {color: colors.textColor}]} onPress={() => navigation.navigate("Обратная связь")}>Обратная связь</Text>*/}
+                        {/*    </TouchableOpacity>*/}
+                        {/*</View>*/}
                         <View style={style.version}>
                             <View>
                                 <Text style={{color: colors.textColor}}>
@@ -94,27 +88,26 @@ const style = StyleSheet.create({
         borderStyle: "solid",
         marginBottom: 7,
         paddingBottom: 7,
-        paddingTop: 10,
+        paddingTop: 10
     },
     containerLogo: {
         justifyContent: "center",
         flexDirection: "row",
-        padding: 15,
+        padding: 15
     },
     version:{
         paddingHorizontal: 30,
         paddingVertical: 15,
         justifyContent: "space-between",
-        flexDirection: "row",
+        flexDirection: "row"
 
     },
     heading: {
         padding: 10,
         color: "red",
         fontWeight: "bold",
-        fontSize: 14,
+        fontSize: 14
     },
-
      checkboxContainer: {
         flexDirection: "row",
         margin: 10,

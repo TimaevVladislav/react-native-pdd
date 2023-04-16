@@ -1,6 +1,6 @@
 import React from "react"
 import List from "../components/layouts/Sections"
-import {data} from "../store/data/markup"
+import {data} from "../store/dependencies/markup"
 
 export const ContextMarkup = React.createContext({
     horizontal: data.markup.horizontal,
@@ -8,8 +8,8 @@ export const ContextMarkup = React.createContext({
     item: data.items,
 })
 
-const Markup = () => {
+const MarkupScreen = () => {
     return <List data={data.items} />
 }
 
-export default Markup
+export default MarkupScreen

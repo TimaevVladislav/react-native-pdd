@@ -1,6 +1,6 @@
 import React, {createContext} from "react"
 import List from "../components/layouts/Sections"
-import {items, item} from "../store/temp/rules.json"
+import {items, item} from "../store/topics/rules.json"
 
 export const ContextRules = createContext({
      rules: [
@@ -17,9 +17,9 @@ export const ContextRules = createContext({
 })
 
 
-const Profile = (props) => {
+const ProfileScreen = () => {
     return <List data={items} />
-};
+}
 
-export default Profile;
+export default ProfileScreen
 

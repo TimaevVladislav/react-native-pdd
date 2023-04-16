@@ -4,37 +4,39 @@
     "slug": "Awesome",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./icons/pdd.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/pdd.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/b012667b-432b-4f76-9a0e-707056183d99"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.timaev.AwesomeProject"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./icons/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.timaev.AwesomeProject"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./icons/favicon.png"
     },
     "extra": {
       "eas": {
         "projectId": "b012667b-432b-4f76-9a0e-707056183d99"
       }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }

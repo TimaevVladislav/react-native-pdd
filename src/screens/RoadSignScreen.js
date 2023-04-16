@@ -1,7 +1,7 @@
 import React, {createContext} from "react"
 
 import Section from "../components/layouts/Sections"
-import {data} from "../store/data/data.js"
+import {data} from "../store/dependencies/data.js"
 
 
 export const ContextSigns = createContext({
@@ -19,9 +19,9 @@ export const ContextSigns = createContext({
 })
 
 
-const Signs = () => {
+const RoadSignScreen = () => {
     return <Section data={data.items} />
 
 }
 
-export default Signs;
+export default RoadSignScreen

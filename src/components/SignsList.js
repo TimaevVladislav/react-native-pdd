@@ -3,12 +3,12 @@ import {useNavigation, useRoute} from "@react-navigation/native"
 import {Text, View, VirtualizedList} from "react-native"
 
 
-import {styleSigns} from "../store/data/styles"
-import {ContextMarkup} from "../screens/Markup"
-import {ContextRules} from "../screens/Profile"
-import {ContextSigns} from "../screens/Signs"
+import {styleSigns} from "../store/dependencies/styles"
+import {ContextMarkup} from "../screens/MarkupScreen"
+import {ContextRules} from "../screens/ProfileScreen"
+import {ContextSigns} from "../screens/RoadSignScreen"
 import {ThemeContext} from "../context/theme"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/dependencies/colors"
 import {SearchContext} from "../context/search"
 
 import Dropdown from "./layouts/Dropdown"
@@ -37,7 +37,6 @@ function FloatList () {
     const {rules, indexRules} = useContext(ContextRules)
     const {signs, indexSigns} = useContext(ContextSigns)
     const {setDropdown, setSearch, setClicked} = useContext(SearchContext)
-
     const [state, setState] = useState([])
 
     const getItem = (data, index) => data[index]

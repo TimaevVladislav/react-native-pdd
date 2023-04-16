@@ -1,5 +1,5 @@
 import {useRef, useState} from 'react'
-import {colors as colorIndex} from "../store/data/colors"
+import {colors as colorIndex} from "../store/dependencies/colors"
 
 export const useColor = () => {
     const [colors, setColor] = useState(["#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD", "#DDDDDD"])

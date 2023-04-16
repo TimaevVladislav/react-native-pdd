@@ -2,9 +2,9 @@ import React from 'react'
 import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider'
 
-import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/dependencies/colors"
 import {ThemeContext} from "../context/theme"
-import {items} from "../store/data/item"
+import {items} from "../store/dependencies/item"
 
 
 export default function HomeScreen({navigation}) {

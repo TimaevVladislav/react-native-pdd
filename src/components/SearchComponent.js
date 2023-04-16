@@ -2,12 +2,12 @@ import React, {useEffect, useContext} from 'react'
 import {useRoute} from "@react-navigation/native"
 import {SafeAreaView, View, TextInput, Keyboard,} from 'react-native'
 
-import {data} from "../store/data/data.js"
-import {styleSearch} from "../store/data/styles"
+import {data} from "../store/dependencies/data.js"
+import {styleSearch} from "../store/dependencies/styles"
 import {Entypo, Feather} from "@expo/vector-icons"
-import {ContextSigns} from "../screens/Signs"
-import {ContextMarkup} from "../screens/Markup"
-import {ContextRules} from "../screens/Profile"
+import {ContextSigns} from "../screens/RoadSignScreen"
+import {ContextMarkup} from "../screens/MarkupScreen"
+import {ContextRules} from "../screens/ProfileScreen"
 import {ThemeContext} from "../context/theme"
 import {SearchContext} from "../context/search"
 

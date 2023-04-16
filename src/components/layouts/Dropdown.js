@@ -4,7 +4,7 @@ import {useNavigation} from "@react-navigation/native"
 import {FlatList, Text, TouchableOpacity, View, StyleSheet} from "react-native"
 import {SearchContext} from "../../context/search"
 import {LocalSvg} from "../default/LocalSvg"
-import {DARK_COLORS, LIGHT_COLORS} from "../../store/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../../store/dependencies/colors"
 import {ThemeContext} from "../../context/theme"
 
 

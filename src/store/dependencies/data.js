@@ -693,7 +693,7 @@ export const data = {
       },
       {
         "key": 21,
-        // "img": require("../icons/prohibition/3.18"),
+        // "img": require("../assets/prohibition/3.18"),
         "heading": "Знак 3.18.2. Поворот налево запрещен",
         "title": "Запрещает поворот налево.\n\nОБРАТИТЕ ВНИМАНИЕ: знак не запрещает разворот.",
         "text": [

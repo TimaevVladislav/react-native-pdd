@@ -2,6 +2,9 @@ node_modules/
 .expo/
 dist/
 .idea
+android
+ios
+dist
 npm-debug.*
 *.jks
 *.p8
@@ -46,7 +49,7 @@ project.xcworkspace
 build/
 .idea
 .gradle
-local.properties
+android/local.properties
 *.iml
 *.hprof
 
