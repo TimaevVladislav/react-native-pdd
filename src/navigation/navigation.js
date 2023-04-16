@@ -18,6 +18,8 @@ import MistakeScreen from "../screens/MistakeScreen"
 import Timer, {ArrowBack} from "../components/Timer"
 import ExtraInformation, {Region} from "../components/ExtraInformation"
 import Router from "./router"
+import ResultFavoriteScreen from "../screens/ResultFavoriteScreen"
+import ResultMistakeScreen from "../screens/ResultMistakeScreen"
 
 export default function Navigation () {
     const Stack = createNativeStackNavigator()
@@ -44,8 +46,8 @@ export default function Navigation () {
             <Stack.Screen name="Избранное" component={FavouriteScreen} />
             <Stack.Screen name="Ошибки" component={MistakeScreen} />
             <Stack.Screen name="Результаты" component={ResultExamScreen} />
-            <Stack.Screen name="Результат избранное" component={ResultExamScreen} />
-            <Stack.Screen name="Результат ошибки" component={ResultExamScreen} />
+            <Stack.Screen name="Результат избранное" component={ResultFavoriteScreen} />
+            <Stack.Screen name="Результат ошибки" component={ResultMistakeScreen} />
             <Stack.Screen
                 name="Signs"
                 options={() => ({

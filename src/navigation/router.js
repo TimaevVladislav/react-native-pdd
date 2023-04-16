@@ -2,7 +2,7 @@ import React from "react"
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList} from '@react-navigation/drawer'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import {ThemeContext} from "../context/theme"
-import {DARK_COLORS, LIGHT_COLORS} from "../store/data/colors"
+import {DARK_COLORS, LIGHT_COLORS} from "../store/dependencies/colors"
 
 import Home from "../screens/HomeScreen"
 import SettingScreen from "../screens/SettingScreen"
